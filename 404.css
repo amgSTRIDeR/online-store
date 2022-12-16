@@ -44,16 +44,19 @@ body {
 }
 
 .not_found {
+  display: flex;
   position: relative;
+  align-items: center;
+  justify-content: center;
   top: 160px;
   background-image: url("./src/assets/images/not-found.png");
   background-repeat: no-repeat;
-  width: 1327px;
-  height: 777px;
+  width: 1233px;
+  height: 718px;
   font-family: "Aire Exterior";
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: 3px solid #00c5ff;
+  border-radius: 10px;
+  box-shadow: 0px 17px 29px #00c5ff;
 }
 
 .not_found__content {
@@ -77,8 +80,46 @@ body {
 .not_found__content__small_text {
   font-family: "Roboto";
   font-size: 16px;
+  text-align: center;
 }
 
 .not_found__content__pic {
   margin-top: 45px;
+}
+
+@media (max-width: 1440px) {
+  .not_found {
+    top: 60px;
+    width: 630px;
+    height: 720px;
+    border: 3px solid #00c5ff;
+    background-image: url("./src/assets/images/not-found-tablet.png");
+    border-radius: 10px;
+  }
+  .not_found .not_found__content {
+    width: 600px;
+  }
+  .not_found .not_found__content__info {
+    font-size: 36px;
+  }
+}
+@media (max-width: 640px) {
+  .not_found {
+    top: 60px;
+    width: 305px;
+    height: 600px;
+    border: 3px solid #00c5ff;
+    background-image: url("./src/assets/images/not-found-mobile.png");
+    border-radius: 10px;
+  }
+  .not_found .not_found__content {
+    width: 600px;
+  }
+  .not_found .not_found__content__info {
+    font-size: 24px;
+  }
+  .not_found .not_found__content__small_text {
+    width: 250px;
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=404.css.map */
