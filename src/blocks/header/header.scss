@@ -100,14 +100,28 @@
         font-weight: bold;
         font-size: 30px;
 
-        @media (max-width: 1000px) {
-            font-size: calc(0vw + 30px);
-        }
+        @media (max-width: 1900px) {
+          font-size: calc(1.013vw + 10.76px);
+      }
     }
 
     & .widget__cart-wrapper {
         position: relative;
-        color: $BACKGROUND;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        
+
+        color: $MAIN_TEXT;
+
+        
+        @media (max-width: 400px) {
+          width: calc(25vw - 20px);
+          height: calc(25vw - 20px);
+      }
 
         &:hover {
             cursor: pointer;
@@ -121,33 +135,28 @@
         }
 
         & .widget__cart {
-            width: 80px;
-            height: 80px;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
 
             fill: $MAIN_TEXT;
             stroke: $MAIN_TEXT;
 
             transition: all 0.3s ease;
-
-            @media (max-width: 400px) {
-                width: calc(25vw - 20px);
-                height: calc(25vw - 20px);
-            }
         }
 
         & .sum-text {
-            position: absolute;
-            top: 22px;
-            left: 32px;
-
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Aire Exterior', sans-serif;
             font-size: 20px;
 
             @media (max-width: 400px) {
-              top: calc(6.250vw - 3.00px);
-              left: calc(10.000vw - 8.00px);
-  
-              font-size: calc(7.500vw - 10.00px);
+                top: calc(6.25vw - 3px);
+                left: calc(10vw - 8px);
+
+                font-size: calc(7.5vw - 10px);
             }
         }
     }
