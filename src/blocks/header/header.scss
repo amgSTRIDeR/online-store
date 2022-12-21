@@ -1,0 +1,222 @@
+.header {
+    z-index: 3;
+
+    width: calc(90vw - (100vw - 100%));
+    height: 100px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+
+    background-color: $BACKGROUND;
+    color: $MAIN_TEXT;
+
+    @media (max-width: 900px) {
+        position: relative;
+    }
+}
+
+.header__header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 50%;
+    padding-top: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 50px;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+        cursor: pointer;
+
+        .logo__image {
+            stroke: $MAIN_COLOR;
+        }
+
+        color: $MAIN_COLOR;
+
+        transition: all 0.3s ease;
+    }
+}
+
+.logo__image {
+    width: 70px;
+    height: 70px;
+    margin-right: 1vw;
+    fill: $MAIN_TEXT;
+    stroke: $MAIN_TEXT;
+
+    transition: all 0.3s ease;
+
+    @media (max-width: 400px) {
+        width: calc(25vw - 30px);
+        height: calc(25vw - 30px);
+    }
+}
+
+.logo__text {
+    font-family: 'Pulsar Original', sans-serif;
+    font-size: 50px;
+    text-transform: uppercase;
+
+    @media (max-width: 1920px) {
+        font-size: calc(1.282vw + 25.38px);
+    }
+
+    @media (max-width: 700px) {
+        display: none;
+    }
+}
+
+.widget {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    & .widget__wallet {
+        width: 50px;
+        height: 50px;
+
+        fill: $MAIN_TEXT;
+
+        @media (max-width: 1000px) {
+            width: calc(3.125vw + 18.75px);
+            height: calc(3.125vw + 18.75px);
+        }
+    }
+
+    & .widget__sum {
+        margin-right: 1vw;
+        margin-left: 1vw;
+
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+
+        @media (max-width: 1000px) {
+            font-size: calc(0vw + 30px);
+        }
+    }
+
+    & .widget__cart-wrapper {
+        position: relative;
+        color: $BACKGROUND;
+
+        &:hover {
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+            & .widget__cart {
+                fill: $MAIN_COLOR;
+                stroke: $MAIN_COLOR;
+            }
+        }
+
+        & .widget__cart {
+            width: 80px;
+            height: 80px;
+
+            fill: $MAIN_TEXT;
+            stroke: $MAIN_TEXT;
+
+            transition: all 0.3s ease;
+
+            @media (max-width: 400px) {
+                width: calc(25vw - 20px);
+                height: calc(25vw - 20px);
+            }
+        }
+
+        & .sum-text {
+            position: absolute;
+            top: 22px;
+            left: 32px;
+
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+
+            @media (max-width: 400px) {
+              top: calc(6.250vw - 3.00px);
+              left: calc(10.000vw - 8.00px);
+  
+              font-size: calc(7.500vw - 10.00px);
+            }
+        }
+    }
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+}
+
+.lang-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+
+    text-transform: uppercase;
+    font-family: 'Pulsar Original', sans-serif;
+    font-size: 30px;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+        cursor: pointer;
+        border-radius: 10px;
+        color: $MAIN_COLOR;
+
+        transition: all 0.3s ease;
+    }
+}
+
+.theme-control {
+    display: flex;
+    width: 60px;
+    height: 20px;
+    justify-content: $JUSTIFY_CONTENT;
+
+    border-radius: 10px;
+    background-image: $THEME_BG_IMAGE;
+    background-repeat: no-repeat;
+    background-size: cover;
+    outline: 1px solid $MAIN_COLOR;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+        cursor: pointer;
+        border-radius: 10px;
+
+        transition: all 0.3s ease;
+    }
+
+    & .theme-control__switch {
+        width: 20px;
+        height: 20px;
+
+        border-radius: 10px;
+        background-color: $MAIN_TEXT;
+        box-shadow: 0 0 10px $MAIN_TEXT;
+
+        transition: all 0.3s ease;
+    }
+
+    &:hover .theme-control__switch {
+        background-color: $MAIN_COLOR;
+    }
+}
