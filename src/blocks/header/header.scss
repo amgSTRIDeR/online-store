@@ -75,7 +75,7 @@
 
 .widget {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 
     width: 100%;
@@ -101,8 +101,12 @@
         font-size: 30px;
 
         @media (max-width: 1900px) {
-          font-size: calc(1.013vw + 10.76px);
-      }
+            font-size: calc(1.013vw + 10.76px);
+        }
+
+        &:hover {
+            cursor: default;
+        }
     }
 
     & .widget__cart-wrapper {
@@ -113,15 +117,13 @@
         align-items: center;
         width: 80px;
         height: 80px;
-        
 
         color: $MAIN_TEXT;
 
-        
         @media (max-width: 400px) {
-          width: calc(25vw - 20px);
-          height: calc(25vw - 20px);
-      }
+            width: calc(25vw - 20px);
+            height: calc(25vw - 20px);
+        }
 
         &:hover {
             cursor: pointer;
@@ -131,6 +133,12 @@
             & .widget__cart {
                 fill: $MAIN_COLOR;
                 stroke: $MAIN_COLOR;
+            }
+
+            & .sum-text {
+                color: $MAIN_COLOR;
+
+                transition: all 0.3s ease;
             }
         }
 
@@ -151,6 +159,8 @@
         & .sum-text {
             font-family: 'Aire Exterior', sans-serif;
             font-size: 20px;
+
+            transition: all 0.3s ease;
 
             @media (max-width: 400px) {
                 top: calc(6.25vw - 3px);

@@ -1,0 +1,102 @@
+.footer {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: calc(90vw - (100vw - 100%));
+  height: calc(5.102vw + 23.67px);
+  padding-left: 5vw;
+  padding-right: 5vw;
+
+  background-color: $BACKGROUND;
+  color: $MAIN_TEXT;
+
+  @media (max-width: 800px) {
+    & .logo {
+      position: absolute;
+      visibility: none;
+      display: none;
+      opacity: 0;
+    }
+
+  }
+}
+
+.year-author {
+  text-align: center;
+  font-family: 'Pulsar Original';
+  font-size: calc(1.646vw + 8.73px);
+  text-transform: uppercase;
+
+  &:hover {
+    cursor: default;
+  }
+}
+
+.github-link {
+  width: calc(3.469vw + 18.90px);
+  height: calc(3.469vw + 18.90px);
+}
+
+
+.github-link__svg {
+  fill: $MAIN_TEXT;
+
+  transition: all 0.3s ease;
+}
+
+.github-link__svg:hover {
+  fill: $MAIN_COLOR;
+
+  transition: all 0.3s ease;
+}
+
+.rsschool-link__svg {
+  width: calc(6.735vw + 32.45px);
+
+  fill: $MAIN_TEXT;
+
+  transition: all 0.3s ease;
+
+  & .svg_0,
+  & .st0 {
+    fill: none;
+  }
+
+  & .st5 {
+    fill: none;
+    stroke: $MAIN_TEXT;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+  }
+
+  & .st6,
+  & .st7 {
+    fill: none;
+    stroke: none;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+  }
+
+  & .st9 {
+    fill: none;
+    stroke: $MAIN_COLOR;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+  }
+}
+
+.rsschool-link__svg:hover {
+  fill: $MAIN_COLOR;
+
+  transition: all 0.3s ease;
+
+  & .st5,
+  & .st9 {
+    stroke: $MAIN_COLOR;
+  }
+}
+
