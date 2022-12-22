@@ -83,8 +83,22 @@ body {
   text-align: center;
 }
 
-.not_found__content__pic {
+.not_found__content__button {
+  background-color: transparent;
+  border: none;
   margin-top: 45px;
+}
+
+.not_found__content__button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0px 0px 16px #ffffff;
+}
+
+.not_found__content__button:active {
+  background-color: rgba(0, 197, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0px 0px 16px #00c5ff;
 }
 
 @media (max-width: 1440px) {

@@ -41,12 +41,10 @@
 
 $DARK_BG: #141c24;
 $WHITE: #ffffff;
-$BLACK_BG: rgba(0,
-0,
-0,
-0.1);
+$WHITE_TR: rgba(255, 255, 255, 0.5);
+$BLACK_BG: rgba(0, 0, 0, 0.1);
 $BLUE: #00c5ff;
-//
+$BLUE_TR: rgba(0, 197, 255, 0.5); //
 body {
     background-color: $DARK_BG;
     width: 100%;
@@ -97,8 +95,22 @@ body {
     text-align: center;
 }
 
-.not_found__content__pic {
+.not_found__content__button {
+    background-color: transparent;
+    border: none;
     margin-top: 45px;
+}
+
+.not_found__content__button:hover {
+    background-color: $WHITE_TR;
+    border-radius: 10px;
+    box-shadow: 0px 0px 16px $WHITE;
+}
+
+.not_found__content__button:active {
+    background-color: $BLUE_TR;
+    border-radius: 10px;
+    box-shadow: 0px 0px 16px $BLUE;
 }
 
 @media (max-width: 1440px) {
