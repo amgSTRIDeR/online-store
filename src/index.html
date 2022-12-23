@@ -83,7 +83,53 @@
   </header>
 
   <main class="main-section">
-
+<section class="store store_vertical">
+    <select class="goods-sort" id="sort" name="sort">
+      <option class="goods-sort__item" value="0">
+        по популярности &#x2198;
+      </option>
+      <option class="goods-sort__item" value="1">
+        по популярности &#x2197;
+      </option>
+      <option class="goods-sort__item" value="2">
+        по цене &#x2198;
+      </option>
+      <option class="goods-sort__item" value="3">
+        по цене &#x2197;
+      </option>
+      <option class="goods-sort__item" value="4">
+        по названию &#x2198;
+      </option>
+      <option class="goods-sort__item" value="5">
+        по названию &#x2197;
+      </option>
+    </select>
+    <div class="goods-search">
+      <input class="goods-search__input" type="text" name="search" id="search" placeholder="Поиск">
+      <div class="goods-search__reset"></div>
+      <p class="goods-search__count">23</p>
+    </div>
+    <select class="goods-view" id="sort" name="sort">
+      <option class="goods-view__item goods-view__item_active"  value="0">
+        горизонтальный
+      </option>
+      <option class="goods-view__item"  value="1">
+        вертикальный
+      </option>
+    </select>
+    <div class="arrow-left"></div>
+    <div class="cards-wrapper">
+      <div class="card">
+        <h3 class="card__title"></h3>
+        <p class="card__subtitle"></p>
+        <img src="./assets/collection/images/Bang_Star_Wars_8.webp" alt="" class="card__img">
+        <button class="card__button">
+          <p class="card__price"></p>
+        </button>
+      </div>
+    </div>
+    <div class="arrow-right"></div>
+</section>
   </main>
 
   <footer class="footer">
