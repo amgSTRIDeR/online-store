@@ -110,7 +110,10 @@ h2 {
 }
 .about__main_info__info__amount .amount {
   border: 3px solid #00c5ff;
+  background-color: #141c24;
+  color: #ffffff;
   border-radius: 10px;
+  font-size: 28px;
   width: 40px;
   height: 40px;
   text-align: center;
@@ -118,6 +121,7 @@ h2 {
   justify-content: center;
   align-items: center;
   margin: 0 25px;
+  font-family: "Pulsar Original";
 }
 
 .about__main_info__info__buy {
@@ -130,6 +134,15 @@ h2 {
   color: black;
   font-family: "Aire Exterior";
   left: 20%;
+}
+
+.about__main_info__info__buy:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+}
+
+.about__main_info__info__buy:active {
+  color: #00c5ff;
 }
 
 .about__gallery {
@@ -194,13 +207,6 @@ h2 {
     align-items: center;
     justify-content: center;
     left: 5%;
-  }
-  .about .about__main_info__info__buy:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    color: #ffffff;
-  }
-  .about .about__main_info__info__buy:active {
-    color: #00c5ff;
   }
   .about .about__gallery {
     width: 95%;
