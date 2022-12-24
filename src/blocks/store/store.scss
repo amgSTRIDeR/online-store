@@ -15,8 +15,8 @@
 
 .store_horizontal {
     grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
-    grid-template-rows: 50px 600px 50px 300px;
-    grid-gap: 1vw;
+    grid-template-rows: 50px 750px 50px 300px;
+    gap: 1vw;
 
     grid-template-areas:
         'sort sort search view view'
@@ -28,7 +28,7 @@
 .store_vertical {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 1vw;
+    gap: 1vw;
 
     grid-template-areas:
         'sort search view'
@@ -204,7 +204,7 @@
     // grid-template-columns: 32% 32% 32% 32% 32% 32%;
     // grid-template-columns: repeat(7, 32%);
     grid-template-rows: 1fr 1fr;
-    grid-gap: 1vw;
+    gap: 1vw;
 }
 
 @for $i from 1 through 101 {
@@ -223,7 +223,7 @@
         '. img .'
         '. button .'
         '. button .';
-    grid-gap: 0.5vw;
+    gap: 0.5vw;
     padding: 1vw;
     overflow: hidden;
 
@@ -390,4 +390,181 @@
 .card__info-age {
     font-family: 'Pulsar Original', sans-serif;
     font-size: 20px;
+}
+
+.scroll {
+    grid-area: scroll;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    & .scroll__item {
+        width: 20px;
+        height: 20px;
+        margin-left: 0.5vw;
+        margin-right: 0.5vw;
+
+        border: 3px solid $MAIN_COLOR;
+        border-radius: 20px;
+
+        &:hover {
+            scale: 1.1;
+            cursor: pointer;
+        }
+    }
+
+    & .scroll__item_active {
+        background-color: $MAIN_COLOR;
+    }
+}
+
+.sets-wrapper {
+    grid-area: sets;
+    display: grid;
+    grid-template-areas:
+        'category maker price price sale stock'
+        'category maker price price . .'
+        'category maker players players filter filter'
+        'category maker players players copy-button copy-button';
+    gap: 1vw;
+
+    & .sets {
+        padding: 1vw;
+
+        background-color: #00000024;
+        border-radius: 1vw;
+        color: $MAIN_COLOR;
+
+        & .sets__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+
+            list-style: none;
+            color: $MAIN_TEXT;
+        }
+    }
+
+    & .sets-category {
+        grid-area: category;
+    }
+
+    & .sets-maker {
+        grid-area: maker;
+    }
+}
+
+.price-slider__wrapper {
+    grid-area: price;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #00000024;
+    border-radius: 1vw;
+    color: $MAIN_COLOR;
+}
+
+.players-number {
+    grid-area: players;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #00000024;
+    border-radius: 1vw;
+    color: $MAIN_COLOR;
+
+    & .players-number__inputs {
+        display: flex;
+    }
+}
+
+.sale__wrapper {
+    grid-area: sale;
+
+    background-color: #00000024;
+    border-radius: 1vw;
+    color: $MAIN_COLOR;
+}
+
+.stock__wrapper {
+    grid-area: stock;
+
+    background-color: #00000024;
+    border-radius: 1vw;
+    color: $MAIN_COLOR;
+}
+
+.filter__button {
+  position: relative;
+
+  grid-area: filter;
+  display: block;
+  width: calc(11.527vw + 58.50px);
+  height: calc(2.824vw + 13.83px);
+  // margin-top: calc(7.023vw - 17.28px);
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+  font-family: 'Aire Exterior', sans-serif;
+  font-size: calc(0.746vw + 11.31px);
+
+  clip-path: polygon(0 0, 90% 0%, 100% 40%, 100% 80%, 100% 100%, 20% 100%, 0 100%);
+  border: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: $BACKGROUND;
+  background-color: $MAIN_TEXT;
+
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+
+  &:active {
+    background-color: $MAIN_COLOR;
+  }
+}
+
+.copy__button {
+  position: relative;
+
+  grid-area: copy-button;
+  display: block;
+  width: calc(11.527vw + 58.50px);
+  height: calc(2.824vw + 13.83px);
+  // margin-top: calc(7.023vw - 17.28px);
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+  font-family: 'Aire Exterior', sans-serif;
+  font-size: calc(0.746vw + 11.31px);
+
+  clip-path: polygon(0 0, 90% 0%, 100% 40%, 100% 80%, 100% 100%, 20% 100%, 0 100%);
+  border: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: $BACKGROUND;
+  background-color: $MAIN_TEXT;
+
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+
+  &:active {
+    background-color: $MAIN_COLOR;
+  }
 }
