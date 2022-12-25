@@ -1,30 +1,30 @@
 @font-face {
   font-family: "Aire Exterior";
-  src: url("./src/assets/fonts/aireExterior.ttf");
+  src: url("../src/assets/fonts/aireExterior.ttf");
   font-weight: 300;
 }
 @font-face {
   font-family: "Pulsar Original";
-  src: url("./src/assets/fonts/pulsarOriginal.otf");
+  src: url("../src/assets/fonts/pulsarOriginal.otf");
 }
 @font-face {
   font-family: "Roboto";
-  src: url("./src/assets/fonts/Roboto-Light.ttf");
+  src: url("../src/assets/fonts/Roboto-Light.ttf");
   font-weight: 300;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("./src/assets/fonts/Roboto-Regular.ttf");
+  src: url("../src/assets/fonts/Roboto-Regular.ttf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("./src/assets/fonts/Roboto-Medium.ttf");
+  src: url("../src/assets/fonts/Roboto-Medium.ttf");
   font-weight: 500;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("./src/assets/fonts/Roboto-Bold.ttf");
+  src: url("../src/assets/fonts/Roboto-Bold.ttf");
   font-weight: 700;
 }
 * {
@@ -49,7 +49,7 @@ body {
   align-items: center;
   justify-content: center;
   top: 160px;
-  background-image: url("./src/assets/images/not-found.png");
+  background-image: url("../src/assets/images/not-found.png");
   background-repeat: no-repeat;
   width: 1233px;
   height: 718px;
@@ -83,8 +83,22 @@ body {
   text-align: center;
 }
 
-.not_found__content__pic {
+.not_found__content__button {
+  background-color: transparent;
+  border: none;
   margin-top: 45px;
+}
+
+.not_found__content__button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0px 0px 16px #ffffff;
+}
+
+.not_found__content__button:active {
+  background-color: rgba(0, 197, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0px 0px 16px #00c5ff;
 }
 
 @media (max-width: 1440px) {
@@ -93,7 +107,7 @@ body {
     width: 630px;
     height: 720px;
     border: 3px solid #00c5ff;
-    background-image: url("./src/assets/images/not-found-tablet.png");
+    background-image: url("../src/assets/images/not-found-tablet.png");
     border-radius: 10px;
   }
   .not_found .not_found__content {
@@ -109,7 +123,7 @@ body {
     width: 305px;
     height: 600px;
     border: 3px solid #00c5ff;
-    background-image: url("./src/assets/images/not-found-mobile.png");
+    background-image: url("../src/assets/images/not-found-mobile.png");
     border-radius: 10px;
   }
   .not_found .not_found__content {

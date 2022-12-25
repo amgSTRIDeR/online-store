@@ -1,30 +1,30 @@
 @font-face {
   font-family: "Aire Exterior";
-  src: url("./src/assets/fonts/aireExterior.ttf");
+  src: url("../src/assets/fonts/aireExterior.ttf");
   font-weight: 300;
 }
 @font-face {
   font-family: "Pulsar Original";
-  src: url("./src/assets/fonts/pulsarOriginal.otf");
+  src: url("../src/assets/fonts/pulsarOriginal.otf");
 }
 @font-face {
   font-family: "Roboto";
-  src: url("./src/assets/fonts/Roboto-Light.ttf");
+  src: url("../src/assets/fonts/Roboto-Light.ttf");
   font-weight: 300;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("./src/assets/fonts/Roboto-Regular.ttf");
+  src: url("../src/assets/fonts/Roboto-Regular.ttf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("./src/assets/fonts/Roboto-Medium.ttf");
+  src: url("../src/assets/fonts/Roboto-Medium.ttf");
   font-weight: 500;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("./src/assets/fonts/Roboto-Bold.ttf");
+  src: url("../src/assets/fonts/Roboto-Bold.ttf");
   font-weight: 700;
 }
 * {
@@ -102,9 +102,18 @@ h2 {
   color: #ffffff;
   font-size: 28px;
 }
+.about__main_info__info__amount .num_button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.about__main_info__info__amount .num_button:active {
+  background-color: rgba(0, 197, 255, 0.5);
+}
 .about__main_info__info__amount .amount {
   border: 3px solid #00c5ff;
+  background-color: #141c24;
+  color: #ffffff;
   border-radius: 10px;
+  font-size: 28px;
   width: 40px;
   height: 40px;
   text-align: center;
@@ -112,6 +121,7 @@ h2 {
   justify-content: center;
   align-items: center;
   margin: 0 25px;
+  font-family: "Pulsar Original";
 }
 
 .about__main_info__info__buy {
@@ -126,6 +136,15 @@ h2 {
   left: 20%;
 }
 
+.about__main_info__info__buy:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+}
+
+.about__main_info__info__buy:active {
+  color: #00c5ff;
+}
+
 .about__gallery {
   display: flex;
   align-items: center;
@@ -137,9 +156,15 @@ h2 {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.1);
   color: #ffffff;
   font-size: 24px;
+}
+.about__gallery .about__gallery__arrow:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.about__gallery .about__gallery__arrow:active {
+  background-color: rgba(0, 197, 255, 0.5);
 }
 
 .about__gallery__photoes {

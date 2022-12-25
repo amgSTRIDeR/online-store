@@ -1,0 +1,10 @@
+@import './assets/styles/fonts';
+@import './assets/styles/variables';
+@import './blocks/header/header.scss';
+@import './blocks/footer/footer.scss';
+@import './blocks/start/start.scss';
+@import './blocks/store/store.scss';
+
+body {
+  margin: 0;
+}
