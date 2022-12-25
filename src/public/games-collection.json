@@ -18,18 +18,18 @@
       "brand": "Hobby World",
       "category_ru":  ["Вечериночные игры", "Игры для компании", "Игры для взрослых", "Карточные игры"],
       "category_en": ["Party Games", "Company Games", "Adult Games", "Card Games"],
-      "thumbnail": "./thumbnails/krutogidon_extrimalno_ostriy_chipsio-thumbnail.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/krutogidon_extrimalno_ostriy_chipsio-thumbnail.png",
       "images": [
-        "./images/krutogidon_extrimalno_ostriy_chipsio-1.webp",
-        "./images/krutogidon_extrimalno_ostriy_chipsio-2.webp",
-        "./images/krutogidon_extrimalno_ostriy_chipsio-3.webp",
-        "./images/krutogidon_extrimalno_ostriy_chipsio-4.webp",
-        "./images/krutogidon_extrimalno_ostriy_chipsio-5.webp",
-        "./images/krutogidon_extrimalno_ostriy_chipsio-6.webp",
-        "./images/krutogidon_extrimalno_ostriy_chipsio-7.webp",
-        "./images/krutogidon_extrimalno_ostriy_chipsio-8.webp",
-        "./images/krutogidon_extrimalno_ostriy_chipsio-9.webp",
-        "./images/krutogidon_extrimalno_ostriy_chipsio-10.webp"
+        "../assets/images/game-collection-imageskrutogidon_extrimalno_ostriy_chipsio-1.webp",
+        "../assets/images/game-collection-imageskrutogidon_extrimalno_ostriy_chipsio-2.webp",
+        "../assets/images/game-collection-imageskrutogidon_extrimalno_ostriy_chipsio-3.webp",
+        "../assets/images/game-collection-imageskrutogidon_extrimalno_ostriy_chipsio-4.webp",
+        "../assets/images/game-collection-imageskrutogidon_extrimalno_ostriy_chipsio-5.webp",
+        "../assets/images/game-collection-imageskrutogidon_extrimalno_ostriy_chipsio-6.webp",
+        "../assets/images/game-collection-imageskrutogidon_extrimalno_ostriy_chipsio-7.webp",
+        "../assets/images/game-collection-imageskrutogidon_extrimalno_ostriy_chipsio-8.webp",
+        "../assets/images/game-collection-imageskrutogidon_extrimalno_ostriy_chipsio-9.webp",
+        "../assets/images/game-collection-imageskrutogidon_extrimalno_ostriy_chipsio-10.webp"
       ]
     },
     {
@@ -50,16 +50,16 @@
       "brand": "Hobby World",
       "category_ru":  ["Вечериночные игры", "Игры для компании", "Игры для взрослых", "Карточные игры"],
       "category_en": ["Party Games", "Company Games", "Adult Games", "Card Games"],
-      "thumbnail": "./thumbnails/Neuderzhimye_Edinorozhki(18+).png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Neuderzhimye_Edinorozhki(18+).png",
       "images": [
-        "./images/Neuderzhimye_Edinorozhki(18+)1.webp",
-        "./images/Neuderzhimye_Edinorozhki(18+)2.webp",
-        "./images/Neuderzhimye_Edinorozhki(18+)3.webp",
-        "./images/Neuderzhimye_Edinorozhki(18+)4.webp",
-        "./images/Neuderzhimye_Edinorozhki(18+)5.webp",
-        "./images/Neuderzhimye_Edinorozhki(18+)6.webp",
-        "./images/Neuderzhimye_Edinorozhki(18+)7.webp",
-        "./images/Neuderzhimye_Edinorozhki(18+)8.webp"
+        "../assets/images/game-collection-imagesNeuderzhimye_Edinorozhki(18+)1.webp",
+        "../assets/images/game-collection-imagesNeuderzhimye_Edinorozhki(18+)2.webp",
+        "../assets/images/game-collection-imagesNeuderzhimye_Edinorozhki(18+)3.webp",
+        "../assets/images/game-collection-imagesNeuderzhimye_Edinorozhki(18+)4.webp",
+        "../assets/images/game-collection-imagesNeuderzhimye_Edinorozhki(18+)5.webp",
+        "../assets/images/game-collection-imagesNeuderzhimye_Edinorozhki(18+)6.webp",
+        "../assets/images/game-collection-imagesNeuderzhimye_Edinorozhki(18+)7.webp",
+        "../assets/images/game-collection-imagesNeuderzhimye_Edinorozhki(18+)8.webp"
       ]
     },
     {
@@ -80,15 +80,15 @@
       "brand": "Hobby World",
       "category_ru":  ["Вечериночные игры", "Игры для компании", "Игры в дорогу", "Карточные игры"],
       "category_en": ["Party games", "Games for the company", "Games on the road", "Card games"],
-      "thumbnail": "./thumbnails/Munchkin.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Munchkin.png",
       "images": [
-        "./images/Munchkin-1.webp",
-        "./images/Munchkin-2.webp",
-        "./images/Munchkin-3.webp",
-        "./images/Munchkin-4.webp",
-        "./images/Munchkin-5.webp",
-        "./images/Munchkin-6.webp",
-        "./images/Munchkin-7.webp"
+        "../assets/images/game-collection-imagesMunchkin-1.webp",
+        "../assets/images/game-collection-imagesMunchkin-2.webp",
+        "../assets/images/game-collection-imagesMunchkin-3.webp",
+        "../assets/images/game-collection-imagesMunchkin-4.webp",
+        "../assets/images/game-collection-imagesMunchkin-5.webp",
+        "../assets/images/game-collection-imagesMunchkin-6.webp",
+        "../assets/images/game-collection-imagesMunchkin-7.webp"
       ]
     },
     {
@@ -109,16 +109,16 @@
       "brand": "Hobby World",
       "category_ru":  ["Вечериночные игры", "Игры для компании", "Для двоих", "Карточные игры", "Семейные игры"],
       "category_en": ["Party games", "Games for the company", "For two", "Card games", "Family games"],
-      "thumbnail": "./thumbnails/vzryvnye_kotyata.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/vzryvnye_kotyata.png",
       "images": [
-        "./images/vzryvnye_kotyata1.webp",
-        "./images/vzryvnye_kotyata2.webp",
-        "./images/vzryvnye_kotyata3.webp",
-        "./images/vzryvnye_kotyata4.webp",
-        "./images/vzryvnye_kotyata5.webp",
-        "./images/vzryvnye_kotyata6.webp",
-        "./images/vzryvnye_kotyata7.webp",
-        "./images/vzryvnye_kotyata8.webp"
+        "../assets/images/game-collection-imagesvzryvnye_kotyata1.webp",
+        "../assets/images/game-collection-imagesvzryvnye_kotyata2.webp",
+        "../assets/images/game-collection-imagesvzryvnye_kotyata3.webp",
+        "../assets/images/game-collection-imagesvzryvnye_kotyata4.webp",
+        "../assets/images/game-collection-imagesvzryvnye_kotyata5.webp",
+        "../assets/images/game-collection-imagesvzryvnye_kotyata6.webp",
+        "../assets/images/game-collection-imagesvzryvnye_kotyata7.webp",
+        "../assets/images/game-collection-imagesvzryvnye_kotyata8.webp"
       ]
     },
     {
@@ -139,17 +139,17 @@
       "brand": "Экономикус",
       "category_ru":  ["Вечериночные игры", "Игры для взрослых", "Игры для компании", "Карточные игры"],
       "category_en": ["Party games", "Games for adults", "Games for the company", "Card games"],
-      "thumbnail": "./thumbnails/Bunker.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Bunker.png",
       "images": [
-        "./images/Bunker1.webp",
-        "./images/Bunker2.webp",
-        "./images/Bunker3.webp",
-        "./images/Bunker4.webp",
-        "./images/Bunker5.webp",
-        "./images/Bunker6.webp",
-        "./images/Bunker7.webp",
-        "./images/Bunker8.webp",
-        "./images/Bunker9.webp"
+        "../assets/images/game-collection-imagesBunker1.webp",
+        "../assets/images/game-collection-imagesBunker2.webp",
+        "../assets/images/game-collection-imagesBunker3.webp",
+        "../assets/images/game-collection-imagesBunker4.webp",
+        "../assets/images/game-collection-imagesBunker5.webp",
+        "../assets/images/game-collection-imagesBunker6.webp",
+        "../assets/images/game-collection-imagesBunker7.webp",
+        "../assets/images/game-collection-imagesBunker8.webp",
+        "../assets/images/game-collection-imagesBunker9.webp"
       ]
     },
     {
@@ -170,19 +170,19 @@
       "brand": "Hobby World",
       "category_ru":  ["Вечериночные игры", "Игры для компании", "Карточные игры"],
       "category_en": ["Party Games", "Company Games", "Card Games"],
-      "thumbnail": "./thumbnails/ya_ne_chelovek.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/ya_ne_chelovek.png",
       "images": [
-        "./images/ya_ne_chelovek1.webp",
-        "./images/ya_ne_chelovek2.webp",
-        "./images/ya_ne_chelovek3.webp",
-        "./images/ya_ne_chelovek4.webp",
-        "./images/ya_ne_chelovek5.webp",
-        "./images/ya_ne_chelovek6.webp",
-        "./images/ya_ne_chelovek7.webp",
-        "./images/ya_ne_chelovek8.webp",
-        "./images/ya_ne_chelovek9.webp",
-        "./images/ya_ne_chelovek10.webp",
-        "./images/ya_ne_chelovek11.webp"
+        "../assets/images/game-collection-imagesya_ne_chelovek1.webp",
+        "../assets/images/game-collection-imagesya_ne_chelovek2.webp",
+        "../assets/images/game-collection-imagesya_ne_chelovek3.webp",
+        "../assets/images/game-collection-imagesya_ne_chelovek4.webp",
+        "../assets/images/game-collection-imagesya_ne_chelovek5.webp",
+        "../assets/images/game-collection-imagesya_ne_chelovek6.webp",
+        "../assets/images/game-collection-imagesya_ne_chelovek7.webp",
+        "../assets/images/game-collection-imagesya_ne_chelovek8.webp",
+        "../assets/images/game-collection-imagesya_ne_chelovek9.webp",
+        "../assets/images/game-collection-imagesya_ne_chelovek10.webp",
+        "../assets/images/game-collection-imagesya_ne_chelovek11.webp"
       ]
     },
     {
@@ -203,19 +203,19 @@
       "brand": "New Making Studio",
       "category_ru":  ["Вечериночные игры", "Игры для компании", "Семейные", "Карточные игры"],
       "category_en": ["Party Games", "Company Games", "Family Games", "Card Games"],
-      "thumbnail": "./thumbnails/vnutri_lapenko.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/vnutri_lapenko.png",
       "images": [
-        "./images/vnutri_lapenko1.webp",
-        "./images/vnutri_lapenko2.webp",
-        "./images/vnutri_lapenko3.webp",
-        "./images/vnutri_lapenko4.webp",
-        "./images/vnutri_lapenko5.webp",
-        "./images/vnutri_lapenko6.webp",
-        "./images/vnutri_lapenko7.webp",
-        "./images/vnutri_lapenko8.webp",
-        "./images/vnutri_lapenko9.webp",
-        "./images/vnutri_lapenko10.webp",
-        "./images/vnutri_lapenko11.webp"
+        "../assets/images/game-collection-imagesvnutri_lapenko1.webp",
+        "../assets/images/game-collection-imagesvnutri_lapenko2.webp",
+        "../assets/images/game-collection-imagesvnutri_lapenko3.webp",
+        "../assets/images/game-collection-imagesvnutri_lapenko4.webp",
+        "../assets/images/game-collection-imagesvnutri_lapenko5.webp",
+        "../assets/images/game-collection-imagesvnutri_lapenko6.webp",
+        "../assets/images/game-collection-imagesvnutri_lapenko7.webp",
+        "../assets/images/game-collection-imagesvnutri_lapenko8.webp",
+        "../assets/images/game-collection-imagesvnutri_lapenko9.webp",
+        "../assets/images/game-collection-imagesvnutri_lapenko10.webp",
+        "../assets/images/game-collection-imagesvnutri_lapenko11.webp"
       ]
     },
     {
@@ -236,13 +236,13 @@
       "brand": "Hobby World",
       "category_ru":  ["Вечериночные игры", "Стратегические игры", "Игры для компании"],
       "category_en": ["Party Games", "Strategy Games", "Company Games"],
-      "thumbnail": "./thumbnails/citadels_classic.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/citadels_classic.png",
       "images": [
-        "./images/citadels_classic1.webp",
-        "./images/citadels_classic2.webp",
-        "./images/citadels_classic3.webp",
-        "./images/citadels_classic4.webp",
-        "./images/citadels_classic5.webp"
+        "../assets/images/game-collection-imagescitadels_classic1.webp",
+        "../assets/images/game-collection-imagescitadels_classic2.webp",
+        "../assets/images/game-collection-imagescitadels_classic3.webp",
+        "../assets/images/game-collection-imagescitadels_classic4.webp",
+        "../assets/images/game-collection-imagescitadels_classic5.webp"
       ]
     },
     {
@@ -263,17 +263,17 @@
       "brand": "Hobby World",
       "category_ru":  ["Вечериночные игры", "Кооперативные игры", "Игры для взрослых", "Карточные игры", "Игры в дорогу"],
       "category_en": ["Party games", "Co-op games", "Adult games", "Card games", "Games on the road"],
-      "thumbnail": "./thumbnails/Vsmortit_Vsjo.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Vsmortit_Vsjo.png",
       "images": [
-        "./images/Vsmortit_Vsjo1.webp",
-        "./images/Vsmortit_Vsjo2.webp",
-        "./images/Vsmortit_Vsjo3.webp",
-        "./images/Vsmortit_Vsjo4.webp",
-        "./images/Vsmortit_Vsjo5.webp",
-        "./images/Vsmortit_Vsjo6.webp",
-        "./images/Vsmortit_Vsjo7.webp",
-        "./images/Vsmortit_Vsjo8.webp",
-        "./images/Vsmortit_Vsjo9.webp"
+        "../assets/images/game-collection-imagesVsmortit_Vsjo1.webp",
+        "../assets/images/game-collection-imagesVsmortit_Vsjo2.webp",
+        "../assets/images/game-collection-imagesVsmortit_Vsjo3.webp",
+        "../assets/images/game-collection-imagesVsmortit_Vsjo4.webp",
+        "../assets/images/game-collection-imagesVsmortit_Vsjo5.webp",
+        "../assets/images/game-collection-imagesVsmortit_Vsjo6.webp",
+        "../assets/images/game-collection-imagesVsmortit_Vsjo7.webp",
+        "../assets/images/game-collection-imagesVsmortit_Vsjo8.webp",
+        "../assets/images/game-collection-imagesVsmortit_Vsjo9.webp"
       ]
     },
     {
@@ -294,18 +294,18 @@
       "brand": "Hobby World",
       "category_ru":  ["Вечериночные игры", "Для двоих", "Игры для компании", "Карточные игры"],
       "category_en": ["Party games", "For two", "Games for the company", "Card games"],
-      "thumbnail": "./thumbnails/Strashnye_Skazki.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Strashnye_Skazki.png",
       "images": [
-        "./images/Strashnye_Skazki1.webp",
-        "./images/Strashnye_Skazki2.webp",
-        "./images/Strashnye_Skazki3.webp",
-        "./images/Strashnye_Skazki4.webp",
-        "./images/Strashnye_Skazki5.webp",
-        "./images/Strashnye_Skazki6.webp",
-        "./images/Strashnye_Skazki7.webp",
-        "./images/Strashnye_Skazki8.webp",
-        "./images/Strashnye_Skazki9.webp",
-        "./images/Strashnye_Skazki10.webp"
+        "../assets/images/game-collection-imagesStrashnye_Skazki1.webp",
+        "../assets/images/game-collection-imagesStrashnye_Skazki2.webp",
+        "../assets/images/game-collection-imagesStrashnye_Skazki3.webp",
+        "../assets/images/game-collection-imagesStrashnye_Skazki4.webp",
+        "../assets/images/game-collection-imagesStrashnye_Skazki5.webp",
+        "../assets/images/game-collection-imagesStrashnye_Skazki6.webp",
+        "../assets/images/game-collection-imagesStrashnye_Skazki7.webp",
+        "../assets/images/game-collection-imagesStrashnye_Skazki8.webp",
+        "../assets/images/game-collection-imagesStrashnye_Skazki9.webp",
+        "../assets/images/game-collection-imagesStrashnye_Skazki10.webp"
       ]
     },
     {
@@ -326,16 +326,16 @@
       "brand": "Hobby World",
       "category_ru": ["Вечериночные игры", "Для двоих", "Игры для компании", "Карточные игры", "Игры в дорогу"],
       "category_en": ["Party games", "For two", "Games for the company", "Card games", "Games on the road"],
-      "thumbnail": "./thumbnails/Neuderzhimye_Edinorozhki.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Neuderzhimye_Edinorozhki.png",
       "images": [
-        "./images/Neuderzhimye_Edinorozhki1.webp",
-        "./images/Neuderzhimye_Edinorozhki2.webp",
-        "./images/Neuderzhimye_Edinorozhki3.webp",
-        "./images/Neuderzhimye_Edinorozhki4.webp",
-        "./images/Neuderzhimye_Edinorozhki5.webp",
-        "./images/Neuderzhimye_Edinorozhki6.webp",
-        "./images/Neuderzhimye_Edinorozhki7.webp",
-        "./images/Neuderzhimye_Edinorozhki8.webp"
+        "../assets/images/game-collection-imagesNeuderzhimye_Edinorozhki1.webp",
+        "../assets/images/game-collection-imagesNeuderzhimye_Edinorozhki2.webp",
+        "../assets/images/game-collection-imagesNeuderzhimye_Edinorozhki3.webp",
+        "../assets/images/game-collection-imagesNeuderzhimye_Edinorozhki4.webp",
+        "../assets/images/game-collection-imagesNeuderzhimye_Edinorozhki5.webp",
+        "../assets/images/game-collection-imagesNeuderzhimye_Edinorozhki6.webp",
+        "../assets/images/game-collection-imagesNeuderzhimye_Edinorozhki7.webp",
+        "../assets/images/game-collection-imagesNeuderzhimye_Edinorozhki8.webp"
       ]
     },
     {
@@ -356,15 +356,15 @@
       "brand": "Hobby World",
       "category_ru": ["Вечериночные игры", "Игры для взрослых", "Игры для компании", "Карточные игры"],
       "category_en": ["Party games", "Games for adults", "Games for the company", "Card games"],
-      "thumbnail": "./thumbnails/Taverna_Krasnyj_Drakon.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Taverna_Krasnyj_Drakon.png",
       "images": [
-        "./images/Taverna_Krasnyj_Drakon1.webp",
-        "./images/Taverna_Krasnyj_Drakon2.webp",
-        "./images/Taverna_Krasnyj_Drakon3.webp",
-        "./images/Taverna_Krasnyj_Drakon4.webp",
-        "./images/Taverna_Krasnyj_Drakon5.webp",
-        "./images/Taverna_Krasnyj_Drakon6.webp",
-        "./images/Taverna_Krasnyj_Drakon7.webp"
+        "../assets/images/game-collection-imagesTaverna_Krasnyj_Drakon1.webp",
+        "../assets/images/game-collection-imagesTaverna_Krasnyj_Drakon2.webp",
+        "../assets/images/game-collection-imagesTaverna_Krasnyj_Drakon3.webp",
+        "../assets/images/game-collection-imagesTaverna_Krasnyj_Drakon4.webp",
+        "../assets/images/game-collection-imagesTaverna_Krasnyj_Drakon5.webp",
+        "../assets/images/game-collection-imagesTaverna_Krasnyj_Drakon6.webp",
+        "../assets/images/game-collection-imagesTaverna_Krasnyj_Drakon7.webp"
       ]
     },
     {
@@ -385,16 +385,16 @@
       "brand": "Экономикус",
       "category_ru": ["Вечериночные игры", "Игры для взрослых", "Игры для компании"],
       "category_en": ["Party games", "Games for adults", "Games for the company"],
-      "thumbnail": "./thumbnails/memy.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/memy.png",
       "images": [
-        "./images/memy1.webp",
-        "./images/memy2.webp",
-        "./images/memy3.webp",
-        "./images/memy4.webp",
-        "./images/memy5.webp",
-        "./images/memy6.webp",
-        "./images/memy7.webp",
-        "./images/memy8.webp"
+        "../assets/images/game-collection-imagesmemy1.webp",
+        "../assets/images/game-collection-imagesmemy2.webp",
+        "../assets/images/game-collection-imagesmemy3.webp",
+        "../assets/images/game-collection-imagesmemy4.webp",
+        "../assets/images/game-collection-imagesmemy5.webp",
+        "../assets/images/game-collection-imagesmemy6.webp",
+        "../assets/images/game-collection-imagesmemy7.webp",
+        "../assets/images/game-collection-imagesmemy8.webp"
       ]
     },
     {
@@ -415,16 +415,16 @@
       "brand": "Hobby World",
       "category_ru": ["Вечериночные игры", "Полукооперативные игры", "Игры для компании", "Карточные игры", "Приключенческие игры", "Игры для взрослых"],
       "category_en": ["Party Games", "Semi-Cooperative Games", "Company Games", "Card Games", "Adventure Games", "Adult Games"],
-      "thumbnail": "./thumbnails/Nechto.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Nechto.png",
       "images": [
-        "./images/Nechto1.webp",
-        "./images/Nechto2.webp",
-        "./images/Nechto3.webp",
-        "./images/Nechto4.webp",
-        "./images/Nechto5.webp",
-        "./images/Nechto6.webp",
-        "./images/Nechto7.webp",
-        "./images/Nechto8.webp"
+        "../assets/images/game-collection-imagesNechto1.webp",
+        "../assets/images/game-collection-imagesNechto2.webp",
+        "../assets/images/game-collection-imagesNechto3.webp",
+        "../assets/images/game-collection-imagesNechto4.webp",
+        "../assets/images/game-collection-imagesNechto5.webp",
+        "../assets/images/game-collection-imagesNechto6.webp",
+        "../assets/images/game-collection-imagesNechto7.webp",
+        "../assets/images/game-collection-imagesNechto8.webp"
       ]
     },
     {
@@ -445,15 +445,15 @@
       "brand": "Hobby World",
       "category_ru": ["Вечериночные игры", "Полукооперативные игры", "Игры для компании", "Семейные игры", "Детективные игры"],
       "category_en": ["Party games", "Semi-cooperative games", "Company games", "Family games", "Detective games"],
-      "thumbnail": "./thumbnails/spyfall_new.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/spyfall_new.png",
       "images": [
-        "./images/spyfall_new1.webp",
-        "./images/spyfall_new2.webp",
-        "./images/spyfall_new3.webp",
-        "./images/spyfall_new4.webp",
-        "./images/spyfall_new5.webp",
-        "./images/spyfall_new6.webp",
-        "./images/spyfall_new7.webp"
+        "../assets/images/game-collection-imagesspyfall_new1.webp",
+        "../assets/images/game-collection-imagesspyfall_new2.webp",
+        "../assets/images/game-collection-imagesspyfall_new3.webp",
+        "../assets/images/game-collection-imagesspyfall_new4.webp",
+        "../assets/images/game-collection-imagesspyfall_new5.webp",
+        "../assets/images/game-collection-imagesspyfall_new6.webp",
+        "../assets/images/game-collection-imagesspyfall_new7.webp"
       ]
     },
     {
@@ -474,19 +474,19 @@
       "brand": "Magellan",
       "category_ru": ["Вечериночные игры", "Командные игры", "Игры для компании", "Мафия", "Детективные игры"],
       "category_en": ["Party Games", "Team Games", "Company Games", "Mafia", "Detective Games"],
-      "thumbnail": "./thumbnails/Sudniy_Den.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Sudniy_Den.png",
       "images": [
-        "./images/Sudniy_Den1.webp",
-        "./images/Sudniy_Den2.webp",
-        "./images/Sudniy_Den3.webp",
-        "./images/Sudniy_Den4.webp",
-        "./images/Sudniy_Den5.webp",
-        "./images/Sudniy_Den6.webp",
-        "./images/Sudniy_Den7.webp",
-        "./images/Sudniy_Den8.webp",
-        "./images/Sudniy_Den9.webp",
-        "./images/Sudniy_Den10.webp",
-        "./images/Sudniy_Den11.webp"
+        "../assets/images/game-collection-imagesSudniy_Den1.webp",
+        "../assets/images/game-collection-imagesSudniy_Den2.webp",
+        "../assets/images/game-collection-imagesSudniy_Den3.webp",
+        "../assets/images/game-collection-imagesSudniy_Den4.webp",
+        "../assets/images/game-collection-imagesSudniy_Den5.webp",
+        "../assets/images/game-collection-imagesSudniy_Den6.webp",
+        "../assets/images/game-collection-imagesSudniy_Den7.webp",
+        "../assets/images/game-collection-imagesSudniy_Den8.webp",
+        "../assets/images/game-collection-imagesSudniy_Den9.webp",
+        "../assets/images/game-collection-imagesSudniy_Den10.webp",
+        "../assets/images/game-collection-imagesSudniy_Den11.webp"
       ]
     },
     {
@@ -507,18 +507,18 @@
       "brand": "Magellan",
       "category_ru": ["Вечериночные игры", "Игры для взрослых", "Игры для компании"],
       "category_en": ["Party games", "Games for adults", "Games for the company"],
-      "thumbnail": "./thumbnails/Tramvay_Smerti.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Tramvay_Smerti.png",
       "images": [
-        "./images/Tramvay_Smerti1.webp",
-        "./images/Tramvay_Smerti2.webp",
-        "./images/Tramvay_Smerti3.webp",
-        "./images/Tramvay_Smerti4.webp",
-        "./images/Tramvay_Smerti5.webp",
-        "./images/Tramvay_Smerti6.webp",
-        "./images/Tramvay_Smerti7.webp",
-        "./images/Tramvay_Smerti8.webp",
-        "./images/Tramvay_Smerti9.webp",
-        "./images/Tramvay_Smerti10.webp"
+        "../assets/images/game-collection-imagesTramvay_Smerti1.webp",
+        "../assets/images/game-collection-imagesTramvay_Smerti2.webp",
+        "../assets/images/game-collection-imagesTramvay_Smerti3.webp",
+        "../assets/images/game-collection-imagesTramvay_Smerti4.webp",
+        "../assets/images/game-collection-imagesTramvay_Smerti5.webp",
+        "../assets/images/game-collection-imagesTramvay_Smerti6.webp",
+        "../assets/images/game-collection-imagesTramvay_Smerti7.webp",
+        "../assets/images/game-collection-imagesTramvay_Smerti8.webp",
+        "../assets/images/game-collection-imagesTramvay_Smerti9.webp",
+        "../assets/images/game-collection-imagesTramvay_Smerti10.webp"
       ]
     },
     {
@@ -539,16 +539,16 @@
       "brand": "Hobby World",
       "category_ru": ["Вечериночные игры", "Карточные игры", "Игры в дорогу", "Логические игры"],
       "category_en": ["Party games", "Card games", "Games on the road", "Logic games"],
-      "thumbnail": "./thumbnails/Conex.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Conex.png",
       "images": [
-        "./images/Conex1.webp",
-        "./images/Conex2.webp",
-        "./images/Conex3.webp",
-        "./images/Conex4.webp",
-        "./images/Conex5.webp",
-        "./images/Conex6.webp",
-        "./images/Conex7.webp",
-        "./images/Conex8.webp"
+        "../assets/images/game-collection-imagesConex1.webp",
+        "../assets/images/game-collection-imagesConex2.webp",
+        "../assets/images/game-collection-imagesConex3.webp",
+        "../assets/images/game-collection-imagesConex4.webp",
+        "../assets/images/game-collection-imagesConex5.webp",
+        "../assets/images/game-collection-imagesConex6.webp",
+        "../assets/images/game-collection-imagesConex7.webp",
+        "../assets/images/game-collection-imagesConex8.webp"
       ]
     },
     {
@@ -569,17 +569,17 @@
       "brand": "Экивоки",
       "category_ru": ["Вечериночные игры", "Игры для компании", "Семейные игры"],
       "category_en": ["Party Games", "Company Games", "Family Games"],
-      "thumbnail": "./thumbnails/Ekivoki.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Ekivoki.png",
       "images": [
-        "./images/Ekivoki1.webp",
-        "./images/Ekivoki2.webp",
-        "./images/Ekivoki3.webp",
-        "./images/Ekivoki4.webp",
-        "./images/Ekivoki5.webp",
-        "./images/Ekivoki6.webp",
-        "./images/Ekivoki7.webp",
-        "./images/Ekivoki8.webp",
-        "./images/Ekivoki9.webp"
+        "../assets/images/game-collection-imagesEkivoki1.webp",
+        "../assets/images/game-collection-imagesEkivoki2.webp",
+        "../assets/images/game-collection-imagesEkivoki3.webp",
+        "../assets/images/game-collection-imagesEkivoki4.webp",
+        "../assets/images/game-collection-imagesEkivoki5.webp",
+        "../assets/images/game-collection-imagesEkivoki6.webp",
+        "../assets/images/game-collection-imagesEkivoki7.webp",
+        "../assets/images/game-collection-imagesEkivoki8.webp",
+        "../assets/images/game-collection-imagesEkivoki9.webp"
       ]
     },
     {
@@ -600,15 +600,15 @@
       "brand": "Стиль Жизни",
       "category_ru": ["Вечериночные игры", "Полукооперативные игры", "Игры в дорогу", "Семейные игры", "Кооперативные игры", "Карточные игры", "Игры для компании"],
       "category_en": ["Party games", "Semi-cooperative games", "Games on the road", "Family games", "Co-op games", "Card games", "Company games"],
-      "thumbnail": "./thumbnails/Gnomi_Vrediteli.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Gnomi_Vrediteli.png",
       "images": [
-        "./images/Gnomi_Vrediteli1.webp",
-        "./images/Gnomi_Vrediteli2.webp",
-        "./images/Gnomi_Vrediteli3.webp",
-        "./images/Gnomi_Vrediteli4.webp",
-        "./images/Gnomi_Vrediteli5.webp",
-        "./images/Gnomi_Vrediteli6.webp",
-        "./images/Gnomi_Vrediteli7.webp"
+        "../assets/images/game-collection-imagesGnomi_Vrediteli1.webp",
+        "../assets/images/game-collection-imagesGnomi_Vrediteli2.webp",
+        "../assets/images/game-collection-imagesGnomi_Vrediteli3.webp",
+        "../assets/images/game-collection-imagesGnomi_Vrediteli4.webp",
+        "../assets/images/game-collection-imagesGnomi_Vrediteli5.webp",
+        "../assets/images/game-collection-imagesGnomi_Vrediteli6.webp",
+        "../assets/images/game-collection-imagesGnomi_Vrediteli7.webp"
       ]
     },
     {
@@ -629,18 +629,18 @@
       "brand": "Magellan",
       "category_ru": ["Вечериночные игры", "Полукооперативные игры", "Игры в дорогу", "Семейные игры", "Кооперативные игры", "Карточные игры", "Игры для компании"],
       "category_en": ["Party games", "Semi-cooperative games", "Games on the road", "Family games", "Co-op games", "Card games", "Company games"],
-      "thumbnail": "./thumbnails/Samyiy_ujasnyiy_chelovek.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Samyiy_ujasnyiy_chelovek.png",
       "images": [
-        "./images/Samyiy_ujasnyiy_chelovek1.webp",
-        "./images/Samyiy_ujasnyiy_chelovek2.webp",
-        "./images/Samyiy_ujasnyiy_chelovek3.webp",
-        "./images/Samyiy_ujasnyiy_chelovek4.webp",
-        "./images/Samyiy_ujasnyiy_chelovek5.webp",
-        "./images/Samyiy_ujasnyiy_chelovek6.webp",
-        "./images/Samyiy_ujasnyiy_chelovek7.webp",
-        "./images/Samyiy_ujasnyiy_chelovek8.webp",
-        "./images/Samyiy_ujasnyiy_chelovek9.webp",
-        "./images/Samyiy_ujasnyiy_chelovek10.webp"
+        "../assets/images/game-collection-imagesSamyiy_ujasnyiy_chelovek1.webp",
+        "../assets/images/game-collection-imagesSamyiy_ujasnyiy_chelovek2.webp",
+        "../assets/images/game-collection-imagesSamyiy_ujasnyiy_chelovek3.webp",
+        "../assets/images/game-collection-imagesSamyiy_ujasnyiy_chelovek4.webp",
+        "../assets/images/game-collection-imagesSamyiy_ujasnyiy_chelovek5.webp",
+        "../assets/images/game-collection-imagesSamyiy_ujasnyiy_chelovek6.webp",
+        "../assets/images/game-collection-imagesSamyiy_ujasnyiy_chelovek7.webp",
+        "../assets/images/game-collection-imagesSamyiy_ujasnyiy_chelovek8.webp",
+        "../assets/images/game-collection-imagesSamyiy_ujasnyiy_chelovek9.webp",
+        "../assets/images/game-collection-imagesSamyiy_ujasnyiy_chelovek10.webp"
       ]
     },
     {
@@ -661,17 +661,17 @@
       "brand": "Blue Orange Games",
       "category_ru": ["Вечериночные игры", "Карточные игры", "Игры для компании", "Игры для взрослых"],
       "category_en": ["Party Games", "Card Games", "Company Games", "Adult Games"],
-      "thumbnail": "./thumbnails/kucha_voprosov.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/kucha_voprosov.png",
       "images": [
-        "./images/kucha_voprosov1.webp",
-        "./images/kucha_voprosov2.webp",
-        "./images/kucha_voprosov3.webp",
-        "./images/kucha_voprosov4.webp",
-        "./images/kucha_voprosov5.webp",
-        "./images/kucha_voprosov6.webp",
-        "./images/kucha_voprosov7.webp",
-        "./images/kucha_voprosov8.webp",
-        "./images/kucha_voprosov9.webp"
+        "../assets/images/game-collection-imageskucha_voprosov1.webp",
+        "../assets/images/game-collection-imageskucha_voprosov2.webp",
+        "../assets/images/game-collection-imageskucha_voprosov3.webp",
+        "../assets/images/game-collection-imageskucha_voprosov4.webp",
+        "../assets/images/game-collection-imageskucha_voprosov5.webp",
+        "../assets/images/game-collection-imageskucha_voprosov6.webp",
+        "../assets/images/game-collection-imageskucha_voprosov7.webp",
+        "../assets/images/game-collection-imageskucha_voprosov8.webp",
+        "../assets/images/game-collection-imageskucha_voprosov9.webp"
       ]
     },
     {
@@ -692,16 +692,16 @@
       "brand": "GaGa Games",
       "category_ru": ["Вечериночные игры", "Игры для компании", "Командные игры"],
       "category_en": ["Party Games", "Company Games", "Team Games"],
-      "thumbnail": "./thumbnails/Codenames.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Codenames.png",
       "images": [
-        "./images/Codenames1.webp",
-        "./images/Codenames2.webp",
-        "./images/Codenames3.webp",
-        "./images/Codenames4.webp",
-        "./images/Codenames5.webp",
-        "./images/Codenames6.webp",
-        "./images/Codenames7.webp",
-        "./images/Codenames8.webp"
+        "../assets/images/game-collection-imagesCodenames1.webp",
+        "../assets/images/game-collection-imagesCodenames2.webp",
+        "../assets/images/game-collection-imagesCodenames3.webp",
+        "../assets/images/game-collection-imagesCodenames4.webp",
+        "../assets/images/game-collection-imagesCodenames5.webp",
+        "../assets/images/game-collection-imagesCodenames6.webp",
+        "../assets/images/game-collection-imagesCodenames7.webp",
+        "../assets/images/game-collection-imagesCodenames8.webp"
       ]
     },
     {
@@ -722,16 +722,16 @@
       "brand": "Games Workshop",
       "category_ru": ["Вечериночные игры", "Игры для компании", "Карточные игры"],
       "category_en": ["Party Games", "Company Games", "Card Games"],
-      "thumbnail": "./thumbnails/Munchkin_Warhammer-40000.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Munchkin_Warhammer-40000.png",
       "images": [
-        "./images/Munchkin_Warhammer-40000_1.webp",
-        "./images/Munchkin_Warhammer-40000_2.webp",
-        "./images/Munchkin_Warhammer-40000_3.webp",
-        "./images/Munchkin_Warhammer-40000_4.webp",
-        "./images/Munchkin_Warhammer-40000_5.webp",
-        "./images/Munchkin_Warhammer-40000_6.webp",
-        "./images/Munchkin_Warhammer-40000_7.webp",
-        "./images/Munchkin_Warhammer-40000_8.webp"
+        "../assets/images/game-collection-imagesMunchkin_Warhammer-40000_1.webp",
+        "../assets/images/game-collection-imagesMunchkin_Warhammer-40000_2.webp",
+        "../assets/images/game-collection-imagesMunchkin_Warhammer-40000_3.webp",
+        "../assets/images/game-collection-imagesMunchkin_Warhammer-40000_4.webp",
+        "../assets/images/game-collection-imagesMunchkin_Warhammer-40000_5.webp",
+        "../assets/images/game-collection-imagesMunchkin_Warhammer-40000_6.webp",
+        "../assets/images/game-collection-imagesMunchkin_Warhammer-40000_7.webp",
+        "../assets/images/game-collection-imagesMunchkin_Warhammer-40000_8.webp"
       ]
     },
     {
@@ -752,12 +752,12 @@
       "brand": "Magellan",
       "category_ru": ["Вечериночные игры", "Игры для компании", "Игры для взрослых"],
       "category_en": ["Party games", "Games for the company", "Games for adults"],
-      "thumbnail": "./thumbnails/Fak_moy_mozg.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Fak_moy_mozg.png",
       "images": [
-        "./images/Fak_moy_mozg_1.webp",
-        "./images/Fak_moy_mozg_2.webp",
-        "./images/Fak_moy_mozg_3.webp",
-        "./images/Fak_moy_mozg_4.webp"
+        "../assets/images/game-collection-imagesFak_moy_mozg_1.webp",
+        "../assets/images/game-collection-imagesFak_moy_mozg_2.webp",
+        "../assets/images/game-collection-imagesFak_moy_mozg_3.webp",
+        "../assets/images/game-collection-imagesFak_moy_mozg_4.webp"
       ]
     },
     {
@@ -778,19 +778,19 @@
       "brand": "Hobby World",
       "category_ru": ["Для двоих", "Для одного", "Хардкорные игры", "Детективные игры"],
       "category_en": ["For two", "For one", "Hardcore games", "Detective games"],
-      "thumbnail": "./thumbnails/JKI_UjasArkhama.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/JKI_UjasArkhama.png",
       "images": [
-        "./images/JKI_UjasArkhama1.webp",
-        "./images/JKI_UjasArkhama2.webp",
-        "./images/JKI_UjasArkhama3.webp",
-        "./images/JKI_UjasArkhama4.webp",
-        "./images/JKI_UjasArkhama5.webp",
-        "./images/JKI_UjasArkhama6.webp",
-        "./images/JKI_UjasArkhama7.webp",
-        "./images/JKI_UjasArkhama8.webp",
-        "./images/JKI_UjasArkhama9.webp",
-        "./images/JKI_UjasArkhama10.webp",
-        "./images/JKI_UjasArkhama11.webp"
+        "../assets/images/game-collection-imagesJKI_UjasArkhama1.webp",
+        "../assets/images/game-collection-imagesJKI_UjasArkhama2.webp",
+        "../assets/images/game-collection-imagesJKI_UjasArkhama3.webp",
+        "../assets/images/game-collection-imagesJKI_UjasArkhama4.webp",
+        "../assets/images/game-collection-imagesJKI_UjasArkhama5.webp",
+        "../assets/images/game-collection-imagesJKI_UjasArkhama6.webp",
+        "../assets/images/game-collection-imagesJKI_UjasArkhama7.webp",
+        "../assets/images/game-collection-imagesJKI_UjasArkhama8.webp",
+        "../assets/images/game-collection-imagesJKI_UjasArkhama9.webp",
+        "../assets/images/game-collection-imagesJKI_UjasArkhama10.webp",
+        "../assets/images/game-collection-imagesJKI_UjasArkhama11.webp"
       ]
     },
     {
@@ -811,18 +811,18 @@
       "brand": "Hobby World",
       "category_ru": ["Для двоих", "Для одного", "Хардкорные игры", "Детективные игры", "Приключенческие игры", "Кооперативные игры", "Хардкорные игры"],
       "category_en": ["For two", "For one", "Hardcore games", "Detective games", "Adventure games", "Co-op games", "Hardcore games"],
-      "thumbnail": "./thumbnails/EldritchHorror.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/EldritchHorror.png",
       "images": [
-        "./images/EldritchHorror1.webp",
-        "./images/EldritchHorror2.webp",
-        "./images/EldritchHorror3.webp",
-        "./images/EldritchHorror4.webp",
-        "./images/EldritchHorror5.webp",
-        "./images/EldritchHorror6.webp",
-        "./images/EldritchHorror7.webp",
-        "./images/EldritchHorror8.webp",
-        "./images/EldritchHorror9.webp",
-        "./images/EldritchHorror10.webp"
+        "../assets/images/game-collection-imagesEldritchHorror1.webp",
+        "../assets/images/game-collection-imagesEldritchHorror2.webp",
+        "../assets/images/game-collection-imagesEldritchHorror3.webp",
+        "../assets/images/game-collection-imagesEldritchHorror4.webp",
+        "../assets/images/game-collection-imagesEldritchHorror5.webp",
+        "../assets/images/game-collection-imagesEldritchHorror6.webp",
+        "../assets/images/game-collection-imagesEldritchHorror7.webp",
+        "../assets/images/game-collection-imagesEldritchHorror8.webp",
+        "../assets/images/game-collection-imagesEldritchHorror9.webp",
+        "../assets/images/game-collection-imagesEldritchHorror10.webp"
       ]
     },
     {
@@ -843,12 +843,12 @@
       "brand": "Celaeno Books",
       "category_ru": ["Детективные игры", "Приключенческие игры", "Книги-игры"],
       "category_en": ["Detective games", "Adventure games", "Game books"],
-      "thumbnail": "./thumbnails/EldritchHorror.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/EldritchHorror.png",
       "images": [
-        "./images/hrebty_bezumiya_kniga_igra1.webp",
-        "./images/hrebty_bezumiya_kniga_igra2.webp",
-        "./images/hrebty_bezumiya_kniga_igra3.webp",
-        "./images/hrebty_bezumiya_kniga_igra4.webp"
+        "../assets/images/game-collection-imageshrebty_bezumiya_kniga_igra1.webp",
+        "../assets/images/game-collection-imageshrebty_bezumiya_kniga_igra2.webp",
+        "../assets/images/game-collection-imageshrebty_bezumiya_kniga_igra3.webp",
+        "../assets/images/game-collection-imageshrebty_bezumiya_kniga_igra4.webp"
       ]
     },
     {
@@ -869,15 +869,15 @@
       "brand": "Fantasy Flight Games",
       "category_ru": ["Детективные игры", "Полукооперативные игры", "Хардкорные игры", "Командные игры", "Приключенческие игры", "Игры для компании"],
       "category_en": ["Detective games", "Semi-cooperative games", "Hardcore games", "Team games", "Adventure games", "Company games"],
-      "thumbnail": "./thumbnails/unfathomable.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/unfathomable.png",
       "images": [
-        "./images/unfathomable1.webp",
-        "./images/unfathomable2.webp",
-        "./images/unfathomable3.webp",
-        "./images/unfathomable4.webp",
-        "./images/unfathomable5.webp",
-        "./images/unfathomable6.webp",
-        "./images/unfathomable7.webp"
+        "../assets/images/game-collection-imagesunfathomable1.webp",
+        "../assets/images/game-collection-imagesunfathomable2.webp",
+        "../assets/images/game-collection-imagesunfathomable3.webp",
+        "../assets/images/game-collection-imagesunfathomable4.webp",
+        "../assets/images/game-collection-imagesunfathomable5.webp",
+        "../assets/images/game-collection-imagesunfathomable6.webp",
+        "../assets/images/game-collection-imagesunfathomable7.webp"
       ]
     },
     {
@@ -898,12 +898,12 @@
       "brand": "Celaeno Books",
       "category_ru": ["Детективные игры", "Приключенческие игры", "Книги-игры"],
       "category_en": ["Detective games", "Adventure games", "Game books"],
-      "thumbnail": "./thumbnails/The_Shadow_Over_Innsmouth_front.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/The_Shadow_Over_Innsmouth_front.png",
       "images": [
-        "./images/The_Shadow_Over_Innsmouth_front_1.webp",
-        "./images/The_Shadow_Over_Innsmouth_front_2.webp",
-        "./images/The_Shadow_Over_Innsmouth_front_3.webp",
-        "./images/The_Shadow_Over_Innsmouth_front_4.webp"
+        "../assets/images/game-collection-imagesThe_Shadow_Over_Innsmouth_front_1.webp",
+        "../assets/images/game-collection-imagesThe_Shadow_Over_Innsmouth_front_2.webp",
+        "../assets/images/game-collection-imagesThe_Shadow_Over_Innsmouth_front_3.webp",
+        "../assets/images/game-collection-imagesThe_Shadow_Over_Innsmouth_front_4.webp"
       ]
     },
     {
@@ -924,17 +924,17 @@
       "brand": "Games Workshop",
       "category_ru": ["Детективные игры", "Полукооперативные игры", "Для двоих", "Хардкорные игры", "Кооперативные игры", "Игры для компании"],
       "category_en": ["Detective games", "Semi-cooperative games", "For two", "Hardcore games", "Co-op games", "Company games"],
-      "thumbnail": "./thumbnails/The_Shadow_Over_Innsmouth_front.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/The_Shadow_Over_Innsmouth_front.png",
       "images": [
-        "./images/YArost_Drakuly_1.webp",
-        "./images/YArost_Drakuly_2.webp",
-        "./images/YArost_Drakuly_3.webp",
-        "./images/YArost_Drakuly_4.webp",
-        "./images/YArost_Drakuly_5.webp",
-        "./images/YArost_Drakuly_6.webp",
-        "./images/YArost_Drakuly_7.webp",
-        "./images/YArost_Drakuly_8.webp",
-        "./images/YArost_Drakuly_9.webp"
+        "../assets/images/game-collection-imagesYArost_Drakuly_1.webp",
+        "../assets/images/game-collection-imagesYArost_Drakuly_2.webp",
+        "../assets/images/game-collection-imagesYArost_Drakuly_3.webp",
+        "../assets/images/game-collection-imagesYArost_Drakuly_4.webp",
+        "../assets/images/game-collection-imagesYArost_Drakuly_5.webp",
+        "../assets/images/game-collection-imagesYArost_Drakuly_6.webp",
+        "../assets/images/game-collection-imagesYArost_Drakuly_7.webp",
+        "../assets/images/game-collection-imagesYArost_Drakuly_8.webp",
+        "../assets/images/game-collection-imagesYArost_Drakuly_9.webp"
       ]
     },
     {
@@ -955,16 +955,16 @@
       "brand": "GaGa Games",
       "category_ru": ["Детективные игры", "Стратегические игры", "Игры для компании", "Семейные игры", "Мафия", "Семейные игры", "Командные игры"],
       "category_en": ["Detective games", "Strategy games", "Company games", "Family games", "Mafia", "Family games", "Team games"],
-      "thumbnail": "./thumbnails/Nuar.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Nuar.png",
       "images": [
-        "./images/Nuar_1.webp",
-        "./images/Nuar_2.webp",
-        "./images/Nuar_3.webp",
-        "./images/Nuar_4.webp",
-        "./images/Nuar_5.webp",
-        "./images/Nuar_6.webp",
-        "./images/Nuar_7.webp",
-        "./images/Nuar_8.webp"
+        "../assets/images/game-collection-imagesNuar_1.webp",
+        "../assets/images/game-collection-imagesNuar_2.webp",
+        "../assets/images/game-collection-imagesNuar_3.webp",
+        "../assets/images/game-collection-imagesNuar_4.webp",
+        "../assets/images/game-collection-imagesNuar_5.webp",
+        "../assets/images/game-collection-imagesNuar_6.webp",
+        "../assets/images/game-collection-imagesNuar_7.webp",
+        "../assets/images/game-collection-imagesNuar_8.webp"
       ]
     },
     {
@@ -985,15 +985,15 @@
       "brand": "Mandoo Games",
       "category_ru": ["Детективные игры", "Кооперативные игры", "Игры для компании", "Логические игры", "Игры для взрослых"],
       "category_en": ["Detective games", "Cooperative games", "Games for the company", "Logic games", "Games for adults"],
-      "thumbnail": "./thumbnails/Paranormal.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Paranormal.png",
       "images": [
-        "./images/Paranormal_1.webp",
-        "./images/Paranormal_2.webp",
-        "./images/Paranormal_3.webp",
-        "./images/Paranormal_4.webp",
-        "./images/Paranormal_5.webp",
-        "./images/Paranormal_6.webp",
-        "./images/Paranormal_7.webp"
+        "../assets/images/game-collection-imagesParanormal_1.webp",
+        "../assets/images/game-collection-imagesParanormal_2.webp",
+        "../assets/images/game-collection-imagesParanormal_3.webp",
+        "../assets/images/game-collection-imagesParanormal_4.webp",
+        "../assets/images/game-collection-imagesParanormal_5.webp",
+        "../assets/images/game-collection-imagesParanormal_6.webp",
+        "../assets/images/game-collection-imagesParanormal_7.webp"
       ]
     },
     {
@@ -1014,15 +1014,15 @@
       "brand": "Asmodee",
       "category_ru": ["Детективные игры", "Квесты", "Игры для компании", "Для одного", "Логические игры"],
       "category_en": ["Detective games", "Quests", "Games for the company", "For one", "Logic games"],
-      "thumbnail": "./thumbnails/Sherlok_box.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Sherlok_box.png",
       "images": [
-        "./images/Sherlok_box_1.webp",
-        "./images/Sherlok_box_2.webp",
-        "./images/Sherlok_box_3.webp",
-        "./images/Sherlok_box_4.webp",
-        "./images/Sherlok_box_5.webp",
-        "./images/Sherlok_box_6.webp",
-        "./images/Sherlok_box_7.webp"
+        "../assets/images/game-collection-imagesSherlok_box_1.webp",
+        "../assets/images/game-collection-imagesSherlok_box_2.webp",
+        "../assets/images/game-collection-imagesSherlok_box_3.webp",
+        "../assets/images/game-collection-imagesSherlok_box_4.webp",
+        "../assets/images/game-collection-imagesSherlok_box_5.webp",
+        "../assets/images/game-collection-imagesSherlok_box_6.webp",
+        "../assets/images/game-collection-imagesSherlok_box_7.webp"
       ]
     },
     {
@@ -1043,16 +1043,16 @@
       "brand": "Fantasy Flight Games",
       "category_ru": ["Детективные игры", "Приключенческие игры", "Игры для компании", "Кооперативные игры"],
       "category_en": ["Detective Games", "Adventure Games", "Company Games", "Co-op Games"],
-      "thumbnail": "./thumbnails/AH_Final-Hour.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/AH_Final-Hour.png",
       "images": [
-        "./images/AH_Final-Hour_1.webp",
-        "./images/AH_Final-Hour_2.webp",
-        "./images/AH_Final-Hour_3.webp",
-        "./images/AH_Final-Hour_4.webp",
-        "./images/AH_Final-Hour_5.webp",
-        "./images/AH_Final-Hour_6.webp",
-        "./images/AH_Final-Hour_7.webp",
-        "./images/AH_Final-Hour_8.webp"
+        "../assets/images/game-collection-imagesAH_Final-Hour_1.webp",
+        "../assets/images/game-collection-imagesAH_Final-Hour_2.webp",
+        "../assets/images/game-collection-imagesAH_Final-Hour_3.webp",
+        "../assets/images/game-collection-imagesAH_Final-Hour_4.webp",
+        "../assets/images/game-collection-imagesAH_Final-Hour_5.webp",
+        "../assets/images/game-collection-imagesAH_Final-Hour_6.webp",
+        "../assets/images/game-collection-imagesAH_Final-Hour_7.webp",
+        "../assets/images/game-collection-imagesAH_Final-Hour_8.webp"
       ]
     },
     {
@@ -1073,18 +1073,18 @@
       "brand": "Hobby World",
       "category_ru": ["Детективные игры", "Игры для компании", "Вечериночные игры", "Мафия"],
       "category_en": ["Detective Games", "Company Games", "Company Games", "Party Games", "Mafia"],
-      "thumbnail": "./thumbnails/Mafiya_Vsya_Semya_V_Sbore_Maski.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Mafiya_Vsya_Semya_V_Sbore_Maski.png",
       "images": [
-        "./images/Mafiya_Vsya_Semya_V_Sbore_Maski_1.webp",
-        "./images/Mafiya_Vsya_Semya_V_Sbore_Maski_2.webp",
-        "./images/Mafiya_Vsya_Semya_V_Sbore_Maski_3.webp",
-        "./images/Mafiya_Vsya_Semya_V_Sbore_Maski_4.webp",
-        "./images/Mafiya_Vsya_Semya_V_Sbore_Maski_5.webp",
-        "./images/Mafiya_Vsya_Semya_V_Sbore_Maski_6.webp",
-        "./images/Mafiya_Vsya_Semya_V_Sbore_Maski_7.webp",
-        "./images/Mafiya_Vsya_Semya_V_Sbore_Maski_8.webp",
-        "./images/Mafiya_Vsya_Semya_V_Sbore_Maski_9.webp",
-        "./images/Mafiya_Vsya_Semya_V_Sbore_Maski_10.webp"
+        "../assets/images/game-collection-imagesMafiya_Vsya_Semya_V_Sbore_Maski_1.webp",
+        "../assets/images/game-collection-imagesMafiya_Vsya_Semya_V_Sbore_Maski_2.webp",
+        "../assets/images/game-collection-imagesMafiya_Vsya_Semya_V_Sbore_Maski_3.webp",
+        "../assets/images/game-collection-imagesMafiya_Vsya_Semya_V_Sbore_Maski_4.webp",
+        "../assets/images/game-collection-imagesMafiya_Vsya_Semya_V_Sbore_Maski_5.webp",
+        "../assets/images/game-collection-imagesMafiya_Vsya_Semya_V_Sbore_Maski_6.webp",
+        "../assets/images/game-collection-imagesMafiya_Vsya_Semya_V_Sbore_Maski_7.webp",
+        "../assets/images/game-collection-imagesMafiya_Vsya_Semya_V_Sbore_Maski_8.webp",
+        "../assets/images/game-collection-imagesMafiya_Vsya_Semya_V_Sbore_Maski_9.webp",
+        "../assets/images/game-collection-imagesMafiya_Vsya_Semya_V_Sbore_Maski_10.webp"
       ]
     },
     {
@@ -1105,18 +1105,18 @@
       "brand": "Lucky Duck Games",
       "category_ru": ["Детективные игры", "Игры для компании", "Кооперативные игры", "Для двоих", "Для одного", "Логические игры", "Игры для взрослых"],
       "category_en": ["Detective games", "Games for the company", "Cooperative games", "For two", "For one", "Logic games", "Games for adults"],
-      "thumbnail": "./thumbnails/Mesto_Prestupleniya_Srednevekovye.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Mesto_Prestupleniya_Srednevekovye.png",
       "images": [
-        "./images/Mesto_Prestupleniya_Srednevekovye_1.webp",
-        "./images/Mesto_Prestupleniya_Srednevekovye_2.webp",
-        "./images/Mesto_Prestupleniya_Srednevekovye_3.webp",
-        "./images/Mesto_Prestupleniya_Srednevekovye_4.webp",
-        "./images/Mesto_Prestupleniya_Srednevekovye_5.webp",
-        "./images/Mesto_Prestupleniya_Srednevekovye_6.webp",
-        "./images/Mesto_Prestupleniya_Srednevekovye_7.webp",
-        "./images/Mesto_Prestupleniya_Srednevekovye_8.webp",
-        "./images/Mesto_Prestupleniya_Srednevekovye_9.webp",
-        "./images/Mesto_Prestupleniya_Srednevekovye_10.webp"
+        "../assets/images/game-collection-imagesMesto_Prestupleniya_Srednevekovye_1.webp",
+        "../assets/images/game-collection-imagesMesto_Prestupleniya_Srednevekovye_2.webp",
+        "../assets/images/game-collection-imagesMesto_Prestupleniya_Srednevekovye_3.webp",
+        "../assets/images/game-collection-imagesMesto_Prestupleniya_Srednevekovye_4.webp",
+        "../assets/images/game-collection-imagesMesto_Prestupleniya_Srednevekovye_5.webp",
+        "../assets/images/game-collection-imagesMesto_Prestupleniya_Srednevekovye_6.webp",
+        "../assets/images/game-collection-imagesMesto_Prestupleniya_Srednevekovye_7.webp",
+        "../assets/images/game-collection-imagesMesto_Prestupleniya_Srednevekovye_8.webp",
+        "../assets/images/game-collection-imagesMesto_Prestupleniya_Srednevekovye_9.webp",
+        "../assets/images/game-collection-imagesMesto_Prestupleniya_Srednevekovye_10.webp"
       ]
     },
     {
@@ -1137,20 +1137,20 @@
       "brand": "GaGa Games",
       "category_ru": ["Детективные игры", "Для одного", "Кооперативные игры", "Приключенческие игры"],
       "category_en": ["Detective games", "For one", "Co-op games", "Adventure games"],
-      "thumbnail": "./thumbnails/duna_sekrety_velikih_domov.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/duna_sekrety_velikih_domov.png",
       "images": [
-        "./images/duna_sekrety_velikih_domov_1.webp",
-        "./images/duna_sekrety_velikih_domov_2.webp",
-        "./images/duna_sekrety_velikih_domov_3.webp",
-        "./images/duna_sekrety_velikih_domov_4.webp",
-        "./images/duna_sekrety_velikih_domov_5.webp",
-        "./images/duna_sekrety_velikih_domov_6.webp",
-        "./images/duna_sekrety_velikih_domov_7.webp",
-        "./images/duna_sekrety_velikih_domov_8.webp",
-        "./images/duna_sekrety_velikih_domov_9.webp",
-        "./images/duna_sekrety_velikih_domov_10.webp",
-        "./images/duna_sekrety_velikih_domov_11.webp",
-        "./images/duna_sekrety_velikih_domov_12.webp"
+        "../assets/images/game-collection-imagesduna_sekrety_velikih_domov_1.webp",
+        "../assets/images/game-collection-imagesduna_sekrety_velikih_domov_2.webp",
+        "../assets/images/game-collection-imagesduna_sekrety_velikih_domov_3.webp",
+        "../assets/images/game-collection-imagesduna_sekrety_velikih_domov_4.webp",
+        "../assets/images/game-collection-imagesduna_sekrety_velikih_domov_5.webp",
+        "../assets/images/game-collection-imagesduna_sekrety_velikih_domov_6.webp",
+        "../assets/images/game-collection-imagesduna_sekrety_velikih_domov_7.webp",
+        "../assets/images/game-collection-imagesduna_sekrety_velikih_domov_8.webp",
+        "../assets/images/game-collection-imagesduna_sekrety_velikih_domov_9.webp",
+        "../assets/images/game-collection-imagesduna_sekrety_velikih_domov_10.webp",
+        "../assets/images/game-collection-imagesduna_sekrety_velikih_domov_11.webp",
+        "../assets/images/game-collection-imagesduna_sekrety_velikih_domov_12.webp"
       ]
     },
     {
@@ -1171,24 +1171,24 @@
       "brand": "IGames",
       "category_ru": ["Детективные игры", "Логические игры", "Кооперативные игры"],
       "category_en": ["Detective games", "Logic games", "Cooperative games"],
-      "thumbnail": "./thumbnails/Mistrium.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Mistrium.png",
       "images": [
-        "./images/Mistrium_1.webp",
-        "./images/Mistrium_2.webp",
-        "./images/Mistrium_3.webp",
-        "./images/Mistrium_4.webp",
-        "./images/Mistrium_5.webp",
-        "./images/Mistrium_6.webp",
-        "./images/Mistrium_7.webp",
-        "./images/Mistrium_8.webp",
-        "./images/Mistrium_9.webp",
-        "./images/Mistrium_10.webp",
-        "./images/Mistrium_11.webp",
-        "./images/Mistrium_12.webp",
-        "./images/Mistrium_13.webp",
-        "./images/Mistrium_14.webp",
-        "./images/Mistrium_15.webp",
-        "./images/Mistrium_16.webp"
+        "../assets/images/game-collection-imagesMistrium_1.webp",
+        "../assets/images/game-collection-imagesMistrium_2.webp",
+        "../assets/images/game-collection-imagesMistrium_3.webp",
+        "../assets/images/game-collection-imagesMistrium_4.webp",
+        "../assets/images/game-collection-imagesMistrium_5.webp",
+        "../assets/images/game-collection-imagesMistrium_6.webp",
+        "../assets/images/game-collection-imagesMistrium_7.webp",
+        "../assets/images/game-collection-imagesMistrium_8.webp",
+        "../assets/images/game-collection-imagesMistrium_9.webp",
+        "../assets/images/game-collection-imagesMistrium_10.webp",
+        "../assets/images/game-collection-imagesMistrium_11.webp",
+        "../assets/images/game-collection-imagesMistrium_12.webp",
+        "../assets/images/game-collection-imagesMistrium_13.webp",
+        "../assets/images/game-collection-imagesMistrium_14.webp",
+        "../assets/images/game-collection-imagesMistrium_15.webp",
+        "../assets/images/game-collection-imagesMistrium_16.webp"
       ]
     },
     {
@@ -1209,19 +1209,19 @@
       "brand": "Hobby World",
       "category_ru": ["Детективные игры", "Логические игры", "Кооперативные игры"],
       "category_en": ["Detective games", "Logic games", "Cooperative games"],
-      "thumbnail": "./thumbnails/Spycon.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Spycon.png",
       "images": [
-        "./images/Spycon_1.webp",
-        "./images/Spycon_2.webp",
-        "./images/Spycon_3.webp",
-        "./images/Spycon_4.webp",
-        "./images/Spycon_5.webp",
-        "./images/Spycon_6.webp",
-        "./images/Spycon_7.webp",
-        "./images/Spycon_8.webp",
-        "./images/Spycon_9.webp",
-        "./images/Spycon_10.webp",
-        "./images/Spycon_11.webp"
+        "../assets/images/game-collection-imagesSpycon_1.webp",
+        "../assets/images/game-collection-imagesSpycon_2.webp",
+        "../assets/images/game-collection-imagesSpycon_3.webp",
+        "../assets/images/game-collection-imagesSpycon_4.webp",
+        "../assets/images/game-collection-imagesSpycon_5.webp",
+        "../assets/images/game-collection-imagesSpycon_6.webp",
+        "../assets/images/game-collection-imagesSpycon_7.webp",
+        "../assets/images/game-collection-imagesSpycon_8.webp",
+        "../assets/images/game-collection-imagesSpycon_9.webp",
+        "../assets/images/game-collection-imagesSpycon_10.webp",
+        "../assets/images/game-collection-imagesSpycon_11.webp"
       ]
     },
     {
@@ -1242,11 +1242,11 @@
       "brand": "Lavka Games",
       "category_ru": ["Детективные игры", "Игры для компании", "Кооперативные игры", "Для одного"],
       "category_en": ["Detective games", "Games for the company", "Cooperative games", "For one"],
-      "thumbnail": "./thumbnails/Mortum.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Mortum.png",
       "images": [
-        "./images/Mortum_1.webp",
-        "./images/Mortum_2.webp",
-        "./images/Mortum_3.webp"
+        "../assets/images/game-collection-imagesMortum_1.webp",
+        "../assets/images/game-collection-imagesMortum_2.webp",
+        "../assets/images/game-collection-imagesMortum_3.webp"
       ]
     },
     {
@@ -1267,18 +1267,18 @@
       "brand": "dV Giochi",
       "category_ru": ["Детективные игры", "Квесты", "Семейные игры", "Для одного", "Логические игры"],
       "category_en": ["Detective games", "Quests", "Family games", "For one", "Logic games"],
-      "thumbnail": "./thumbnails/detektivnye_hroniki_flamandskoe_zaveschanie.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/detektivnye_hroniki_flamandskoe_zaveschanie.png",
       "images": [
-        "./images/detektivnye_hroniki_flamandskoe_zaveschanie_1.webp",
-        "./images/detektivnye_hroniki_flamandskoe_zaveschanie_2.webp",
-        "./images/detektivnye_hroniki_flamandskoe_zaveschanie_3.webp",
-        "./images/detektivnye_hroniki_flamandskoe_zaveschanie_4.webp",
-        "./images/detektivnye_hroniki_flamandskoe_zaveschanie_5.webp",
-        "./images/detektivnye_hroniki_flamandskoe_zaveschanie_6.webp",
-        "./images/detektivnye_hroniki_flamandskoe_zaveschanie_7.webp",
-        "./images/detektivnye_hroniki_flamandskoe_zaveschanie_8.webp",
-        "./images/detektivnye_hroniki_flamandskoe_zaveschanie_9.webp",
-        "./images/detektivnye_hroniki_flamandskoe_zaveschanie_10.webp"
+        "../assets/images/game-collection-imagesdetektivnye_hroniki_flamandskoe_zaveschanie_1.webp",
+        "../assets/images/game-collection-imagesdetektivnye_hroniki_flamandskoe_zaveschanie_2.webp",
+        "../assets/images/game-collection-imagesdetektivnye_hroniki_flamandskoe_zaveschanie_3.webp",
+        "../assets/images/game-collection-imagesdetektivnye_hroniki_flamandskoe_zaveschanie_4.webp",
+        "../assets/images/game-collection-imagesdetektivnye_hroniki_flamandskoe_zaveschanie_5.webp",
+        "../assets/images/game-collection-imagesdetektivnye_hroniki_flamandskoe_zaveschanie_6.webp",
+        "../assets/images/game-collection-imagesdetektivnye_hroniki_flamandskoe_zaveschanie_7.webp",
+        "../assets/images/game-collection-imagesdetektivnye_hroniki_flamandskoe_zaveschanie_8.webp",
+        "../assets/images/game-collection-imagesdetektivnye_hroniki_flamandskoe_zaveschanie_9.webp",
+        "../assets/images/game-collection-imagesdetektivnye_hroniki_flamandskoe_zaveschanie_10.webp"
       ]
     },
     {
@@ -1299,19 +1299,19 @@
       "brand": "Magellan",
       "category_ru": ["Детективные игры", "Квесты", "Кооперативные игры", "Для одного", "Игры для компании", "Логические игры", "Игры для взрослых"],
       "category_en": ["Detective games", "Quests", "Cooperative games", "For one", "Games for the company", "Logic games", "Games for adults"],
-      "thumbnail": "./thumbnails/smertelnie_materialy.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/smertelnie_materialy.png",
       "images": [
-        "./images/smertelnie_materialy_1.webp",
-        "./images/smertelnie_materialy_2.webp",
-        "./images/smertelnie_materialy_3.webp",
-        "./images/smertelnie_materialy_4.webp",
-        "./images/smertelnie_materialy_5.webp",
-        "./images/smertelnie_materialy_6.webp",
-        "./images/smertelnie_materialy_7.webp",
-        "./images/smertelnie_materialy_8.webp",
-        "./images/smertelnie_materialy_9.webp",
-        "./images/smertelnie_materialy_10.webp",
-        "./images/smertelnie_materialy_11.webp"
+        "../assets/images/game-collection-imagessmertelnie_materialy_1.webp",
+        "../assets/images/game-collection-imagessmertelnie_materialy_2.webp",
+        "../assets/images/game-collection-imagessmertelnie_materialy_3.webp",
+        "../assets/images/game-collection-imagessmertelnie_materialy_4.webp",
+        "../assets/images/game-collection-imagessmertelnie_materialy_5.webp",
+        "../assets/images/game-collection-imagessmertelnie_materialy_6.webp",
+        "../assets/images/game-collection-imagessmertelnie_materialy_7.webp",
+        "../assets/images/game-collection-imagessmertelnie_materialy_8.webp",
+        "../assets/images/game-collection-imagessmertelnie_materialy_9.webp",
+        "../assets/images/game-collection-imagessmertelnie_materialy_10.webp",
+        "../assets/images/game-collection-imagessmertelnie_materialy_11.webp"
       ]
     },
     {
@@ -1332,11 +1332,11 @@
       "brand": "Правильные Игры",
       "category_ru": ["Детективные игры", "Для одного", "Игры для компании", "Приключенческие игры", "Логические игры", "Игры для взрослых"],
       "category_en": ["Detective games", "For one", "Games for the company", "Adventure games", "Logic games", "Games for adults"],
-      "thumbnail": "./thumbnails/Odnajdi_V_Chikago.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Odnajdi_V_Chikago.png",
       "images": [
-        "./images/Odnajdi_V_Chikago_1.webp",
-        "./images/Odnajdi_V_Chikago_2.webp",
-        "./images/Odnajdi_V_Chikago_3.webp"
+        "../assets/images/game-collection-imagesOdnajdi_V_Chikago_1.webp",
+        "../assets/images/game-collection-imagesOdnajdi_V_Chikago_2.webp",
+        "../assets/images/game-collection-imagesOdnajdi_V_Chikago_3.webp"
       ]
     },
     {
@@ -1357,13 +1357,13 @@
       "brand": "Horrible Games",
       "category_ru": ["Детективные игры", "Кооперативные игры", "Карточные игры", "Вечериночные игры", "Логические игры", "Семейные игры"],
       "category_en": ["Detective games", "Cooperative games", "Card games", "Party games", "Logic games", "Family games"],
-      "thumbnail": "./thumbnails/Similo_myths.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Similo_myths.png",
       "images": [
-        "./images/Similo_myths_1.webp",
-        "./images/Similo_myths_2.webp",
-        "./images/Similo_myths_3.webp",
-        "./images/Similo_myths_4.webp",
-        "./images/Similo_myths_5.webp"
+        "../assets/images/game-collection-imagesSimilo_myths_1.webp",
+        "../assets/images/game-collection-imagesSimilo_myths_2.webp",
+        "../assets/images/game-collection-imagesSimilo_myths_3.webp",
+        "../assets/images/game-collection-imagesSimilo_myths_4.webp",
+        "../assets/images/game-collection-imagesSimilo_myths_5.webp"
       ]
     },
     {
@@ -1384,17 +1384,17 @@
       "brand": "Экономикус",
       "category_ru": ["Детективные игры", "Игры для компании", "Семейные игры"],
       "category_en": ["Detective games", "Games for the company", "Family games"],
-      "thumbnail": "./thumbnails/pochtoviy_yaschik.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/pochtoviy_yaschik.png",
       "images": [
-        "./images/pochtoviy_yaschik_1.webp",
-        "./images/pochtoviy_yaschik_2.webp",
-        "./images/pochtoviy_yaschik_3.webp",
-        "./images/pochtoviy_yaschik_4.webp",
-        "./images/pochtoviy_yaschik_5.webp",
-        "./images/pochtoviy_yaschik_6.webp",
-        "./images/pochtoviy_yaschik_7.webp",
-        "./images/pochtoviy_yaschik_8.webp",
-        "./images/pochtoviy_yaschik_9.webp"
+        "../assets/images/game-collection-imagespochtoviy_yaschik_1.webp",
+        "../assets/images/game-collection-imagespochtoviy_yaschik_2.webp",
+        "../assets/images/game-collection-imagespochtoviy_yaschik_3.webp",
+        "../assets/images/game-collection-imagespochtoviy_yaschik_4.webp",
+        "../assets/images/game-collection-imagespochtoviy_yaschik_5.webp",
+        "../assets/images/game-collection-imagespochtoviy_yaschik_6.webp",
+        "../assets/images/game-collection-imagespochtoviy_yaschik_7.webp",
+        "../assets/images/game-collection-imagespochtoviy_yaschik_8.webp",
+        "../assets/images/game-collection-imagespochtoviy_yaschik_9.webp"
       ]
     },
     {
@@ -1415,17 +1415,17 @@
       "brand": "Lucky Duck Games",
       "category_ru": ["Детективные игры", "Для двоих", "Для одного", "Игры для компании", "Логические игры", "Игры для взрослых"],
       "category_en": ["Detective games", "For two", "For one", "Games for the company", "Logic games", "Games for adults"],
-      "thumbnail": "./thumbnails/Mesto_prestuplenia_Prekrasnaya_epokha.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Mesto_prestuplenia_Prekrasnaya_epokha.png",
       "images": [
-        "./images/Mesto_prestuplenia_Prekrasnaya_epokha_1.webp",
-        "./images/Mesto_prestuplenia_Prekrasnaya_epokha_2.webp",
-        "./images/Mesto_prestuplenia_Prekrasnaya_epokha_3.webp",
-        "./images/Mesto_prestuplenia_Prekrasnaya_epokha_4.webp",
-        "./images/Mesto_prestuplenia_Prekrasnaya_epokha_5.webp",
-        "./images/Mesto_prestuplenia_Prekrasnaya_epokha_6.webp",
-        "./images/Mesto_prestuplenia_Prekrasnaya_epokha_7.webp",
-        "./images/Mesto_prestuplenia_Prekrasnaya_epokha_8.webp",
-        "./images/Mesto_prestuplenia_Prekrasnaya_epokha_9.webp"
+        "../assets/images/game-collection-imagesMesto_prestuplenia_Prekrasnaya_epokha_1.webp",
+        "../assets/images/game-collection-imagesMesto_prestuplenia_Prekrasnaya_epokha_2.webp",
+        "../assets/images/game-collection-imagesMesto_prestuplenia_Prekrasnaya_epokha_3.webp",
+        "../assets/images/game-collection-imagesMesto_prestuplenia_Prekrasnaya_epokha_4.webp",
+        "../assets/images/game-collection-imagesMesto_prestuplenia_Prekrasnaya_epokha_5.webp",
+        "../assets/images/game-collection-imagesMesto_prestuplenia_Prekrasnaya_epokha_6.webp",
+        "../assets/images/game-collection-imagesMesto_prestuplenia_Prekrasnaya_epokha_7.webp",
+        "../assets/images/game-collection-imagesMesto_prestuplenia_Prekrasnaya_epokha_8.webp",
+        "../assets/images/game-collection-imagesMesto_prestuplenia_Prekrasnaya_epokha_9.webp"
       ]
     },
     {
@@ -1446,13 +1446,13 @@
       "brand": "GaGa Games",
       "category_ru": ["Детективные игры", "Для двоих", "Стратегические игры", "Карточные игры"],
       "category_en": ["Detective games", "For two", "Strategy games", "Card games"],
-      "thumbnail": "./thumbnails/Uotergate.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Uotergate.png",
       "images": [
-        "./images/Uotergate_1.webp",
-        "./images/Uotergate_2.webp",
-        "./images/Uotergate_3.webp",
-        "./images/Uotergate_4.webp",
-        "./images/Uotergate_5.webp"
+        "../assets/images/game-collection-imagesUotergate_1.webp",
+        "../assets/images/game-collection-imagesUotergate_2.webp",
+        "../assets/images/game-collection-imagesUotergate_3.webp",
+        "../assets/images/game-collection-imagesUotergate_4.webp",
+        "../assets/images/game-collection-imagesUotergate_5.webp"
       ]
     },
     {
@@ -1473,13 +1473,13 @@
       "brand": "GaGa Games",
       "category_ru": ["Детективные игры", "Для двоих", "Кооперативные игры", "Игры для компании", "Логические игры"],
       "category_en": ["Detective games", "For two", "Cooperative games", "Games for the company", "Logic games"],
-      "thumbnail": "./thumbnails/Uotergate.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Uotergate.png",
       "images": [
-        "./images/Venskiy_Svyaznoi_1.webp",
-        "./images/Venskiy_Svyaznoi_2.webp",
-        "./images/Venskiy_Svyaznoi_3.webp",
-        "./images/Venskiy_Svyaznoi_4.webp",
-        "./images/Venskiy_Svyaznoi_5.webp"
+        "../assets/images/game-collection-imagesVenskiy_Svyaznoi_1.webp",
+        "../assets/images/game-collection-imagesVenskiy_Svyaznoi_2.webp",
+        "../assets/images/game-collection-imagesVenskiy_Svyaznoi_3.webp",
+        "../assets/images/game-collection-imagesVenskiy_Svyaznoi_4.webp",
+        "../assets/images/game-collection-imagesVenskiy_Svyaznoi_5.webp"
       ]
     },
     {
@@ -1500,12 +1500,12 @@
       "brand": "Эврикус",
       "category_ru": ["Детективные игры", "Для одного", "Кооперативные игры", "Игры для компании"],
       "category_en": ["Detective games", "For one", "Cooperative games", "Games for the company"],
-      "thumbnail": "./thumbnails/Sledstvie.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Sledstvie.png",
       "images": [
-        "./images/Sledstvie_1.webp",
-        "./images/Sledstvie_2.webp",
-        "./images/Sledstvie_3.webp",
-        "./images/Sledstvie_4.webp"
+        "../assets/images/game-collection-imagesSledstvie_1.webp",
+        "../assets/images/game-collection-imagesSledstvie_2.webp",
+        "../assets/images/game-collection-imagesSledstvie_3.webp",
+        "../assets/images/game-collection-imagesSledstvie_4.webp"
       ]
     },
     {
@@ -1526,19 +1526,19 @@
       "brand": "Magellan",
       "category_ru": ["Командные игры", "Игры для компании", "Вечериночные игры", "Мафия", "Игры в дорогу", "Карточные игры"],
       "category_en": ["Team games", "Games for the company", "Party games", "Mafia", "Games on the road", "Card games"],
-      "thumbnail": "./thumbnails/Soprotivlenie.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Soprotivlenie.png",
       "images": [
-        "./images/Soprotivlenie_1.webp",
-        "./images/Soprotivlenie_2.webp",
-        "./images/Soprotivlenie_3.webp",
-        "./images/Soprotivlenie_4.webp",
-        "./images/Soprotivlenie_5.webp",
-        "./images/Soprotivlenie_6.webp",
-        "./images/Soprotivlenie_7.webp",
-        "./images/Soprotivlenie_8.webp",
-        "./images/Soprotivlenie_9.webp",
-        "./images/Soprotivlenie_10.webp",
-        "./images/Soprotivlenie_11.webp"
+        "../assets/images/game-collection-imagesSoprotivlenie_1.webp",
+        "../assets/images/game-collection-imagesSoprotivlenie_2.webp",
+        "../assets/images/game-collection-imagesSoprotivlenie_3.webp",
+        "../assets/images/game-collection-imagesSoprotivlenie_4.webp",
+        "../assets/images/game-collection-imagesSoprotivlenie_5.webp",
+        "../assets/images/game-collection-imagesSoprotivlenie_6.webp",
+        "../assets/images/game-collection-imagesSoprotivlenie_7.webp",
+        "../assets/images/game-collection-imagesSoprotivlenie_8.webp",
+        "../assets/images/game-collection-imagesSoprotivlenie_9.webp",
+        "../assets/images/game-collection-imagesSoprotivlenie_10.webp",
+        "../assets/images/game-collection-imagesSoprotivlenie_11.webp"
       ]
     },
     {
@@ -1559,17 +1559,17 @@
       "brand": "Magellan",
       "category_ru": ["Командные игры", "Для двоих", "Стратегические игры", "Дуэльные", "Логические игры"],
       "category_en": ["Team games", "Games for the company", "Party games", "Mafia", "Games on the road", "Card games"],
-      "thumbnail": "./thumbnails/Bogy_Olimpa.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Bogy_Olimpa.png",
       "images": [
-        "./images/Bogy_Olimpa_1.webp",
-        "./images/Bogy_Olimpa_2.webp",
-        "./images/Bogy_Olimpa_3.webp",
-        "./images/Bogy_Olimpa_4.webp",
-        "./images/Bogy_Olimpa_5.webp",
-        "./images/Bogy_Olimpa_6.webp",
-        "./images/Bogy_Olimpa_7.webp",
-        "./images/Bogy_Olimpa_8.webp",
-        "./images/Bogy_Olimpa_9.webp"
+        "../assets/images/game-collection-imagesBogy_Olimpa_1.webp",
+        "../assets/images/game-collection-imagesBogy_Olimpa_2.webp",
+        "../assets/images/game-collection-imagesBogy_Olimpa_3.webp",
+        "../assets/images/game-collection-imagesBogy_Olimpa_4.webp",
+        "../assets/images/game-collection-imagesBogy_Olimpa_5.webp",
+        "../assets/images/game-collection-imagesBogy_Olimpa_6.webp",
+        "../assets/images/game-collection-imagesBogy_Olimpa_7.webp",
+        "../assets/images/game-collection-imagesBogy_Olimpa_8.webp",
+        "../assets/images/game-collection-imagesBogy_Olimpa_9.webp"
       ]
     },
     {
@@ -1590,17 +1590,17 @@
       "brand": "Hobby World",
       "category_ru": ["Командные игры", "Игры для компании", "Вечериночные игры", "Игры в дорогу", "Карточные игры"],
       "category_en": ["Team games", "Games for the company", "Party games", "Games on the road", "Card games"],
-      "thumbnail": "./thumbnails/Bang_Star_Wars.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Bang_Star_Wars.png",
       "images": [
-        "./images/Bang_Star_Wars_1.webp",
-        "./images/Bang_Star_Wars_2.webp",
-        "./images/Bang_Star_Wars_3.webp",
-        "./images/Bang_Star_Wars_4.webp",
-        "./images/Bang_Star_Wars_5.webp",
-        "./images/Bang_Star_Wars_6.webp",
-        "./images/Bang_Star_Wars_7.webp",
-        "./images/Bang_Star_Wars_8.webp",
-        "./images/Bang_Star_Wars_9.webp"
+        "../assets/images/game-collection-imagesBang_Star_Wars_1.webp",
+        "../assets/images/game-collection-imagesBang_Star_Wars_2.webp",
+        "../assets/images/game-collection-imagesBang_Star_Wars_3.webp",
+        "../assets/images/game-collection-imagesBang_Star_Wars_4.webp",
+        "../assets/images/game-collection-imagesBang_Star_Wars_5.webp",
+        "../assets/images/game-collection-imagesBang_Star_Wars_6.webp",
+        "../assets/images/game-collection-imagesBang_Star_Wars_7.webp",
+        "../assets/images/game-collection-imagesBang_Star_Wars_8.webp",
+        "../assets/images/game-collection-imagesBang_Star_Wars_9.webp"
       ]
     },
     {
@@ -1621,11 +1621,11 @@
       "brand": "Hobby World",
       "category_ru": ["Командные игры", "Карточные игры", "Детские игры", "Семейные игры"],
       "category_en": ["Team Games", "Card Games", "Kids Games", "Family Games"],
-      "thumbnail": "./thumbnails/Gravity_Falls_Memory.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Gravity_Falls_Memory.png",
       "images": [
-        "./images/Gravity_Falls_Memory_1.webp",
-        "./images/Gravity_Falls_Memory_2.webp",
-        "./images/Gravity_Falls_Memory_3.webp"
+        "../assets/images/game-collection-imagesGravity_Falls_Memory_1.webp",
+        "../assets/images/game-collection-imagesGravity_Falls_Memory_2.webp",
+        "../assets/images/game-collection-imagesGravity_Falls_Memory_3.webp"
       ]
     },
     {
@@ -1646,21 +1646,21 @@
       "brand": "Фабрика игр",
       "category_ru": ["Командные игры", "Стратегические игры", "Для двоих", "Дуэльные"],
       "category_en": ["Team games", "Strategy games", "For two", "Duel"],
-      "thumbnail": "./thumbnails/krosmaster_arena.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/krosmaster_arena.png",
       "images": [
-        "./images/krosmaster_arena_1.webp",
-        "./images/krosmaster_arena_2.webp",
-        "./images/krosmaster_arena_3.webp",
-        "./images/krosmaster_arena_4.webp",
-        "./images/krosmaster_arena_5.webp",
-        "./images/krosmaster_arena_6.webp",
-        "./images/krosmaster_arena_7.webp",
-        "./images/krosmaster_arena_8.webp",
-        "./images/krosmaster_arena_9.webp",
-        "./images/krosmaster_arena_10.webp",
-        "./images/krosmaster_arena_11.webp",
-        "./images/krosmaster_arena_12.webp",
-        "./images/krosmaster_arena_13.webp"
+        "../assets/images/game-collection-imageskrosmaster_arena_1.webp",
+        "../assets/images/game-collection-imageskrosmaster_arena_2.webp",
+        "../assets/images/game-collection-imageskrosmaster_arena_3.webp",
+        "../assets/images/game-collection-imageskrosmaster_arena_4.webp",
+        "../assets/images/game-collection-imageskrosmaster_arena_5.webp",
+        "../assets/images/game-collection-imageskrosmaster_arena_6.webp",
+        "../assets/images/game-collection-imageskrosmaster_arena_7.webp",
+        "../assets/images/game-collection-imageskrosmaster_arena_8.webp",
+        "../assets/images/game-collection-imageskrosmaster_arena_9.webp",
+        "../assets/images/game-collection-imageskrosmaster_arena_10.webp",
+        "../assets/images/game-collection-imageskrosmaster_arena_11.webp",
+        "../assets/images/game-collection-imageskrosmaster_arena_12.webp",
+        "../assets/images/game-collection-imageskrosmaster_arena_13.webp"
       ]
     },
     {
@@ -1681,16 +1681,16 @@
       "brand": "Piatnik",
       "category_ru": ["Командные игры", "Игры для компании", "Игры в дорогу", "Вечериночные игры", "Семейные игры"],
       "category_en": ["Team games", "Games for the company", "Games on the road", "Party games", "Family games"],
-      "thumbnail": "./thumbnails/Activity_Travel.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Activity_Travel.png",
       "images": [
-        "./images/Activity_Travel_1.webp",
-        "./images/Activity_Travel_2.webp",
-        "./images/Activity_Travel_3.webp",
-        "./images/Activity_Travel_4.webp",
-        "./images/Activity_Travel_5.webp",
-        "./images/Activity_Travel_6.webp",
-        "./images/Activity_Travel_7.webp",
-        "./images/Activity_Travel_8.webp"
+        "../assets/images/game-collection-imagesActivity_Travel_1.webp",
+        "../assets/images/game-collection-imagesActivity_Travel_2.webp",
+        "../assets/images/game-collection-imagesActivity_Travel_3.webp",
+        "../assets/images/game-collection-imagesActivity_Travel_4.webp",
+        "../assets/images/game-collection-imagesActivity_Travel_5.webp",
+        "../assets/images/game-collection-imagesActivity_Travel_6.webp",
+        "../assets/images/game-collection-imagesActivity_Travel_7.webp",
+        "../assets/images/game-collection-imagesActivity_Travel_8.webp"
       ]
     },
     {
@@ -1711,19 +1711,19 @@
       "brand": "Hobby World",
       "category_ru": ["Кооперативные игры", "Для двоих", "Для одного", "Приключенческие игры", "Хардкорные игры", "Игры для компании"],
       "category_en": ["Co-op games", "For two", "For one", "Adventure games", "Hardcore games", "Games for the company"],
-      "thumbnail": "./thumbnails/LotR_journey-in-middle-earth.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/LotR_journey-in-middle-earth.png",
       "images": [
-        "./images/LotR_journey-in-middle-earth_1.webp",
-        "./images/LotR_journey-in-middle-earth_2.webp",
-        "./images/LotR_journey-in-middle-earth_3.webp",
-        "./images/LotR_journey-in-middle-earth_4.webp",
-        "./images/LotR_journey-in-middle-earth_5.webp",
-        "./images/LotR_journey-in-middle-earth_6.webp",
-        "./images/LotR_journey-in-middle-earth_7.webp",
-        "./images/LotR_journey-in-middle-earth_8.webp",
-        "./images/LotR_journey-in-middle-earth_9.webp",
-        "./images/LotR_journey-in-middle-earth_10.webp",
-        "./images/LotR_journey-in-middle-earth_11.webp"
+        "../assets/images/game-collection-imagesLotR_journey-in-middle-earth_1.webp",
+        "../assets/images/game-collection-imagesLotR_journey-in-middle-earth_2.webp",
+        "../assets/images/game-collection-imagesLotR_journey-in-middle-earth_3.webp",
+        "../assets/images/game-collection-imagesLotR_journey-in-middle-earth_4.webp",
+        "../assets/images/game-collection-imagesLotR_journey-in-middle-earth_5.webp",
+        "../assets/images/game-collection-imagesLotR_journey-in-middle-earth_6.webp",
+        "../assets/images/game-collection-imagesLotR_journey-in-middle-earth_7.webp",
+        "../assets/images/game-collection-imagesLotR_journey-in-middle-earth_8.webp",
+        "../assets/images/game-collection-imagesLotR_journey-in-middle-earth_9.webp",
+        "../assets/images/game-collection-imagesLotR_journey-in-middle-earth_10.webp",
+        "../assets/images/game-collection-imagesLotR_journey-in-middle-earth_11.webp"
       ]
     },
     {
@@ -1744,13 +1744,13 @@
       "brand": "Fantasy Flight Games",
       "category_ru": ["Кооперативные игры", "Хардкорные игры", "Приключенческие игры"],
       "category_en": ["Co-op Games", "Hardcore Games", "Adventure Games"],
-      "thumbnail": "./thumbnails/descent_legends_of_the_dark.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/descent_legends_of_the_dark.png",
       "images": [
-        "./images/descent_legends_of_the_dark_1.webp",
-        "./images/descent_legends_of_the_dark_2.webp",
-        "./images/descent_legends_of_the_dark_3.webp",
-        "./images/descent_legends_of_the_dark_4.webp",
-        "./images/descent_legends_of_the_dark_5.webp"
+        "../assets/images/game-collection-imagesdescent_legends_of_the_dark_1.webp",
+        "../assets/images/game-collection-imagesdescent_legends_of_the_dark_2.webp",
+        "../assets/images/game-collection-imagesdescent_legends_of_the_dark_3.webp",
+        "../assets/images/game-collection-imagesdescent_legends_of_the_dark_4.webp",
+        "../assets/images/game-collection-imagesdescent_legends_of_the_dark_5.webp"
       ]
     },
     {
@@ -1771,13 +1771,13 @@
       "brand": "Fantasy Flight Games",
       "category_ru": ["Кооперативные игры", "Для одного", "Приключенческие игры", "Игры для компании"],
       "category_en": ["Co-op games", "For one", "Adventure games", "Games for the company"],
-      "thumbnail": "./thumbnails/Mansions-of-Madness_box.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Mansions-of-Madness_box.png",
       "images": [
-        "./images/Mansions-of-Madness_box_1.webp",
-        "./images/Mansions-of-Madness_box_2.webp",
-        "./images/Mansions-of-Madness_box_3.webp",
-        "./images/Mansions-of-Madness_box_4.webp",
-        "./images/Mansions-of-Madness_box_5.webp"
+        "../assets/images/game-collection-imagesMansions-of-Madness_box_1.webp",
+        "../assets/images/game-collection-imagesMansions-of-Madness_box_2.webp",
+        "../assets/images/game-collection-imagesMansions-of-Madness_box_3.webp",
+        "../assets/images/game-collection-imagesMansions-of-Madness_box_4.webp",
+        "../assets/images/game-collection-imagesMansions-of-Madness_box_5.webp"
       ]
     },
     {
@@ -1798,13 +1798,13 @@
       "brand": "CMON",
       "category_ru": ["Кооперативные игры", "Для двоих", "Приключенческие игры", "Хардкорные игры"],
       "category_en": ["Co-op games", "For two", "Adventure games", "Hardcore games"],
-      "thumbnail": "./thumbnails/Zombicide_2ed.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Zombicide_2ed.png",
       "images": [
-        "./images/Zombicide_2ed_1.webp",
-        "./images/Zombicide_2ed_2.webp",
-        "./images/Zombicide_2ed_3.webp",
-        "./images/Zombicide_2ed_4.webp",
-        "./images/Zombicide_2ed_5.webp"
+        "../assets/images/game-collection-imagesZombicide_2ed_1.webp",
+        "../assets/images/game-collection-imagesZombicide_2ed_2.webp",
+        "../assets/images/game-collection-imagesZombicide_2ed_3.webp",
+        "../assets/images/game-collection-imagesZombicide_2ed_4.webp",
+        "../assets/images/game-collection-imagesZombicide_2ed_5.webp"
       ]
     },
     {
@@ -1825,22 +1825,22 @@
       "brand": "Paizo",
       "category_ru": ["Кооперативные игры", "Для двоих", "Приключенческие игры", "Хардкорные игры", "Карточные игры", "Для двоих"],
       "category_en": ["Co-op games", "For two", "Adventure games", "Hardcore games", "Card games", "For two"],
-      "thumbnail": "./thumbnails/Pathfinder_CG_base.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Pathfinder_CG_base.png",
       "images": [
-        "./images/Pathfinder_CG_base_1.webp",
-        "./images/Pathfinder_CG_base_2.webp",
-        "./images/Pathfinder_CG_base_3.webp",
-        "./images/Pathfinder_CG_base_4.webp",
-        "./images/Pathfinder_CG_base_5.webp",
-        "./images/Pathfinder_CG_base_6.webp",
-        "./images/Pathfinder_CG_base_7.webp",
-        "./images/Pathfinder_CG_base_8.webp",
-        "./images/Pathfinder_CG_base_9.webp",
-        "./images/Pathfinder_CG_base_10.webp",
-        "./images/Pathfinder_CG_base_11.webp",
-        "./images/Pathfinder_CG_base_12.webp",
-        "./images/Pathfinder_CG_base_13.webp",
-        "./images/Pathfinder_CG_base_14.webp"
+        "../assets/images/game-collection-imagesPathfinder_CG_base_1.webp",
+        "../assets/images/game-collection-imagesPathfinder_CG_base_2.webp",
+        "../assets/images/game-collection-imagesPathfinder_CG_base_3.webp",
+        "../assets/images/game-collection-imagesPathfinder_CG_base_4.webp",
+        "../assets/images/game-collection-imagesPathfinder_CG_base_5.webp",
+        "../assets/images/game-collection-imagesPathfinder_CG_base_6.webp",
+        "../assets/images/game-collection-imagesPathfinder_CG_base_7.webp",
+        "../assets/images/game-collection-imagesPathfinder_CG_base_8.webp",
+        "../assets/images/game-collection-imagesPathfinder_CG_base_9.webp",
+        "../assets/images/game-collection-imagesPathfinder_CG_base_10.webp",
+        "../assets/images/game-collection-imagesPathfinder_CG_base_11.webp",
+        "../assets/images/game-collection-imagesPathfinder_CG_base_12.webp",
+        "../assets/images/game-collection-imagesPathfinder_CG_base_13.webp",
+        "../assets/images/game-collection-imagesPathfinder_CG_base_14.webp"
       ]
     },
     {
@@ -1861,19 +1861,19 @@
       "brand": "Magellan",
       "category_ru": ["Кооперативные игры", "Семейные игры", "Приключенческие игры", "Игры для компании"],
       "category_en": ["Co-op Games", "Family Games", "Adventure Games", "Company Games"],
-      "thumbnail": "./thumbnails/Zomby_V_Dome_Zarajenie.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Zomby_V_Dome_Zarajenie.png",
       "images": [
-        "./images/Zomby_V_Dome_Zarajenie_1.webp",
-        "./images/Zomby_V_Dome_Zarajenie_2.webp",
-        "./images/Zomby_V_Dome_Zarajenie_3.webp",
-        "./images/Zomby_V_Dome_Zarajenie_4.webp",
-        "./images/Zomby_V_Dome_Zarajenie_5.webp",
-        "./images/Zomby_V_Dome_Zarajenie_6.webp",
-        "./images/Zomby_V_Dome_Zarajenie_7.webp",
-        "./images/Zomby_V_Dome_Zarajenie_8.webp",
-        "./images/Zomby_V_Dome_Zarajenie_9.webp",
-        "./images/Zomby_V_Dome_Zarajenie_10.webp",
-        "./images/Zomby_V_Dome_Zarajenie_11.webp"
+        "../assets/images/game-collection-imagesZomby_V_Dome_Zarajenie_1.webp",
+        "../assets/images/game-collection-imagesZomby_V_Dome_Zarajenie_2.webp",
+        "../assets/images/game-collection-imagesZomby_V_Dome_Zarajenie_3.webp",
+        "../assets/images/game-collection-imagesZomby_V_Dome_Zarajenie_4.webp",
+        "../assets/images/game-collection-imagesZomby_V_Dome_Zarajenie_5.webp",
+        "../assets/images/game-collection-imagesZomby_V_Dome_Zarajenie_6.webp",
+        "../assets/images/game-collection-imagesZomby_V_Dome_Zarajenie_7.webp",
+        "../assets/images/game-collection-imagesZomby_V_Dome_Zarajenie_8.webp",
+        "../assets/images/game-collection-imagesZomby_V_Dome_Zarajenie_9.webp",
+        "../assets/images/game-collection-imagesZomby_V_Dome_Zarajenie_10.webp",
+        "../assets/images/game-collection-imagesZomby_V_Dome_Zarajenie_11.webp"
       ]
     },
     {
@@ -1894,12 +1894,12 @@
       "brand": "Greater Than Games",
       "category_ru": ["Кооперативные игры", "Стратегические игры", "Для одного", "Хардкорные игры"],
       "category_en": ["Co-op Games", "Strategy Games", "Single Player", "Hardcore Games"],
-      "thumbnail": "./thumbnails/Ostrov_duhov.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Ostrov_duhov.png",
       "images": [
-        "./images/Ostrov_duhov_1.webp",
-        "./images/Ostrov_duhov_2.webp",
-        "./images/Ostrov_duhov_3.webp",
-        "./images/Ostrov_duhov_4.webp"
+        "../assets/images/game-collection-imagesOstrov_duhov_1.webp",
+        "../assets/images/game-collection-imagesOstrov_duhov_2.webp",
+        "../assets/images/game-collection-imagesOstrov_duhov_3.webp",
+        "../assets/images/game-collection-imagesOstrov_duhov_4.webp"
       ]
     },
     {
@@ -1920,21 +1920,21 @@
       "brand": "Фабрика игр",
       "category_ru": ["Кооперативные игры", "Стратегические игры", "Игры для взрослых", "Игры для компании", "Приключенческие игры"],
       "category_en": ["Co-op Games", "Strategy Games", "Adult Games", "Company Games", "Adventure Games"],
-      "thumbnail": "./thumbnails/Mor_Utopia.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Mor_Utopia.png",
       "images": [
-        "./images/Mor_Utopia_1.webp",
-        "./images/Mor_Utopia_2.webp",
-        "./images/Mor_Utopia_3.webp",
-        "./images/Mor_Utopia_4.webp",
-        "./images/Mor_Utopia_5.webp",
-        "./images/Mor_Utopia_6.webp",
-        "./images/Mor_Utopia_7.webp",
-        "./images/Mor_Utopia_8.webp",
-        "./images/Mor_Utopia_9.webp",
-        "./images/Mor_Utopia_10.webp",
-        "./images/Mor_Utopia_11.webp",
-        "./images/Mor_Utopia_12.webp",
-        "./images/Mor_Utopia_13.webp"
+        "../assets/images/game-collection-imagesMor_Utopia_1.webp",
+        "../assets/images/game-collection-imagesMor_Utopia_2.webp",
+        "../assets/images/game-collection-imagesMor_Utopia_3.webp",
+        "../assets/images/game-collection-imagesMor_Utopia_4.webp",
+        "../assets/images/game-collection-imagesMor_Utopia_5.webp",
+        "../assets/images/game-collection-imagesMor_Utopia_6.webp",
+        "../assets/images/game-collection-imagesMor_Utopia_7.webp",
+        "../assets/images/game-collection-imagesMor_Utopia_8.webp",
+        "../assets/images/game-collection-imagesMor_Utopia_9.webp",
+        "../assets/images/game-collection-imagesMor_Utopia_10.webp",
+        "../assets/images/game-collection-imagesMor_Utopia_11.webp",
+        "../assets/images/game-collection-imagesMor_Utopia_12.webp",
+        "../assets/images/game-collection-imagesMor_Utopia_13.webp"
       ]
     },
     {
@@ -1955,19 +1955,19 @@
       "brand": "Portal Games",
       "category_ru": ["Кооперативные игры", "Приключенческие игры", "Для двоих", "Для одного", "Хардкорные игры", "Экономические"],
       "category_en": ["Co-op games", "Adventure games", "For two", "For one", "Hardcore games", "Economic"],
-      "thumbnail": "./thumbnails/Robinzon_Kruzo_Vtoraya_Redakciya.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Robinzon_Kruzo_Vtoraya_Redakciya.png",
       "images": [
-        "./images/Robinzon_Kruzo_Vtoraya_Redakciya_1.webp",
-        "./images/Robinzon_Kruzo_Vtoraya_Redakciya_2.webp",
-        "./images/Robinzon_Kruzo_Vtoraya_Redakciya_3.webp",
-        "./images/Robinzon_Kruzo_Vtoraya_Redakciya_4.webp",
-        "./images/Robinzon_Kruzo_Vtoraya_Redakciya_5.webp",
-        "./images/Robinzon_Kruzo_Vtoraya_Redakciya_6.webp",
-        "./images/Robinzon_Kruzo_Vtoraya_Redakciya_7.webp",
-        "./images/Robinzon_Kruzo_Vtoraya_Redakciya_8.webp",
-        "./images/Robinzon_Kruzo_Vtoraya_Redakciya_9.webp",
-        "./images/Robinzon_Kruzo_Vtoraya_Redakciya_10.webp",
-        "./images/Robinzon_Kruzo_Vtoraya_Redakciya_11.webp"
+        "../assets/images/game-collection-imagesRobinzon_Kruzo_Vtoraya_Redakciya_1.webp",
+        "../assets/images/game-collection-imagesRobinzon_Kruzo_Vtoraya_Redakciya_2.webp",
+        "../assets/images/game-collection-imagesRobinzon_Kruzo_Vtoraya_Redakciya_3.webp",
+        "../assets/images/game-collection-imagesRobinzon_Kruzo_Vtoraya_Redakciya_4.webp",
+        "../assets/images/game-collection-imagesRobinzon_Kruzo_Vtoraya_Redakciya_5.webp",
+        "../assets/images/game-collection-imagesRobinzon_Kruzo_Vtoraya_Redakciya_6.webp",
+        "../assets/images/game-collection-imagesRobinzon_Kruzo_Vtoraya_Redakciya_7.webp",
+        "../assets/images/game-collection-imagesRobinzon_Kruzo_Vtoraya_Redakciya_8.webp",
+        "../assets/images/game-collection-imagesRobinzon_Kruzo_Vtoraya_Redakciya_9.webp",
+        "../assets/images/game-collection-imagesRobinzon_Kruzo_Vtoraya_Redakciya_10.webp",
+        "../assets/images/game-collection-imagesRobinzon_Kruzo_Vtoraya_Redakciya_11.webp"
       ]
     },
     {
@@ -1988,15 +1988,15 @@
       "brand": "Fantasy Flight Games",
       "category_ru": ["Кооперативные игры", "Приключенческие игры"],
       "category_en": ["Co-op Games", "Adventure Games"],
-      "thumbnail": "./thumbnails/Fallout_Atomic-Bonds.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Fallout_Atomic-Bonds.png",
       "images": [
-        "./images/Fallout_Atomic-Bonds_1.webp",
-        "./images/Fallout_Atomic-Bonds_2.webp",
-        "./images/Fallout_Atomic-Bonds_3.webp",
-        "./images/Fallout_Atomic-Bonds_4.webp",
-        "./images/Fallout_Atomic-Bonds_5.webp",
-        "./images/Fallout_Atomic-Bonds_6.webp",
-        "./images/Fallout_Atomic-Bonds_7.webp"
+        "../assets/images/game-collection-imagesFallout_Atomic-Bonds_1.webp",
+        "../assets/images/game-collection-imagesFallout_Atomic-Bonds_2.webp",
+        "../assets/images/game-collection-imagesFallout_Atomic-Bonds_3.webp",
+        "../assets/images/game-collection-imagesFallout_Atomic-Bonds_4.webp",
+        "../assets/images/game-collection-imagesFallout_Atomic-Bonds_5.webp",
+        "../assets/images/game-collection-imagesFallout_Atomic-Bonds_6.webp",
+        "../assets/images/game-collection-imagesFallout_Atomic-Bonds_7.webp"
       ]
     },
     {
@@ -2017,16 +2017,16 @@
       "brand": "Rebel",
       "category_ru": ["Кооперативные игры", "Полукооперативные игры", "Хардкорные игры", "Игры для компании"],
       "category_en": ["Co-op games", "Semi-cooperative games", "Hardcore games", "Company games"],
-      "thumbnail": "./thumbnails/Nemesida_Voidseeders.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Nemesida_Voidseeders.png",
       "images": [
-        "./images/Nemesida_Voidseeders_1.webp",
-        "./images/Nemesida_Voidseeders_2.webp",
-        "./images/Nemesida_Voidseeders_3.webp",
-        "./images/Nemesida_Voidseeders_4.webp",
-        "./images/Nemesida_Voidseeders_5.webp",
-        "./images/Nemesida_Voidseeders_6.webp",
-        "./images/Nemesida_Voidseeders_7.webp",
-        "./images/Nemesida_Voidseeders_8.webp"
+        "../assets/images/game-collection-imagesNemesida_Voidseeders_1.webp",
+        "../assets/images/game-collection-imagesNemesida_Voidseeders_2.webp",
+        "../assets/images/game-collection-imagesNemesida_Voidseeders_3.webp",
+        "../assets/images/game-collection-imagesNemesida_Voidseeders_4.webp",
+        "../assets/images/game-collection-imagesNemesida_Voidseeders_5.webp",
+        "../assets/images/game-collection-imagesNemesida_Voidseeders_6.webp",
+        "../assets/images/game-collection-imagesNemesida_Voidseeders_7.webp",
+        "../assets/images/game-collection-imagesNemesida_Voidseeders_8.webp"
       ]
     },
     {
@@ -2047,18 +2047,18 @@
       "brand": "GaGa Games",
       "category_ru": ["Кооперативные игры", "Полукооперативные игры", "Приключенческие игры", "Игры для компании", "Карточные игры"],
       "category_en": ["Co-op games", "Semi-cooperative games", "Adventure games", "Company games", "Card games"],
-      "thumbnail": "./thumbnails/Chujaya_Planeta.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Chujaya_Planeta.png",
       "images": [
-        "./images/Chujaya_Planeta_1.webp",
-        "./images/Chujaya_Planeta_2.webp",
-        "./images/Chujaya_Planeta_3.webp",
-        "./images/Chujaya_Planeta_4.webp",
-        "./images/Chujaya_Planeta_5.webp",
-        "./images/Chujaya_Planeta_6.webp",
-        "./images/Chujaya_Planeta_7.webp",
-        "./images/Chujaya_Planeta_8.webp",
-        "./images/Chujaya_Planeta_9.webp",
-        "./images/Chujaya_Planeta_10.webp"
+        "../assets/images/game-collection-imagesChujaya_Planeta_1.webp",
+        "../assets/images/game-collection-imagesChujaya_Planeta_2.webp",
+        "../assets/images/game-collection-imagesChujaya_Planeta_3.webp",
+        "../assets/images/game-collection-imagesChujaya_Planeta_4.webp",
+        "../assets/images/game-collection-imagesChujaya_Planeta_5.webp",
+        "../assets/images/game-collection-imagesChujaya_Planeta_6.webp",
+        "../assets/images/game-collection-imagesChujaya_Planeta_7.webp",
+        "../assets/images/game-collection-imagesChujaya_Planeta_8.webp",
+        "../assets/images/game-collection-imagesChujaya_Planeta_9.webp",
+        "../assets/images/game-collection-imagesChujaya_Planeta_10.webp"
       ]
     },
     {
@@ -2079,18 +2079,18 @@
       "brand": "Стиль Жизни",
       "category_ru": ["Кооперативные игры", "Стратегические игры", "Семейные игры", "Игры для компании"],
       "category_en": ["Cooperative Games", "Strategy Games", "Family Games", "Company Games"],
-      "thumbnail": "./thumbnails/Pandemic.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Pandemic.png",
       "images": [
-        "./images/Pandemic_1.webp",
-        "./images/Pandemic_2.webp",
-        "./images/Pandemic_3.webp",
-        "./images/Pandemic_4.webp",
-        "./images/Pandemic_5.webp",
-        "./images/Pandemic_6.webp",
-        "./images/Pandemic_7.webp",
-        "./images/Pandemic_8.webp",
-        "./images/Pandemic_9.webp",
-        "./images/Pandemic_10.webp"
+        "../assets/images/game-collection-imagesPandemic_1.webp",
+        "../assets/images/game-collection-imagesPandemic_2.webp",
+        "../assets/images/game-collection-imagesPandemic_3.webp",
+        "../assets/images/game-collection-imagesPandemic_4.webp",
+        "../assets/images/game-collection-imagesPandemic_5.webp",
+        "../assets/images/game-collection-imagesPandemic_6.webp",
+        "../assets/images/game-collection-imagesPandemic_7.webp",
+        "../assets/images/game-collection-imagesPandemic_8.webp",
+        "../assets/images/game-collection-imagesPandemic_9.webp",
+        "../assets/images/game-collection-imagesPandemic_10.webp"
       ]
     },
     {
@@ -2111,22 +2111,22 @@
       "brand": "Asmodee",
       "category_ru": ["Приключенческие игры", "Для одного", "Стратегические игры"],
       "category_en": ["Adventure games", "For one", "Strategy games"],
-      "thumbnail": "./thumbnails/enciklopediya.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/enciklopediya.png",
       "images": [
-        "./images/enciklopediya_1.webp",
-        "./images/enciklopediya_2.webp",
-        "./images/enciklopediya_3.webp",
-        "./images/enciklopediya_4.webp",
-        "./images/enciklopediya_5.webp",
-        "./images/enciklopediya_6.webp",
-        "./images/enciklopediya_7.webp",
-        "./images/enciklopediya_8.webp",
-        "./images/enciklopediya_9.webp",
-        "./images/enciklopediya_10.webp",
-        "./images/enciklopediya_11.webp",
-        "./images/enciklopediya_12.webp",
-        "./images/enciklopediya_13.webp",
-        "./images/enciklopediya_14.webp"
+        "../assets/images/game-collection-imagesenciklopediya_1.webp",
+        "../assets/images/game-collection-imagesenciklopediya_2.webp",
+        "../assets/images/game-collection-imagesenciklopediya_3.webp",
+        "../assets/images/game-collection-imagesenciklopediya_4.webp",
+        "../assets/images/game-collection-imagesenciklopediya_5.webp",
+        "../assets/images/game-collection-imagesenciklopediya_6.webp",
+        "../assets/images/game-collection-imagesenciklopediya_7.webp",
+        "../assets/images/game-collection-imagesenciklopediya_8.webp",
+        "../assets/images/game-collection-imagesenciklopediya_9.webp",
+        "../assets/images/game-collection-imagesenciklopediya_10.webp",
+        "../assets/images/game-collection-imagesenciklopediya_11.webp",
+        "../assets/images/game-collection-imagesenciklopediya_12.webp",
+        "../assets/images/game-collection-imagesenciklopediya_13.webp",
+        "../assets/images/game-collection-imagesenciklopediya_14.webp"
       ]
     },
     {
@@ -2147,12 +2147,12 @@
       "brand": "Makaka Editions",
       "category_ru": ["Приключенческие игры", "Книги-игры"],
       "category_en": ["Adventure Games", "Game Books"],
-      "thumbnail": "./thumbnails/kosmicheskiy_desant_komix_igra.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/kosmicheskiy_desant_komix_igra.png",
       "images": [
-        "./images/kosmicheskiy_desant_komix_igra_1.webp",
-        "./images/kosmicheskiy_desant_komix_igra_2.webp",
-        "./images/kosmicheskiy_desant_komix_igra_3.webp",
-        "./images/kosmicheskiy_desant_komix_igra_4.webp"
+        "../assets/images/game-collection-imageskosmicheskiy_desant_komix_igra_1.webp",
+        "../assets/images/game-collection-imageskosmicheskiy_desant_komix_igra_2.webp",
+        "../assets/images/game-collection-imageskosmicheskiy_desant_komix_igra_3.webp",
+        "../assets/images/game-collection-imageskosmicheskiy_desant_komix_igra_4.webp"
       ]
     },
     {
@@ -2173,18 +2173,18 @@
       "brand": "Fantasy Flight Games",
       "category_ru": ["Приключенческие игры", "Для двоих", "Для одного", "Игры для компании"],
       "category_en": ["Adventure games", "For two", "For one", "Games for the company"],
-      "thumbnail": "./thumbnails/SWOuterRim.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/SWOuterRim.png",
       "images": [
-        "./images/SWOuterRim_1.webp",
-        "./images/SWOuterRim_2.webp",
-        "./images/SWOuterRim_3.webp",
-        "./images/SWOuterRim_4.webp",
-        "./images/SWOuterRim_5.webp",
-        "./images/SWOuterRim_6.webp",
-        "./images/SWOuterRim_7.webp",
-        "./images/SWOuterRim_8.webp",
-        "./images/SWOuterRim_9.webp",
-        "./images/SWOuterRim_10.webp"
+        "../assets/images/game-collection-imagesSWOuterRim_1.webp",
+        "../assets/images/game-collection-imagesSWOuterRim_2.webp",
+        "../assets/images/game-collection-imagesSWOuterRim_3.webp",
+        "../assets/images/game-collection-imagesSWOuterRim_4.webp",
+        "../assets/images/game-collection-imagesSWOuterRim_5.webp",
+        "../assets/images/game-collection-imagesSWOuterRim_6.webp",
+        "../assets/images/game-collection-imagesSWOuterRim_7.webp",
+        "../assets/images/game-collection-imagesSWOuterRim_8.webp",
+        "../assets/images/game-collection-imagesSWOuterRim_9.webp",
+        "../assets/images/game-collection-imagesSWOuterRim_10.webp"
       ]
     },
     {
@@ -2205,18 +2205,18 @@
       "brand": "Fantasy Flight Games",
       "category_ru": ["Приключенческие игры", "Для двоих", "Для одного", "Игры для компании", "Хардкорные игры"],
       "category_en": ["Adventure games", "For two", "For one", "Games for the company", "Hardcore games"],
-      "thumbnail": "./thumbnails/Runebound.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Runebound.png",
       "images": [
-        "./images/Runebound_1.webp",
-        "./images/Runebound_2.webp",
-        "./images/Runebound_3.webp",
-        "./images/Runebound_4.webp",
-        "./images/Runebound_5.webp",
-        "./images/Runebound_6.webp",
-        "./images/Runebound_7.webp",
-        "./images/Runebound_8.webp",
-        "./images/Runebound_9.webp",
-        "./images/Runebound_10.webp"
+        "../assets/images/game-collection-imagesRunebound_1.webp",
+        "../assets/images/game-collection-imagesRunebound_2.webp",
+        "../assets/images/game-collection-imagesRunebound_3.webp",
+        "../assets/images/game-collection-imagesRunebound_4.webp",
+        "../assets/images/game-collection-imagesRunebound_5.webp",
+        "../assets/images/game-collection-imagesRunebound_6.webp",
+        "../assets/images/game-collection-imagesRunebound_7.webp",
+        "../assets/images/game-collection-imagesRunebound_8.webp",
+        "../assets/images/game-collection-imagesRunebound_9.webp",
+        "../assets/images/game-collection-imagesRunebound_10.webp"
       ]
     },
     {
@@ -2237,11 +2237,11 @@
       "brand": "Magellan",
       "category_ru": ["Приключенческие игры", "Логические игры", "Семейные игры"],
       "category_en": ["Adventure games", "Logic games", "Family games"],
-      "thumbnail": "./thumbnails/Jakal.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Jakal.png",
       "images": [
-        "./images/Jakal_1.webp",
-        "./images/Jakal_2.webp",
-        "./images/Jakal_3.webp"
+        "../assets/images/game-collection-imagesJakal_1.webp",
+        "../assets/images/game-collection-imagesJakal_2.webp",
+        "../assets/images/game-collection-imagesJakal_3.webp"
       ]
     },
     {
@@ -2262,23 +2262,23 @@
       "brand": "Фабрика игр",
       "category_ru": ["Приключенческие игры", "Хардкорные игры"],
       "category_en": ["Adventure games", "Hardcore games"],
-      "thumbnail": "./thumbnails/voyny_chyornoy_rozy_preispodnyaya.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/voyny_chyornoy_rozy_preispodnyaya.png",
       "images": [
-        "./images/voyny_chyornoy_rozy_preispodnyaya_1.webp",
-        "./images/voyny_chyornoy_rozy_preispodnyaya_2.webp",
-        "./images/voyny_chyornoy_rozy_preispodnyaya_3.webp",
-        "./images/voyny_chyornoy_rozy_preispodnyaya_4.webp",
-        "./images/voyny_chyornoy_rozy_preispodnyaya_5.webp",
-        "./images/voyny_chyornoy_rozy_preispodnyaya_6.webp",
-        "./images/voyny_chyornoy_rozy_preispodnyaya_7.webp",
-        "./images/voyny_chyornoy_rozy_preispodnyaya_8.webp",
-        "./images/voyny_chyornoy_rozy_preispodnyaya_9.webp",
-        "./images/voyny_chyornoy_rozy_preispodnyaya_10.webp",
-        "./images/voyny_chyornoy_rozy_preispodnyaya_11.webp",
-        "./images/voyny_chyornoy_rozy_preispodnyaya_12.webp",
-        "./images/voyny_chyornoy_rozy_preispodnyaya_13.webp",
-        "./images/voyny_chyornoy_rozy_preispodnyaya_14.webp",
-        "./images/voyny_chyornoy_rozy_preispodnyaya_15.webp"
+        "../assets/images/game-collection-imagesvoyny_chyornoy_rozy_preispodnyaya_1.webp",
+        "../assets/images/game-collection-imagesvoyny_chyornoy_rozy_preispodnyaya_2.webp",
+        "../assets/images/game-collection-imagesvoyny_chyornoy_rozy_preispodnyaya_3.webp",
+        "../assets/images/game-collection-imagesvoyny_chyornoy_rozy_preispodnyaya_4.webp",
+        "../assets/images/game-collection-imagesvoyny_chyornoy_rozy_preispodnyaya_5.webp",
+        "../assets/images/game-collection-imagesvoyny_chyornoy_rozy_preispodnyaya_6.webp",
+        "../assets/images/game-collection-imagesvoyny_chyornoy_rozy_preispodnyaya_7.webp",
+        "../assets/images/game-collection-imagesvoyny_chyornoy_rozy_preispodnyaya_8.webp",
+        "../assets/images/game-collection-imagesvoyny_chyornoy_rozy_preispodnyaya_9.webp",
+        "../assets/images/game-collection-imagesvoyny_chyornoy_rozy_preispodnyaya_10.webp",
+        "../assets/images/game-collection-imagesvoyny_chyornoy_rozy_preispodnyaya_11.webp",
+        "../assets/images/game-collection-imagesvoyny_chyornoy_rozy_preispodnyaya_12.webp",
+        "../assets/images/game-collection-imagesvoyny_chyornoy_rozy_preispodnyaya_13.webp",
+        "../assets/images/game-collection-imagesvoyny_chyornoy_rozy_preispodnyaya_14.webp",
+        "../assets/images/game-collection-imagesvoyny_chyornoy_rozy_preispodnyaya_15.webp"
 
       ]
     },
@@ -2300,18 +2300,18 @@
       "brand": "Rebel",
       "category_ru": ["Приключенческие игры", "Для двоих", "Семейные игры", "Кооперативные игры"],
       "category_en": ["Adventure games", "For two", "Family games", "Co-op games"],
-      "thumbnail": "./thumbnails/Zapret_ostr.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Zapret_ostr.png",
       "images": [
-        "./images/Zapret_ostr_1.webp",
-        "./images/Zapret_ostr_2.webp",
-        "./images/Zapret_ostr_3.webp",
-        "./images/Zapret_ostr_4.webp",
-        "./images/Zapret_ostr_5.webp",
-        "./images/Zapret_ostr_6.webp",
-        "./images/Zapret_ostr_7.webp",
-        "./images/Zapret_ostr_8.webp",
-        "./images/Zapret_ostr_9.webp",
-        "./images/Zapret_ostr_10.webp"
+        "../assets/images/game-collection-imagesZapret_ostr_1.webp",
+        "../assets/images/game-collection-imagesZapret_ostr_2.webp",
+        "../assets/images/game-collection-imagesZapret_ostr_3.webp",
+        "../assets/images/game-collection-imagesZapret_ostr_4.webp",
+        "../assets/images/game-collection-imagesZapret_ostr_5.webp",
+        "../assets/images/game-collection-imagesZapret_ostr_6.webp",
+        "../assets/images/game-collection-imagesZapret_ostr_7.webp",
+        "../assets/images/game-collection-imagesZapret_ostr_8.webp",
+        "../assets/images/game-collection-imagesZapret_ostr_9.webp",
+        "../assets/images/game-collection-imagesZapret_ostr_10.webp"
       ]
     },
     {
@@ -2332,18 +2332,18 @@
       "brand": "GaGa Games",
       "category_ru": ["Приключенческие игры", "Для одного", "Карточные игры", "Игры в дорогу"],
       "category_en": ["Adventure games", "For one", "Card games", "Games on the road"],
-      "thumbnail": "./thumbnails/Dungeons.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Dungeons.png",
       "images": [
-        "./images/Dungeons_1.webp",
-        "./images/Dungeons_2.webp",
-        "./images/Dungeons_3.webp",
-        "./images/Dungeons_4.webp",
-        "./images/Dungeons_5.webp",
-        "./images/Dungeons_6.webp",
-        "./images/Dungeons_7.webp",
-        "./images/Dungeons_8.webp",
-        "./images/Dungeons_9.webp",
-        "./images/Dungeons_10.webp"
+        "../assets/images/game-collection-imagesDungeons_1.webp",
+        "../assets/images/game-collection-imagesDungeons_2.webp",
+        "../assets/images/game-collection-imagesDungeons_3.webp",
+        "../assets/images/game-collection-imagesDungeons_4.webp",
+        "../assets/images/game-collection-imagesDungeons_5.webp",
+        "../assets/images/game-collection-imagesDungeons_6.webp",
+        "../assets/images/game-collection-imagesDungeons_7.webp",
+        "../assets/images/game-collection-imagesDungeons_8.webp",
+        "../assets/images/game-collection-imagesDungeons_9.webp",
+        "../assets/images/game-collection-imagesDungeons_10.webp"
       ]
     },
     {
@@ -2364,22 +2364,22 @@
       "brand": "Эврикус",
       "category_ru": ["Приключенческие игры", "Стратегические игры", "Кооперативные игры"],
       "category_en": ["Adventure games", "Strategy games", "Co-op games"],
-      "thumbnail": "./thumbnails/oltre.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/oltre.png",
       "images": [
-        "./images/oltre_1.webp",
-        "./images/oltre_2.webp",
-        "./images/oltre_3.webp",
-        "./images/oltre_4.webp",
-        "./images/oltre_5.webp",
-        "./images/oltre_6.webp",
-        "./images/oltre_7.webp",
-        "./images/oltre_8.webp",
-        "./images/oltre_9.webp",
-        "./images/oltre_10.webp",
-        "./images/oltre_11.webp",
-        "./images/oltre_12.webp",
-        "./images/oltre_13.webp",
-        "./images/oltre_14.webp"
+        "../assets/images/game-collection-imagesoltre_1.webp",
+        "../assets/images/game-collection-imagesoltre_2.webp",
+        "../assets/images/game-collection-imagesoltre_3.webp",
+        "../assets/images/game-collection-imagesoltre_4.webp",
+        "../assets/images/game-collection-imagesoltre_5.webp",
+        "../assets/images/game-collection-imagesoltre_6.webp",
+        "../assets/images/game-collection-imagesoltre_7.webp",
+        "../assets/images/game-collection-imagesoltre_8.webp",
+        "../assets/images/game-collection-imagesoltre_9.webp",
+        "../assets/images/game-collection-imagesoltre_10.webp",
+        "../assets/images/game-collection-imagesoltre_11.webp",
+        "../assets/images/game-collection-imagesoltre_12.webp",
+        "../assets/images/game-collection-imagesoltre_13.webp",
+        "../assets/images/game-collection-imagesoltre_14.webp"
       ]
     },
     {
@@ -2400,20 +2400,20 @@
       "brand": "GaGa Games",
       "category_ru": ["Приключенческие игры", "Стратегические игры", "Для одного", "Карточные игры", "Хардкорные игры", "Экономические"],
       "category_en": ["Adventure games", "Strategy games", "For one", "Card games", "Hardcore games", "Economic"],
-      "thumbnail": "./thumbnails/vechnaya_zima.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/vechnaya_zima.png",
       "images": [
-        "./images/vechnaya_zima_1.webp",
-        "./images/vechnaya_zima_2.webp",
-        "./images/vechnaya_zima_3.webp",
-        "./images/vechnaya_zima_4.webp",
-        "./images/vechnaya_zima_5.webp",
-        "./images/vechnaya_zima_6.webp",
-        "./images/vechnaya_zima_7.webp",
-        "./images/vechnaya_zima_8.webp",
-        "./images/vechnaya_zima_9.webp",
-        "./images/vechnaya_zima_10.webp",
-        "./images/vechnaya_zima_11.webp",
-        "./images/vechnaya_zima_12.webp"
+        "../assets/images/game-collection-imagesvechnaya_zima_1.webp",
+        "../assets/images/game-collection-imagesvechnaya_zima_2.webp",
+        "../assets/images/game-collection-imagesvechnaya_zima_3.webp",
+        "../assets/images/game-collection-imagesvechnaya_zima_4.webp",
+        "../assets/images/game-collection-imagesvechnaya_zima_5.webp",
+        "../assets/images/game-collection-imagesvechnaya_zima_6.webp",
+        "../assets/images/game-collection-imagesvechnaya_zima_7.webp",
+        "../assets/images/game-collection-imagesvechnaya_zima_8.webp",
+        "../assets/images/game-collection-imagesvechnaya_zima_9.webp",
+        "../assets/images/game-collection-imagesvechnaya_zima_10.webp",
+        "../assets/images/game-collection-imagesvechnaya_zima_11.webp",
+        "../assets/images/game-collection-imagesvechnaya_zima_12.webp"
       ]
     },
     {
@@ -2434,14 +2434,14 @@
       "brand": "GaGa Games",
       "category_ru": ["Приключенческие игры", "Стратегические игры", "Для одного", "Семейные игры", "Экономические"],
       "category_en": ["Adventure games", "Strategy games", "For one", "Family games", "Economic"],
-      "thumbnail": "./thumbnails/Arnaks.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Arnaks.png",
       "images": [
-        "./images/Arnaks_1.webp",
-        "./images/Arnaks_2.webp",
-        "./images/Arnaks_3.webp",
-        "./images/Arnaks_4.webp",
-        "./images/Arnaks_5.webp",
-        "./images/Arnaks_6.webp"
+        "../assets/images/game-collection-imagesArnaks_1.webp",
+        "../assets/images/game-collection-imagesArnaks_2.webp",
+        "../assets/images/game-collection-imagesArnaks_3.webp",
+        "../assets/images/game-collection-imagesArnaks_4.webp",
+        "../assets/images/game-collection-imagesArnaks_5.webp",
+        "../assets/images/game-collection-imagesArnaks_6.webp"
       ]
     },
     {
@@ -2462,15 +2462,15 @@
       "brand": "Games Workshop",
       "category_ru": ["Приключенческие игры", "Игры для компании"],
       "category_en": ["Adventure games", "Games for the company"],
-      "thumbnail": "./thumbnails/Talisman.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Talisman.png",
       "images": [
-        "./images/Talisman_1.webp",
-        "./images/Talisman_2.webp",
-        "./images/Talisman_3.webp",
-        "./images/Talisman_4.webp",
-        "./images/Talisman_5.webp",
-        "./images/Talisman_6.webp",
-        "./images/Talisman_7.webp"
+        "../assets/images/game-collection-imagesTalisman_1.webp",
+        "../assets/images/game-collection-imagesTalisman_2.webp",
+        "../assets/images/game-collection-imagesTalisman_3.webp",
+        "../assets/images/game-collection-imagesTalisman_4.webp",
+        "../assets/images/game-collection-imagesTalisman_5.webp",
+        "../assets/images/game-collection-imagesTalisman_6.webp",
+        "../assets/images/game-collection-imagesTalisman_7.webp"
       ]
     },
     {
@@ -2491,13 +2491,13 @@
       "brand": "Hobby World",
       "category_ru": ["Приключенческие игры", "Книги-игры", "Игры в дорогу"],
       "category_en": ["Adventure games", "Game books", "Games on the road"],
-      "thumbnail": "./thumbnails/Oboroten.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Oboroten.png",
       "images": [
-        "./images/Oboroten_1.webp",
-        "./images/Oboroten_2.webp",
-        "./images/Oboroten_3.webp",
-        "./images/Oboroten_4.webp",
-        "./images/Oboroten_5.webp"
+        "../assets/images/game-collection-imagesOboroten_1.webp",
+        "../assets/images/game-collection-imagesOboroten_2.webp",
+        "../assets/images/game-collection-imagesOboroten_3.webp",
+        "../assets/images/game-collection-imagesOboroten_4.webp",
+        "../assets/images/game-collection-imagesOboroten_5.webp"
       ]
     },
     {
@@ -2518,19 +2518,19 @@
       "brand": "Hobby World",
       "category_ru": ["Приключенческие игры", "Стратегические игры", "Для одного"],
       "category_en": ["Adventure games", "Strategy games", "For one"],
-      "thumbnail": "./thumbnails/enciklopediya_bolshoe_puteshestvie.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/enciklopediya_bolshoe_puteshestvie.png",
       "images": [
-        "./images/enciklopediya_bolshoe_puteshestvie_1.webp",
-        "./images/enciklopediya_bolshoe_puteshestvie_2.webp",
-        "./images/enciklopediya_bolshoe_puteshestvie_3.webp",
-        "./images/enciklopediya_bolshoe_puteshestvie_4.webp",
-        "./images/enciklopediya_bolshoe_puteshestvie_5.webp",
-        "./images/enciklopediya_bolshoe_puteshestvie_6.webp",
-        "./images/enciklopediya_bolshoe_puteshestvie_7.webp",
-        "./images/enciklopediya_bolshoe_puteshestvie_8.webp",
-        "./images/enciklopediya_bolshoe_puteshestvie_9.webp",
-        "./images/enciklopediya_bolshoe_puteshestvie_10.webp",
-        "./images/enciklopediya_bolshoe_puteshestvie_11.webp"
+        "../assets/images/game-collection-imagesenciklopediya_bolshoe_puteshestvie_1.webp",
+        "../assets/images/game-collection-imagesenciklopediya_bolshoe_puteshestvie_2.webp",
+        "../assets/images/game-collection-imagesenciklopediya_bolshoe_puteshestvie_3.webp",
+        "../assets/images/game-collection-imagesenciklopediya_bolshoe_puteshestvie_4.webp",
+        "../assets/images/game-collection-imagesenciklopediya_bolshoe_puteshestvie_5.webp",
+        "../assets/images/game-collection-imagesenciklopediya_bolshoe_puteshestvie_6.webp",
+        "../assets/images/game-collection-imagesenciklopediya_bolshoe_puteshestvie_7.webp",
+        "../assets/images/game-collection-imagesenciklopediya_bolshoe_puteshestvie_8.webp",
+        "../assets/images/game-collection-imagesenciklopediya_bolshoe_puteshestvie_9.webp",
+        "../assets/images/game-collection-imagesenciklopediya_bolshoe_puteshestvie_10.webp",
+        "../assets/images/game-collection-imagesenciklopediya_bolshoe_puteshestvie_11.webp"
       ]
     },
     {
@@ -2551,16 +2551,16 @@
       "brand": "CMON",
       "category_ru": ["Приключенческие игры", "Стратегические игры", "Игры для компании", "Кооперативные игры"],
       "category_en": ["Adventure games", "Strategy games", "Company games", "Co-op games"],
-      "thumbnail": "./thumbnails/Hellboy.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Hellboy.png",
       "images": [
-        "./images/Hellboy_1.webp",
-        "./images/Hellboy_2.webp",
-        "./images/Hellboy_3.webp",
-        "./images/Hellboy_4.webp",
-        "./images/Hellboy_5.webp",
-        "./images/Hellboy_6.webp",
-        "./images/Hellboy_7.webp",
-        "./images/Hellboy_8.webp"
+        "../assets/images/game-collection-imagesHellboy_1.webp",
+        "../assets/images/game-collection-imagesHellboy_2.webp",
+        "../assets/images/game-collection-imagesHellboy_3.webp",
+        "../assets/images/game-collection-imagesHellboy_4.webp",
+        "../assets/images/game-collection-imagesHellboy_5.webp",
+        "../assets/images/game-collection-imagesHellboy_6.webp",
+        "../assets/images/game-collection-imagesHellboy_7.webp",
+        "../assets/images/game-collection-imagesHellboy_8.webp"
       ]
     },
     {
@@ -2581,18 +2581,18 @@
       "brand": "Magellan",
       "category_ru": ["Приключенческие игры", "Семейные игры", "Игры для компании"],
       "category_en": ["Adventure games", "Family games", "Company games"],
-      "thumbnail": "./thumbnails/Shakal_Archipelag.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Shakal_Archipelag.png",
       "images": [
-        "./images/Shakal_Archipelag_1.webp",
-        "./images/Shakal_Archipelag_2.webp",
-        "./images/Shakal_Archipelag_3.webp",
-        "./images/Shakal_Archipelag_4.webp",
-        "./images/Shakal_Archipelag_5.webp",
-        "./images/Shakal_Archipelag_6.webp",
-        "./images/Shakal_Archipelag_7.webp",
-        "./images/Shakal_Archipelag_8.webp",
-        "./images/Shakal_Archipelag_9.webp",
-        "./images/Shakal_Archipelag_10.webp"
+        "../assets/images/game-collection-imagesShakal_Archipelag_1.webp",
+        "../assets/images/game-collection-imagesShakal_Archipelag_2.webp",
+        "../assets/images/game-collection-imagesShakal_Archipelag_3.webp",
+        "../assets/images/game-collection-imagesShakal_Archipelag_4.webp",
+        "../assets/images/game-collection-imagesShakal_Archipelag_5.webp",
+        "../assets/images/game-collection-imagesShakal_Archipelag_6.webp",
+        "../assets/images/game-collection-imagesShakal_Archipelag_7.webp",
+        "../assets/images/game-collection-imagesShakal_Archipelag_8.webp",
+        "../assets/images/game-collection-imagesShakal_Archipelag_9.webp",
+        "../assets/images/game-collection-imagesShakal_Archipelag_10.webp"
       ]
     },
     {
@@ -2613,15 +2613,15 @@
       "brand": "Horrible Games",
       "category_ru": ["Приключенческие игры", "Для одного", "Стратегические игры"],
       "category_en": ["Adventure games", "For one", "Strategy games"],
-      "thumbnail": "./thumbnails/epoha_oblakov.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/epoha_oblakov.png",
       "images": [
-        "./images/epoha_oblakov_1.webp",
-        "./images/epoha_oblakov_2.webp",
-        "./images/epoha_oblakov_3.webp",
-        "./images/epoha_oblakov_4.webp",
-        "./images/epoha_oblakov_5.webp",
-        "./images/epoha_oblakov_6.webp",
-        "./images/epoha_oblakov_7.webp"
+        "../assets/images/game-collection-imagesepoha_oblakov_1.webp",
+        "../assets/images/game-collection-imagesepoha_oblakov_2.webp",
+        "../assets/images/game-collection-imagesepoha_oblakov_3.webp",
+        "../assets/images/game-collection-imagesepoha_oblakov_4.webp",
+        "../assets/images/game-collection-imagesepoha_oblakov_5.webp",
+        "../assets/images/game-collection-imagesepoha_oblakov_6.webp",
+        "../assets/images/game-collection-imagesepoha_oblakov_7.webp"
       ]
     },
     {
@@ -2642,12 +2642,12 @@
       "brand": "Greater Than Games",
       "category_ru": ["Приключенческие игры", "Карточные игры", "Кооперативные игры", "Стратегические игры"],
       "category_en": ["Adventure games", "Card games", "Co-op games", "Strategy games"],
-      "thumbnail": "./thumbnails/Paleo_NB.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Paleo_NB.png",
       "images": [
-        "./images/Paleo_NB_1.webp",
-        "./images/Paleo_NB_2.webp",
-        "./images/Paleo_NB_3.webp",
-        "./images/Paleo_NB_4.webp"
+        "../assets/images/game-collection-imagesPaleo_NB_1.webp",
+        "../assets/images/game-collection-imagesPaleo_NB_2.webp",
+        "../assets/images/game-collection-imagesPaleo_NB_3.webp",
+        "../assets/images/game-collection-imagesPaleo_NB_4.webp"
       ]
     },
     {
@@ -2668,15 +2668,15 @@
       "brand": "Lavka Games",
       "category_ru": ["Стратегические игры", "Для одного"],
       "category_en": ["Strategy games", "For one"],
-      "thumbnail": "./thumbnails/istoriya_ricarya.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/istoriya_ricarya.png",
       "images": [
-        "./images/istoriya_ricarya_1.webp",
-        "./images/istoriya_ricarya_2.webp",
-        "./images/istoriya_ricarya_3.webp",
-        "./images/istoriya_ricarya_4.webp",
-        "./images/istoriya_ricarya_5.webp",
-        "./images/istoriya_ricarya_6.webp",
-        "./images/istoriya_ricarya_7.webp"
+        "../assets/images/game-collection-imagesistoriya_ricarya_1.webp",
+        "../assets/images/game-collection-imagesistoriya_ricarya_2.webp",
+        "../assets/images/game-collection-imagesistoriya_ricarya_3.webp",
+        "../assets/images/game-collection-imagesistoriya_ricarya_4.webp",
+        "../assets/images/game-collection-imagesistoriya_ricarya_5.webp",
+        "../assets/images/game-collection-imagesistoriya_ricarya_6.webp",
+        "../assets/images/game-collection-imagesistoriya_ricarya_7.webp"
       ]
     },
     {
@@ -2697,16 +2697,16 @@
       "brand": "Asmodee",
       "category_ru": ["Стратегические игры", "Семейные игры", "Игры для компании"],
       "category_en": ["Strategy games", "Family games", "Company games"],
-      "thumbnail": "./thumbnails/Ticket-to-Ride_Europe.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Ticket-to-Ride_Europe.png",
       "images": [
-        "./images/Ticket-to-Ride_Europe_1.webp",
-        "./images/Ticket-to-Ride_Europe_2.webp",
-        "./images/Ticket-to-Ride_Europe_3.webp",
-        "./images/Ticket-to-Ride_Europe_4.webp",
-        "./images/Ticket-to-Ride_Europe_5.webp",
-        "./images/Ticket-to-Ride_Europe_6.webp",
-        "./images/Ticket-to-Ride_Europe_7.webp",
-        "./images/Ticket-to-Ride_Europe_8.webp"
+        "../assets/images/game-collection-imagesTicket-to-Ride_Europe_1.webp",
+        "../assets/images/game-collection-imagesTicket-to-Ride_Europe_2.webp",
+        "../assets/images/game-collection-imagesTicket-to-Ride_Europe_3.webp",
+        "../assets/images/game-collection-imagesTicket-to-Ride_Europe_4.webp",
+        "../assets/images/game-collection-imagesTicket-to-Ride_Europe_5.webp",
+        "../assets/images/game-collection-imagesTicket-to-Ride_Europe_6.webp",
+        "../assets/images/game-collection-imagesTicket-to-Ride_Europe_7.webp",
+        "../assets/images/game-collection-imagesTicket-to-Ride_Europe_8.webp"
       ]
     },
     {
@@ -2727,16 +2727,16 @@
       "brand": "Fantasy Flight Games",
       "category_ru": ["Стратегические игры", "Для двоих", "Игры для компании", "Хардкорные игры"],
       "category_en": ["Strategy games", "For two", "Games for the company", "Hardcore games"],
-      "thumbnail": "./thumbnails/bitva-za-rokugan.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/bitva-za-rokugan.png",
       "images": [
-        "./images/bitva-za-rokugan_1.webp",
-        "./images/bitva-za-rokugan_2.webp",
-        "./images/bitva-za-rokugan_3.webp",
-        "./images/bitva-za-rokugan_4.webp",
-        "./images/bitva-za-rokugan_5.webp",
-        "./images/bitva-za-rokugan_6.webp",
-        "./images/bitva-za-rokugan_7.webp",
-        "./images/bitva-za-rokugan_8.webp"
+        "../assets/images/game-collection-imagesbitva-za-rokugan_1.webp",
+        "../assets/images/game-collection-imagesbitva-za-rokugan_2.webp",
+        "../assets/images/game-collection-imagesbitva-za-rokugan_3.webp",
+        "../assets/images/game-collection-imagesbitva-za-rokugan_4.webp",
+        "../assets/images/game-collection-imagesbitva-za-rokugan_5.webp",
+        "../assets/images/game-collection-imagesbitva-za-rokugan_6.webp",
+        "../assets/images/game-collection-imagesbitva-za-rokugan_7.webp",
+        "../assets/images/game-collection-imagesbitva-za-rokugan_8.webp"
       ]
     },
     {
@@ -2757,19 +2757,19 @@
       "brand": "Fantasy Flight Games",
       "category_ru": ["Стратегические игры", "Хардкорные игры"],
       "category_en": ["Strategy games", "Hardcore games"],
-      "thumbnail": "./thumbnails/gameOfThrones.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/gameOfThrones.png",
       "images": [
-        "./images/gameOfThrones_1.webp",
-        "./images/gameOfThrones_2.webp",
-        "./images/gameOfThrones_3.webp",
-        "./images/gameOfThrones_4.webp",
-        "./images/gameOfThrones_5.webp",
-        "./images/gameOfThrones_6.webp",
-        "./images/gameOfThrones_7.webp",
-        "./images/gameOfThrones_8.webp",
-        "./images/gameOfThrones_9.webp",
-        "./images/gameOfThrones_10.webp",
-        "./images/gameOfThrones_11.webp"
+        "../assets/images/game-collection-imagesgameOfThrones_1.webp",
+        "../assets/images/game-collection-imagesgameOfThrones_2.webp",
+        "../assets/images/game-collection-imagesgameOfThrones_3.webp",
+        "../assets/images/game-collection-imagesgameOfThrones_4.webp",
+        "../assets/images/game-collection-imagesgameOfThrones_5.webp",
+        "../assets/images/game-collection-imagesgameOfThrones_6.webp",
+        "../assets/images/game-collection-imagesgameOfThrones_7.webp",
+        "../assets/images/game-collection-imagesgameOfThrones_8.webp",
+        "../assets/images/game-collection-imagesgameOfThrones_9.webp",
+        "../assets/images/game-collection-imagesgameOfThrones_10.webp",
+        "../assets/images/game-collection-imagesgameOfThrones_11.webp"
       ]
     },
     {
@@ -2790,18 +2790,18 @@
       "brand": "Portal Games",
       "category_ru": ["Стратегические игры", "Экономические", "Для одного", "Для двоих", "Семейные игры"],
       "category_en": ["Strategy games", "Economic", "For one", "For two", "Family games"],
-      "thumbnail": "./thumbnails/Ehverdell.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Ehverdell.png",
       "images": [
-        "./images/Ehverdell_1.webp",
-        "./images/Ehverdell_2.webp",
-        "./images/Ehverdell_3.webp",
-        "./images/Ehverdell_4.webp",
-        "./images/Ehverdell_5.webp",
-        "./images/Ehverdell_6.webp",
-        "./images/Ehverdell_7.webp",
-        "./images/Ehverdell_8.webp",
-        "./images/Ehverdell_9.webp",
-        "./images/Ehverdell_10.webp"
+        "../assets/images/game-collection-imagesEhverdell_1.webp",
+        "../assets/images/game-collection-imagesEhverdell_2.webp",
+        "../assets/images/game-collection-imagesEhverdell_3.webp",
+        "../assets/images/game-collection-imagesEhverdell_4.webp",
+        "../assets/images/game-collection-imagesEhverdell_5.webp",
+        "../assets/images/game-collection-imagesEhverdell_6.webp",
+        "../assets/images/game-collection-imagesEhverdell_7.webp",
+        "../assets/images/game-collection-imagesEhverdell_8.webp",
+        "../assets/images/game-collection-imagesEhverdell_9.webp",
+        "../assets/images/game-collection-imagesEhverdell_10.webp"
       ]
     },
     {
@@ -2822,20 +2822,20 @@
       "brand": "Экивоки",
       "category_ru": ["Стратегические игры", "Игры для компании", "Семейные игры"],
       "category_en": ["Strategy games", "Games for the company", "Family games"],
-      "thumbnail": "./thumbnails/Small-World.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Small-World.png",
       "images": [
-        "./images/Small-World_1.webp",
-        "./images/Small-World_2.webp",
-        "./images/Small-World_3.webp",
-        "./images/Small-World_4.webp",
-        "./images/Small-World_5.webp",
-        "./images/Small-World_6.webp",
-        "./images/Small-World_7.webp",
-        "./images/Small-World_8.webp",
-        "./images/Small-World_9.webp",
-        "./images/Small-World_10.webp",
-        "./images/Small-World_11.webp",
-        "./images/Small-World_12.webp"
+        "../assets/images/game-collection-imagesSmall-World_1.webp",
+        "../assets/images/game-collection-imagesSmall-World_2.webp",
+        "../assets/images/game-collection-imagesSmall-World_3.webp",
+        "../assets/images/game-collection-imagesSmall-World_4.webp",
+        "../assets/images/game-collection-imagesSmall-World_5.webp",
+        "../assets/images/game-collection-imagesSmall-World_6.webp",
+        "../assets/images/game-collection-imagesSmall-World_7.webp",
+        "../assets/images/game-collection-imagesSmall-World_8.webp",
+        "../assets/images/game-collection-imagesSmall-World_9.webp",
+        "../assets/images/game-collection-imagesSmall-World_10.webp",
+        "../assets/images/game-collection-imagesSmall-World_11.webp",
+        "../assets/images/game-collection-imagesSmall-World_12.webp"
       ]
     },
     {
@@ -2856,24 +2856,24 @@
       "brand": "Hobby World",
       "category_ru": ["Стратегические игры", "Для одного", "Хардкорные игры"],
       "category_en": ["Strategy games", "For one", "Hardcore games"],
-      "thumbnail": "./thumbnails/bitoku.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/bitoku.png",
       "images": [
-        "./images/bitoku_1.webp",
-        "./images/bitoku_2.webp",
-        "./images/bitoku_3.webp",
-        "./images/bitoku_4.webp",
-        "./images/bitoku_5.webp",
-        "./images/bitoku_6.webp",
-        "./images/bitoku_7.webp",
-        "./images/bitoku_8.webp",
-        "./images/bitoku_9.webp",
-        "./images/bitoku_10.webp",
-        "./images/bitoku_11.webp",
-        "./images/bitoku_12.webp",
-        "./images/bitoku_13.webp",
-        "./images/bitoku_14.webp",
-        "./images/bitoku_15.webp",
-        "./images/bitoku_16.webp"
+        "../assets/images/game-collection-imagesbitoku_1.webp",
+        "../assets/images/game-collection-imagesbitoku_2.webp",
+        "../assets/images/game-collection-imagesbitoku_3.webp",
+        "../assets/images/game-collection-imagesbitoku_4.webp",
+        "../assets/images/game-collection-imagesbitoku_5.webp",
+        "../assets/images/game-collection-imagesbitoku_6.webp",
+        "../assets/images/game-collection-imagesbitoku_7.webp",
+        "../assets/images/game-collection-imagesbitoku_8.webp",
+        "../assets/images/game-collection-imagesbitoku_9.webp",
+        "../assets/images/game-collection-imagesbitoku_10.webp",
+        "../assets/images/game-collection-imagesbitoku_11.webp",
+        "../assets/images/game-collection-imagesbitoku_12.webp",
+        "../assets/images/game-collection-imagesbitoku_13.webp",
+        "../assets/images/game-collection-imagesbitoku_14.webp",
+        "../assets/images/game-collection-imagesbitoku_15.webp",
+        "../assets/images/game-collection-imagesbitoku_16.webp"
       ]
     },
     {
@@ -2894,16 +2894,16 @@
       "brand": "Fantasy Flight Games",
       "category_ru": ["Стратегические игры", "Экономические", "Хардкорные игры"],
       "category_en": ["Strategy games", "Economic games", "Hardcore games"],
-      "thumbnail": "./thumbnails/CIV02TerraIncognitaBox.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/CIV02TerraIncognitaBox.png",
       "images": [
-        "./images/CIV02TerraIncognitaBox_1.webp",
-        "./images/CIV02TerraIncognitaBox_2.webp",
-        "./images/CIV02TerraIncognitaBox_3.webp",
-        "./images/CIV02TerraIncognitaBox_4.webp",
-        "./images/CIV02TerraIncognitaBox_5.webp",
-        "./images/CIV02TerraIncognitaBox_6.webp",
-        "./images/CIV02TerraIncognitaBox_7.webp",
-        "./images/CIV02TerraIncognitaBox_8.webp"
+        "../assets/images/game-collection-imagesCIV02TerraIncognitaBox_1.webp",
+        "../assets/images/game-collection-imagesCIV02TerraIncognitaBox_2.webp",
+        "../assets/images/game-collection-imagesCIV02TerraIncognitaBox_3.webp",
+        "../assets/images/game-collection-imagesCIV02TerraIncognitaBox_4.webp",
+        "../assets/images/game-collection-imagesCIV02TerraIncognitaBox_5.webp",
+        "../assets/images/game-collection-imagesCIV02TerraIncognitaBox_6.webp",
+        "../assets/images/game-collection-imagesCIV02TerraIncognitaBox_7.webp",
+        "../assets/images/game-collection-imagesCIV02TerraIncognitaBox_8.webp"
       ]
     },
     {
@@ -2924,17 +2924,17 @@
       "brand": "Hobby World",
       "category_ru": ["Стратегические игры", "Экономические", "Игры для компании"],
       "category_en": ["Strategy games", "Economic games", "Company games"],
-      "thumbnail": "./thumbnails/Industry.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Industry.png",
       "images": [
-        "./images/Industry_1.webp",
-        "./images/Industry_2.webp",
-        "./images/Industry_3.webp",
-        "./images/Industry_4.webp",
-        "./images/Industry_5.webp",
-        "./images/Industry_6.webp",
-        "./images/Industry_7.webp",
-        "./images/Industry_8.webp",
-        "./images/Industry_9.webp"
+        "../assets/images/game-collection-imagesIndustry_1.webp",
+        "../assets/images/game-collection-imagesIndustry_2.webp",
+        "../assets/images/game-collection-imagesIndustry_3.webp",
+        "../assets/images/game-collection-imagesIndustry_4.webp",
+        "../assets/images/game-collection-imagesIndustry_5.webp",
+        "../assets/images/game-collection-imagesIndustry_6.webp",
+        "../assets/images/game-collection-imagesIndustry_7.webp",
+        "../assets/images/game-collection-imagesIndustry_8.webp",
+        "../assets/images/game-collection-imagesIndustry_9.webp"
       ]
     },
     {
@@ -2955,12 +2955,12 @@
       "brand": "Hobby World",
       "category_ru": ["Стратегические игры", "Для двоих", "Хардкорные игры", "Дуэльные"],
       "category_en": ["Strategy games", "For two", "Hardcore games", "Dueling"],
-      "thumbnail": "./thumbnails/BattleTech.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/BattleTech.png",
       "images": [
-        "./images/BattleTech_1.webp",
-        "./images/BattleTech_2.webp",
-        "./images/BattleTech_3.webp",
-        "./images/BattleTech_4.webp"
+        "../assets/images/game-collection-imagesBattleTech_1.webp",
+        "../assets/images/game-collection-imagesBattleTech_2.webp",
+        "../assets/images/game-collection-imagesBattleTech_3.webp",
+        "../assets/images/game-collection-imagesBattleTech_4.webp"
       ]
     },
     {
@@ -2981,19 +2981,19 @@
       "brand": "Hobby World",
       "category_ru": ["Стратегические игры", "Игры для компании"],
       "category_en": ["Strategy games", "Games for the company"],
-      "thumbnail": "./thumbnails/metro2033.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/metro2033.png",
       "images": [
-        "./images/metro2033_1.webp",
-        "./images/metro2033_2.webp",
-        "./images/metro2033_3.webp",
-        "./images/metro2033_4.webp",
-        "./images/metro2033_5.webp",
-        "./images/metro2033_6.webp",
-        "./images/metro2033_7.webp",
-        "./images/metro2033_8.webp",
-        "./images/metro2033_9.webp",
-        "./images/metro2033_10.webp",
-        "./images/metro2033_11.webp"
+        "../assets/images/game-collection-imagesmetro2033_1.webp",
+        "../assets/images/game-collection-imagesmetro2033_2.webp",
+        "../assets/images/game-collection-imagesmetro2033_3.webp",
+        "../assets/images/game-collection-imagesmetro2033_4.webp",
+        "../assets/images/game-collection-imagesmetro2033_5.webp",
+        "../assets/images/game-collection-imagesmetro2033_6.webp",
+        "../assets/images/game-collection-imagesmetro2033_7.webp",
+        "../assets/images/game-collection-imagesmetro2033_8.webp",
+        "../assets/images/game-collection-imagesmetro2033_9.webp",
+        "../assets/images/game-collection-imagesmetro2033_10.webp",
+        "../assets/images/game-collection-imagesmetro2033_11.webp"
       ]
     },
     {
@@ -3014,18 +3014,18 @@
       "brand": "Стиль Жизни",
       "category_ru": ["Стратегические игры", "Семейные игры", "Игры для компании", "Карточные игры", "Экономические"],
       "category_en": ["Strategy games", "Family games", "Company games", "Card games", "Economic"],
-      "thumbnail": "./thumbnails/7_Chudes.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/7_Chudes.png",
       "images": [
-        "./images/7_Chudes_1.webp",
-        "./images/7_Chudes_2.webp",
-        "./images/7_Chudes_3.webp",
-        "./images/7_Chudes_4.webp",
-        "./images/7_Chudes_5.webp",
-        "./images/7_Chudes_6.webp",
-        "./images/7_Chudes_7.webp",
-        "./images/7_Chudes_8.webp",
-        "./images/7_Chudes_9.webp",
-        "./images/7_Chudes_10.webp"
+        "../assets/images/game-collection-images7_Chudes_1.webp",
+        "../assets/images/game-collection-images7_Chudes_2.webp",
+        "../assets/images/game-collection-images7_Chudes_3.webp",
+        "../assets/images/game-collection-images7_Chudes_4.webp",
+        "../assets/images/game-collection-images7_Chudes_5.webp",
+        "../assets/images/game-collection-images7_Chudes_6.webp",
+        "../assets/images/game-collection-images7_Chudes_7.webp",
+        "../assets/images/game-collection-images7_Chudes_8.webp",
+        "../assets/images/game-collection-images7_Chudes_9.webp",
+        "../assets/images/game-collection-images7_Chudes_10.webp"
       ]
     },
     {
@@ -3046,12 +3046,12 @@
       "brand": "Hobby World",
       "category_ru": ["Стратегические игры", "Хардкорные игры", "Для одного"],
       "category_en": ["Strategy Games", "Hardcore Games", "For One"],
-      "thumbnail": "./thumbnails/Osnovateli_Mrachnoy_Gavani.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Osnovateli_Mrachnoy_Gavani.png",
       "images": [
-        "./images/Osnovateli_Mrachnoy_Gavani_1.webp",
-        "./images/Osnovateli_Mrachnoy_Gavani_2.webp",
-        "./images/Osnovateli_Mrachnoy_Gavani_3.webp",
-        "./images/Osnovateli_Mrachnoy_Gavani_4.webp"
+        "../assets/images/game-collection-imagesOsnovateli_Mrachnoy_Gavani_1.webp",
+        "../assets/images/game-collection-imagesOsnovateli_Mrachnoy_Gavani_2.webp",
+        "../assets/images/game-collection-imagesOsnovateli_Mrachnoy_Gavani_3.webp",
+        "../assets/images/game-collection-imagesOsnovateli_Mrachnoy_Gavani_4.webp"
       ]
     },
     {
@@ -3072,19 +3072,19 @@
       "brand": "Magellan",
       "category_ru": ["Детективные игры", "Игры для компании", "Мафия", "Вечериночные игры", "Командные игры"],
       "category_en": ["Detective games", "Games for the company", "Mafia", "Party games", "Team games"],
-      "thumbnail": "./thumbnails/Sudnyiy_den_proekt_Chistilische.png",
+      "thumbnail": "../assets/images/game-collection-thumbnails/Sudnyiy_den_proekt_Chistilische.png",
       "images": [
-        "./images/Sudnyiy_den_proekt_Chistilische_1.webp",
-        "./images/Sudnyiy_den_proekt_Chistilische_2.webp",
-        "./images/Sudnyiy_den_proekt_Chistilische_3.webp",
-        "./images/Sudnyiy_den_proekt_Chistilische_4.webp",
-        "./images/Sudnyiy_den_proekt_Chistilische_5.webp",
-        "./images/Sudnyiy_den_proekt_Chistilische_6.webp",
-        "./images/Sudnyiy_den_proekt_Chistilische_7.webp",
-        "./images/Sudnyiy_den_proekt_Chistilische_8.webp",
-        "./images/Sudnyiy_den_proekt_Chistilische_9.webp",
-        "./images/Sudnyiy_den_proekt_Chistilische_10.webp",
-        "./images/Sudnyiy_den_proekt_Chistilische_11.webp"
+        "../assets/images/game-collection-imagesSudnyiy_den_proekt_Chistilische_1.webp",
+        "../assets/images/game-collection-imagesSudnyiy_den_proekt_Chistilische_2.webp",
+        "../assets/images/game-collection-imagesSudnyiy_den_proekt_Chistilische_3.webp",
+        "../assets/images/game-collection-imagesSudnyiy_den_proekt_Chistilische_4.webp",
+        "../assets/images/game-collection-imagesSudnyiy_den_proekt_Chistilische_5.webp",
+        "../assets/images/game-collection-imagesSudnyiy_den_proekt_Chistilische_6.webp",
+        "../assets/images/game-collection-imagesSudnyiy_den_proekt_Chistilische_7.webp",
+        "../assets/images/game-collection-imagesSudnyiy_den_proekt_Chistilische_8.webp",
+        "../assets/images/game-collection-imagesSudnyiy_den_proekt_Chistilische_9.webp",
+        "../assets/images/game-collection-imagesSudnyiy_den_proekt_Chistilische_10.webp",
+        "../assets/images/game-collection-imagesSudnyiy_den_proekt_Chistilische_11.webp"
       ]
     }
   ],
