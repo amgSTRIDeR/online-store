@@ -1,58 +1,11 @@
-@font-face {
-    font-family: 'Aire Exterior';
-    src: url('../src/assets/fonts/aireExterior.ttf');
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: 'Pulsar Original';
-    src: url('../src/assets/fonts/pulsarOriginal.otf');
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('../src/assets/fonts/Roboto-Light.ttf');
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('../src/assets/fonts/Roboto-Regular.ttf');
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('../src/assets/fonts/Roboto-Medium.ttf');
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('../src/assets/fonts/Roboto-Bold.ttf');
-    font-weight: 700;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-$DARK_BG: #141c24;
-$WHITE: #ffffff;
-$WHITE_TR: rgba(255, 255, 255, 0.5);
-$BLACK_BG: rgba(0, 0, 0, 0.1);
-$BLUE: #00c5ff;
-$BLUE_TR: rgba(0, 197, 255, 0.5); //
 body {
-    background-color: $DARK_BG;
+    background-color: $BACKGROUND;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    font-family: 'Aire Exterior';
+    font-family: 'Aire Exterior', sans-serif;
 }
 
 .not_found {
@@ -61,14 +14,14 @@ body {
     align-items: center;
     justify-content: center;
     top: 160px;
-    background-image: url('../src/assets/images/not-found.png');
+    background-image: url('../images/not-found.png');
     background-repeat: no-repeat;
     width: 1233px;
     height: 718px;
-    font-family: 'Aire Exterior';
-    border: 3px solid $BLUE;
+    font-family: 'Aire Exterior', sans-serif;
+    border: 3px solid $MAIN_COLOR;
     border-radius: 10px;
-    box-shadow: 0px 17px 29px $BLUE;
+    box-shadow: 0px 17px 29px $MAIN_COLOR;
 }
 
 .not_found__content {
@@ -78,7 +31,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: $WHITE;
+    color: $MAIN_TEXT;
     width: 980px;
     height: 530px;
 }
@@ -90,7 +43,7 @@ body {
 }
 
 .not_found__content__small_text {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     text-align: center;
 }
@@ -104,13 +57,13 @@ body {
 .not_found__content__button:hover {
     background-color: $WHITE_TR;
     border-radius: 10px;
-    box-shadow: 0px 0px 16px $WHITE;
+    box-shadow: 0px 0px 16px $MAIN_TEXT;
 }
 
 .not_found__content__button:active {
     background-color: $BLUE_TR;
     border-radius: 10px;
-    box-shadow: 0px 0px 16px $BLUE;
+    box-shadow: 0px 0px 16px $MAIN_COLOR;
 }
 
 @media (max-width: 1440px) {
@@ -118,8 +71,8 @@ body {
         top: 60px;
         width: 630px;
         height: 720px;
-        border: 3px solid $BLUE;
-        background-image: url('../src/assets/images/not-found-tablet.png');
+        border: 3px solid $MAIN_COLOR;
+        background-image: url('../images/not-found-tablet.png');
         border-radius: 10px;
         .not_found__content {
             width: 600px;
@@ -135,8 +88,8 @@ body {
         top: 60px;
         width: 305px;
         height: 600px;
-        border: 3px solid $BLUE;
-        background-image: url('../src/assets/images/not-found-mobile.png');
+        border: 3px solid $MAIN_COLOR;
+        background-image: url('../images/not-found-mobile.png');
         border-radius: 10px;
         .not_found__content {
             width: 600px;
