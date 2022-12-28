@@ -1,12 +1,14 @@
-import { routing } from './core/functionality/routing';
-import { render } from './core/functionality/render';
+import { Route } from './core/functionality/routing';
+import { Render } from './core/functionality/render';
 
 class App {
     constructor() {
-        render.renderNewPage('start');
+        const renderBeginPage = new Render();
+        renderBeginPage.renderNewPage('start');
     }
     run() {
-        routing.routePage();
+        const routingApp = new Route();
+        routingApp.routePage();
     }
 }
 

@@ -1,5 +1,5 @@
 import ComponentButton from '../core/template/components';
-import { render } from '../core/functionality/render';
+import { Render } from '../core/functionality/render';
 
 class ButtonStart extends ComponentButton {
     constructor() {
@@ -9,7 +9,8 @@ class ButtonStart extends ComponentButton {
     push() {
         if (this.component) {
             this.component.addEventListener('click', () => {
-                render.renderNewPage('store');
+                const renderStore = new Render();
+                renderStore.renderNewPage('store');
             });
         }
     }

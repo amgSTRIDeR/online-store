@@ -1,16 +1,18 @@
-import { Render } from '../models/render.model';
 import StartPage from '../../pages/start';
 import StorePage from '../../pages/store';
 import ErrorPage from '../../pages/error';
 import BasketPage from '../../pages/basket';
 import ProductPage from '../../pages/product';
 
-export const render: Render = {
+export class Render {
+    constructor() {}
+
     changeURL(url: string): void {
         const finalLink = window.location.protocol + '//' + window.location.host + '/#' + url;
         window.location.href = finalLink;
-    },
-    renderNewPage(pageID) {
+    }
+
+    renderNewPage(pageID: string): void {
         let page;
         if (pageID === 'start' || pageID === '') {
             page = new StartPage(pageID);
@@ -28,5 +30,5 @@ export const render: Render = {
             page.render();
         }
         this.changeURL(pageID);
-    },
-};
+    }
+}
