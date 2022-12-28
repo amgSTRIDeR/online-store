@@ -1,4 +1,14 @@
-<section>
+import Page from '../core/template/base';
+
+class ProductPage extends Page {
+    constructor(pageID: string) {
+        super(pageID);
+    }
+
+    render() {
+        if (this.container) {
+            this.container.innerHTML = `
+            <section>
     <h2>Главная/Каталог/Кооперативные игры/Древний ужас</h2>
     <section class="about">
         <div class="about__main_info">
@@ -60,4 +70,10 @@
             для бесстрашных авантюристов, которые готовы бросить вызов судьбе и богам.
         </div>
     </section>
-</section>
+</section>`;
+        }
+        return this.container;
+    }
+}
+
+export default ProductPage;

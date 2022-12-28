@@ -1,5 +1,5 @@
-import ComponentButton from '../../core/template/components';
-import { render } from '../../core/functionality/render';
+import ComponentButton from '../core/template/components';
+import { render } from '../core/functionality/render';
 
 class ButtonStart extends ComponentButton {
     constructor() {

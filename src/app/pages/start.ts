@@ -1,5 +1,5 @@
-import Page from '../../core/template/base';
-import ButtonStart from './start-route';
+import Page from '../core/template/base';
+import ButtonStart from '../components/start-route';
 
 class StartPage extends Page {
     constructor(pageID: string) {

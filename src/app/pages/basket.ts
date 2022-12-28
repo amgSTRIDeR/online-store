@@ -1,4 +1,14 @@
-<div>
+import Page from '../core/template/base';
+
+class BasketPage extends Page {
+    constructor(pageID: string) {
+        super(pageID);
+    }
+
+    render() {
+        if (this.container) {
+            this.container.innerHTML = `
+            <div>
     <section class="basket__head_info">
         <h2 class="basket__head_info__header">Корзина</h2>
         <div class="basket__head_info__page_control">
@@ -183,4 +193,10 @@
             <button class="info__buy_now">Купить сейчас</button>
         </div>
     </section>
-</div>
+</div>`;
+        }
+        return this.container;
+    }
+}
+
+export default BasketPage;

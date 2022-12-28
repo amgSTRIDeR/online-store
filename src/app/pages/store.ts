@@ -1,4 +1,4 @@
-import Page from '../../core/template/base';
+import Page from '../core/template/base';
 
 class StorePage extends Page {
     constructor(pageID: string) {

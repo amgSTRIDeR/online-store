@@ -1,6 +1,9 @@
 import { Render } from '../models/render.model';
-import StartPage from '../../app/start/start';
-import StorePage from '../../app/store/store';
+import StartPage from '../../pages/start';
+import StorePage from '../../pages/store';
+import ErrorPage from '../../pages/error';
+import BasketPage from '../../pages/basket';
+import ProductPage from '../../pages/product';
 
 export const render: Render = {
     changeURL(url: string): void {
@@ -13,8 +16,12 @@ export const render: Render = {
             page = new StartPage(pageID);
         } else if (pageID === 'store') {
             page = new StorePage(pageID);
+        } else if (pageID === 'basket') {
+            page = new BasketPage(pageID);
+        } else if (pageID === 'product') {
+            page = new ProductPage(pageID);
         } else {
-            console.log('ADD 404');
+            page = new ErrorPage('error');
         }
 
         if (page) {
