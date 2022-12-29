@@ -19,16 +19,23 @@ h2 {
     position: relative;
     flex-direction: column;
     align-items: center;
-    top: 150px;
-    width: 960px;
+    bottom: 50px;
+    width: 100%;
+}
+
+.basket__head_info__header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    top: 180px;
 }
 
 .basket__head_info__page_control {
     display: flex;
     position: relative;
+    width: 100%;
     justify-content: space-between;
     font-size: 32px;
-    width: 960px;
 }
 
 .small_button {
@@ -56,10 +63,10 @@ h2 {
     background-color: $BLACK_BG;
     flex-direction: column;
     align-items: center;
-    top: 160px;
     width: 1279px;
-    height: 100%;
+    height: 70%;
     border-radius: 10px;
+    margin-bottom: 30px;
 }
 
 .basket__cards__card {
@@ -188,7 +195,14 @@ h2 {
     position: relative;
     flex-direction: column;
     align-items: center;
-    top: 170px;
+    bottom: 70px;
+    margin-bottom: 30px;
+}
+
+.basket__result__name {
+    display: flex;
+    position: relative;
+    top: 30px;
 }
 
 .basket__result__info {
@@ -260,15 +274,19 @@ h2 {
         width: 100%;
     }
     .basket__head_info {
-        width: 90%;
+        width: 100%;
         .basket__head_info__page_control {
-            width: 100%;
+            width: 100vw;
             flex-direction: column;
             align-items: center;
         }
+        .basket__head_info__header {
+            width: 100vw;
+            top: 280px;
+        }
     }
     .basket__cards {
-        width: 90%;
+        width: 100vw;
         height: 100%;
         .basket__cards__card {
             width: 100%;
@@ -290,7 +308,7 @@ h2 {
         }
     }
     .basket__result {
-        width: 90%;
+        width: 100vw;
         height: 100%;
         .basket__result__info {
             width: 100%;
@@ -324,7 +342,7 @@ h2 {
         margin-bottom: 20px;
     }
     .basket__head_info {
-        width: 90%;
+        width: 100vw;
         .basket__head_info__page_control {
             width: 100%;
             flex-direction: column;
@@ -333,7 +351,7 @@ h2 {
         }
     }
     .basket__cards {
-        width: 90%;
+        width: 100vw;
         height: 100%;
         .basket__cards__card {
             width: 100%;
@@ -362,7 +380,7 @@ h2 {
         }
     }
     .basket__result {
-        width: 90%;
+        width: 100vw;
         height: 100%;
         .basket__result__info {
             width: 100%;
