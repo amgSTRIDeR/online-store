@@ -1,14 +1,7 @@
-import Page from '../core/template/base';
+import { PageComponent } from '../core/components/page.component';
 
-class BasketPage extends Page {
-    constructor(pageID: string) {
-        super(pageID);
-    }
-
-    render() {
-        if (this.container) {
-            this.container.innerHTML = `
-            <div>
+export const basketPage = new PageComponent({
+    template: `<div>
     <section class="basket__head_info">
         <h2 class="basket__head_info__header">Корзина</h2>
         <div class="basket__head_info__page_control">
@@ -193,10 +186,6 @@ class BasketPage extends Page {
             <button class="info__buy_now">Купить сейчас</button>
         </div>
     </section>
-</div>`;
-        }
-        return this.container;
-    }
-}
-
-export default BasketPage;
+</div>`,
+    selector: '.main-section',
+});

@@ -1,8 +1,8 @@
-import StartPage from '../../pages/start';
-import StorePage from '../../pages/store';
-import ErrorPage from '../../pages/error';
-import BasketPage from '../../pages/basket';
-import ProductPage from '../../pages/product';
+import { startPage } from '../../pages/start';
+import { storePage } from '../../pages/store';
+import { errorPage } from '../../pages/error';
+import { basketPage } from '../../pages/basket';
+import { productPage } from '../../pages/product';
 
 export class Render {
     constructor() {}
@@ -15,15 +15,15 @@ export class Render {
     renderNewPage(pageID: string): void {
         let page;
         if (pageID === 'start' || pageID === '') {
-            page = new StartPage(pageID);
+            page = startPage;
         } else if (pageID === 'store') {
-            page = new StorePage(pageID);
+            page = storePage;
         } else if (pageID === 'basket') {
-            page = new BasketPage(pageID);
+            page = basketPage;
         } else if (pageID === 'product') {
-            page = new ProductPage(pageID);
+            page = productPage;
         } else {
-            page = new ErrorPage('error');
+            page = errorPage;
         }
 
         if (page) {

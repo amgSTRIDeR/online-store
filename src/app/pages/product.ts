@@ -1,14 +1,7 @@
-import Page from '../core/template/base';
+import { PageComponent } from '../core/components/page.component';
 
-class ProductPage extends Page {
-    constructor(pageID: string) {
-        super(pageID);
-    }
-
-    render() {
-        if (this.container) {
-            this.container.innerHTML = `
-            <section>
+export const productPage = new PageComponent({
+    template: `<section>
     <h2>Главная/Каталог/Кооперативные игры/Древний ужас</h2>
     <section class="about">
         <div class="about__main_info">
@@ -70,10 +63,7 @@ class ProductPage extends Page {
             для бесстрашных авантюристов, которые готовы бросить вызов судьбе и богам.
         </div>
     </section>
-</section>`;
-        }
-        return this.container;
-    }
-}
-
-export default ProductPage;
+</section>
+`,
+    selector: '.main-section',
+});
