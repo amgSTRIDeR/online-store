@@ -1,19 +1,20 @@
 import { PageComponent } from '../components/page.component';
+import { ButtonComponent } from '../components/button.component';
 
-interface ModelConfig {
-    component: PageComponent[];
+export interface ModuleConfig {
+    components: Array<PageComponent | ButtonComponent>;
 }
 
-export class Page {
-    components: PageComponent[];
-    constructor(config: ModelConfig) {
-        this.components = config.component;
+export class PageModule {
+    components: Array<PageComponent | ButtonComponent>;
+    constructor(config: ModuleConfig) {
+        this.components = config.components;
     }
     render() {
         this.initComponents();
     }
 
     initComponents() {
-        this.components.forEach((c: PageComponent) => c.render());
+        this.components.forEach((c: PageComponent | ButtonComponent) => c.render());
     }
 }

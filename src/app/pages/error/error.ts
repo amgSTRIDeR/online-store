@@ -1,4 +1,4 @@
-import { PageComponent } from '../core/components/page.component';
+import { PageComponent } from '../../core/components/page.component';
 
 export const errorPage = new PageComponent({
     template: `<section class="not_found">

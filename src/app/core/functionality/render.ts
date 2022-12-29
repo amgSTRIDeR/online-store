@@ -1,8 +1,8 @@
-import { startPage } from '../../pages/start';
-import { storePage } from '../../pages/store';
-import { errorPage } from '../../pages/error';
-import { basketPage } from '../../pages/basket';
-import { productPage } from '../../pages/product';
+import { startPage } from '../../pages/start/start';
+import { storePage } from '../../pages/store/store';
+import { errorPage } from '../../pages/error/error';
+import { basketPage } from '../../pages/basket/basket';
+import { productPage } from '../../pages/product/product';
 
 export class Render {
     constructor() {}
@@ -29,6 +29,9 @@ export class Render {
         if (page) {
             page.render();
         }
+
+        page.loadComponents();
+
         this.changeURL(pageID);
     }
 }

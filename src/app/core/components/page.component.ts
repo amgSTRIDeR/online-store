@@ -1,4 +1,4 @@
-export interface ConfigComp {
+export interface PageConfig {
     template: string;
     selector: string;
 }
@@ -6,17 +6,19 @@ export interface ConfigComp {
 export class PageComponent {
     template: string;
     selector: string;
-    constructor(config: ConfigComp) {
+    constructor(config: PageConfig) {
         this.template = config.template;
         this.selector = config.selector;
     }
 
     render() {
-        console.log(this.selector);
         const element = document.querySelector(this.selector);
-        console.log(document.querySelector(this.selector));
         if (element) {
             element.innerHTML = this.template;
+        } else {
+            throw new Error(`Component with selector ${this.selector} wasn't found`);
         }
     }
+
+    loadComponents() {}
 }
