@@ -1,15 +1,10 @@
 import './assets/styles/main.scss';
 import App from './app/app';
 import { CartStorage } from './app/shared/singletons/cart-singleton';
+import gamesCollection from './public/gamesCollection.json';
 
 const page = new App();
 page.run();
 
-
-const cart = CartStorage.getInstance();
-
-const cart1 = CartStorage.getInstance();
-
-cart.addItem(1)
-console.table(cart.cartArray)
-console.table(cart1.cartArray)
+console.log(gamesCollection.products[0])
+console.log(gamesCollection.products[1])
