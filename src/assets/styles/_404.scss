@@ -13,7 +13,6 @@ body {
     position: relative;
     align-items: center;
     justify-content: center;
-    top: 160px;
     background-image: url('../images/not-found.png');
     background-repeat: no-repeat;
     width: 1233px;
@@ -22,11 +21,10 @@ body {
     border: 3px solid $MAIN_COLOR;
     border-radius: 10px;
     box-shadow: 0px 17px 29px $MAIN_COLOR;
+    margin: 50px auto;
 }
 
 .not_found__content {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,7 +66,6 @@ body {
 
 @media (max-width: 1440px) {
     .not_found {
-        top: 60px;
         width: 630px;
         height: 720px;
         border: 3px solid $MAIN_COLOR;
@@ -85,7 +82,6 @@ body {
 
 @media (max-width: 640px) {
     .not_found {
-        top: 60px;
         width: 305px;
         height: 600px;
         border: 3px solid $MAIN_COLOR;

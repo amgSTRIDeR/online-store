@@ -8,3 +8,10 @@
 @import './basket.scss';
 @import './modal.scss';
 @import './product.scss';
+
+.main-section {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,4 +1,7 @@
-<section class="not_found">
+import { PageComponent } from '../../core/components/page.component';
+
+export const errorPage = new PageComponent({
+    template: `<section class="not_found">
     <div class="not_found__content">
         <p class="not_found__content__info">
             Спасаясь от гоблинов в какой то момент вы поняли что потерялись. Попытка найти выход из
@@ -22,4 +25,6 @@
             />
         </button>
     </div>
-</section>
+</section>`,
+    selector: '.main-section',
+});

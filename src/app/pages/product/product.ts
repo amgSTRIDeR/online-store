@@ -1,4 +1,7 @@
-<section>
+import { PageComponent } from '../../core/components/page.component';
+
+export const productPage = new PageComponent({
+    template: `<section>
     <h2>Главная/Каталог/Кооперативные игры/Древний ужас</h2>
     <section class="about">
         <div class="about__main_info">
@@ -61,3 +64,6 @@
         </div>
     </section>
 </section>
+`,
+    selector: '.main-section',
+});

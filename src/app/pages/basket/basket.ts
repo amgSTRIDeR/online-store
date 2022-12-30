@@ -1,4 +1,7 @@
-<div>
+import { PageComponent } from '../../core/components/page.component';
+
+export const basketPage = new PageComponent({
+    template: `<div>
     <section class="basket__head_info">
         <h2 class="basket__head_info__header">Корзина</h2>
         <div class="basket__head_info__page_control">
@@ -183,4 +186,6 @@
             <button class="info__buy_now">Купить сейчас</button>
         </div>
     </section>
-</div>
+</div>`,
+    selector: '.main-section',
+});
