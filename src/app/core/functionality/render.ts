@@ -1,8 +1,8 @@
 import { startPage } from '../../pages/start/start';
 import { storePage } from '../../pages/store/store';
 import { errorPage } from '../../pages/error/error';
-import { basketPage } from '../../pages/basket/basket';
 import { productPage } from '../../pages/product/product';
+import { CartPage } from '../../pages/basket/cart';
 
 export class Render {
     constructor() {}
@@ -14,23 +14,24 @@ export class Render {
 
     renderNewPage(pageID: string): void {
         let page;
+
         if (pageID === 'start' || pageID === '') {
             page = startPage;
         } else if (pageID === 'store') {
             page = storePage;
-        } else if (pageID === 'basket') {
-            page = basketPage;
+        } else if (pageID === 'basket' || pageID.startsWith('basket?')) {
+          CartPage.pageRender(pageID);
         } else if (pageID === 'product') {
             page = productPage;
         } else {
             page = errorPage;
+            pageID = 'error'
         }
 
         if (page) {
             page.render();
+            page.loadComponents();
         }
-
-        page.loadComponents();
 
         this.changeURL(pageID);
     }

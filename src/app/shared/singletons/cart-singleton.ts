@@ -1,4 +1,4 @@
-import { ItemInCart } from './interfaces';
+import { ItemInCart } from '../interfaces/interfaces';
 
 export class CartStorage {
     cartArray: object[];
@@ -13,7 +13,7 @@ export class CartStorage {
 
     public static getInstance(): CartStorage {
         if (!CartStorage.instance) {
-          CartStorage.instance = new CartStorage();
+            CartStorage.instance = new CartStorage();
         }
 
         return CartStorage.instance;
