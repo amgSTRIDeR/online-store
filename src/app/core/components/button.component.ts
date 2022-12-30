@@ -16,7 +16,6 @@ export class ButtonComponent {
 
     render() {
         const button = document.querySelector(this.className);
-        console.log(document.querySelector(this.className), this.className);
         this.push(button);
     }
 

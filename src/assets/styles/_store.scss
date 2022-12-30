@@ -3,6 +3,8 @@
 .store {
     display: grid;
     align-items: flex-start;
+    position: relative;
+    right: 50px;
 
     width: 90vw;
     padding-left: 5vw;
@@ -14,8 +16,9 @@
 }
 
 .store_horizontal {
+    margin: 550px auto;
     grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
-    grid-template-rows: 50px 750px 50px 300px;
+    grid-template-rows: 50px 750px 50px 400px;
     gap: 1vw;
 
     grid-template-areas:
@@ -198,11 +201,15 @@
 .cards {
     position: relative;
     left: 0px;
-
-    display: grid;
+    width: 1300px;
+    height: 750px;
+    // display: grid;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
     // grid-template-columns: 32% 32% 32% 32% 32% 32%;
-    // grid-template-columns: repeat(7, 32%);
+    // grid-template-columns: repeat(3, 32%);
     grid-template-rows: 1fr 1fr;
     gap: 1vw;
 }
@@ -215,6 +222,8 @@
 .card {
     position: relative;
     display: grid;
+    width: 330px;
+    height: 1fr;
     grid-template-rows: 1fr 0.5fr 3fr 1fr 1fr;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas:
@@ -498,71 +507,84 @@
 }
 
 .filter__button {
-  position: relative;
+    position: relative;
 
-  grid-area: filter;
-  display: block;
-  width: calc(11.527vw + 58.50px);
-  height: calc(2.824vw + 13.83px);
-  // margin-top: calc(7.023vw - 17.28px);
-  margin-left: auto;
-  margin-right: auto;
+    grid-area: filter;
+    display: block;
+    width: calc(11.527vw + 58.5px);
+    height: calc(2.824vw + 13.83px);
+    // margin-top: calc(7.023vw - 17.28px);
+    margin-left: auto;
+    margin-right: auto;
 
-  text-align: center;
-  font-family: 'Aire Exterior', sans-serif;
-  font-size: calc(0.746vw + 11.31px);
+    text-align: center;
+    font-family: 'Aire Exterior', sans-serif;
+    font-size: calc(0.746vw + 11.31px);
 
-  clip-path: polygon(0 0, 90% 0%, 100% 40%, 100% 80%, 100% 100%, 20% 100%, 0 100%);
-  border: none;
-  background-repeat: no-repeat;
-  background-size: contain;
-  color: $BACKGROUND;
-  background-color: $MAIN_TEXT;
+    clip-path: polygon(0 0, 90% 0%, 100% 40%, 100% 80%, 100% 100%, 20% 100%, 0 100%);
+    border: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: $BACKGROUND;
+    background-color: $MAIN_TEXT;
 
-  transition: transform 0.3s ease;
-  
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.05);
     transition: transform 0.3s ease;
-  }
 
-  &:active {
-    background-color: $MAIN_COLOR;
-  }
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+
+    &:active {
+        background-color: $MAIN_COLOR;
+    }
 }
 
 .copy__button {
-  position: relative;
+    position: relative;
 
-  grid-area: copy-button;
-  display: block;
-  width: calc(11.527vw + 58.50px);
-  height: calc(2.824vw + 13.83px);
-  // margin-top: calc(7.023vw - 17.28px);
-  margin-left: auto;
-  margin-right: auto;
+    grid-area: copy-button;
+    display: block;
+    width: calc(11.527vw + 58.5px);
+    height: calc(2.824vw + 13.83px);
+    // margin-top: calc(7.023vw - 17.28px);
+    margin-left: auto;
+    margin-right: auto;
 
-  text-align: center;
-  font-family: 'Aire Exterior', sans-serif;
-  font-size: calc(0.746vw + 11.31px);
+    text-align: center;
+    font-family: 'Aire Exterior', sans-serif;
+    font-size: calc(0.746vw + 11.31px);
 
-  clip-path: polygon(0 0, 90% 0%, 100% 40%, 100% 80%, 100% 100%, 20% 100%, 0 100%);
-  border: none;
-  background-repeat: no-repeat;
-  background-size: contain;
-  color: $BACKGROUND;
-  background-color: $MAIN_TEXT;
+    clip-path: polygon(0 0, 90% 0%, 100% 40%, 100% 80%, 100% 100%, 20% 100%, 0 100%);
+    border: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: $BACKGROUND;
+    background-color: $MAIN_TEXT;
 
-  transition: transform 0.3s ease;
-  
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.05);
     transition: transform 0.3s ease;
-  }
 
-  &:active {
-    background-color: $MAIN_COLOR;
-  }
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+
+    &:active {
+        background-color: $MAIN_COLOR;
+    }
+}
+
+@media (max-width: 1440px) {
+    .store {
+        top: 200px;
+    }
+
+    .scroll {
+        margin: 50px auto;
+    }
+    .sets-wrapper {
+        margin-top: 50px;
+    }
 }
