@@ -1,5 +1,5 @@
 import { PageComponent, PageConfig } from '../../core/components/page.component';
-import gamesCollection from '../../../public/gamesCollection.json';
+import { GamesCollection } from '../../../public/gamesCollection.js';
 import { CartStorage } from '../../shared/singletons/cart-singleton';
 
 interface CardConfig {
@@ -20,20 +20,45 @@ interface PriceConfig {
 export class CardComponent extends PageComponent {
     containerSelector: string;
     id: number;
+    flagAdd: boolean | undefined;
 
     constructor(config: CardConfig) {
         super(config);
         this.containerSelector = config.containerSelector;
         this.id = config.id;
+        this.flagAdd = false;
     }
 
     push(element: HTMLElement) {
         const cartButton = element.querySelector('.card__cart-image');
-        cartButton?.addEventListener('click', () => {
-            const cardProductAdd: CartStorage = CartStorage.getInstance();
-            cardProductAdd.addItem(this.id);
-            console.log('cartButton', 'как поменять картинку?');
-        });
+        const cardProductAdd: CartStorage = CartStorage.getInstance();
+
+        if (cartButton) {
+            const picChange = cartButton.querySelector('g');
+            if (picChange) {
+                cartButton?.addEventListener('click', () => {
+                    if (!this.flagAdd) {
+                        cardProductAdd.addItem(this.id);
+                        this.flagAdd = true;
+                        picChange.innerHTML = `
+                        <path d="M 72.975 58.994 H 31.855 c -1.539 0 -2.897 -1.005 -3.347 -2.477 L 15.199 13.006 H 3.5 c -1.933 0 -3.5 -1.567 -3.5 -3.5 s 1.567 -3.5 3.5 -3.5 h 14.289 c 1.539 0 2.897 1.005 3.347 2.476 l 13.309 43.512 h 36.204 l 10.585 -25.191 h -6.021 c -1.933 0 -3.5 -1.567 -3.5 -3.5 s 1.567 -3.5 3.5 -3.5 H 86.5 c 1.172 0 2.267 0.587 2.915 1.563 s 0.766 2.212 0.312 3.293 L 76.201 56.85 C 75.655 58.149 74.384 58.994 72.975 58.994 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #ffffff; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"></path>
+                        <circle cx="28.88" cy="74.33" r="6.16" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #ffffff; fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "></circle>
+                        <circle cx="74.59" cy="74.33" r="6.16" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #ffffff; fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "></circle>
+                        <path d="M 62.278 19.546 L 52.237 19.546 L 45.237 19.546 L 35.197 19.546 C 33.264 19.546 31.697 21.113 31.697 23.046 C 31.697 24.979 33.264 26.546 35.197 26.546 L 45.237 26.546 L 52.237 26.546 L 62.278 26.546 C 64.211 26.546 65.778 24.979 65.778 23.046 C 65.778 21.113 64.211 19.546 62.278 19.546 Z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #ffffff; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #ffffff; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"></path>
+                        `;
+                    } else {
+                        cardProductAdd.removeItem(this.id);
+                        this.flagAdd = false;
+                        picChange.innerHTML = `
+                        <path d="M 72.975 58.994 H 31.855 c -1.539 0 -2.897 -1.005 -3.347 -2.477 L 15.199 13.006 H 3.5 c -1.933 0 -3.5 -1.567 -3.5 -3.5 s 1.567 -3.5 3.5 -3.5 h 14.289 c 1.539 0 2.897 1.005 3.347 2.476 l 13.309 43.512 h 36.204 l 10.585 -25.191 h -6.021 c -1.933 0 -3.5 -1.567 -3.5 -3.5 s 1.567 -3.5 3.5 -3.5 H 86.5 c 1.172 0 2.267 0.587 2.915 1.563 s 0.766 2.212 0.312 3.293 L 76.201 56.85 C 75.655 58.149 74.384 58.994 72.975 58.994 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #ffffff; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"></path>
+                        <circle cx="28.88" cy="74.33" r="6.16" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #ffffff; fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "></circle>
+                        <circle cx="74.59" cy="74.33" r="6.16" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #ffffff; fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "></circle>
+                        <path d="M 62.278 19.546 H 52.237 V 9.506 c 0 -1.933 -1.567 -3.5 -3.5 -3.5 s -3.5 1.567 -3.5 3.5 v 10.04 h -10.04 c -1.933 0 -3.5 1.567 -3.5 3.5 s 1.567 3.5 3.5 3.5 h 10.04 v 10.04 c 0 1.933 1.567 3.5 3.5 3.5 s 3.5 -1.567 3.5 -3.5 v -10.04 h 10.041 c 1.933 0 3.5 -1.567 3.5 -3.5 S 64.211 19.546 62.278 19.546 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #ffffff; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"></path>
+                        `;
+                    }
+                });
+            }
+        }
     }
 
     render() {
@@ -81,13 +106,13 @@ for (let i = 0; i < 10; i += 1) {
     card = new CardComponent({
         template: `
       <div class="card">
-    <h3 class="card__title">${gamesCollection.products[i].title_ru}</h3>
-    <p class="card__subtitle">${gamesCollection.products[i].subtittle_ru}</p>
-    <img class="card__image" src="{gamesCollection.products[i].thumbnail}" alt="">
+    <h3 class="card__title">${GamesCollection[i].title_ru}</h3>
+    <p class="card__subtitle">${GamesCollection[i].subtittle_ru}</p>
+    <img class="card__image" src="${GamesCollection[i].thumbnail}" alt="">
     <button class="card__button">
-      <p class="card__price"><span class="card__price-old">${
-          gamesCollection.products[i].price
-      }$</span> ${gamesCollection.products[i].discountPercentage}$</p>
+      <p class="card__price"><span class="card__price-old">${GamesCollection[i].price}$</span> ${
+            GamesCollection[i].discountPercentage
+        }$</p>
       <svg class="card__cart-image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
         version="1.1" viewBox="0 0 256 256" xml:space="preserve">
         <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
@@ -169,7 +194,7 @@ for (let i = 0; i < 10; i += 1) {
     C268.8,512,279.2,501.6,279.2,488.8" />
           </g>
         </svg>
-        ${gamesCollection.products[i].stock}
+        ${GamesCollection[i].stock}
       </li>
       <li class="card__info-players">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +208,7 @@ for (let i = 0; i < 10; i += 1) {
           M349.1,278.8c-6.5,0-14,0.9-22.3,0.9c27,19.5,45.6,45.6,45.6,80.1v58.6H512v-58.6C512,305.8,403.1,278.8,349.1,278.8z" />
           </g>
         </svg>
-        ${gamesCollection.products[i].gamers.join('-')}
+        ${GamesCollection[i].gamers.join('-')}
       </li>
       <li class="card__info-time">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -197,16 +222,16 @@ for (let i = 0; i < 10; i += 1) {
             <path id="XMLID_4_" d="M153.6,135.9l127.5,91.2c17.7,12.1,21.4,36.3,9.3,54s-36.3,21.4-54,9.3c-3.7-2.8-6.5-5.6-9.3-9.3
          l-91.2-127.5c-3.7-5.6-2.8-14,2.8-17.7C143.4,132.2,148.9,132.2,153.6,135.9z" />
           </g>
-        </svg>${gamesCollection.products[i].GameTime.join('-')}
+        </svg>${GamesCollection[i].GameTime.join('-')}
       </li>
-      <li class="card__info-age">${gamesCollection.products[i].age[0]}+
+      <li class="card__info-age">${GamesCollection[i].age[0]}+
       </li>
     </ul>
   </div>
       `,
         selector: 'card',
         containerSelector: '.cards',
-        id: gamesCollection.products[i].id,
+        id: GamesCollection[i].id,
     });
     cardList.push(card);
 }
