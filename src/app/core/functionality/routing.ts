@@ -7,10 +7,12 @@ export class Route {
         return hash;
     }
     routePage() {
-        window.addEventListener('hashchange', () => {
-            const hash = this.getHash();
-            const renderPage = new Render();
+        window.addEventListener('hashchange', (e) => {
+          if (e.oldURL.split('?')[0] !== e.newURL.split('?')[0]) {
+          const hash = this.getHash();
+          const renderPage = new Render();
             renderPage.renderNewPage(hash);
+          }
         });
     }
 }

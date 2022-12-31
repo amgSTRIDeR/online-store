@@ -19,7 +19,7 @@ const conf = {
                 use: ['html-loader'],
             },
             {
-                test: /\.(png|svg|jpg|jpeg|ico|gif|mp4|mp3)$/i,
+                test: /\.(png|svg|jpg|jpeg|ico|gif|mp4|mp3|webp)$/i,
                 type: 'asset/resource',
             },
             {

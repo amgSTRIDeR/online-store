@@ -26,7 +26,7 @@ export class Render {
             page = productPage;
         } else {
             page = errorPage;
-            pageID = 'error';
+            pageID = `error`;
         }
 
         if (page) {
