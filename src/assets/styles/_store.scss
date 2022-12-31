@@ -472,10 +472,59 @@
     grid-area: price;
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     background-color: #00000024;
     border-radius: 1vw;
     color: $MAIN_COLOR;
+}
+
+.price-slider__sliders-control {
+    position: relative;
+    top: 15px;
+    width: 80%;
+    min-height: 50px;
+    input[type='range']::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        pointer-events: all;
+        width: 15px;
+        height: 15px;
+        z-index: 1;
+        cursor: poiner;
+        background-color: $MAIN_COLOR;
+        border-radius: 50%;
+        &:active {
+            box-shadow: 0 0 3px $BLUE_TR;
+        }
+    }
+    input[type='range'] {
+        -webkit-appearance: none;
+        appearance: none;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        pointer-events: none;
+    }
+}
+
+.price-slider__from-slider {
+    z-index: 1;
+    height: 0;
+}
+
+.price-slider__min-max {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    input[type='number'] {
+        display: flex;
+        border: none;
+        color: $MAIN_TEXT;
+        background-color: transparent;
+        font-size: 20px;
+        width: 50px;
+        height: 30px;
+    }
 }
 
 .players-number {

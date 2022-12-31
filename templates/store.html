@@ -2526,12 +2526,22 @@ L213.13,222.409z" />
     </div>
     <div class="price-slider__wrapper">
       Цена
-      <input class="price-slider" type="range" name="" id="">
+        <div class="price-slider__sliders-control">
+          <input class="price-slider__from-slider" type="range" value="10" min="0" max="15000"/>
+          <input class="price-slider__to-slider" type="range" value="780" min="0" max="15000"/>
+        </div>
+        <div class="price-slider__min-max">
+          <div class="price-slider__min">От
+          <input class="price-slider__min__input" type="number" name="" id="" min="0" max="15000"></div>
+          <div class="price-slider__max">до 
+          <input class="price-slider__max__input" type="number" name="" id="" min="0" max="15000">
+        </div>
+      {% comment %} <input class="price-slider" type="range" name="" id="">
       <div class="price-slider__inputs">От
         <input type="number" name="" id="">
         до 
         <input type="number" name="" id="">
-      </div>
+      </div> {% endcomment %}
     </div>
     <div class="players-number">
       Количество игроков
