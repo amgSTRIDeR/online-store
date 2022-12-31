@@ -8,11 +8,11 @@ export class Route {
     }
     routePage() {
         window.addEventListener('hashchange', (e) => {
-          if (e.oldURL.split('?')[0] !== e.newURL.split('?')[0]) {
-          const hash = this.getHash();
-          const renderPage = new Render();
-            renderPage.renderNewPage(hash);
-          }
+            if (e.oldURL.split('?')[0] !== e.newURL.split('?')[0]) {
+                const hash = this.getHash();
+                const renderPage = new Render();
+                renderPage.renderNewPage(hash);
+            }
         });
     }
 }

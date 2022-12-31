@@ -4,6 +4,7 @@ import { errorPage } from '../../pages/error/error';
 import { productPage } from '../../pages/product/product';
 import { CartPage } from '../../pages/basket/cart';
 import { CardComponent } from '../../pages/store/store.components';
+import { CartStorage } from '../../shared/singletons/cart-singleton';
 
 export class Render {
     constructor() {}
@@ -21,7 +22,7 @@ export class Render {
         } else if (pageID === 'store') {
             page = storePage;
         } else if (pageID === 'basket' || pageID.startsWith('basket?')) {
-            CartPage.pageRender(pageID);
+            CartPage.pageRender(pageID.replace('basket', '').replace('?', ''));
         } else if (pageID === 'product') {
             page = productPage;
         } else {
@@ -32,6 +33,9 @@ export class Render {
         if (page) {
             page.render();
             page.loadComponents();
+            
+            const cart = CartStorage.getInstance();
+            cart.renewCartWidget();
         }
 
         this.changeURL(pageID);
