@@ -1,10 +1,15 @@
 import './assets/styles/main.scss';
 import App from './app/app';
 import { CartStorage } from './app/shared/singletons/cart-singleton';
-import gamesCollection from './public/gamesCollection.json';
+import { GamesCollection } from './public/gamesCollection.js';
 
 const page = new App();
 page.run();
 
-console.log(gamesCollection.products[0])
-console.log(gamesCollection.products[1])
+// Пример обращения к GamesCollection
+// const themeChanger = document.querySelector<HTMLElement>('.start__container');
+
+// if (themeChanger) {
+//     themeChanger.style.backgroundImage = `url(${GamesCollection[0].images[2]})`;
+// }
+
