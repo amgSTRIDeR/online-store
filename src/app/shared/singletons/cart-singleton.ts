@@ -1,7 +1,7 @@
 import { ItemInCart } from '../interfaces/interfaces';
-
 import { GamesCollection } from '../../../public/gamesCollection';
-//"widget__sum sum-text
+
+
 export class CartStorage {
     cartArray: ItemInCart[];
     private static instance: CartStorage;
@@ -30,6 +30,7 @@ export class CartStorage {
             return <[]>JSON.parse(<string>localStorage.getItem('cartItems'));
         }
         this.renewCartWidget();
+        this.renewSumWidget();
     }
 
     addItem(itemId: number) {
@@ -48,6 +49,7 @@ export class CartStorage {
             this.cartArray.push({ id: itemId, quantity: 1 });
         }
         this.renewCartWidget();
+        this.renewSumWidget();
     }
 
     removeItem(itemId: number) {
@@ -57,6 +59,7 @@ export class CartStorage {
             if (item.id === itemId) {
                 this.cartArray.splice(i, 1);
                 this.renewCartWidget();
+                this.renewSumWidget();
                 return;
             }
         }
@@ -72,6 +75,7 @@ export class CartStorage {
                     this.removeItem(itemId);
                 }
                 this.renewCartWidget();
+                this.renewSumWidget();
                 return;
             }
         }
@@ -87,6 +91,19 @@ export class CartStorage {
 
         if (cartWidget) {
             cartWidget.textContent = itemsCount.toString();
+        }
+    }
+
+    renewSumWidget() {
+        const sumWidget = document.querySelector('.widget__sum');
+        let priceCount = 0;
+
+        this.cartArray.forEach((e) => {
+            priceCount += GamesCollection[e.id - 1].price / GamesCollection[e.id - 1].discountPercentage * e.quantity;
+        });
+
+        if (sumWidget) {
+            sumWidget.textContent = priceCount.toString() + ' $';
         }
     }
 }

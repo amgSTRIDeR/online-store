@@ -1,3 +1,3 @@
-export function queryCheck(param, number) {
+// export function queryCheck(param, number) {
 
-}
+// }
