@@ -1,5 +1,7 @@
 import { PageComponent, PageConfig } from '../../core/components/page.component';
+
 import { GamesCollection } from '../../../public/gamesCollection.js';
+
 import { CartStorage } from '../../shared/singletons/cart-singleton';
 
 interface CardConfig {
@@ -20,17 +22,20 @@ interface PriceConfig {
 export class CardComponent extends PageComponent {
     containerSelector: string;
     id: number;
+
     flagAdd: boolean | undefined;
 
     constructor(config: CardConfig) {
         super(config);
         this.containerSelector = config.containerSelector;
         this.id = config.id;
+
         this.flagAdd = false;
     }
 
     push(element: HTMLElement) {
         const cartButton = element.querySelector('.card__cart-image');
+
         const cardProductAdd: CartStorage = CartStorage.getInstance();
 
         if (cartButton) {
