@@ -1,10 +1,10 @@
+import { queryCheck } from '../../shared/functions/queryCheck';
+
 export class CartPage {
     static pageRender(query: string) {
-      let pageNumber = 1;
-      let itemsLimit = 3;
-      
-      console.log(query)
-      //page=2&limit=4
+        let pageNumber = queryCheck(query, 'page') || 1;
+        let itemsLimit = queryCheck(query, 'limit') || 3;
+
         const mainSection = document.querySelector('.main-section');
         const basketHead = document.createElement('section');
         const basketHeadInfoHeader = document.createElement('h2');
