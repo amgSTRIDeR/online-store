@@ -11,7 +11,7 @@ class App {
     run() {
         const routingApp = new Route();
         routingApp.routePage();
-        
+
         const cart = CartStorage.getInstance();
         cart.renewSumWidget();
         cart.renewCartWidget();

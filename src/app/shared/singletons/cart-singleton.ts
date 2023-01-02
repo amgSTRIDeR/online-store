@@ -1,6 +1,6 @@
 import { ItemInCart } from '../interfaces/interfaces';
 import { GamesCollection } from '../../../public/gamesCollection';
-
+import { CartPage } from '../../pages/basket/cart';
 
 export class CartStorage {
     cartArray: ItemInCart[];
@@ -40,45 +40,56 @@ export class CartStorage {
             const item: ItemInCart = this.cartArray[i];
 
             if (item.id === itemId) {
-                item.quantity += 1;
+                if (item.stock) {
+                    item.stock -= 1;
+                    item.quantity += 1;
+                }
                 isItemInArray = true;
             }
         }
 
         if (!isItemInArray) {
-            this.cartArray.push({ id: itemId, quantity: 1 });
+            const itemStock = GamesCollection[itemId - 1].stock;
+            if (itemStock) {
+                this.cartArray.push({ id: itemId, quantity: 1, stock: itemStock - 1 });
+            }
         }
         this.renewCartWidget();
         this.renewSumWidget();
+        CartPage.cardsRender();
     }
 
     removeItem(itemId: number) {
-        for (let i = 0; i < this.cartArray.length; i += 1) {
-            const item: ItemInCart = this.cartArray[i];
-
-            if (item.id === itemId) {
-                this.cartArray.splice(i, 1);
-                this.renewCartWidget();
-                this.renewSumWidget();
-                return;
+        this.cartArray.forEach((e, i) => {
+            if (e.id === itemId) {
+                if (this.cartArray.length === 1) {
+                    this.cartArray = [];
+                } else {
+                    this.cartArray.splice(i, 1);
+                }
             }
-        }
+        });
+
+        this.renewCartWidget();
+        this.renewSumWidget();
+        CartPage.cardsRender();
     }
 
     decreaseQuantity(itemId: number) {
-        for (let i = 0; i < this.cartArray.length; i += 1) {
-            const item: ItemInCart = this.cartArray[i];
+        this.cartArray.forEach((e, i) => {
+            if (e.id === itemId) {
+                e.stock += 1;
+                e.quantity -= 1;
 
-            if (item.id === itemId) {
-                item.quantity -= 1;
-                if (item.quantity === 0) {
+                if (e.quantity === 0) {
                     this.removeItem(itemId);
                 }
+
                 this.renewCartWidget();
                 this.renewSumWidget();
-                return;
+                CartPage.cardsRender();
             }
-        }
+        });
     }
 
     renewCartWidget() {
@@ -99,11 +110,25 @@ export class CartStorage {
         let priceCount = 0;
 
         this.cartArray.forEach((e) => {
-            priceCount += GamesCollection[e.id - 1].price / GamesCollection[e.id - 1].discountPercentage * e.quantity;
+            priceCount +=
+                (GamesCollection[e.id - 1].price / GamesCollection[e.id - 1].discountPercentage) *
+                e.quantity;
         });
 
         if (sumWidget) {
             sumWidget.textContent = priceCount.toString() + ' $';
         }
+    }
+
+    getItemStockNumber(itemId: number): number {
+        let inStock = 0;
+
+        this.cartArray.forEach((e) => {
+            if (e.id === itemId) {
+                inStock = e.stock;
+            }
+        });
+
+        return inStock;
     }
 }
