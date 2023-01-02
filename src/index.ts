@@ -5,3 +5,6 @@ import { GamesCollection } from './public/gamesCollection.js';
 
 const page = new App();
 page.run();
+
+// const cart = CartStorage.getInstance();
+// cart.addItem(2)
