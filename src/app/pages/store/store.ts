@@ -1,7 +1,7 @@
 import { PageComponent, PageConfig } from '../../core/components/page.component';
 import { PageModule, ModuleConfig } from '../../core/modules/page.model';
-import { priceSlider, DualSliderComponent } from './store.filters';
-import cardList from './store.components';
+import { cardList } from './store.components';
+import { priceSlider } from './store.components';
 
 class StorePage extends PageComponent {
     constructor(config: PageConfig) {
@@ -10,7 +10,7 @@ class StorePage extends PageComponent {
 
     loadComponents() {
         const pageModule: PageModule = new PageModule({
-            components: [...cardList, priceSlider],
+            components: [priceSlider, ...cardList],
         });
         pageModule.render();
     }
