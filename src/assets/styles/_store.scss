@@ -491,10 +491,10 @@
         height: 15px;
         z-index: 1;
         cursor: poiner;
-        background-color: $MAIN_COLOR;
+        background-color: $MAIN_TEXT;
         border-radius: 50%;
         &:active {
-            box-shadow: 0 0 3px $BLUE_TR;
+            box-shadow: 0 0 5px $BLUE_TR;
         }
     }
     input[type='range'] {
@@ -515,14 +515,17 @@
 .price-slider__min-max {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: space-around;
     input[type='number'] {
+        font-family: 'Pulsar Original', sans-serif;
+        font-size: 14px;
         display: flex;
         border: none;
         color: $MAIN_TEXT;
         background-color: transparent;
         font-size: 20px;
-        width: 50px;
+        width: 100px;
         height: 30px;
     }
 }
