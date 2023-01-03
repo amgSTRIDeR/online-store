@@ -85,7 +85,8 @@ export class CartStorage {
     }
 
     removePromo(itemId: number) {
-        console.log(itemId);
+        const resultPromocodeInput = document.querySelector('.info__promocode__enter');
+
         this.promoArray.forEach((e, i) => {
             if (e.id === itemId) {
                 if (this.promoArray.length === 1) {
@@ -98,6 +99,9 @@ export class CartStorage {
 
         this.renewSumWidget();
         CartPage.promoRender();
+        if (resultPromocodeInput && resultPromocodeInput instanceof HTMLInputElement) {
+            this.showPromo(resultPromocodeInput.value);
+        }
     }
 
     decreaseQuantity(itemId: number) {
@@ -141,7 +145,6 @@ export class CartStorage {
         const promoPrice = document.querySelector('.promo-price');
 
         const promoDiscount = this.promoArray.reduce((sum, value) => sum + value.discount, 0);
-        console.log(this.promoArray);
         let priceCount = 0;
 
         this.cartArray.forEach((e) => {
@@ -164,6 +167,7 @@ export class CartStorage {
                 purePrice.textContent = `${price}`;
             } else {
                 promoPrice.textContent = `${price}`;
+                purePrice.textContent = '';
             }
         }
     }
@@ -194,6 +198,37 @@ export class CartStorage {
                     this.renewCartWidget();
                     this.renewSumWidget();
                     CartPage.promoRender();
+                }
+            });
+        }
+
+        this.showPromo(promocode);
+    }
+
+    showPromo(promocode: string) {
+      console.log(promocode)
+        const proposalPromo = document.querySelector('.proposal__promocode');
+        const proposalButton = document.querySelector('.proposal__button');
+
+        if (proposalButton && proposalPromo) {
+            proposalButton.classList.remove('proposal__button_active');
+            proposalPromo.textContent = '';
+            let isPromoInArray = false;
+
+            this.promoArray.forEach((e) => {
+                if (e.code === promocode) {
+                    isPromoInArray = true;
+                }
+            });
+
+            PromocodesCollection.forEach((e) => {
+                if (e.code === promocode) {
+                    if (!isPromoInArray) {
+                        proposalButton?.classList.add('proposal__button_active');
+                        proposalPromo.textContent = `Добавить промокод: "${e.title_ru}" на ${e.discount}%`;
+                    } else {
+                        proposalPromo.textContent = `Этот промокод уже активирован`;
+                    }
                 }
             });
         }

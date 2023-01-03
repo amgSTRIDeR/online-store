@@ -242,7 +242,11 @@ export class CartPage {
         const promoPrice = document.createElement('span');
         const resultInfoPrice = document.createElement('p');
         const resultPromocode = document.createElement('div');
+        const proposalWrapper = document.createElement('div');
+        const proposalPromo = document.createElement('p');
+        const proposalButton = document.createElement('div');
         const resultPromocodeInput = document.createElement('input');
+        const resultPromocodeButton = document.createElement('div');
         const promocodes = document.createElement('div');
         const buyButton = document.createElement('button');
 
@@ -255,19 +259,40 @@ export class CartPage {
         purePrice.style.textDecoration = 'line-through';
         promoPrice.classList.add('promo-price');
         resultPromocode.classList.add('info__promocode');
+        proposalWrapper.classList.add('proposal');
+        proposalPromo.classList.add('proposal__promocode');
+        proposalButton.classList.add('proposal__button');
         promocodes.classList.add('promocodes');
         resultPromocodeInput.classList.add('info__promocode__enter');
+        resultPromocodeButton.classList.add('info__promocode__button');
         buyButton.classList.add('info__buy_now');
 
         basketResultHeader.textContent = 'Итого:';
         resultInfoPrice.textContent = 'На сумму: ';
         resultPromocodeInput.type = 'text';
         resultPromocodeInput.placeholder = 'Введите промокод (newRS, salesalesale)';
+        resultPromocodeButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 19"><path fill="#ffffff" d="M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z"/></svg>';
+        proposalButton.innerHTML = '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.875 122.648" enable-background="new 0 0 122.875 122.648" xml:space="preserve"><g><path fill-rule="evenodd" clip-rule="evenodd" d="M108.993,47.079c7.683-0.059,13.898,6.12,13.882,13.805 c-0.018,7.683-6.26,13.959-13.942,14.019L75.24,75.138l-0.235,33.73c-0.063,7.619-6.338,13.789-14.014,13.78 c-7.678-0.01-13.848-6.197-13.785-13.818l0.233-33.497l-33.558,0.235C6.2,75.628-0.016,69.448,0,61.764 c0.018-7.683,6.261-13.959,13.943-14.018l33.692-0.236l0.236-33.73C47.935,6.161,54.209-0.009,61.885,0 c7.678,0.009,13.848,6.197,13.784,13.818l-0.233,33.497L108.993,47.079L108.993,47.079z"/></g></svg>'
+
         buyButton.textContent = 'Купить сейчас';
 
-        resultPromocodeInput.addEventListener('change', () => {
-            cart.addPromo(resultPromocodeInput.value);
+        resultPromocodeInput.addEventListener('input', () => {
+            cart.showPromo(resultPromocodeInput.value);
+            if (resultPromocodeInput.value.length) {
+              resultPromocodeButton.classList.add('info__promocode__button_active');
+            } else {
+              resultPromocodeButton.classList.remove('info__promocode__button_active');
+            }
         });
+
+        proposalButton.addEventListener('click', () => {
+          cart.addPromo(resultPromocodeInput.value);
+        })
+
+        resultPromocodeButton.addEventListener('click', () => {
+          resultPromocodeInput.value = '';
+          resultPromocodeButton.classList.remove('info__promocode__button_active');
+        })
 
         basketResultInfo.appendChild(resultInfo);
         basketResultInfo.appendChild(resultPromocode);
@@ -275,13 +300,17 @@ export class CartPage {
         resultInfoPrice.appendChild(purePrice);
         resultInfoPrice.appendChild(promoPrice);
         resultInfo.appendChild(resultInfoPrice);
+        resultInfo.appendChild(buyButton);
         resultPromocode.appendChild(resultPromocodeInput);
+        resultPromocode.appendChild(resultPromocodeButton);
+        proposalWrapper.appendChild(proposalPromo);
+        proposalWrapper.appendChild(proposalButton);
+        resultPromocode.appendChild(proposalWrapper);
         resultPromocode.appendChild(promocodes);
 
         if (basketResult) {
             basketResult.appendChild(basketResultHeader);
             basketResult.appendChild(basketResultInfo);
-            basketResult.appendChild(buyButton);
         }
     }
 
