@@ -219,6 +219,7 @@
         grid-template-columns: repeat(#{round($i / 2)}, 32%);
     }
 }
+
 .card {
     position: relative;
     display: grid;

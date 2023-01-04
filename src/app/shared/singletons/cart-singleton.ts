@@ -66,6 +66,7 @@ export class CartStorage {
         this.renewCartWidget();
         this.renewSumWidget();
         CartPage.cardsRender();
+        CartPage.basketCardsRenew();
     }
 
     removeItem(itemId: number) {
@@ -82,6 +83,7 @@ export class CartStorage {
         this.renewCartWidget();
         this.renewSumWidget();
         CartPage.cardsRender();
+        CartPage.basketCardsRenew();
     }
 
     removePromo(itemId: number) {
@@ -117,6 +119,7 @@ export class CartStorage {
                 this.renewCartWidget();
                 this.renewSumWidget();
                 CartPage.cardsRender();
+                CartPage.basketCardsRenew();
             }
         });
     }
