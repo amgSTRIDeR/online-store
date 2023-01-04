@@ -964,7 +964,6 @@ import Sudnyiy_den_proekt_Chistilische_9 from '../assets/images/game-collection-
 import Sudnyiy_den_proekt_Chistilische_10 from '../assets/images/game-collection-images/Sudnyiy_den_proekt_Chistilische_10.webp';
 import Sudnyiy_den_proekt_Chistilische_11 from '../assets/images/game-collection-images/Sudnyiy_den_proekt_Chistilische_11.webp';
 
-
 export const GamesCollection = [
   {
     "id": 1,
