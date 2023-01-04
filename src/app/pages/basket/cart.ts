@@ -292,6 +292,7 @@ export class CartPage {
         resultPromocodeButton.addEventListener('click', () => {
           resultPromocodeInput.value = '';
           resultPromocodeButton.classList.remove('info__promocode__button_active');
+          cart.showPromo(resultPromocodeInput.value);
         })
 
         basketResultInfo.appendChild(resultInfo);
