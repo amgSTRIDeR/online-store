@@ -101,6 +101,7 @@ export class DualSliderComponent {
     leftRange: string;
     rightRange: string;
     option: string;
+
     constructor(config: DualSliderConfig) {
         this.selector = config.selector;
         this.leftSlider = config.leftSlider;
@@ -115,10 +116,15 @@ export class DualSliderComponent {
         localStorage.setItem(this.option + 'To', to);
     }
 
-    getValues(sliderLeft: HTMLInputElement, sliderRight: HTMLInputElement): string[] {
-        const from: string = sliderLeft.value;
-        const to: string = sliderRight.value;
-        return [from, to];
+    public getValues(): string[] {
+        const sliderLeft: HTMLInputElement | null = document.querySelector(this.leftSlider);
+        const sliderRight: HTMLInputElement | null = document.querySelector(this.rightSlider);
+        if (sliderLeft && sliderRight) {
+            const from: string = sliderLeft.value;
+            const to: string = sliderRight.value;
+            return [from, to];
+        }
+        return [];
     }
 
     fixLeftThumpPosition(
@@ -126,7 +132,7 @@ export class DualSliderComponent {
         sliderRight: HTMLInputElement,
         rangeLeft: HTMLInputElement
     ) {
-        const [from, to] = this.getValues(sliderLeft, sliderRight);
+        const [from, to] = this.getValues();
         if (Number(from) > Number(to)) {
             sliderLeft.value = to;
         } else {
@@ -140,7 +146,7 @@ export class DualSliderComponent {
         sliderRight: HTMLInputElement,
         rangeRight: HTMLInputElement
     ) {
-        const [from, to] = this.getValues(sliderLeft, sliderRight);
+        const [from, to] = this.getValues();
 
         if (Number(from) <= Number(to)) {
             sliderRight.value = to;
@@ -170,21 +176,14 @@ export class DualSliderComponent {
         sliderRight.addEventListener('input', () => {
             this.fixRightThumpPosition(sliderLeft, sliderRight, rangeRight);
         });
+
         sliderLeft.addEventListener('mouseup', () => {
-            const finalList: GameObject[] | null = new Filter({
-                beginList: GamesCollection,
-                option: this.option,
-                params: [String(sliderLeft.value), String(sliderRight.value)],
-            }).filter();
+            const finalList = makeNewCollection();
             makeCardList(finalList);
             storePage.loadComponents();
         });
         sliderRight.addEventListener('mouseup', () => {
-            const finalList: GameObject[] | null = new Filter({
-                beginList: GamesCollection,
-                option: this.option,
-                params: [String(sliderLeft.value), String(sliderRight.value)],
-            }).filter();
+            const finalList = makeNewCollection();
             makeCardList(finalList);
             storePage.loadComponents();
         });
@@ -215,7 +214,29 @@ export const priceSlider = new DualSliderComponent({
     option: 'price',
 });
 
+export const playersSlider = new DualSliderComponent({
+    selector: '.players-number__wrapper',
+    leftSlider: '.players-number__from-slider',
+    rightSlider: '.players-number__to-slider',
+    leftRange: '.players-number__min__input',
+    rightRange: '.players-number__max__input',
+    option: 'gamers',
+});
+
 let cardList: CardComponent[] = [];
+//функция для перебора фильтров
+function makeNewCollection() {
+    const filterList: object[] = [{ price: priceSlider }, { gamers: playersSlider }];
+    let listOfGames: GameObject[] | null = GamesCollection;
+    for (let item of filterList) {
+        listOfGames = new Filter({
+            beginList: listOfGames,
+            option: Object.keys(item)[0],
+            params: Object.values(item)[0].getValues(),
+        }).filter();
+    }
+    return listOfGames;
+}
 
 function makeCardList(gameList: GameObject[] | null) {
     let container = document.querySelector('.cards');
@@ -360,6 +381,7 @@ function makeCardList(gameList: GameObject[] | null) {
             cardList.push(card);
         }
     }
+    return cardList;
 }
 
 makeCardList(GamesCollection);

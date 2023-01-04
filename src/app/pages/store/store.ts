@@ -1,7 +1,7 @@
 import { PageComponent, PageConfig } from '../../core/components/page.component';
 import { PageModule, ModuleConfig } from '../../core/modules/page.model';
 import { cardList } from './store.components';
-import { priceSlider } from './store.components';
+import { priceSlider, playersSlider } from './store.components';
 
 class StorePage extends PageComponent {
     constructor(config: PageConfig) {
@@ -10,7 +10,7 @@ class StorePage extends PageComponent {
 
     loadComponents() {
         const pageModule: PageModule = new PageModule({
-            components: [priceSlider, ...cardList],
+            components: [priceSlider, playersSlider, ...cardList],
         });
         pageModule.render();
     }
@@ -123,19 +123,30 @@ export const storePage = new StorePage({
         </div>
        
 
-      </div>
-      <div class="players-number">
-        Количество игроков
-        <div class="players-number__inputs">
-          <input type="radio" name="players" id="any">
-          <input type="radio" name="players" id="any">
-          <input type="radio" name="players" id="any">
-          <input type="radio" name="players" id="any">
-          <input type="radio" name="players" id="any">
-          <input type="radio" name="players" id="any">
-          <input type="radio" name="players" id="any">
+    </div>
+
+
+    <div class="players-number__wrapper">
+    Количество игроков
+        <div class="players-number__sliders-control">
+          <input class="players-number__from-slider" type="range" value="1" min="1" max="99"/>
+          <input class="players-number__to-slider" type="range" value="99" min="1" max="99"/>
         </div>
-      </div>
+        <div class="players-number__min-max">
+          <div class="players-number__min">От
+            <input class="players-number__min__input" type="number" name="" id="" min="1" max="99">
+          </div>
+          <div class="players-number__max">до 
+          <input class="players-number__max__input" type="number" name="" id="" min="1" max="99">
+          </div>
+        </div>
+       
+
+    </div>
+
+
+
+    <div class='reboot_filter__wrapper'>
       <div class="sale__wrapper">
         <input class="sets__checkbox" type="checkbox" name="" id="">Акция
       </div>

@@ -45,7 +45,7 @@ export interface DualSliderConfig {
 }
 
 export interface FilterConfig {
-    beginList: GameObject[];
+    beginList: GameObject[] | null;
     option: string;
     params: string[];
 }
