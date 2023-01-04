@@ -1,6 +1,7 @@
 import { PageComponent, PageConfig } from '../../core/components/page.component';
 import { PageModule, ModuleConfig } from '../../core/modules/page.model';
-import cardList from './store.components';
+import { cardList } from './store.components';
+import { priceSlider } from './store.components';
 
 class StorePage extends PageComponent {
     constructor(config: PageConfig) {
@@ -9,7 +10,7 @@ class StorePage extends PageComponent {
 
     loadComponents() {
         const pageModule: PageModule = new PageModule({
-            components: cardList,
+            components: [priceSlider, ...cardList],
         });
         pageModule.render();
     }
@@ -108,12 +109,20 @@ export const storePage = new StorePage({
       </div>
       <div class="price-slider__wrapper">
         Цена
-        <input class="price-slider" type="range" name="" id="">
-        <div class="price-slider__inputs">От
-          <input type="number" name="" id="">
-          до 
-          <input type="number" name="" id="">
+        <div class="price-slider__sliders-control">
+          <input class="price-slider__from-slider" type="range" value="0" min="0" max="15000"/>
+          <input class="price-slider__to-slider" type="range" value="15000" min="0" max="15000"/>
         </div>
+        <div class="price-slider__min-max">
+          <div class="price-slider__min">От
+            <input class="price-slider__min__input" type="number" value="0" min="0" max="15000">
+          </div>
+          <div class="price-slider__max">до 
+            <input class="price-slider__max__input" type="number" value="15000" min="0" max="15000">
+          </div>
+        </div>
+       
+
       </div>
       <div class="players-number">
         Количество игроков

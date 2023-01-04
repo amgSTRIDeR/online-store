@@ -99,7 +99,6 @@ import metro2033 from '../assets/images/game-collection-thumbnails/metro2033.png
 import seven_Chudes from '../assets/images/game-collection-thumbnails/7_Chudes.png';
 import Osnovateli_Mrachnoy_Gavani from '../assets/images/game-collection-thumbnails/Osnovateli_Mrachnoy_Gavani.png';
 import Sudnyiy_den_proekt_Chistilische from '../assets/images/game-collection-thumbnails/Sudnyiy_den_proekt_Chistilische.png';
-
 import krutogidon_extrimalno_ostriy_chipsio_1 from '../assets/images/game-collection-images/krutogidon_extrimalno_ostriy_chipsio-1.webp';
 import krutogidon_extrimalno_ostriy_chipsio_2 from '../assets/images/game-collection-images/krutogidon_extrimalno_ostriy_chipsio-2.webp';
 import krutogidon_extrimalno_ostriy_chipsio_3 from '../assets/images/game-collection-images/krutogidon_extrimalno_ostriy_chipsio-3.webp';
@@ -964,7 +963,6 @@ import Sudnyiy_den_proekt_Chistilische_8 from '../assets/images/game-collection-
 import Sudnyiy_den_proekt_Chistilische_9 from '../assets/images/game-collection-images/Sudnyiy_den_proekt_Chistilische_9.webp';
 import Sudnyiy_den_proekt_Chistilische_10 from '../assets/images/game-collection-images/Sudnyiy_den_proekt_Chistilische_10.webp';
 import Sudnyiy_den_proekt_Chistilische_11 from '../assets/images/game-collection-images/Sudnyiy_den_proekt_Chistilische_11.webp';
-
 
 export const GamesCollection = [
   {
@@ -4676,4 +4674,4 @@ export const GamesCollection = [
       Sudnyiy_den_proekt_Chistilische_11
     ]
   }
-]
+];
