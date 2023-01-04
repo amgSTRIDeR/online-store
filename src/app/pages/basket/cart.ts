@@ -1,7 +1,6 @@
 import { queryCheck } from '../../shared/functions/queryCheck';
 import { CartStorage } from '../../shared/singletons/cart-singleton';
 import { GamesCollection } from '../../../public/gamesCollection';
-import { ItemInCart } from '../../shared/interfaces/interfaces';
 
 const cart = CartStorage.getInstance();
 
@@ -252,6 +251,8 @@ export class CartPage {
         minusButtonsArray.forEach((e) => {
             e.addEventListener('click', () => {
                 cart.decreaseQuantity(+e.id.split('=')[1]);
+                CartPage.cardsRender();
+                CartPage.basketCardsRenew();
             });
         });
 
@@ -259,6 +260,8 @@ export class CartPage {
         plusButtonsArray.forEach((e) => {
             e.addEventListener('click', () => {
                 cart.addItem(+e.id.split('=')[1]);
+                CartPage.cardsRender();
+                CartPage.basketCardsRenew();
             });
         });
 
@@ -266,6 +269,8 @@ export class CartPage {
         smallButtonsArray.forEach((e) => {
             e.addEventListener('click', () => {
                 cart.removeItem(+e.id.split('=')[1]);
+                CartPage.cardsRender();
+                CartPage.basketCardsRenew();
             });
         });
     }
@@ -327,6 +332,7 @@ export class CartPage {
 
         proposalButton.addEventListener('click', () => {
             cart.addPromo(resultPromocodeInput.value);
+            CartPage.promoRender();
         });
 
         resultPromocodeButton.addEventListener('click', () => {
@@ -383,6 +389,7 @@ export class CartPage {
         smallPromoButtonsArray.forEach((e) => {
             e.addEventListener('click', () => {
                 cart.removePromo(+e.id.split('=')[1]);
+                CartPage.promoRender();
             });
         });
     }

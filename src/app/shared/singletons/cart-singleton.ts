@@ -1,6 +1,5 @@
 import { ItemInCart } from '../interfaces/interfaces';
 import { GamesCollection } from '../../../public/gamesCollection';
-import { CartPage } from '../../pages/basket/cart';
 import { Promocodes } from '../interfaces/interfaces';
 import { PromocodesCollection } from '../../../public/promocodes';
 
@@ -65,8 +64,6 @@ export class CartStorage {
         }
         this.renewCartWidget();
         this.renewSumWidget();
-        CartPage.cardsRender();
-        CartPage.basketCardsRenew();
     }
 
     removeItem(itemId: number) {
@@ -82,8 +79,6 @@ export class CartStorage {
 
         this.renewCartWidget();
         this.renewSumWidget();
-        CartPage.cardsRender();
-        CartPage.basketCardsRenew();
     }
 
     removePromo(itemId: number) {
@@ -100,7 +95,6 @@ export class CartStorage {
         });
 
         this.renewSumWidget();
-        CartPage.promoRender();
         if (resultPromocodeInput && resultPromocodeInput instanceof HTMLInputElement) {
             this.showPromo(resultPromocodeInput.value);
         }
@@ -118,8 +112,6 @@ export class CartStorage {
 
                 this.renewCartWidget();
                 this.renewSumWidget();
-                CartPage.cardsRender();
-                CartPage.basketCardsRenew();
             }
         });
     }
@@ -200,7 +192,6 @@ export class CartStorage {
                     this.promoArray.push(e);
                     this.renewCartWidget();
                     this.renewSumWidget();
-                    CartPage.promoRender();
                 }
             });
         }
