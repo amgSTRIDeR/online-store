@@ -13,25 +13,21 @@ class App {
         const routingApp = new Route();
         routingApp.routePage();
 
-        const cart = CartStorage.getInstance();
-        cart.renewSumWidget();
-        cart.renewCartWidget();
-
         const logoArray = Array.from(document.querySelectorAll('.logo'));
         const cartLink = document.querySelector('.widget__cart');
 
-        //TODO
+        //TODO place to different file
         if (logoArray) {
             logoArray.forEach((e) => {
                 e.addEventListener('click', () => {
-                    window.location.hash = '#start';
+                    window.location.hash = '#store';
                 });
             });
         }
 
         if (cartLink) {
             cartLink.addEventListener('click', () => {
-                window.location.hash = '#store';
+                window.location.hash = '#basket';
             });
         }
     }
