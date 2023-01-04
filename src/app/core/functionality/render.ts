@@ -18,7 +18,7 @@ export class Render {
 
         if (pageID === 'start' || pageID === '') {
             page = startPage;
-        } else if (pageID === 'store' || pageID.startsWith('store?')) {
+        } else if (pageID === 'store' || pageID.startsWith('store')) {
             page = storePage;
         } else if (pageID === 'basket' || pageID.startsWith('basket?')) {
             CartPage.pageRender(pageID.replace('basket', '').replace('?', ''));

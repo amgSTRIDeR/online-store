@@ -10,12 +10,30 @@ export class Filter {
         this.params = config.params;
     }
 
-    completeURL() {
-        let finalLink: string = window.location.protocol + '//' + window.location.host + '/#store';
-        if (this.option === 'price') {
-            finalLink += '?' + this.option + '=' + this.params[0] + '&' + this.params[1];
+    changeURL() {
+        if (this.option === 'price' && (this.params[0] !== '0' || this.params[1] !== '15000')) {
+            if (!window.location.href.includes(this.option)) {
+                window.location.href +=
+                    '?' + this.option + '=' + this.params[0] + '↕' + this.params[1];
+            } else {
+                window.location.href =
+                    window.location.href.slice(0, 28) +
+                    '?' +
+                    this.option +
+                    '=' +
+                    this.params[0] +
+                    '↕' +
+                    this.params[1];
+            }
+        } else if (
+            this.option === 'gamers' &&
+            (this.params[0] !== '1' || this.params[1] !== '99')
+        ) {
+            if (!window.location.href.includes(this.option)) {
+                window.location.href +=
+                    '?' + this.option + '=' + this.params[0] + '↕' + this.params[1];
+            }
         }
-        window.location.href = finalLink;
     }
 
     filter(): GameObject[] | null {
@@ -27,10 +45,10 @@ export class Filter {
                         this.beginList[i].price >= +this.params[0] &&
                         this.beginList[i].price <= +this.params[1]
                     ) {
-                        this.completeURL();
                         resultList.push(this.beginList[i]);
                     }
                 }
+                this.changeURL();
             }
             if (this.option === 'gamers') {
                 for (let i = 0; i < this.beginList.length; i++) {
@@ -56,7 +74,9 @@ export class Filter {
                         }
                     }
                 }
+                this.changeURL();
             }
+
             if (resultList.length !== 0) {
                 return resultList;
             }
