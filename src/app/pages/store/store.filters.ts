@@ -10,6 +10,14 @@ export class Filter {
         this.params = config.params;
     }
 
+    completeURL() {
+        let finalLink: string = window.location.protocol + '//' + window.location.host + '/#store';
+        if (this.option === 'price') {
+            finalLink += '?' + this.option + '=' + this.params[0] + '&' + this.params[1];
+        }
+        window.location.href = finalLink;
+    }
+
     filter(): GameObject[] | null {
         const resultList: GameObject[] | null = [];
 
@@ -19,6 +27,7 @@ export class Filter {
                     this.beginList[i].price >= +this.params[0] &&
                     this.beginList[i].price <= +this.params[1]
                 ) {
+                    this.completeURL();
                     resultList.push(this.beginList[i]);
                 }
             }
@@ -28,6 +37,7 @@ export class Filter {
         if (resultList.length !== 0) {
             return resultList;
         }
+
         return null;
     }
 }

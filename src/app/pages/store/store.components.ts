@@ -1,5 +1,5 @@
 import { PageComponent } from '../../core/components/page.component';
-import { GamesCollection } from '../../../public/gamesCollection.js'; // отфильтрованная коллекция
+import { GamesCollection } from '../../../public/gamesCollection.js';
 import { CardConfig, PriceConfig, GameObject, DualSliderConfig } from './store.interfaces';
 import { CartStorage } from '../../shared/singletons/cart-singleton';
 import { Filter } from './store.filters';
