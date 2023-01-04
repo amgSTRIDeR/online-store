@@ -34,9 +34,9 @@ export class Render {
             page.render();
             page.loadComponents();
 
-            // const cart = CartStorage.getInstance();
-            // cart.renewCartWidget();
-            // cart.renewSumWidget();
+            const cart = CartStorage.getInstance();
+            cart.renewCartWidget();
+            cart.renewSumWidget();
         }
 
         this.changeURL(pageID);
