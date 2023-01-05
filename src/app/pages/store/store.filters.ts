@@ -33,6 +33,8 @@ export class Filter {
                 window.location.href +=
                     '?' + this.option + '=' + this.params[0] + '↕' + this.params[1];
             }
+        } else if (this.option === 'category' && this.params.length !== 0) {
+            window.location.href += '?category=' + this.params.join('↕');
         }
     }
 
@@ -48,7 +50,7 @@ export class Filter {
                         resultList.push(this.beginList[i]);
                     }
                 }
-                this.changeURL();
+                // this.changeURL();
             }
             if (this.option === 'gamers') {
                 for (let i = 0; i < this.beginList.length; i++) {
@@ -74,7 +76,25 @@ export class Filter {
                         }
                     }
                 }
-                this.changeURL();
+                // this.changeURL();
+            }
+            if (this.option === 'category') {
+                if (this.params.length !== 0) {
+                    for (let i = 0; i < this.beginList.length; i++) {
+                        for (let criteria of this.beginList[i].category_ru) {
+                            if (
+                                this.params.includes(criteria) &&
+                                !resultList.includes(this.beginList[i])
+                            ) {
+                                resultList.push(this.beginList[i]);
+                            }
+                        }
+                    }
+                    // this.changeURL();
+                } else {
+                    return this.beginList;
+                }
+                console.log(resultList);
             }
 
             if (resultList.length !== 0) {

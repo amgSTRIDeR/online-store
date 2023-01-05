@@ -1,7 +1,7 @@
 import { PageComponent, PageConfig } from '../../core/components/page.component';
 import { PageModule, ModuleConfig } from '../../core/modules/page.model';
 import { cardList } from './store.components';
-import { priceSlider, playersSlider } from './store.components';
+import { priceSlider, playersSlider, categoryBox } from './store.components';
 
 class StorePage extends PageComponent {
     constructor(config: PageConfig) {
@@ -10,7 +10,7 @@ class StorePage extends PageComponent {
 
     loadComponents() {
         const pageModule: PageModule = new PageModule({
-            components: [priceSlider, playersSlider, ...cardList],
+            components: [priceSlider, playersSlider, categoryBox, ...cardList],
         });
         pageModule.render();
     }
@@ -89,22 +89,37 @@ export const storePage = new StorePage({
     <div class="sets-wrapper">
       <div class="sets sets-category">Категория
         <ul class="sets__list">
-          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="" id=""> Вечериночные игры</li>
-          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="" id="">Викторины</li>
-          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="" id="">Детективные</li>
-          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="" id="">Карточные</li>
-          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="" id="">Командные</li>
-          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="" id="">Квесты</li>
+          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Игры для компании" id="">Игры для компании</li>
+          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Игры для взрослых" id="">Игры для взрослых</li>
+          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Карточные игры" id="">Карточные игры</li>
+          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Игры в дорогу" id="">Игры в дорогу</li>
+          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Для двоих" id="">Для двоих</li>
+          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Семейные" id="">Семейные</li>
+          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Стратегические игры" id="">Стратегические игры</li>
+          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Кооперативные игры" id="">Кооперативные игры</li>
+          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Полукооперативные игры" id="">Полукооперативные игры</li>
+          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Приключенческие игры" id="">Приключенческие игры</li>
+          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Детективные игры" id="">Детективные игры</li>
+          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Мафия" id="">Мафия</li>
+          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Логические игры" id="">Логические игры</li>
+          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Для одного" id="">Для одного</li>
+          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Хардкорные игры" id="">Хардкорные игры</li>
+          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Книги-игры" id="">Книги-игры</li>
+          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Квесты" id="">Квесты</li>
+          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Дуэльные" id="">Дуэльные</li>
+          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Детские игры" id="">Детские игры</li>
+          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Экономические" id="">Экономические</li>
+
         </ul>
       </div>
       <div class="sets sets-maker">Производитель
         <ul class="sets__list">
-          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="" id=""> Hobby world игры</li>
-          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="" id="">ARES</li>
-          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="" id="">Devir</li>
-          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="" id="">Blue Cocker</li>
-          <li class="sets__list-item"><input class= "sets__checkbox" type="checkbox" name="" id="">Do Joy</li>
-          <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="" id="">Dude Games</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Hobby world" id=""> Hobby world игры</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="ARES" id="">ARES</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Devir" id="">Devir</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Blue Cocker" id="">Blue Cocker</li>
+        <li class="sets__list-item"><input class= "sets__checkbox" type="checkbox" name="Do Joy" id="">Do Joy</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Dude Games" id="">Dude Games</li>
         </ul>
       </div>
       <div class="price-slider__wrapper">

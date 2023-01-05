@@ -44,6 +44,12 @@ export interface DualSliderConfig {
     option: string;
 }
 
+export interface CheckBoxConfig {
+    selector: string;
+    itemSelector: string;
+    option: string;
+}
+
 export interface FilterConfig {
     beginList: GameObject[] | null;
     option: string;

@@ -1,6 +1,12 @@
 import { PageComponent } from '../../core/components/page.component';
 import { GamesCollection } from '../../../public/gamesCollection.js';
-import { CardConfig, PriceConfig, GameObject, DualSliderConfig } from './store.interfaces';
+import {
+    CardConfig,
+    PriceConfig,
+    GameObject,
+    DualSliderConfig,
+    CheckBoxConfig,
+} from './store.interfaces';
 import { CartStorage } from '../../shared/singletons/cart-singleton';
 import { Filter } from './store.filters';
 
@@ -205,6 +211,50 @@ export class DualSliderComponent {
     }
 }
 
+//продолжить фильтрацию по категории
+export class CheckBoxComponent {
+    selector: string;
+    itemSelector: string;
+    option: string;
+    checkedValues: string[];
+    constructor(config: CheckBoxConfig) {
+        this.selector = config.selector;
+        this.itemSelector = config.itemSelector;
+        this.option = config.option;
+        this.checkedValues = [];
+    }
+
+    addRemove(checkbox: HTMLInputElement) {
+        if (checkbox.checked) {
+            this.checkedValues.push(checkbox.name);
+        } else {
+            const index: number = this.checkedValues.indexOf(checkbox.name);
+            this.checkedValues.splice(index, 1);
+        }
+    }
+
+    getValues(): string[] {
+        return this.checkedValues;
+    }
+
+    render() {
+        const checkBoxContainer: HTMLElement | null = document.querySelector(this.selector);
+        const checkBoxItems: NodeListOf<HTMLInputElement> | null = document.querySelectorAll(
+            this.itemSelector
+        );
+        if (checkBoxContainer) {
+            for (let i of checkBoxItems) {
+                i.addEventListener('change', () => {
+                    this.addRemove(i);
+                    const finalList = makeNewCollection();
+                    makeCardList(finalList);
+                    storePage.loadComponents();
+                });
+            }
+        }
+    }
+}
+
 export const priceSlider = new DualSliderComponent({
     selector: '.price-slider__wrapper',
     leftSlider: '.price-slider__from-slider',
@@ -223,10 +273,19 @@ export const playersSlider = new DualSliderComponent({
     option: 'gamers',
 });
 
+export const categoryBox = new CheckBoxComponent({
+    selector: '.sets__list',
+    itemSelector: '.sets__checkbox',
+    option: 'category',
+});
+
 let cardList: CardComponent[] = [];
-//функция для перебора фильтров
 function makeNewCollection() {
-    const filterList: object[] = [{ price: priceSlider }, { gamers: playersSlider }];
+    const filterList: object[] = [
+        { price: priceSlider },
+        { gamers: playersSlider },
+        { category: categoryBox },
+    ];
     let listOfGames: GameObject[] | null = GamesCollection;
     for (let item of filterList) {
         listOfGames = new Filter({
