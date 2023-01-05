@@ -211,7 +211,7 @@ export class DualSliderComponent {
     }
 }
 
-//продолжить фильтрацию по категории
+//что-то тут не так
 export class CheckBoxComponent {
     selector: string;
     itemSelector: string;
@@ -226,11 +226,16 @@ export class CheckBoxComponent {
 
     addRemove(checkbox: HTMLInputElement) {
         if (checkbox.checked) {
-            this.checkedValues.push(checkbox.name);
-        } else {
+            if (!this.checkedValues.includes(checkbox.name)) {
+                this.checkedValues.push(checkbox.name);
+            }
+        } else if (!checkbox.checked) {
             const index: number = this.checkedValues.indexOf(checkbox.name);
             this.checkedValues.splice(index, 1);
         }
+        const finalList = makeNewCollection();
+        makeCardList(finalList);
+        storePage.loadComponents();
     }
 
     getValues(): string[] {
@@ -246,9 +251,6 @@ export class CheckBoxComponent {
             for (let i of checkBoxItems) {
                 i.addEventListener('change', () => {
                     this.addRemove(i);
-                    const finalList = makeNewCollection();
-                    makeCardList(finalList);
-                    storePage.loadComponents();
                 });
             }
         }

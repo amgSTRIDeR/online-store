@@ -1,4 +1,5 @@
 import { FilterConfig, GameObject } from './store.interfaces';
+import { QueryStorage } from '../../shared/singletons/query-singleton';
 
 export class Filter {
     beginList: GameObject[] | null;
@@ -11,35 +12,33 @@ export class Filter {
     }
 
     changeURL() {
-        if (this.option === 'price' && (this.params[0] !== '0' || this.params[1] !== '15000')) {
-            if (!window.location.href.includes(this.option)) {
-                window.location.href +=
-                    '?' + this.option + '=' + this.params[0] + '↕' + this.params[1];
-            } else {
-                window.location.href =
-                    window.location.href.slice(0, 28) +
-                    '?' +
-                    this.option +
-                    '=' +
-                    this.params[0] +
-                    '↕' +
-                    this.params[1];
+        let finalLink = window.location.protocol + '//' + window.location.host + '/#store?';
+        const queryList = new QueryStorage();
+        queryList.changeParams(this.option, this.params);
+        if (this.option === 'category') {
+            // console.log(this.option + '*');
+            const finalList = queryList.getList();
+            if (finalList.price[0] !== '0' || finalList.price[1] !== '15000') {
+                finalLink += 'price=' + finalList.price.join('↕') + '&';
             }
-        } else if (
-            this.option === 'gamers' &&
-            (this.params[0] !== '1' || this.params[1] !== '99')
-        ) {
-            if (!window.location.href.includes(this.option)) {
-                window.location.href +=
-                    '?' + this.option + '=' + this.params[0] + '↕' + this.params[1];
+            if (finalList.gamers[0] !== '1' || finalList.gamers[1] !== '99') {
+                finalLink += 'gamers=' + finalList.gamers.join('↕') + '&';
             }
-        } else if (this.option === 'category' && this.params.length !== 0) {
-            window.location.href += '?category=' + this.params.join('↕');
+            if (finalList.category.length !== 0) {
+                finalLink += 'category=' + finalList.category.join('↕') + '&';
+            }
+            window.location.href = finalLink;
         }
+
+        // console.log(
+        //     queryList.getList().price,
+        //     queryList.getList().gamers,
+        //     queryList.getList().category
+        // );
     }
 
     filter(): GameObject[] | null {
-        const resultList: GameObject[] | null = [];
+        let resultList: GameObject[] | null = [];
         if (this.beginList) {
             if (this.option === 'price') {
                 for (let i = 0; i < this.beginList.length; i++) {
@@ -50,7 +49,6 @@ export class Filter {
                         resultList.push(this.beginList[i]);
                     }
                 }
-                // this.changeURL();
             }
             if (this.option === 'gamers') {
                 for (let i = 0; i < this.beginList.length; i++) {
@@ -76,7 +74,6 @@ export class Filter {
                         }
                     }
                 }
-                // this.changeURL();
             }
             if (this.option === 'category') {
                 if (this.params.length !== 0) {
@@ -90,13 +87,11 @@ export class Filter {
                             }
                         }
                     }
-                    // this.changeURL();
                 } else {
-                    return this.beginList;
+                    resultList = this.beginList;
                 }
-                console.log(resultList);
             }
-
+            this.changeURL();
             if (resultList.length !== 0) {
                 return resultList;
             }
