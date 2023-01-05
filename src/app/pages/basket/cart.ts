@@ -1,6 +1,7 @@
 import { queryCheck } from '../../shared/functions/queryCheck';
 import { CartStorage } from '../../shared/singletons/cart-singleton';
 import { GamesCollection } from '../../../public/gamesCollection';
+import { ModalWindow } from '../modal-window/modalWindow';
 
 const cart = CartStorage.getInstance();
 
@@ -115,6 +116,7 @@ export class CartPage {
         CartPage.resultRender();
         CartPage.promoRender();
         CartPage.basketCardsRenew();
+        ModalWindow.modalRender();
     }
 
     static cardsRender() {
