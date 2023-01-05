@@ -108,6 +108,10 @@ export class ModalWindow {
         phoneInput.addEventListener('input', () => {
             ModalWindow.telInputCheck(phoneInput);
         });
+
+        nameInput.addEventListener('input', () => {
+            ModalWindow.nameInputCheck(nameInput);
+        });
     }
 
     static telInputCheck(inputElement: HTMLInputElement) {
@@ -139,5 +143,43 @@ export class ModalWindow {
             inputElement.classList.add('input_false');
             inputElement.classList.remove('input_true');
         }
+    }
+
+    static nameInputCheck(inputElement: HTMLInputElement) {
+        const inputArray = inputElement.value.split('');
+        ModalWindow.nameCheck = false;
+
+        for (let i = 0; i < inputElement.value.length; i += 1) {
+            const charCode = inputElement.value.toUpperCase().charCodeAt(i);
+            if (
+                (charCode < 65 && charCode !== 32) ||
+                charCode > 1071 ||
+                (charCode > 90 && charCode < 1040)
+            ) {
+                inputArray.length = i;
+                inputElement.value = inputArray.join('');
+                inputElement.classList.add('input_false');
+                break;
+            }
+        }
+
+        const wordsArray = inputElement.value.split(' ');
+
+        if (wordsArray.length >= 2) {
+          ModalWindow.nameCheck = true;
+          wordsArray.forEach((e) => {
+            if (e.length < 3) {
+              ModalWindow.nameCheck = false;
+            }
+          })
+        }
+
+        if (ModalWindow.nameCheck === true) {
+          inputElement.classList.add('input_true');
+          inputElement.classList.remove('input_false');
+      } else {
+          inputElement.classList.add('input_false');
+          inputElement.classList.remove('input_true');
+      }
     }
 }
