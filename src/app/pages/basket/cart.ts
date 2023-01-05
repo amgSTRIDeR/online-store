@@ -424,5 +424,11 @@ export class CartPage {
         if (productsPerPageShow) {
             productsPerPageShow.textContent = ` ${CartPage.itemsLimit} `;
         }
+
+        CartPage.changeHash();
+    }
+
+    static changeHash() {
+        window.location.hash = `#basket?limit=${this.itemsLimit}&page=${this.pageNumber}`;
     }
 }
