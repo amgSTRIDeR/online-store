@@ -1,21 +1,21 @@
 .body_modal {
-  &::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vw;
-    z-index: 5;
-    background-color: $BACKGROUND;
-    opacity: 0.9;
-  }
+    &::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vw;
+        z-index: 5;
+        background-color: $BACKGROUND;
+        opacity: 0.9;
+    }
 
-  & .modal__content {
-    display: flex;
-  }
+    & .modal__content {
+        display: flex;
+    }
 }
 
 .modal__content {
@@ -100,6 +100,14 @@ h3 {
         font-weight: 400;
         text-align: center;
     }
+
+    .card_logo {
+        width: 50px;
+        height: 50px;
+
+        fill: $MAIN_TEXT;
+    }
+
     .card_input {
         border: 3px solid $MAIN_COLOR;
         text-align: center;
@@ -198,9 +206,9 @@ h3 {
 }
 
 .input_true {
-  outline: 3px solid green;
+    outline: 3px solid green;
 }
 
 .input_false {
-  outline: 3px solid red;
+    outline: 3px solid red;
 }

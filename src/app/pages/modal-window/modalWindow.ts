@@ -1,8 +1,11 @@
+import { CreditCardsSvg } from '../../shared/enums/creditCardsSvg';
+
 export class ModalWindow {
     static nameCheck = false;
     static telCheck = false;
     static addressCheck = false;
     static emailCheck = false;
+    static cardNumberCheck = false;
 
     static modalRender() {
         const mainSection = document.querySelector('.main-section');
@@ -23,7 +26,7 @@ export class ModalWindow {
         const cardInfoNumber = document.createElement('div');
         const cardInfoNumberLabel = document.createElement('label');
         const cardInfoNumberInput = document.createElement('input');
-        const cardInfoNumberImg = document.createElement('img');
+        const cardInfoNumberImg = document.createElement('div');
         const cardExpireData = document.createElement('div');
         const cardExpireLabel = document.createElement('label');
         const cardExpireInput = document.createElement('input');
@@ -56,7 +59,6 @@ export class ModalWindow {
         cardInfoNumberInput.classList.add('card_input');
         cardInfoNumberInput.type = 'text';
         cardInfoNumberImg.classList.add('card_logo');
-        cardInfoNumberImg.alt = 'card_logo';
         cardExpireData.classList.add('modal__content__card_info__expire_data');
         cardExpireLabel.classList.add('card_label');
         cardExpireLabel.textContent = 'Действительна до';
@@ -124,6 +126,10 @@ export class ModalWindow {
 
         emailInput.addEventListener('input', () => {
             ModalWindow.emailInputCheck(emailInput);
+        });
+
+        cardInfoNumberInput.addEventListener('input', () => {
+            ModalWindow.cardNumberInputCheck(cardInfoNumberInput);
         });
     }
 
@@ -238,9 +244,9 @@ export class ModalWindow {
         ModalWindow.emailCheck = false;
         const inputArray = inputElement.value.split('');
 
-        const lowerCaseArray = inputArray.map((e) => e = e.toLowerCase());
+        const lowerCaseArray = inputArray.map((e) => (e = e.toLowerCase()));
         inputElement.value = lowerCaseArray.join('');
-        
+
         const inputText = inputElement.value;
 
         const emailExp =
@@ -250,6 +256,57 @@ export class ModalWindow {
         }
 
         if (ModalWindow.emailCheck === true) {
+            inputElement.classList.add('input_true');
+            inputElement.classList.remove('input_false');
+        } else {
+            inputElement.classList.add('input_false');
+            inputElement.classList.remove('input_true');
+        }
+    }
+
+    static cardNumberInputCheck(inputElement: HTMLInputElement) {
+        const cardInfoNumberImg = document.querySelector('.card_logo');
+
+        ModalWindow.cardNumberCheck = false;
+        const inputArray = inputElement.value.split('').filter((char) => Number.isInteger(+char));
+
+        if (inputArray.length >= 16) {
+          inputArray.length = 16;
+            ModalWindow.cardNumberCheck = true;
+        }
+
+        if (inputArray.length >= 5) {
+            inputArray.splice(4, 0, '-');
+        }
+        if (inputArray.length >= 10) {
+            inputArray.splice(9, 0, '-');
+        }
+        if (inputArray.length >= 15) {
+            inputArray.splice(14, 0, '-');
+        }
+
+        inputElement.value = inputArray.join('');
+
+        if (cardInfoNumberImg) {
+            switch (+inputArray[0]) {
+                case 3:
+                    cardInfoNumberImg.innerHTML = CreditCardsSvg.AmericanExpress;
+                    break;
+                case 4:
+                    cardInfoNumberImg.innerHTML = CreditCardsSvg.Visa;
+                    break;
+                case 5:
+                    cardInfoNumberImg.innerHTML = CreditCardsSvg.MasterCard;
+                    break;
+                case 6:
+                    cardInfoNumberImg.innerHTML = CreditCardsSvg.Maestro;
+                    break;
+                default:
+                    cardInfoNumberImg.innerHTML = '';
+            }
+        }
+
+        if (ModalWindow.cardNumberCheck === true) {
             inputElement.classList.add('input_true');
             inputElement.classList.remove('input_false');
         } else {
