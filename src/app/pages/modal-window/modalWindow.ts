@@ -1,6 +1,8 @@
 export class ModalWindow {
     static nameCheck = false;
     static telCheck = false;
+    static addressCheck = false;
+    static emailCheck = false;
 
     static modalRender() {
         const mainSection = document.querySelector('.main-section');
@@ -15,6 +17,7 @@ export class ModalWindow {
         const nameInput = document.createElement('input');
         const phoneInput = document.createElement('input');
         const addressInput = document.createElement('input');
+        const emailInput = document.createElement('input');
         const creditcardHeader = document.createElement('h3');
         const cardInfoForm = document.createElement('form');
         const cardInfoNumber = document.createElement('div');
@@ -36,14 +39,15 @@ export class ModalWindow {
         modalContentPersonalData.classList.add('modal__content__personal_data');
         modalDataHeader.textContent = 'Ваши данные';
         nameInput.classList.add('modal__content__personal_data__enter');
-        // nameInput.type = 'text';
         nameInput.placeholder = 'Имя и Фамилия';
         phoneInput.classList.add('modal__content__personal_data__enter');
-        // phoneInput.type = 'number';
         phoneInput.placeholder = 'Номер телефона';
         addressInput.classList.add('modal__content__personal_data__enter');
         addressInput.type = 'text';
         addressInput.placeholder = 'Адрес доставки';
+        emailInput.classList.add('modal__content__personal_data__enter');
+        emailInput.type = 'email';
+        emailInput.placeholder = 'Email';
         creditcardHeader.textContent = 'Данные карты';
         cardInfoForm.classList.add('modal__content__card_info');
         cardInfoNumber.classList.add('modal__content__card_info__number');
@@ -73,6 +77,7 @@ export class ModalWindow {
         modalContentPersonalData.appendChild(nameInput);
         modalContentPersonalData.appendChild(phoneInput);
         modalContentPersonalData.appendChild(addressInput);
+        modalContentPersonalData.appendChild(emailInput);
         modalContent.appendChild(creditcardHeader);
         modalContent.appendChild(cardInfoForm);
         cardInfoForm.appendChild(cardInfoNumber);
@@ -111,6 +116,14 @@ export class ModalWindow {
 
         nameInput.addEventListener('input', () => {
             ModalWindow.nameInputCheck(nameInput);
+        });
+
+        addressInput.addEventListener('input', () => {
+            ModalWindow.addressInputCheck(addressInput);
+        });
+
+        emailInput.addEventListener('input', () => {
+            ModalWindow.emailInputCheck(emailInput);
         });
     }
 
@@ -166,20 +179,77 @@ export class ModalWindow {
         const wordsArray = inputElement.value.split(' ');
 
         if (wordsArray.length >= 2) {
-          ModalWindow.nameCheck = true;
-          wordsArray.forEach((e) => {
-            if (e.length < 3) {
-              ModalWindow.nameCheck = false;
-            }
-          })
+            ModalWindow.nameCheck = true;
+            wordsArray.forEach((e) => {
+                if (e.length < 3) {
+                    ModalWindow.nameCheck = false;
+                }
+            });
         }
 
         if (ModalWindow.nameCheck === true) {
-          inputElement.classList.add('input_true');
-          inputElement.classList.remove('input_false');
-      } else {
-          inputElement.classList.add('input_false');
-          inputElement.classList.remove('input_true');
-      }
+            inputElement.classList.add('input_true');
+            inputElement.classList.remove('input_false');
+        } else {
+            inputElement.classList.add('input_false');
+            inputElement.classList.remove('input_true');
+        }
+    }
+
+    static addressInputCheck(inputElement: HTMLInputElement) {
+        const inputArray = inputElement.value.split('');
+        ModalWindow.addressCheck = false;
+
+        for (let i = 0; i < inputElement.value.length; i += 1) {
+            const charCode = inputElement.value.toUpperCase().charCodeAt(i);
+            if (
+                (charCode < 65 && charCode !== 32) ||
+                charCode > 1071 ||
+                (charCode > 90 && charCode < 1040)
+            ) {
+                inputArray.length = i;
+                inputElement.value = inputArray.join('');
+                inputElement.classList.add('input_false');
+                break;
+            }
+        }
+
+        const wordsArray = inputElement.value.split(' ');
+
+        if (wordsArray.length >= 3) {
+            ModalWindow.addressCheck = true;
+            wordsArray.forEach((e) => {
+                if (e.length < 5) {
+                    ModalWindow.addressCheck = false;
+                }
+            });
+        }
+
+        if (ModalWindow.addressCheck === true) {
+            inputElement.classList.add('input_true');
+            inputElement.classList.remove('input_false');
+        } else {
+            inputElement.classList.add('input_false');
+            inputElement.classList.remove('input_true');
+        }
+    }
+
+    static emailInputCheck(inputElement: HTMLInputElement) {
+        ModalWindow.emailCheck = false;
+        const inputText = inputElement.value;
+
+        const emailExp =
+            /^([a-z\d]+)(\.[a-z]+|-[a-z]+|_[a-z]+)?@([a-z\d-]+).([a-z]{2,8})(\.[a-z]{2,8}?)$/;
+        if (inputText.match(emailExp)) {
+            ModalWindow.emailCheck = true;
+        }
+
+        if (ModalWindow.emailCheck === true) {
+            inputElement.classList.add('input_true');
+            inputElement.classList.remove('input_false');
+        } else {
+            inputElement.classList.add('input_false');
+            inputElement.classList.remove('input_true');
+        }
     }
 }
