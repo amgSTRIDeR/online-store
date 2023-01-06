@@ -3,7 +3,6 @@ import { storePage } from '../../pages/store/store';
 import { errorPage } from '../../pages/error/error';
 import { productPage } from '../../pages/product/product';
 import { CartPage } from '../../pages/basket/cart';
-import { CardComponent } from '../../pages/store/store.components';
 import { CartStorage } from '../../shared/singletons/cart-singleton';
 
 export class Render {
@@ -19,7 +18,7 @@ export class Render {
 
         if (pageID === 'start' || pageID === '') {
             page = startPage;
-        } else if (pageID === 'store' || pageID.startsWith('store?')) {
+        } else if (pageID === 'store' || pageID.startsWith('store')) {
             page = storePage;
         } else if (pageID === 'basket' || pageID.startsWith('basket?')) {
             CartPage.pageRender(pageID.replace('basket', '').replace('?', ''));

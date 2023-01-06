@@ -2543,17 +2543,27 @@ L213.13,222.409z" />
         <input type="number" name="" id="">
       </div> {% endcomment %}
     </div>
-    <div class="players-number">
+    <div class="players-number__wrapper">
       Количество игроков
-      <div class="players-number__inputs">
-        <input type="radio" name="players" id="any">
-        <input type="radio" name="players" id="any">
-        <input type="radio" name="players" id="any">
-        <input type="radio" name="players" id="any">
-        <input type="radio" name="players" id="any">
-        <input type="radio" name="players" id="any">
-        <input type="radio" name="players" id="any">
+      <div class="players-number__sliders-control">
+        <input class="players-number__from-slider" type="range" value="1" min="1" max="99"/>
+        <input class="players-number__to-slider" type="range" value="99" min="1" max="99"/>
       </div>
+      <div class="players-number__min-max">
+        <div class="players-number__min">От
+        <input class="players-number__min__input" type="number" name="" id="" min="1" max="99"></div>
+        <div class="players-number__max">до 
+        <input class="players-number__max__input" type="number" name="" id="" min="1" max="99">
+      </div>
+      {% comment %} <div class="players-number__inputs">
+        <input type="radio" name="players" id="any">
+        <input type="radio" name="players" id="any">
+        <input type="radio" name="players" id="any">
+        <input type="radio" name="players" id="any">
+        <input type="radio" name="players" id="any">
+        <input type="radio" name="players" id="any">
+        <input type="radio" name="players" id="any">
+      </div> {% endcomment %}
     </div>
     <div class="sale__wrapper">
       <input class="sets__checkbox" type="checkbox" name="" id="">Акция

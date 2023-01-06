@@ -474,12 +474,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 130px;
 
     background-color: #00000024;
     border-radius: 1vw;
     color: $MAIN_COLOR;
 }
 
+.players-number__sliders-control,
 .price-slider__sliders-control {
     position: relative;
     top: 15px;
@@ -508,11 +510,13 @@
     }
 }
 
+.players-number__from-slider,
 .price-slider__from-slider {
     z-index: 1;
     height: 0;
 }
 
+.players-number__min-max,
 .price-slider__min-max {
     position: relative;
     display: flex;
@@ -531,18 +535,16 @@
     }
 }
 
-.players-number {
+.players-number__wrapper {
     grid-area: players;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    height: 120px;
 
     background-color: #00000024;
     border-radius: 1vw;
     color: $MAIN_COLOR;
-
-    & .players-number__inputs {
-        display: flex;
-    }
 }
 
 .sale__wrapper {

@@ -1,6 +1,12 @@
 import { PageComponent } from '../../core/components/page.component';
-import { GamesCollection } from '../../../public/gamesCollection.js'; // отфильтрованная коллекция
-import { CardConfig, PriceConfig, GameObject, DualSliderConfig } from './store.interfaces';
+import { GamesCollection } from '../../../public/gamesCollection.js';
+import {
+    CardConfig,
+    PriceConfig,
+    GameObject,
+    DualSliderConfig,
+    CheckBoxConfig,
+} from './store.interfaces';
 import { CartStorage } from '../../shared/singletons/cart-singleton';
 import { Filter } from './store.filters';
 
@@ -101,6 +107,7 @@ export class DualSliderComponent {
     leftRange: string;
     rightRange: string;
     option: string;
+
     constructor(config: DualSliderConfig) {
         this.selector = config.selector;
         this.leftSlider = config.leftSlider;
@@ -115,10 +122,15 @@ export class DualSliderComponent {
         localStorage.setItem(this.option + 'To', to);
     }
 
-    getValues(sliderLeft: HTMLInputElement, sliderRight: HTMLInputElement): string[] {
-        const from: string = sliderLeft.value;
-        const to: string = sliderRight.value;
-        return [from, to];
+    public getValues(): string[] {
+        const sliderLeft: HTMLInputElement | null = document.querySelector(this.leftSlider);
+        const sliderRight: HTMLInputElement | null = document.querySelector(this.rightSlider);
+        if (sliderLeft && sliderRight) {
+            const from: string = sliderLeft.value;
+            const to: string = sliderRight.value;
+            return [from, to];
+        }
+        return [];
     }
 
     fixLeftThumpPosition(
@@ -126,7 +138,7 @@ export class DualSliderComponent {
         sliderRight: HTMLInputElement,
         rangeLeft: HTMLInputElement
     ) {
-        const [from, to] = this.getValues(sliderLeft, sliderRight);
+        const [from, to] = this.getValues();
         if (Number(from) > Number(to)) {
             sliderLeft.value = to;
         } else {
@@ -140,7 +152,7 @@ export class DualSliderComponent {
         sliderRight: HTMLInputElement,
         rangeRight: HTMLInputElement
     ) {
-        const [from, to] = this.getValues(sliderLeft, sliderRight);
+        const [from, to] = this.getValues();
 
         if (Number(from) <= Number(to)) {
             sliderRight.value = to;
@@ -170,23 +182,12 @@ export class DualSliderComponent {
         sliderRight.addEventListener('input', () => {
             this.fixRightThumpPosition(sliderLeft, sliderRight, rangeRight);
         });
+
         sliderLeft.addEventListener('mouseup', () => {
-            const finalList: GameObject[] | null = new Filter({
-                beginList: GamesCollection,
-                option: this.option,
-                params: [String(sliderLeft.value), String(sliderRight.value)],
-            }).filter();
-            makeCardList(finalList);
-            storePage.loadComponents();
+            makeNewCollection();
         });
         sliderRight.addEventListener('mouseup', () => {
-            const finalList: GameObject[] | null = new Filter({
-                beginList: GamesCollection,
-                option: this.option,
-                params: [String(sliderLeft.value), String(sliderRight.value)],
-            }).filter();
-            makeCardList(finalList);
-            storePage.loadComponents();
+            makeNewCollection();
         });
 
         this.setAccess(sliderLeft);
@@ -206,6 +207,48 @@ export class DualSliderComponent {
     }
 }
 
+export class CheckBoxComponent {
+    selector: string;
+    itemSelector: string;
+    option: string;
+    checkedValues: string[];
+    constructor(config: CheckBoxConfig) {
+        this.selector = config.selector;
+        this.itemSelector = config.itemSelector;
+        this.option = config.option;
+        this.checkedValues = [];
+    }
+
+    addRemove(checkbox: HTMLInputElement) {
+        if (this.checkedValues.includes(checkbox.name)) {
+            const index: number = this.checkedValues.indexOf(checkbox.name);
+            this.checkedValues.splice(index, 1);
+        } else {
+            this.checkedValues.push(checkbox.name);
+        }
+        makeNewCollection();
+    }
+
+    getValues(): string[] {
+        return this.checkedValues;
+    }
+
+    render() {
+        const checkBoxContainer: HTMLElement | null = document.querySelector(this.selector);
+        if (checkBoxContainer) {
+            const checkBoxItems: NodeListOf<HTMLInputElement> | null =
+                checkBoxContainer.querySelectorAll(this.itemSelector);
+            if (checkBoxContainer) {
+                for (let i of checkBoxItems) {
+                    i.addEventListener('change', () => {
+                        this.addRemove(i);
+                    });
+                }
+            }
+        }
+    }
+}
+
 export const priceSlider = new DualSliderComponent({
     selector: '.price-slider__wrapper',
     leftSlider: '.price-slider__from-slider',
@@ -215,7 +258,44 @@ export const priceSlider = new DualSliderComponent({
     option: 'price',
 });
 
+export const playersSlider = new DualSliderComponent({
+    selector: '.players-number__wrapper',
+    leftSlider: '.players-number__from-slider',
+    rightSlider: '.players-number__to-slider',
+    leftRange: '.players-number__min__input',
+    rightRange: '.players-number__max__input',
+    option: 'gamers',
+});
+
+export const categoryBox = new CheckBoxComponent({
+    selector: '.sets__list',
+    itemSelector: '.sets__checkbox',
+    option: 'category',
+});
+
+export const producerBox = new CheckBoxComponent({
+    selector: '.sets-maker',
+    itemSelector: '.sets__checkbox',
+    option: 'brand',
+});
+
 let cardList: CardComponent[] = [];
+function makeNewCollection() {
+    const filterList: object[] = [
+        { price: priceSlider },
+        { gamers: playersSlider },
+        { brand: producerBox },
+        { category: categoryBox },
+    ];
+    let listOfGames: GameObject[] | null = GamesCollection;
+    for (let item of filterList) {
+        listOfGames = new Filter({
+            beginList: listOfGames,
+            option: Object.keys(item)[0],
+            params: Object.values(item)[0].getValues(),
+        }).filter();
+    }
+}
 
 function makeCardList(gameList: GameObject[] | null) {
     let container = document.querySelector('.cards');
@@ -229,7 +309,7 @@ function makeCardList(gameList: GameObject[] | null) {
         for (let i = 0; i < gameList.length - 1; i += 1) {
             card = new CardComponent({
                 template: `
-              <div class="card">
+              <div class="card" id = "${gameList[i].id}">
             <h3 class="card__title">${gameList[i].title_ru}</h3>
             <p class="card__subtitle">${gameList[i].subtittle_ru}</p>
             <img class="card__image" src="${gameList[i].thumbnail}" alt="">
@@ -360,6 +440,7 @@ function makeCardList(gameList: GameObject[] | null) {
             cardList.push(card);
         }
     }
+    return cardList;
 }
 
 makeCardList(GamesCollection);
