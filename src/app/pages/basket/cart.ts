@@ -257,7 +257,6 @@ export class CartPage {
             e.addEventListener('click', () => {
                 cart.decreaseQuantity(+e.id.split('=')[1]);
                 CartPage.cardsRender();
-                CartPage.basketCardsRenew();
             });
         });
 
@@ -266,7 +265,6 @@ export class CartPage {
             e.addEventListener('click', () => {
                 cart.addItem(+e.id.split('=')[1]);
                 CartPage.cardsRender();
-                CartPage.basketCardsRenew();
             });
         });
 
@@ -275,7 +273,6 @@ export class CartPage {
             e.addEventListener('click', () => {
                 cart.removeItem(+e.id.split('=')[1]);
                 CartPage.cardsRender();
-                CartPage.basketCardsRenew();
             });
         });
     }
@@ -427,6 +424,8 @@ export class CartPage {
             productsPerPageShow.textContent = ` ${CartPage.itemsLimit} `;
         }
 
+        cart.renewSumWidget();
+        cart.renewCartWidget();
         CartPage.changeHash();
     }
 
