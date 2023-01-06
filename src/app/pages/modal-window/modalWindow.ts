@@ -175,32 +175,13 @@ export class ModalWindow {
     }
 
     static nameInputCheck(inputElement: HTMLInputElement) {
-        const inputArray = inputElement.value.split('');
+        const inputText = inputElement.value;
         ModalWindow.nameCheck = false;
 
-        for (let i = 0; i < inputElement.value.length; i += 1) {
-            const charCode = inputElement.value.toUpperCase().charCodeAt(i);
-            if (
-                (charCode < 65 && charCode !== 32) ||
-                charCode > 1071 ||
-                (charCode > 90 && charCode < 1040)
-            ) {
-                inputArray.length = i;
-                inputElement.value = inputArray.join('');
-                inputElement.classList.add('input_false');
-                break;
-            }
-        }
-
-        const wordsArray = inputElement.value.split(' ');
-
-        if (wordsArray.length >= 2) {
+        const nameExp =
+        /^[a-z]{3,}( [a-z]{3,}){1,}$/i;
+        if (inputText.match(nameExp)) {
             ModalWindow.nameCheck = true;
-            wordsArray.forEach((e) => {
-                if (e.length < 3) {
-                    ModalWindow.nameCheck = false;
-                }
-            });
         }
 
         if (ModalWindow.nameCheck === true) {
