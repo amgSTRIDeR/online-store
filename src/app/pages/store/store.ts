@@ -149,10 +149,10 @@ export const storePage = new StorePage({
         </div>
         <div class="players-number__min-max">
           <div class="players-number__min">От
-            <input class="players-number__min__input" type="number" name="" id="" min="1" max="99">
+            <input class="players-number__min__input" type="number" value="1" name="" id="" min="1" max="99">
           </div>
           <div class="players-number__max">до 
-          <input class="players-number__max__input" type="number" name="" id="" min="1" max="99">
+          <input class="players-number__max__input" type="number" value="99" name="" id="" min="1" max="99">
           </div>
         </div>
        

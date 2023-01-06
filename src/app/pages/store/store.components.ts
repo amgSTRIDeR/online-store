@@ -184,14 +184,10 @@ export class DualSliderComponent {
         });
 
         sliderLeft.addEventListener('mouseup', () => {
-            const finalList = makeNewCollection();
-            makeCardList(finalList);
-            storePage.loadComponents();
+            makeNewCollection();
         });
         sliderRight.addEventListener('mouseup', () => {
-            const finalList = makeNewCollection();
-            makeCardList(finalList);
-            storePage.loadComponents();
+            makeNewCollection();
         });
 
         this.setAccess(sliderLeft);
@@ -211,7 +207,6 @@ export class DualSliderComponent {
     }
 }
 
-//что-то тут не так
 export class CheckBoxComponent {
     selector: string;
     itemSelector: string;
@@ -225,17 +220,13 @@ export class CheckBoxComponent {
     }
 
     addRemove(checkbox: HTMLInputElement) {
-        if (checkbox.checked) {
-            if (!this.checkedValues.includes(checkbox.name)) {
-                this.checkedValues.push(checkbox.name);
-            }
-        } else if (!checkbox.checked) {
+        if (this.checkedValues.includes(checkbox.name)) {
             const index: number = this.checkedValues.indexOf(checkbox.name);
             this.checkedValues.splice(index, 1);
+        } else {
+            this.checkedValues.push(checkbox.name);
         }
-        const finalList = makeNewCollection();
-        makeCardList(finalList);
-        storePage.loadComponents();
+        makeNewCollection();
     }
 
     getValues(): string[] {
@@ -295,8 +286,8 @@ function makeNewCollection() {
             option: Object.keys(item)[0],
             params: Object.values(item)[0].getValues(),
         }).filter();
+        // console.log(listOfGames);
     }
-    return listOfGames;
 }
 
 function makeCardList(gameList: GameObject[] | null) {
@@ -311,7 +302,7 @@ function makeCardList(gameList: GameObject[] | null) {
         for (let i = 0; i < gameList.length - 1; i += 1) {
             card = new CardComponent({
                 template: `
-              <div class="card">
+              <div class="card" id = "${gameList[i].id}">
             <h3 class="card__title">${gameList[i].title_ru}</h3>
             <p class="card__subtitle">${gameList[i].subtittle_ru}</p>
             <img class="card__image" src="${gameList[i].thumbnail}" alt="">
@@ -445,6 +436,7 @@ function makeCardList(gameList: GameObject[] | null) {
     return cardList;
 }
 
+// const listOfCards: GameObject[] | null =
 makeCardList(GamesCollection);
 
 export { cardList };

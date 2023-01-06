@@ -1,5 +1,6 @@
 import { FilterConfig, GameObject } from './store.interfaces';
 import { QueryStorage } from '../../shared/singletons/query-singleton';
+import { cardList } from './store.components';
 
 export class Filter {
     beginList: GameObject[] | null;
@@ -15,9 +16,10 @@ export class Filter {
         let finalLink = window.location.protocol + '//' + window.location.host + '/#store?';
         const queryList = new QueryStorage();
         queryList.changeParams(this.option, this.params);
+        console.log(this.option, this.params);
         if (this.option === 'category') {
-            // console.log(this.option + '*');
             const finalList = queryList.getList();
+            // console.log(finalList);
             if (finalList.price[0] !== '0' || finalList.price[1] !== '15000') {
                 finalLink += 'price=' + finalList.price.join('↕') + '&';
             }
@@ -27,18 +29,36 @@ export class Filter {
             if (finalList.category.length !== 0) {
                 finalLink += 'category=' + finalList.category.join('↕') + '&';
             }
-            window.location.href = finalLink;
+            window.location.href = finalLink.slice(0, finalLink.length - 1);
+        }
+    }
+
+    makeIdList(resultList: GameObject[] | null): number[] {
+        let idList: number[] = [];
+        if (resultList) {
+            for (let i of resultList) {
+                idList.push(i.id);
+            }
         }
 
-        // console.log(
-        //     queryList.getList().price,
-        //     queryList.getList().gamers,
-        //     queryList.getList().category
-        // );
+        return idList;
+    }
+
+    hideCards(resultList: GameObject[] | null) {
+        let idList = this.makeIdList(resultList);
+        const cards: NodeListOf<HTMLElement> = document.querySelectorAll('.card');
+        for (let card of cards) {
+            if (idList.includes(+card.id)) {
+                card.style.display = 'grid';
+            } else {
+                card.style.display = 'none';
+            }
+        }
     }
 
     filter(): GameObject[] | null {
         let resultList: GameObject[] | null = [];
+
         if (this.beginList) {
             if (this.option === 'price') {
                 for (let i = 0; i < this.beginList.length; i++) {
@@ -90,8 +110,10 @@ export class Filter {
                 } else {
                     resultList = this.beginList;
                 }
+                this.hideCards(resultList);
             }
             this.changeURL();
+
             if (resultList.length !== 0) {
                 return resultList;
             }
