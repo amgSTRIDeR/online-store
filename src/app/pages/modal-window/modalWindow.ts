@@ -7,6 +7,7 @@ export class ModalWindow {
     static emailCheck = false;
     static cardNumberCheck = false;
     static cardDateCheck = false;
+    static cardCodeCheck = false;
 
     static modalRender() {
         const mainSection = document.querySelector('.main-section');
@@ -135,6 +136,10 @@ export class ModalWindow {
 
         cardExpireInput.addEventListener('input', () => {
             ModalWindow.cardDateInputCheck(cardExpireInput);
+        });
+
+        cardCvvInput.addEventListener('input', () => {
+            ModalWindow.cardCodeInputCheck(cardCvvInput);
         });
     }
 
@@ -322,17 +327,14 @@ export class ModalWindow {
 
     static cardDateInputCheck(inputElement: HTMLInputElement) {
         ModalWindow.cardDateCheck = false;
-        const inputArray = inputElement.value.split('/').join('').split('');
+        let inputArray = inputElement.value.split('/').join('').split('');
 
+        inputArray = inputArray.map((e) => (Number.isInteger(+e) ? e : '')).join('').split('');
+        
         if (inputArray.length >= 4) {
             inputArray.length = 4;
         }
 
-        for (let i = 0; i < inputArray.length; i += 1) {
-            if (!Number.isInteger(+inputArray[i])) {
-                inputArray.length = i;
-            }
-        }
 
         if (inputArray.length === 4) {
             const monthNumber = +(inputArray[0] + inputArray[1]);
@@ -373,6 +375,28 @@ export class ModalWindow {
         inputElement.value = inputArray.join('');
 
         if (ModalWindow.cardDateCheck === true) {
+            inputElement.classList.add('input_true');
+            inputElement.classList.remove('input_false');
+        } else {
+            inputElement.classList.add('input_false');
+            inputElement.classList.remove('input_true');
+        }
+    }
+
+    static cardCodeInputCheck(inputElement: HTMLInputElement) {
+        ModalWindow.cardCodeCheck = false;
+        let inputArray = inputElement.value.split('');
+
+        inputArray = inputArray.map((e) => (Number.isInteger(+e) ? e : '')).join('').split('');
+
+        if (inputArray.length >= 3) {
+            inputArray.length = 3;
+            ModalWindow.cardCodeCheck = true;
+        }
+
+        inputElement.value = inputArray.join('');
+
+        if (ModalWindow.cardCodeCheck === true) {
             inputElement.classList.add('input_true');
             inputElement.classList.remove('input_false');
         } else {
