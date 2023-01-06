@@ -21,12 +21,13 @@
 .modal__content {
     display: none;
     position: absolute;
-    // top: 200px;
     flex-direction: column;
     align-items: center;
     width: 550;
     z-index: 6;
     background-color: $BACKGROUND;
+
+    font-size: 100px;
 
     h2 {
         display: flex;
@@ -211,4 +212,15 @@ h3 {
 
 .input_false {
     outline: 3px solid red;
+}
+
+@keyframes falseInput {
+  0%   {background-color: #ff000000;}
+  100%  {background-color: #ff000048;}
+}
+
+.input_show-false {
+  animation-name: falseInput;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
 }

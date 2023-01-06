@@ -1,4 +1,5 @@
 import { CreditCardsSvg } from '../../shared/enums/creditCardsSvg';
+import { CartStorage } from '../../shared/singletons/cart-singleton';
 
 export class ModalWindow {
     static nameCheck = false;
@@ -44,13 +45,17 @@ export class ModalWindow {
         modalContentPersonalData.classList.add('modal__content__personal_data');
         modalDataHeader.textContent = 'Ваши данные';
         nameInput.classList.add('modal__content__personal_data__enter');
+        nameInput.classList.add('input');
         nameInput.placeholder = 'Имя и Фамилия';
         phoneInput.classList.add('modal__content__personal_data__enter');
+        phoneInput.classList.add('input');
         phoneInput.placeholder = 'Номер телефона';
         addressInput.classList.add('modal__content__personal_data__enter');
+        addressInput.classList.add('input');
         addressInput.type = 'text';
         addressInput.placeholder = 'Адрес доставки';
         emailInput.classList.add('modal__content__personal_data__enter');
+        emailInput.classList.add('input');
         emailInput.type = 'email';
         emailInput.placeholder = 'Email';
         creditcardHeader.textContent = 'Данные карты';
@@ -59,17 +64,20 @@ export class ModalWindow {
         cardInfoNumberLabel.classList.add('card_label');
         cardInfoNumberLabel.textContent = 'Номер';
         cardInfoNumberInput.classList.add('card_input');
+        cardInfoNumberInput.classList.add('input');
         cardInfoNumberInput.type = 'text';
         cardInfoNumberImg.classList.add('card_logo');
         cardExpireData.classList.add('modal__content__card_info__expire_data');
         cardExpireLabel.classList.add('card_label');
         cardExpireLabel.textContent = 'Действительна до';
         cardExpireInput.classList.add('card_input');
+        cardExpireInput.classList.add('input');
         cardExpireInput.type = 'text';
         cardCvv.classList.add('modal__content__card_info__cvv');
         cardCvvLabel.classList.add('card_label');
         cardCvvLabel.textContent = 'Защитный код';
         cardCvvInput.classList.add('card_input');
+        cardCvvInput.classList.add('input');
         cardCvvInput.type = 'text';
         modalSubmit.classList.add('modal__content__submit');
         modalSubmit.textContent = 'Подтвердить';
@@ -140,6 +148,42 @@ export class ModalWindow {
 
         cardCvvInput.addEventListener('input', () => {
             ModalWindow.cardCodeInputCheck(cardCvvInput);
+        });
+
+        modalSubmit.addEventListener('click', () => {
+            if (
+                ModalWindow.nameCheck &&
+                ModalWindow.telCheck &&
+                ModalWindow.addressCheck &&
+                ModalWindow.emailCheck &&
+                ModalWindow.cardNumberCheck &&
+                ModalWindow.cardDateCheck &&
+                ModalWindow.cardCodeCheck
+            ) {
+                modalContent.innerHTML = 'Покупка завершена!';
+                setTimeout(() => {
+                    const cart = CartStorage.getInstance();
+                    cart.cartArray = [];
+                    window.location.hash = '#store';
+
+                    if (bodyElement) {
+                      bodyElement.classList.remove('body_modal');
+                    }
+                }, 5000);
+            } else {
+                const arrayOfInputs = Array.from(document.querySelectorAll('.input'));
+                if (arrayOfInputs.length) {
+                    arrayOfInputs.forEach((e) => {
+                        if (!e.classList.contains('input_true')) {
+                            e.classList.add('input_show-false');
+
+                            setTimeout(() => {
+                                e.classList.remove('input_show-false');
+                            }, 600);
+                        }
+                    });
+                }
+            }
         });
     }
 
