@@ -6,6 +6,7 @@ export class ModalWindow {
     static addressCheck = false;
     static emailCheck = false;
     static cardNumberCheck = false;
+    static cardDateCheck = false;
 
     static modalRender() {
         const mainSection = document.querySelector('.main-section');
@@ -130,6 +131,10 @@ export class ModalWindow {
 
         cardInfoNumberInput.addEventListener('input', () => {
             ModalWindow.cardNumberInputCheck(cardInfoNumberInput);
+        });
+
+        cardExpireInput.addEventListener('input', () => {
+            ModalWindow.cardDateInputCheck(cardExpireInput);
         });
     }
 
@@ -271,7 +276,7 @@ export class ModalWindow {
         const inputArray = inputElement.value.split('').filter((char) => Number.isInteger(+char));
 
         if (inputArray.length >= 16) {
-          inputArray.length = 16;
+            inputArray.length = 16;
             ModalWindow.cardNumberCheck = true;
         }
 
@@ -307,6 +312,67 @@ export class ModalWindow {
         }
 
         if (ModalWindow.cardNumberCheck === true) {
+            inputElement.classList.add('input_true');
+            inputElement.classList.remove('input_false');
+        } else {
+            inputElement.classList.add('input_false');
+            inputElement.classList.remove('input_true');
+        }
+    }
+
+    static cardDateInputCheck(inputElement: HTMLInputElement) {
+        ModalWindow.cardDateCheck = false;
+        const inputArray = inputElement.value.split('/').join('').split('');
+
+        if (inputArray.length >= 4) {
+            inputArray.length = 4;
+        }
+
+        for (let i = 0; i < inputArray.length; i += 1) {
+            if (!Number.isInteger(+inputArray[i])) {
+                inputArray.length = i;
+            }
+        }
+
+        if (inputArray.length === 4) {
+            const monthNumber = +(inputArray[0] + inputArray[1]);
+            const dayNumber = +(inputArray[2] + inputArray[3]);
+
+            switch (monthNumber) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    if (dayNumber <= 31) {
+                        ModalWindow.cardDateCheck = true;
+                    }
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    if (dayNumber <= 30) {
+                        ModalWindow.cardDateCheck = true;
+                    }
+                    break;
+                case 2:
+                    if (dayNumber <= 29) {
+                        ModalWindow.cardDateCheck = true;
+                    }
+                    break;
+            }
+        }
+
+        if (inputArray.length >= 3) {
+            inputArray.splice(2, 0, '/');
+        }
+
+        inputElement.value = inputArray.join('');
+
+        if (ModalWindow.cardDateCheck === true) {
             inputElement.classList.add('input_true');
             inputElement.classList.remove('input_false');
         } else {
