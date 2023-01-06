@@ -169,7 +169,7 @@ export class ModalWindow {
                     if (bodyElement) {
                       bodyElement.classList.remove('body_modal');
                     }
-                }, 5000);
+                }, 3000);
             } else {
                 const arrayOfInputs = Array.from(document.querySelectorAll('.input'));
                 if (arrayOfInputs.length) {
