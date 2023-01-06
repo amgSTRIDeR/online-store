@@ -213,32 +213,13 @@ export class ModalWindow {
     }
 
     static addressInputCheck(inputElement: HTMLInputElement) {
-        const inputArray = inputElement.value.split('');
+        const inputText = inputElement.value;
         ModalWindow.addressCheck = false;
 
-        for (let i = 0; i < inputElement.value.length; i += 1) {
-            const charCode = inputElement.value.toUpperCase().charCodeAt(i);
-            if (
-                (charCode < 65 && charCode !== 32) ||
-                charCode > 1071 ||
-                (charCode > 90 && charCode < 1040)
-            ) {
-                inputArray.length = i;
-                inputElement.value = inputArray.join('');
-                inputElement.classList.add('input_false');
-                break;
-            }
-        }
-
-        const wordsArray = inputElement.value.split(' ');
-
-        if (wordsArray.length >= 3) {
+        const addressExp =
+        /^\b(\w{5,})\b( \b\w{5,}\b){2,}$/;
+        if (inputText.match(addressExp)) {
             ModalWindow.addressCheck = true;
-            wordsArray.forEach((e) => {
-                if (e.length < 5) {
-                    ModalWindow.addressCheck = false;
-                }
-            });
         }
 
         if (ModalWindow.addressCheck === true) {
@@ -329,12 +310,14 @@ export class ModalWindow {
         ModalWindow.cardDateCheck = false;
         let inputArray = inputElement.value.split('/').join('').split('');
 
-        inputArray = inputArray.map((e) => (Number.isInteger(+e) ? e : '')).join('').split('');
-        
+        inputArray = inputArray
+            .map((e) => (Number.isInteger(+e) ? e : ''))
+            .join('')
+            .split('');
+
         if (inputArray.length >= 4) {
             inputArray.length = 4;
         }
-
 
         if (inputArray.length === 4) {
             const monthNumber = +(inputArray[0] + inputArray[1]);
@@ -387,7 +370,10 @@ export class ModalWindow {
         ModalWindow.cardCodeCheck = false;
         let inputArray = inputElement.value.split('');
 
-        inputArray = inputArray.map((e) => (Number.isInteger(+e) ? e : '')).join('').split('');
+        inputArray = inputArray
+            .map((e) => (Number.isInteger(+e) ? e : ''))
+            .join('')
+            .split('');
 
         if (inputArray.length >= 3) {
             inputArray.length = 3;
