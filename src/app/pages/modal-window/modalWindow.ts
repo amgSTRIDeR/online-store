@@ -144,25 +144,22 @@ export class ModalWindow {
     }
 
     static telInputCheck(inputElement: HTMLInputElement) {
-        const inputArray = inputElement.value.split('');
+        let inputArray = inputElement.value.split('');
         ModalWindow.telCheck = false;
 
-        if (inputArray[0] !== '+') {
-            ModalWindow.telCheck = false;
-            inputElement.value = '';
-            inputElement.placeholder = 'Должен начинаться с "+"';
-        } else {
-            for (let i = 1; i < inputArray.length; i += 1) {
-                if (!Number.isInteger(+inputArray[i])) {
-                    inputArray.length = i;
-                    inputElement.value = inputArray.join('');
-                    break;
-                }
-            }
+        if (inputArray.length && inputArray[0] !== '+') {
+            inputArray.unshift('+');
+        }
 
-            if (inputArray.length >= 10) {
-                ModalWindow.telCheck = true;
-            }
+        inputArray = inputArray
+            .map((e, i) => (i === 0 ? e : Number.isInteger(+e) ? e : ''))
+            .join('')
+            .split('');
+
+        inputElement.value = inputArray.join('');
+
+        if (inputArray.length >= 10) {
+            ModalWindow.telCheck = true;
         }
 
         if (ModalWindow.telCheck === true) {
@@ -178,8 +175,7 @@ export class ModalWindow {
         const inputText = inputElement.value;
         ModalWindow.nameCheck = false;
 
-        const nameExp =
-        /^[a-z]{3,}( [a-z]{3,}){1,}$/i;
+        const nameExp = /^[a-z]{3,}( [a-z]{3,}){1,}$/i;
         if (inputText.match(nameExp)) {
             ModalWindow.nameCheck = true;
         }
@@ -197,8 +193,7 @@ export class ModalWindow {
         const inputText = inputElement.value;
         ModalWindow.addressCheck = false;
 
-        const addressExp =
-        /^\b(\w{5,})\b( \b\w{5,}\b){2,}$/;
+        const addressExp = /^\b(\w{5,})\b( \b\w{5,}\b){2,}$/;
         if (inputText.match(addressExp)) {
             ModalWindow.addressCheck = true;
         }
