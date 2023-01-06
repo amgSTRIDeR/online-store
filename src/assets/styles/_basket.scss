@@ -1,15 +1,9 @@
-@use 'sass:math';
 
-body {
-    background-color: $BACKGROUND;
-    color: $MAIN_TEXT;
-    display: flex;
-    flex-direction: column;
+.basket-wrapper {
+    min-height: 70vh;
+
     font-family: 'Aire Exterior', sans-serif;
-    margin: 0 auto;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+    font-size: 5vw;
 }
 
 h2 {
@@ -60,47 +54,26 @@ h2 {
 }
 
 .basket__cards-wrapper {
-  overflow: hidden;
-  width: 90vw;
+    overflow: hidden;
+    width: 90vw;
 }
 
 .basket__cards {
     display: grid;
     position: relative;
     background-color: $BLACK_BG;
-    // flex-direction: column;
     align-items: center;
-    // width: 1279px;
     grid-auto-flow: column;
-    // height: 70%;
     border-radius: 10px;
     margin-bottom: 30px;
     grid-template-rows: repeat(5, 1fr);
-    // grid-template-columns: repeat(4, 100%);
 
     transition: all 0.3s ease;
 }
 
-// @for $i from 1 through 101 {
-//   .basket__cards:has(.basket__card:nth-child(#{$i})) {
-//       grid-template-columns: repeat(#{round($i / 4)}, 100%);
-//   }
-// }
-
 .basket__card {
-  width: 90vw;
+    width: 90vw;
 }
-
-// .basket__cards__card {
-//     display: flex;
-//     position: relative;
-//     flex-direction: column;
-//     align-items: space-between;
-//     margin: 30px auto;
-//     height: 273px;
-//     padding-bottom: 50px;
-//     border-bottom: 2px solid $MAIN_COLOR;
-// }
 
 .card__main_info {
     display: flex;
@@ -120,6 +93,41 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.stars {
+    width: 10vw;
+    fill: $MAIN_TEXT;
+}
+
+.stars_1 path:nth-child(1) {
+    fill: $MAIN_COLOR;
+}
+
+.stars_2 path:nth-child(1),
+.stars_2 path:nth-child(2) {
+    fill: $MAIN_COLOR;
+}
+
+.stars_3 path:nth-child(1),
+.stars_3 path:nth-child(2),
+.stars_3 path:nth-child(3) {
+    fill: $MAIN_COLOR;
+}
+
+.stars_4 path:nth-child(1),
+.stars_4 path:nth-child(2),
+.stars_4 path:nth-child(3),
+.stars_4 path:nth-child(4) {
+    fill: $MAIN_COLOR;
+}
+
+.stars_5 path:nth-child(1),
+.stars_5 path:nth-child(2),
+.stars_5 path:nth-child(3),
+.stars_5 path:nth-child(4),
+.stars_5 path:nth-child(5) {
+    fill: $MAIN_COLOR;
 }
 
 .card__main_info__head_info {
