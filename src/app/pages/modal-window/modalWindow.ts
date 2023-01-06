@@ -236,6 +236,11 @@ export class ModalWindow {
 
     static emailInputCheck(inputElement: HTMLInputElement) {
         ModalWindow.emailCheck = false;
+        const inputArray = inputElement.value.split('');
+
+        const lowerCaseArray = inputArray.map((e) => e = e.toLowerCase());
+        inputElement.value = lowerCaseArray.join('');
+        
         const inputText = inputElement.value;
 
         const emailExp =
