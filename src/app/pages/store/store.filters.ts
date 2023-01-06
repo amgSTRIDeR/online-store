@@ -16,15 +16,17 @@ export class Filter {
         let finalLink = window.location.protocol + '//' + window.location.host + '/#store?';
         const queryList = new QueryStorage();
         queryList.changeParams(this.option, this.params);
-        console.log(this.option, this.params);
         if (this.option === 'category') {
             const finalList = queryList.getList();
-            // console.log(finalList);
+
             if (finalList.price[0] !== '0' || finalList.price[1] !== '15000') {
                 finalLink += 'price=' + finalList.price.join('↕') + '&';
             }
             if (finalList.gamers[0] !== '1' || finalList.gamers[1] !== '99') {
                 finalLink += 'gamers=' + finalList.gamers.join('↕') + '&';
+            }
+            if (finalList.brand.length !== 0) {
+                finalLink += 'brand=' + finalList.brand.join('↕') + '&';
             }
             if (finalList.category.length !== 0) {
                 finalLink += 'category=' + finalList.category.join('↕') + '&';
@@ -58,7 +60,6 @@ export class Filter {
 
     filter(): GameObject[] | null {
         let resultList: GameObject[] | null = [];
-
         if (this.beginList) {
             if (this.option === 'price') {
                 for (let i = 0; i < this.beginList.length; i++) {
@@ -95,6 +96,20 @@ export class Filter {
                     }
                 }
             }
+
+            if (this.option === 'brand') {
+                if (this.params.length !== 0) {
+                    for (let i = 0; i < this.beginList.length; i++) {
+                        if (this.params.includes(this.beginList[i].brand)) {
+                            resultList.push(this.beginList[i]);
+                        }
+                    }
+                } else {
+                    resultList = this.beginList;
+                }
+                // console.log(resultList);
+            }
+
             if (this.option === 'category') {
                 if (this.params.length !== 0) {
                     for (let i = 0; i < this.beginList.length; i++) {

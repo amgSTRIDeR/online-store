@@ -1,7 +1,7 @@
 import { PageComponent, PageConfig } from '../../core/components/page.component';
 import { PageModule, ModuleConfig } from '../../core/modules/page.model';
 import { cardList } from './store.components';
-import { priceSlider, playersSlider, categoryBox } from './store.components';
+import { priceSlider, playersSlider, categoryBox, producerBox } from './store.components';
 
 class StorePage extends PageComponent {
     constructor(config: PageConfig) {
@@ -10,7 +10,7 @@ class StorePage extends PageComponent {
 
     loadComponents() {
         const pageModule: PageModule = new PageModule({
-            components: [priceSlider, playersSlider, categoryBox, ...cardList],
+            components: [priceSlider, playersSlider, producerBox, categoryBox, ...cardList],
         });
         pageModule.render();
     }
@@ -114,12 +114,33 @@ export const storePage = new StorePage({
       </div>
       <div class="sets sets-maker">Производитель
         <ul class="sets__list">
-        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Hobby world" id=""> Hobby world игры</li>
-        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="ARES" id="">ARES</li>
-        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Devir" id="">Devir</li>
-        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Blue Cocker" id="">Blue Cocker</li>
-        <li class="sets__list-item"><input class= "sets__checkbox" type="checkbox" name="Do Joy" id="">Do Joy</li>
-        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Dude Games" id="">Dude Games</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Hobby World" id=""> Hobby world игры</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Celaeno Books" id="">Celaeno Books</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Fantasy Flight Games" id="">Fantasy Flight Games</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Mandoo Games" id="">Mandoo Games</li>
+        <li class="sets__list-item"><input class= "sets__checkbox" type="checkbox" name="Asmodee" id="">Asmodee</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Lucky Duck Games" id="">Lucky Duck Games</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Экономикус" id="">Экономикус</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="New Making Studio" id="">New Making Studio</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Magellan" id="">Magellan</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Экивоки" id="">Экивоки</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Стиль Жизни" id="">Стиль Жизни</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Blue Orange Games" id="">Blue Orange Games</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="GaGa Games" id="">GaGa Games</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="IGames" id="">IGames</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Lavka Games" id="">Lavka Games</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="dV Giochi" id="">dV Giochi</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Правильные Игры" id="">Правильные Игры</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Horrible Games" id="">Horrible Games</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Эврикус" id="">Эврикус</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Фабрика игр" id="">Фабрика игр</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Piatnik" id="">Piatnik</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="CMON" id="">CMON</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Paizo" id="">Paizo</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Greater Than Games" id="">Greater Than Games</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Portal Games" id="">Portal Games</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Rebel" id="">Rebel</li>
+        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Makaka Editions" id="">Makaka Editions</li>
         </ul>
       </div>
       <div class="price-slider__wrapper">

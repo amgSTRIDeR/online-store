@@ -235,14 +235,15 @@ export class CheckBoxComponent {
 
     render() {
         const checkBoxContainer: HTMLElement | null = document.querySelector(this.selector);
-        const checkBoxItems: NodeListOf<HTMLInputElement> | null = document.querySelectorAll(
-            this.itemSelector
-        );
         if (checkBoxContainer) {
-            for (let i of checkBoxItems) {
-                i.addEventListener('change', () => {
-                    this.addRemove(i);
-                });
+            const checkBoxItems: NodeListOf<HTMLInputElement> | null =
+                checkBoxContainer.querySelectorAll(this.itemSelector);
+            if (checkBoxContainer) {
+                for (let i of checkBoxItems) {
+                    i.addEventListener('change', () => {
+                        this.addRemove(i);
+                    });
+                }
             }
         }
     }
@@ -272,11 +273,18 @@ export const categoryBox = new CheckBoxComponent({
     option: 'category',
 });
 
+export const producerBox = new CheckBoxComponent({
+    selector: '.sets-maker',
+    itemSelector: '.sets__checkbox',
+    option: 'brand',
+});
+
 let cardList: CardComponent[] = [];
 function makeNewCollection() {
     const filterList: object[] = [
         { price: priceSlider },
         { gamers: playersSlider },
+        { brand: producerBox },
         { category: categoryBox },
     ];
     let listOfGames: GameObject[] | null = GamesCollection;
@@ -286,7 +294,6 @@ function makeNewCollection() {
             option: Object.keys(item)[0],
             params: Object.values(item)[0].getValues(),
         }).filter();
-        // console.log(listOfGames);
     }
 }
 
@@ -436,7 +443,6 @@ function makeCardList(gameList: GameObject[] | null) {
     return cardList;
 }
 
-// const listOfCards: GameObject[] | null =
 makeCardList(GamesCollection);
 
 export { cardList };
