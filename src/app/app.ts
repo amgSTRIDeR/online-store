@@ -6,17 +6,18 @@ import { CartStorage } from './shared/singletons/cart-singleton';
 class App {
     constructor() {
         const renderBeginPage = new Render();
-        renderBeginPage.renderNewPage('start');
+        // change when complete product-page
+        renderBeginPage.renderNewPage('product-details/2');
     }
 
     run() {
         const routingApp = new Route();
         routingApp.routePage();
 
+        //TODO place to different file
         const logoArray = Array.from(document.querySelectorAll('.logo'));
         const cartLink = document.querySelector('.widget__cart');
 
-        //TODO place to different file
         if (logoArray) {
             logoArray.forEach((e) => {
                 e.addEventListener('click', () => {

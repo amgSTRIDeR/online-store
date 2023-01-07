@@ -1,69 +1,126 @@
-import { PageComponent } from '../../core/components/page.component';
+import { CartStorage } from '../../shared/singletons/cart-singleton';
+import { GamesCollection } from '../../../public/gamesCollection';
+import { ModalWindow } from '../modal-window/modalWindow';
+import { Product } from '../../shared/interfaces/interfaces';
 
-export const productPage = new PageComponent({
-    template: `<section>
-    <h2>Главная/Каталог/Кооперативные игры/Древний ужас</h2>
-    <section class="about">
-        <div class="about__main_info">
-            <div class="about__main_info__photo">
-                <img
-                    src="../src/assets/images/ancient_evil.png"
-                    alt="photo of game"
-                    class="about__main_info__photo__pic"
-                    width="320"
-                    height="320"
-                />
-                <p>&#9733; &#9733; &#9733; &#9733; &#9733;</p>
-            </div>
-            <div class="about__main_info__info">
-                <p>Категория: Кооперативные игры</p>
-                <p>Производитель: Hobby world</p>
-                <p>Количество игроков: 1-8</p>
-                <p>Время игры: 128-180 минут</p>
-                <p>На складе: 18</p>
-                <p>Акция 130$ <strong>150$</strong></p>
-                <div class="about__main_info__info__amount">
-                    <button class="num_button">-</button>
-                    <input type="text" readonly="readonly" value="2" class="amount" />
-                    <button class="num_button">+</button>
-                </div>
-                <button class="about__main_info__info__buy">Купить сейчас</button>
-            </div>
-        </div>
-        <div class="about__gallery">
-            <button class="about__gallery__arrow left">&#8592;</button>
-            <div class="about__gallery__photoes">
-                <img
-                    src="../src/assets/images/game1.png"
-                    alt=""
-                    class="about__gallery__photoes__photo"
-                />
-                <img
-                    src="../src/assets/images/game2.png"
-                    alt=""
-                    class="about__gallery__photoes__photo"
-                />
-                <img
-                    src="../src/assets/images/game3.png"
-                    alt=""
-                    class="about__gallery__photoes__photo"
-                />
-                <img
-                    src="../src/assets/images/game4.png"
-                    alt=""
-                    class="about__gallery__photoes__photo"
-                />
-            </div>
-            <button class="about__gallery__arrow right">&#8594;</button>
-        </div>
-        <div class="about__desctiption">
-            Разработчики, вдохновившись атмосферой и величием "Ужаса Аркхэма", создали настольную
-            игру "Древний Ужас", действие которой происходит в той же вселенной. "Древний Ужас" –
-            это уникальная, захватывающая настольная игра в жанре приключений, созданная специально
-            для бесстрашных авантюристов, которые готовы бросить вызов судьбе и богам.
-        </div>
-    </section>
-</section>
-`,
-    selector: '.main-section',
-});
+const cart = CartStorage.getInstance();
+
+export class ProductPage {
+    static pageRender(productId: number) {
+        const product: Product = GamesCollection[productId - 1];
+
+        const mainSection = document.querySelector('.main-section');
+        const breadCrumps = document.createElement('h2');
+        const about = document.createElement('section');
+        const main = document.createElement('div');
+        const mainPhotoWrapper = document.createElement('div');
+        const mainPhoto = document.createElement('img');
+        const productRating = document.createElement('p');
+        const mainInfo = document.createElement('div');
+        const mainInfoCategory = document.createElement('p');
+        const mainInfoBrand = document.createElement('p');
+        const mainInfoPlayers = document.createElement('p');
+        const mainInfoTime = document.createElement('p');
+        const mainInfoStock = document.createElement('p');
+        const mainInfoPrice = document.createElement('p');
+        const mainInfoAmount = document.createElement('div');
+        const addDiscordButton = document.createElement('button');
+        const buyNowButton = document.createElement('button');
+        const gallery = document.createElement('div');
+        const description = document.createElement('div');
+
+        breadCrumps.classList.add('bread-crumps');
+        about.classList.add('about');
+        main.classList.add('about__main_info');
+        mainPhotoWrapper.classList.add('about__main_info__photo');
+        mainPhoto.classList.add('about__main_info__photo__pic');
+        productRating.classList.add('stars');
+        productRating.classList.add(`stars_${product.rating}`);
+        mainInfo.classList.add('about__main_info__info');
+        mainInfoAmount.classList.add('about__main_info__info__amount');
+        addDiscordButton.classList.add('add-discord');
+        buyNowButton.classList.add('buy-button');
+        gallery.classList.add('about__gallery');
+        description.classList.add('about__desctiption');
+
+        breadCrumps.textContent = `Каталог / ${product.category_ru[0]} / ${product.brand} / ${product.title_ru}`;
+        mainPhoto.src = `${product.images[0]}`;
+        mainPhoto.alt = '';
+        mainInfoCategory.textContent = `Категория: ${product.category_ru.reduce(
+            (s, c) => s + `, ${c}`
+        )}`;
+        mainInfoBrand.textContent = `Производитель: ${product.brand}`;
+        mainInfoPlayers.textContent = `Количество игроков: ${product.gamers.join(' - ')}`;
+        mainInfoTime.textContent = `Время игры: ${product.GameTime.join(' - ')} минут`;
+        mainInfoStock.textContent = `На складе: ${cart.getItemStockNumber(product.id)}`;
+
+        if (product.discountPercentage > 1) {
+            mainInfoPrice.innerHTML = `<span style="text-decoration: line-through">${
+                product.price
+            }$</span>&nbsp;${Math.round(product.price / product.discountPercentage)}$`;
+        } else {
+            mainInfoPrice.innerHTML = `${product.price}$`;
+        }
+
+        addDiscordButton.textContent = `${cart.getNumberOfItemsInCart(productId) === 0 ? 'Добавить в корзину' : 'Убрать из корзины'}`;
+        buyNowButton.textContent = 'Купить сейчас';
+        description.textContent = `${product.description_ru}`;
+
+        about.appendChild(main);
+        main.appendChild(mainPhotoWrapper);
+        mainPhotoWrapper.appendChild(mainPhoto);
+        mainPhotoWrapper.appendChild(productRating);
+        main.appendChild(mainInfo);
+        mainInfo.appendChild(mainInfoCategory);
+        mainInfo.appendChild(mainInfoBrand);
+        mainInfo.appendChild(mainInfoPlayers);
+        mainInfo.appendChild(mainInfoTime);
+        mainInfo.appendChild(mainInfoStock);
+        mainInfo.appendChild(mainInfoPrice);
+        mainInfo.appendChild(mainInfoAmount);
+        mainInfoAmount.appendChild(addDiscordButton);
+        mainInfo.appendChild(buyNowButton);
+        about.appendChild(gallery);
+
+        for (let i = 0; i < product.images.length; i++) {
+            const galleryPhoto = document.createElement('img');
+            galleryPhoto.alt = '';
+            galleryPhoto.classList.add('gallery__photo');
+            galleryPhoto.src = `${product.images[i]}`;
+
+            const copyCard = galleryPhoto.cloneNode(true);
+            gallery.appendChild(copyCard);
+        }
+
+        about.appendChild(description);
+
+        if (mainSection) {
+            mainSection.innerHTML = '';
+            mainSection.appendChild(breadCrumps);
+            mainSection.appendChild(about);
+        }
+
+        document.querySelectorAll('.gallery__photo').forEach((e) => {
+            if (e instanceof HTMLImageElement) {
+                e.addEventListener('click', () => {
+                    mainPhoto.src = `${e.src}`;
+                });
+            }
+        });
+
+        addDiscordButton.addEventListener('click', () => {
+          if (cart.getNumberOfItemsInCart(productId) === 0) {
+            cart.addItem(productId);
+            addDiscordButton.textContent = 'Убрать из корзины';
+            mainInfoStock.textContent = `На складе: ${cart.getItemStockNumber(product.id)}`;
+          } else {
+            cart.removeItem(productId);
+            addDiscordButton.textContent = 'Добавить в корзину';
+            mainInfoStock.textContent = `На складе: ${cart.getItemStockNumber(product.id)}`;
+          }
+        })
+
+        cart.renewCartWidget();
+        cart.renewSumWidget();
+    }
+}
