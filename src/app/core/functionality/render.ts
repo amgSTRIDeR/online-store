@@ -15,7 +15,6 @@ export class Render {
 
     renderNewPage(pageID: string): void {
         let page;
-
         if (pageID === 'start' || pageID === '') {
             page = startPage;
         } else if (pageID === 'store' || pageID.startsWith('store')) {

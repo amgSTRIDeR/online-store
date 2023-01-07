@@ -12,6 +12,10 @@ export class Filter {
         this.params = config.params;
     }
 
+    saveParams(): void {
+        localStorage.setItem('hash', window.location.hash);
+    }
+
     changeURL() {
         let finalLink = window.location.protocol + '//' + window.location.host + '/#store?';
         const queryList = new QueryStorage();
@@ -31,6 +35,7 @@ export class Filter {
             if (finalList.category.length !== 0) {
                 finalLink += 'category=' + finalList.category.join('↕') + '&';
             }
+            this.saveParams();
             window.location.href = finalLink.slice(0, finalLink.length - 1);
         }
     }

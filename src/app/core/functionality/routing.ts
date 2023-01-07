@@ -14,5 +14,18 @@ export class Route {
                 renderPage.renderNewPage(hash);
             }
         });
+        window.addEventListener('beforeunload', () => {
+            const hash = this.getHash();
+            localStorage.setItem('hash', hash);
+        });
+        window.addEventListener('load', () => {
+            if (localStorage.getItem('hash')) {
+                const hash: string | null = localStorage.getItem('hash');
+                const renderPage = new Render();
+                if (hash) {
+                    renderPage.renderNewPage(hash);
+                }
+            }
+        });
     }
 }
