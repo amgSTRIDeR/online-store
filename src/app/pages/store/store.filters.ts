@@ -107,7 +107,6 @@ export class Filter {
                 } else {
                     resultList = this.beginList;
                 }
-                // console.log(resultList);
             }
 
             if (this.option === 'category') {

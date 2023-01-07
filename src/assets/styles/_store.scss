@@ -433,12 +433,13 @@
 
 .sets-wrapper {
     grid-area: sets;
-    display: grid;
-    grid-template-areas:
-        'category maker price price sale stock'
-        'category maker price price . .'
-        'category maker players players filter filter'
-        'category maker players players copy-button copy-button';
+    // display: grid;
+    display: flex;
+    // grid-template-areas:
+    //     'category maker price price sale stock'
+    //     'category maker price price . .'
+    //     'category maker players players filter filter'
+    //     'category maker players players copy-button copy-button';
     gap: 1vw;
 
     & .sets {
@@ -451,9 +452,11 @@
         & .sets__list {
             display: flex;
             flex-direction: column;
+            flex-wrap: wrap;
             justify-content: space-between;
             margin: 0;
             padding: 0;
+            height: 300px;
 
             list-style: none;
             color: $MAIN_TEXT;
@@ -462,10 +465,17 @@
 
     & .sets-category {
         grid-area: category;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 400px;
     }
 
     & .sets-maker {
         grid-area: maker;
+        display: flex;
+        flex-wrap: wrap;
+        width: 400px;
     }
 }
 
