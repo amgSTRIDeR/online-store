@@ -14,14 +14,17 @@ class StorePage extends PageComponent {
                 const listOfFilters = decodeURI(url).slice(6).split('&');
 
                 for (let filter of listOfFilters) {
-                    const values: string[] = filter.split('=')[1].split('↕');
                     if (filter.split('=')[0] === 'price') {
+                        const values: string[] = filter.split('=')[1].split('↕');
                         priceSlider.changeValues(values[0], values[1]);
                     } else if (filter.split('=')[0] === 'gamers') {
+                        const values: string[] = filter.split('=')[1].split('↕');
                         playersSlider.changeValues(values[0], values[1]);
                     } else if (filter.split('=')[0] === 'category') {
+                        const values: string[] = filter.split('=')[1].split('↕');
                         categoryBox.changeValues(values);
                     } else if (filter.split('=')[0] === 'brand') {
+                        const values: string[] = filter.split('=')[1].split('↕');
                         producerBox.changeValues(values);
                     }
                 }

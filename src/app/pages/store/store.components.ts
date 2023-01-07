@@ -238,7 +238,7 @@ export class CheckBoxComponent {
     }
 
     addRemove(checkbox: HTMLInputElement) {
-        console.log('8');
+        console.log('asdas');
         if (this.checkedValues.includes(checkbox.name)) {
             const index: number = this.checkedValues.indexOf(checkbox.name);
             this.checkedValues.splice(index, 1);
@@ -253,22 +253,23 @@ export class CheckBoxComponent {
     }
 
     public changeValues(checkedList: string[]) {
-        console.log(checkedList);
-        // const checkBoxContainer: HTMLElement | null = document.querySelector(this.selector);
-        // if (checkBoxContainer) {
-        //     const checkBoxItems: NodeListOf<HTMLInputElement> | null =
-        //         checkBoxContainer.querySelectorAll(this.itemSelector);
-        //     if (checkBoxItems) {
-        //         for (let item of checkBoxItems) {
-        //             if (checkedList.includes(item.name)) {
-        //                 item.checked = true;
-        //             } else {
-        //                 item.checked = false;
-        //             }
-        //             this.addRemove(item);
-        //         }
-        //     }
-        // }
+        this.checkedValues = checkedList;
+
+        const checkBoxContainer: HTMLElement | null = document.querySelector(this.selector);
+        if (checkBoxContainer) {
+            const checkBoxItems: NodeListOf<HTMLInputElement> | null =
+                checkBoxContainer.querySelectorAll(this.itemSelector);
+
+            if (checkBoxItems) {
+                for (let item of checkBoxItems) {
+                    if (checkedList.includes(item.name)) {
+                        item.checked = true;
+                    } else {
+                        item.checked = false;
+                    }
+                }
+            }
+        }
     }
 
     render() {
