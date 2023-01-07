@@ -2516,55 +2516,77 @@ L213.13,222.409z" />
     </div>
     <div class="sets sets-maker">Производитель
       <ul class="sets__list">
-        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="" id=""> Hobby world игры</li>
-        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="" id="">ARES</li>
-        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="" id="">Devir</li>
-        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="" id="">Blue Cocker</li>
-        <li class="sets__list-item"><input class= "sets__checkbox" type="checkbox" name="" id="">Do Joy</li>
-        <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="" id="">Dude Games</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Hobby World" id=""> Hobby world игры</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Celaeno Books" id="">Celaeno Books</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Fantasy Flight Games" id="">Fantasy Flight Games</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Mandoo Games" id="">Mandoo Games</li>
+      <li class="sets__list-item"><input class= "sets__checkbox" type="checkbox" name="Asmodee" id="">Asmodee</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Lucky Duck Games" id="">Lucky Duck Games</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Экономикус" id="">Экономикус</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="New Making Studio" id="">New Making Studio</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Magellan" id="">Magellan</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Экивоки" id="">Экивоки</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Стиль Жизни" id="">Стиль Жизни</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Blue Orange Games" id="">Blue Orange Games</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="GaGa Games" id="">GaGa Games</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="IGames" id="">IGames</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Lavka Games" id="">Lavka Games</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="dV Giochi" id="">dV Giochi</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Правильные Игры" id="">Правильные Игры</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Horrible Games" id="">Horrible Games</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Эврикус" id="">Эврикус</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Фабрика игр" id="">Фабрика игр</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Piatnik" id="">Piatnik</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="CMON" id="">CMON</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Paizo" id="">Paizo</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Greater Than Games" id="">Greater Than Games</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Portal Games" id="">Portal Games</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Rebel" id="">Rebel</li>
+      <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Makaka Editions" id="">Makaka Editions</li>
       </ul>
     </div>
+    <div class="silder-wrappr">
     <div class="price-slider__wrapper">
       Цена
-        <div class="price-slider__sliders-control">
-          <input class="price-slider__from-slider" type="range" value="10" min="0" max="15000"/>
-          <input class="price-slider__to-slider" type="range" value="780" min="0" max="15000"/>
+      <div class="price-slider__sliders-control">
+        <input class="price-slider__from-slider" type="range" value="0" min="0" max="15000"/>
+        <input class="price-slider__to-slider" type="range" value="15000" min="0" max="15000"/>
+      </div>
+      <div class="price-slider__min-max">
+        <div class="price-slider__min">От
+          <input class="price-slider__min__input" type="number" value="0" min="0" max="15000">
         </div>
-        <div class="price-slider__min-max">
-          <div class="price-slider__min">От
-          <input class="price-slider__min__input" type="number" name="" id="" min="0" max="15000"></div>
-          <div class="price-slider__max">до 
-          <input class="price-slider__max__input" type="number" name="" id="" min="0" max="15000">
+        <div class="price-slider__max">до 
+          <input class="price-slider__max__input" type="number" value="15000" min="0" max="15000">
         </div>
-      {% comment %} <input class="price-slider" type="range" name="" id="">
-      <div class="price-slider__inputs">От
-        <input type="number" name="" id="">
-        до 
-        <input type="number" name="" id="">
-      </div> {% endcomment %}
-    </div>
-    <div class="players-number__wrapper">
-      Количество игроков
+      </div>
+     
+
+  </div>
+
+
+  <div class="players-number__wrapper">
+  Количество игроков
       <div class="players-number__sliders-control">
         <input class="players-number__from-slider" type="range" value="1" min="1" max="99"/>
         <input class="players-number__to-slider" type="range" value="99" min="1" max="99"/>
       </div>
       <div class="players-number__min-max">
         <div class="players-number__min">От
-        <input class="players-number__min__input" type="number" name="" id="" min="1" max="99"></div>
+          <input class="players-number__min__input" type="number" value="1" name="" id="" min="1" max="99">
+        </div>
         <div class="players-number__max">до 
-        <input class="players-number__max__input" type="number" name="" id="" min="1" max="99">
+        <input class="players-number__max__input" type="number" value="99" name="" id="" min="1" max="99">
+        </div>
       </div>
-      {% comment %} <div class="players-number__inputs">
-        <input type="radio" name="players" id="any">
-        <input type="radio" name="players" id="any">
-        <input type="radio" name="players" id="any">
-        <input type="radio" name="players" id="any">
-        <input type="radio" name="players" id="any">
-        <input type="radio" name="players" id="any">
-        <input type="radio" name="players" id="any">
-      </div> {% endcomment %}
-    </div>
+     
+
+  </div>
+</div>
+
+
+
+  <div class='reboot_filter__wrapper'>
     <div class="sale__wrapper">
       <input class="sets__checkbox" type="checkbox" name="" id="">Акция
     </div>

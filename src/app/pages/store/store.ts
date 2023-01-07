@@ -143,41 +143,39 @@ export const storePage = new StorePage({
         <li class="sets__list-item"><input class="sets__checkbox" type="checkbox" name="Makaka Editions" id="">Makaka Editions</li>
         </ul>
       </div>
-      <div class="price-slider__wrapper">
-        Цена
-        <div class="price-slider__sliders-control">
-          <input class="price-slider__from-slider" type="range" value="0" min="0" max="15000"/>
-          <input class="price-slider__to-slider" type="range" value="15000" min="0" max="15000"/>
-        </div>
-        <div class="price-slider__min-max">
-          <div class="price-slider__min">От
-            <input class="price-slider__min__input" type="number" value="0" min="0" max="15000">
+      <div class="silder-wrapper">
+        <div class="price-slider__wrapper">
+          Цена
+          <div class="price-slider__sliders-control">
+            <input class="price-slider__from-slider" type="range" value="0" min="0" max="15000"/>
+            <input class="price-slider__to-slider" type="range" value="15000" min="0" max="15000"/>
           </div>
-          <div class="price-slider__max">до 
-            <input class="price-slider__max__input" type="number" value="15000" min="0" max="15000">
+          <div class="price-slider__min-max">
+            <div class="price-slider__min">От
+              <input class="price-slider__min__input" type="number" value="0" min="0" max="15000">
+            </div>
+            <div class="price-slider__max">до 
+              <input class="price-slider__max__input" type="number" value="15000" min="0" max="15000">
+            </div>
           </div>
-        </div>
-       
-
-    </div>
+      </div>
 
 
-    <div class="players-number__wrapper">
-    Количество игроков
-        <div class="players-number__sliders-control">
-          <input class="players-number__from-slider" type="range" value="1" min="1" max="99"/>
-          <input class="players-number__to-slider" type="range" value="99" min="1" max="99"/>
-        </div>
-        <div class="players-number__min-max">
-          <div class="players-number__min">От
-            <input class="players-number__min__input" type="number" value="1" name="" id="" min="1" max="99">
+      <div class="players-number__wrapper">
+      Количество игроков
+          <div class="players-number__sliders-control">
+            <input class="players-number__from-slider" type="range" value="1" min="1" max="99"/>
+            <input class="players-number__to-slider" type="range" value="99" min="1" max="99"/>
           </div>
-          <div class="players-number__max">до 
-          <input class="players-number__max__input" type="number" value="99" name="" id="" min="1" max="99">
+          <div class="players-number__min-max">
+            <div class="players-number__min">От
+              <input class="players-number__min__input" type="number" value="1" name="" id="" min="1" max="99">
+            </div>
+            <div class="players-number__max">до 
+            <input class="players-number__max__input" type="number" value="99" name="" id="" min="1" max="99">
+            </div>
           </div>
-        </div>
-       
-
+      </div>
     </div>
 
 

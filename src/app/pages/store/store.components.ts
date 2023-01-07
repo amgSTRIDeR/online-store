@@ -27,13 +27,24 @@ export class CardComponent extends PageComponent {
     }
 
     push(element: HTMLElement) {
-        const cartButton = element.querySelector('.card__cart-image');
+        const cartButton = element.querySelector('.card__button');
 
         const cardProductAdd: CartStorage = CartStorage.getInstance();
 
+        const idList: number[] = cardProductAdd.cartArray.map((el) => el.id);
         if (cartButton) {
             const picChange = cartButton.querySelector('g');
             if (picChange) {
+                if (idList.includes(this.id)) {
+                    console.log(this.id);
+                    this.flagAdd = true;
+                    picChange.innerHTML = `
+                    <path d="M 72.975 58.994 H 31.855 c -1.539 0 -2.897 -1.005 -3.347 -2.477 L 15.199 13.006 H 3.5 c -1.933 0 -3.5 -1.567 -3.5 -3.5 s 1.567 -3.5 3.5 -3.5 h 14.289 c 1.539 0 2.897 1.005 3.347 2.476 l 13.309 43.512 h 36.204 l 10.585 -25.191 h -6.021 c -1.933 0 -3.5 -1.567 -3.5 -3.5 s 1.567 -3.5 3.5 -3.5 H 86.5 c 1.172 0 2.267 0.587 2.915 1.563 s 0.766 2.212 0.312 3.293 L 76.201 56.85 C 75.655 58.149 74.384 58.994 72.975 58.994 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #ffffff; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"></path>
+                    <circle cx="28.88" cy="74.33" r="6.16" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #ffffff; fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "></circle>
+                    <circle cx="74.59" cy="74.33" r="6.16" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #ffffff; fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "></circle>
+                    <path d="M 62.278 19.546 L 52.237 19.546 L 45.237 19.546 L 35.197 19.546 C 33.264 19.546 31.697 21.113 31.697 23.046 C 31.697 24.979 33.264 26.546 35.197 26.546 L 45.237 26.546 L 52.237 26.546 L 62.278 26.546 C 64.211 26.546 65.778 24.979 65.778 23.046 C 65.778 21.113 64.211 19.546 62.278 19.546 Z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #ffffff; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #ffffff; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"></path>
+                    `;
+                }
                 cartButton?.addEventListener('click', () => {
                     if (!this.flagAdd) {
                         cardProductAdd.addItem(this.id);
