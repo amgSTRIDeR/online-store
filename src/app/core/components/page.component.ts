@@ -22,5 +22,9 @@ export class PageComponent {
         }
     }
 
+    saveData() {
+        console.log('gjhghjg');
+    }
+
     loadComponents() {}
 }

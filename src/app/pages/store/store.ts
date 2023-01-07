@@ -7,11 +7,35 @@ class StorePage extends PageComponent {
     constructor(config: PageConfig) {
         super(config);
     }
+    loadFilters() {
+        if (localStorage.getItem('hash')) {
+            const url: string | null = localStorage.getItem('hash');
+            if (url) {
+                const listOfFilters = decodeURI(url).slice(6).split('&');
+                for (let filter of listOfFilters) {
+                    if (filter.split('=')[0].includes('price')) {
+                        const values: string[] = filter.split('=')[1].split('↕');
+                        priceSlider.changeValues(values[0], values[1]);
+                    } else if (filter.split('=')[0].includes('gamers')) {
+                        const values: string[] = filter.split('=')[1].split('↕');
+                        playersSlider.changeValues(values[0], values[1]);
+                    } else if (filter.split('=')[0].includes('category')) {
+                        const values: string[] = filter.split('=')[1].split('↕');
+                        categoryBox.changeValues(values);
+                    } else if (filter.split('=')[0].includes('brand')) {
+                        const values: string[] = filter.split('=')[1].split('↕');
+                        producerBox.changeValues(values);
+                    }
+                }
+            }
+        }
+    }
 
     loadComponents() {
         const pageModule: PageModule = new PageModule({
-            components: [priceSlider, playersSlider, producerBox, categoryBox, ...cardList],
+            components: [...cardList, priceSlider, playersSlider, producerBox, categoryBox],
         });
+        this.loadFilters();
         pageModule.render();
     }
 }
