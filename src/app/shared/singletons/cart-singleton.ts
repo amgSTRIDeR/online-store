@@ -64,7 +64,6 @@ export class CartStorage {
         }
         this.renewCartWidget();
         this.renewSumWidget();
-        console.table(this.cartArray)
     }
 
     removeItem(itemId: number) {
@@ -80,7 +79,6 @@ export class CartStorage {
 
         this.renewCartWidget();
         this.renewSumWidget();
-        console.table(this.cartArray)
     }
 
     removePromo(itemId: number) {
