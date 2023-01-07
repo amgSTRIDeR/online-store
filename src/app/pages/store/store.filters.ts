@@ -132,7 +132,6 @@ export class Filter {
                 this.hideCards(resultList);
             }
             this.changeURL();
-
             if (resultList.length !== 0) {
                 return resultList;
             }

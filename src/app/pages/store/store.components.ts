@@ -186,6 +186,7 @@ export class DualSliderComponent {
         } else {
             currentTarget.style.zIndex = '0';
         }
+        makeNewCollection();
     }
 
     changeThumbs(
@@ -238,7 +239,6 @@ export class CheckBoxComponent {
     }
 
     addRemove(checkbox: HTMLInputElement) {
-        console.log('asdas');
         if (this.checkedValues.includes(checkbox.name)) {
             const index: number = this.checkedValues.indexOf(checkbox.name);
             this.checkedValues.splice(index, 1);
@@ -268,6 +268,7 @@ export class CheckBoxComponent {
                         item.checked = false;
                     }
                 }
+                makeNewCollection();
             }
         }
     }
@@ -485,7 +486,3 @@ function makeCardList(gameList: GameObject[] | null) {
 makeCardList(GamesCollection);
 
 export { cardList };
-
-// document.addEventListener('load', () => {
-//     console.log('dsfd');
-// });
