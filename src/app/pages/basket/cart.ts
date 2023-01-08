@@ -195,15 +195,12 @@ export class CartPage {
           headInfoManufactor.textContent = `Производитель: ${product.brand}`;
           headInfoPlayers.textContent = `Количество игроков: ${product.gamers.join('-')}`;
           headInfoTime.textContent = `Время игры: ${product.GameTime.join('-')} минут`;
-          headInfoStock.textContent = `На складе: ${cart.getItemStockNumber(
-            product.id
-          )}`;
+          headInfoStock.textContent = `На складе: ${cart.getItemStockNumber(product.id)}`;
 
           if (product.discountPercentage > 1) {
             cardMainInfoAmountSpecial.textContent = 'Акция!';
             cardNewPrice.textContent = `${Math.round(
-              product.price /
-              product.discountPercentage
+              product.price / product.discountPercentage
             )}$`;
             cardPrice.style.textDecoration = 'line-through';
           }

@@ -6,8 +6,7 @@ import { CartStorage } from './shared/singletons/cart-singleton';
 class App {
     constructor() {
         const renderBeginPage = new Render();
-        // change when complete product-page
-        renderBeginPage.renderNewPage('product-details/2');
+        renderBeginPage.renderNewPage('start');
     }
 
     run() {

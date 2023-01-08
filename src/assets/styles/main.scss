@@ -9,6 +9,10 @@
 @import './modal.scss';
 @import './product.scss';
 
+.body {
+  margin: 0;
+}
+
 .main-section {
     display: flex;
     position: relative;
