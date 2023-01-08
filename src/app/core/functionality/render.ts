@@ -7,7 +7,6 @@ import { CartStorage } from '../../shared/singletons/cart-singleton';
 import { GamesCollection } from '../../../public/gamesCollection';
 
 export class Render {
-    constructor() {}
 
     changeURL(url: string): void {
         const finalLink = window.location.protocol + '//' + window.location.host + '/#' + url;
