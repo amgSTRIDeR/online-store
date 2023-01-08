@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { PageComponent } from '../../core/components/page.component';
+import { ButtonComponent } from '../../core/components/button.component';
 import { GamesCollection } from '../../../public/gamesCollection.js';
 import {
     CardConfig,
@@ -489,3 +490,12 @@ function makeCardList(gameList: GameObject[] | null) {
 makeCardList(GamesCollection);
 
 export { cardList };
+
+export const copyButton = new ButtonComponent({
+    className: '.copy__button',
+    text: 'Скопировать ссылку',
+    function: () => {
+        console.log(window.location.href);
+        return window.location.href;
+    },
+});
