@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { PageComponent } from '../../core/components/page.component';
 import { GamesCollection } from '../../../public/gamesCollection.js';
 import {
