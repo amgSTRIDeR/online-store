@@ -386,7 +386,7 @@ function makeCardList(gameList: GameObject[] | null) {
              c-53.4,3.101-75.1,70.2-33.7,103.9l209.2,181.4l-71.3,247.7c-14,50.899,41.1,92.899,86.5,65.899l224.3-122.7l224.3,122.601
              c45.4,27,100.5-15,86.5-65.9l-71.3-247.7l209.2-181.399C960.443,389.172,938.744,322.071,885.344,319.071z" />
               </svg>
-              <p class="card__rating-number">4</p>
+              <p class="card__rating-number">${gameList[i].rating}</p>
             </div>
             <svg class="card__sale-image" fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 288.359 288.359" xml:space="preserve">
