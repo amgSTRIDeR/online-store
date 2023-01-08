@@ -168,15 +168,7 @@ export class CartStorage {
     }
 
     getItemStockNumber(itemId: number): number {
-        let inStock = 0;
-
-        this.cartArray.forEach((e) => {
-            if (e.id === itemId) {
-                inStock = e.stock;
-            }
-        });
-
-        return inStock;
+      return this.cartArray.filter(obj => obj.id === itemId)[0]?.stock || GamesCollection[itemId - 1].stock;
     }
 
     addPromo(promocode: string) {
@@ -226,5 +218,9 @@ export class CartStorage {
                 }
             });
         }
+    }
+
+    getNumberOfItemsInCart(itemId: number) {
+      return this.cartArray.filter(obj => obj.id === itemId)[0]?.quantity || 0;
     }
 }

@@ -1,4 +1,6 @@
+
 import { PageModule } from '../../core/modules/page.model';
+
 
 export interface PageConfig {
     template: string;

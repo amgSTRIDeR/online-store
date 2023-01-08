@@ -1,11 +1,13 @@
 import { startPage } from '../../pages/start/start';
 import { storePage } from '../../pages/store/store';
 import { errorPage } from '../../pages/error/error';
-import { productPage } from '../../pages/product/product';
+import { ProductPage } from '../../pages/product/product';
 import { CartPage } from '../../pages/basket/cart';
 import { CartStorage } from '../../shared/singletons/cart-singleton';
+import { GamesCollection } from '../../../public/gamesCollection';
 
 export class Render {
+
     changeURL(url: string): void {
         const finalLink = window.location.protocol + '//' + window.location.host + '/#' + url;
         window.location.href = finalLink;
@@ -19,8 +21,13 @@ export class Render {
             page = storePage;
         } else if (pageID === 'basket' || pageID.startsWith('basket?')) {
             CartPage.pageRender(pageID.replace('basket', '').replace('?', ''));
-        } else if (pageID === 'product') {
-            page = productPage;
+        } else if (
+            pageID.split('/')[0] === 'product-details' &&
+            Number.isInteger(+pageID.split('/')[1]) &&
+            +pageID.split('/')[1] <= GamesCollection.length && 
+            +pageID.split('/')[1] > 0
+        ) {
+            ProductPage.pageRender(+pageID.split('/')[1]);
         } else {
             page = errorPage;
             pageID = `error`;

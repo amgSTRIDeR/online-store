@@ -1,13 +1,3 @@
-body {
-    background-color: $BACKGROUND;
-    color: $MAIN_TEXT;
-    font-family: 'Aire Exterior', sans-serif;
-    display: flex;
-    width: 100%;
-    margin: 0 auto;
-    flex-direction: column;
-    align-items: center;
-}
 
 h2 {
     font-size: 39px;
@@ -50,6 +40,17 @@ h2 {
     strong {
         text-decoration: line-through;
     }
+}
+
+.gallery__photo {
+  width: 100px;
+  height: 100px;
+  margin: 10px 0;
+}
+
+.about__main_info__photo__pic {
+    width: 100px;
+    height: 100px;
 }
 
 .about__main_info__photo {
@@ -184,7 +185,9 @@ h2 {
             flex-direction: column;
             width: 100px;
         }
-        .about__gallery__photoes__photo {
+        .gallery__photo {
+            width: 100px;
+            height: 100px;
             margin: 10px 0;
         }
         .about__desctiption {
