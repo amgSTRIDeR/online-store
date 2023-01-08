@@ -1,5 +1,5 @@
 import { PageComponent, PageConfig } from '../../core/components/page.component';
-import { PageModule, ModuleConfig } from '../../core/modules/page.model';
+import { PageModule } from '../../core/modules/page.model';
 import { cardList } from './store.components';
 import { priceSlider, playersSlider, categoryBox, producerBox } from './store.components';
 

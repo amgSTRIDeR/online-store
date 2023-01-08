@@ -1,4 +1,3 @@
-import { CardComponent } from '../../pages/store/store.components';
 
 export interface PageConfig {
     template: string;
