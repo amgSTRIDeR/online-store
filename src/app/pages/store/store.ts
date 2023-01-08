@@ -54,8 +54,7 @@ class StorePage extends PageComponent {
 }
 
 export const storePage = new StorePage({
-    template: `<section class="start">
-    <section class="store store_horizontal">
+    template: `<section class="store store_horizontal">
     <select class="goods-sort" id="sort" name="sort">
       <option class="goods-sort__item" value="0">
         по популярности &#x2198;
@@ -81,7 +80,7 @@ export const storePage = new StorePage({
       <div class="goods-search__reset"></div>
       <p class="goods-search__count">23</p>
     </div>
-    <select class="goods-view" id="sort" name="sort">
+    <select class="goods-view" id="view" name="view">
       <option class="goods-view__item goods-view__item_active" value="0">
         горизонтальный
       </option>
