@@ -1,7 +1,5 @@
 import { Route } from './core/functionality/routing';
 import { Render } from './core/functionality/render';
-import { CartPage } from './pages/basket/cart';
-import { CartStorage } from './shared/singletons/cart-singleton';
 
 class App {
     constructor() {
@@ -13,10 +11,10 @@ class App {
         const routingApp = new Route();
         routingApp.routePage();
 
+        //TODO place to different file
         const logoArray = Array.from(document.querySelectorAll('.logo'));
         const cartLink = document.querySelector('.widget__cart');
 
-        //TODO place to different file
         if (logoArray) {
             logoArray.forEach((e) => {
                 e.addEventListener('click', () => {
