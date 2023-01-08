@@ -1,13 +1,13 @@
 export interface ButtonConfig {
     className: string;
     text: string;
-    function: Function;
+    function: () => void;
 }
 
 export class ButtonComponent {
     className: string;
     text: string;
-    function: Function;
+    function: () => void;
     constructor(config: ButtonConfig) {
         this.className = config.className;
         this.text = config.text;

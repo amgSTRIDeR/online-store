@@ -6,13 +6,23 @@ import { CheckBoxComponent } from '../../pages/store/store.components';
 
 export interface ModuleConfig {
     components: Array<
-        PageComponent | ButtonComponent | CardComponent | DualSliderComponent | CheckBoxComponent
+        | PageComponent
+        | ButtonComponent
+        | CardComponent
+        | DualSliderComponent
+        | CheckBoxComponent
+        | null
     >;
 }
 
 export class PageModule {
     components: Array<
-        PageComponent | ButtonComponent | CardComponent | DualSliderComponent | CheckBoxComponent
+        | PageComponent
+        | ButtonComponent
+        | CardComponent
+        | DualSliderComponent
+        | CheckBoxComponent
+        | null
     >;
     constructor(config: ModuleConfig) {
         this.components = config.components;
@@ -30,7 +40,8 @@ export class PageModule {
                     | CardComponent
                     | DualSliderComponent
                     | CheckBoxComponent
-            ) => c.render()
+                    | null
+            ) => c?.render()
         );
     }
 }

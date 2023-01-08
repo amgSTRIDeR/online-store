@@ -1,4 +1,7 @@
 
+import { PageModule } from '../../core/modules/page.model';
+
+
 export interface PageConfig {
     template: string;
     selector: string;
@@ -21,9 +24,8 @@ export class PageComponent {
         }
     }
 
-    saveData() {
-        console.log('gjhghjg');
+    loadComponents(): void {
+        const pageModule: PageModule = new PageModule({ components: [null] });
+        pageModule.render();
     }
-
-    loadComponents() {}
 }

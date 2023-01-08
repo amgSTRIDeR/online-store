@@ -6,11 +6,10 @@ import {
     GameObject,
     DualSliderConfig,
     CheckBoxConfig,
+    NewCollectionConfig,
 } from './store.interfaces';
 import { CartStorage } from '../../shared/singletons/cart-singleton';
 import { Filter } from './store.filters';
-
-import { storePage } from './store';
 
 export class CardComponent extends PageComponent {
     containerSelector: string;
@@ -261,7 +260,7 @@ export class CheckBoxComponent {
                 checkBoxContainer.querySelectorAll(this.itemSelector);
 
             if (checkBoxItems) {
-                for (let item of checkBoxItems) {
+                for (const item of checkBoxItems) {
                     if (checkedList.includes(item.name)) {
                         item.checked = true;
                     } else {
@@ -279,7 +278,7 @@ export class CheckBoxComponent {
             const checkBoxItems: NodeListOf<HTMLInputElement> | null =
                 checkBoxContainer.querySelectorAll(this.itemSelector);
             if (checkBoxItems) {
-                for (let i of checkBoxItems) {
+                for (const i of checkBoxItems) {
                     i.addEventListener('change', () => {
                         this.addRemove(i);
                     });
@@ -321,31 +320,32 @@ export const producerBox = new CheckBoxComponent({
 
 let cardList: CardComponent[] = [];
 function makeNewCollection() {
-    const filterList: object[] = [
-        { price: priceSlider },
-        { gamers: playersSlider },
-        { brand: producerBox },
-        { category: categoryBox },
-    ];
+    const filterList: NewCollectionConfig = {
+        price: priceSlider,
+        gamers: playersSlider,
+        brand: producerBox,
+        category: categoryBox,
+    };
     let listOfGames: GameObject[] | null = GamesCollection;
-    for (let item of filterList) {
+
+    for (const item of Object.entries(filterList)) {
         listOfGames = new Filter({
             beginList: listOfGames,
-            option: Object.keys(item)[0],
-            params: Object.values(item)[0].getValues(),
+            option: item[0],
+            params: item[1].getValues(),
         }).filter();
     }
 }
 
 function makeCardList(gameList: GameObject[] | null) {
-    let container = document.querySelector('.cards');
+    const container = document.querySelector('.cards');
     if (container) {
         container.innerHTML = '';
     }
     cardList = [];
 
     if (gameList) {
-        var card;
+        let card;
         for (let i = 0; i < gameList.length - 1; i += 1) {
             card = new CardComponent({
                 template: `
