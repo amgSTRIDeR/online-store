@@ -6,8 +6,6 @@ import { CartPage } from '../../pages/basket/cart';
 import { CartStorage } from '../../shared/singletons/cart-singleton';
 
 export class Render {
-    constructor() {}
-
     changeURL(url: string): void {
         const finalLink = window.location.protocol + '//' + window.location.host + '/#' + url;
         window.location.href = finalLink;
