@@ -31,7 +31,7 @@ export interface GameObject {
     brand: string;
     category_ru: string[];
     category_en: string[];
-    thumbnail: ImageBitmap;
+    thumbnail: string;
     images: ImageBitmap[];
 }
 
@@ -54,4 +54,11 @@ export interface FilterConfig {
     beginList: GameObject[] | null;
     option: string;
     params: string[];
+}
+
+export interface NewCollectionConfig {
+    price: DualSliderConfig | CheckBoxConfig;
+    gamers: DualSliderConfig | CheckBoxConfig;
+    brand: DualSliderConfig | CheckBoxConfig;
+    category: DualSliderConfig | CheckBoxConfig;
 }

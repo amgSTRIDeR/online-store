@@ -1,6 +1,5 @@
 import { FilterConfig, GameObject } from './store.interfaces';
 import { QueryStorage } from '../../shared/singletons/query-singleton';
-import { cardList } from './store.components';
 
 export class Filter {
     beginList: GameObject[] | null;
@@ -18,7 +17,7 @@ export class Filter {
 
     changeURL() {
         let finalLink = window.location.protocol + '//' + window.location.host + '/#store?';
-        const queryList = new QueryStorage();
+        const queryList: QueryStorage = QueryStorage.getInstance();
         queryList.changeParams(this.option, this.params);
         if (this.option === 'category') {
             const finalList = queryList.getList();
@@ -41,9 +40,9 @@ export class Filter {
     }
 
     makeIdList(resultList: GameObject[] | null): number[] {
-        let idList: number[] = [];
+        const idList: number[] = [];
         if (resultList) {
-            for (let i of resultList) {
+            for (const i of resultList) {
                 idList.push(i.id);
             }
         }
@@ -52,9 +51,9 @@ export class Filter {
     }
 
     hideCards(resultList: GameObject[] | null) {
-        let idList = this.makeIdList(resultList);
+        const idList = this.makeIdList(resultList);
         const cards: NodeListOf<HTMLElement> = document.querySelectorAll('.card');
-        for (let card of cards) {
+        for (const card of cards) {
             if (idList.includes(+card.id)) {
                 card.style.display = 'grid';
             } else {
@@ -117,7 +116,7 @@ export class Filter {
             if (this.option === 'category') {
                 if (this.params.length !== 0) {
                     for (let i = 0; i < this.beginList.length; i++) {
-                        for (let criteria of this.beginList[i].category_ru) {
+                        for (const criteria of this.beginList[i].category_ru) {
                             if (
                                 this.params.includes(criteria) &&
                                 !resultList.includes(this.beginList[i])

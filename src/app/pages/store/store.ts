@@ -12,7 +12,7 @@ class StorePage extends PageComponent {
             const url: string | null = localStorage.getItem('hash');
             if (url) {
                 const listOfFilters = decodeURI(url).slice(6).split('&');
-                for (let filter of listOfFilters) {
+                for (const filter of listOfFilters) {
                     if (filter.split('=')[0].includes('price')) {
                         const values: string[] = filter.split('=')[1].split('↕');
                         priceSlider.changeValues(values[0], values[1]);

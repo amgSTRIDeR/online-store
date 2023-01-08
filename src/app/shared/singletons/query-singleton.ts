@@ -1,4 +1,4 @@
-let instance: QueryStorage;
+// let instance: QueryStorage;
 
 interface queryObjectConfig {
     price: string[] | [];
@@ -9,15 +9,25 @@ interface queryObjectConfig {
 
 export class QueryStorage {
     queryObject: queryObjectConfig;
-    constructor() {
+    private static instance: QueryStorage;
+
+    private constructor() {
         this.queryObject = {
             price: [],
             gamers: [],
             brand: [],
             category: [],
         };
-        if (!instance) instance = this;
-        return instance;
+
+        // if (!instance) instance = this;
+        // return instance;
+    }
+
+    public static getInstance(): QueryStorage {
+        if (!QueryStorage.instance) {
+            QueryStorage.instance = new QueryStorage();
+        }
+        return QueryStorage.instance;
     }
 
     getList() {
