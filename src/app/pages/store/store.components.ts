@@ -13,8 +13,13 @@ import { Filter } from './store.filters';
 import { priceSlider, playersSlider, categoryBox, producerBox } from './filter.components';
 
 export class CardComponent extends PageComponent {
+    // card__sale-image
+    // card__price
+    // card__price-old
     containerSelector: string;
     id: number;
+    discount: number;
+    price: number;
 
     flagAdd: boolean | undefined;
 
@@ -22,8 +27,24 @@ export class CardComponent extends PageComponent {
         super(config);
         this.containerSelector = config.containerSelector;
         this.id = config.id;
+        this.discount = config.discount;
+        this.price = config.price;
 
         this.flagAdd = false;
+    }
+
+    checkSale(element: HTMLDivElement) {
+        const salePlace: HTMLDivElement | null = element.querySelector('.card__sale-image');
+        const cardPrice = element.querySelector('.card__price');
+        if (salePlace && cardPrice) {
+            if (this.discount <= 1) {
+                salePlace.innerHTML = '';
+                cardPrice.innerHTML = `${this.price}`;
+            } else {
+                const newPrice = Math.round(this.price / this.discount);
+                cardPrice.innerHTML = `<span class="card__price-old">${this.price}$</span> ${newPrice}$`;
+            }
+        }
     }
 
     push(element: HTMLElement) {
@@ -77,6 +98,7 @@ export class CardComponent extends PageComponent {
 
         if (element) {
             element.innerHTML = this.template;
+            this.checkSale(element);
         } else {
             throw new Error(`Component with selector ${this.selector} wasn't found`);
         }
@@ -297,6 +319,8 @@ function makeCardList(gameList: GameObject[] | null) {
                 selector: 'card',
                 containerSelector: '.cards',
                 id: gameList[i].id,
+                discount: gameList[i].discountPercentage,
+                price: gameList[i].price,
             });
             cardList.push(card);
         }

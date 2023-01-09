@@ -3,6 +3,8 @@ export interface CardConfig {
     selector: string;
     containerSelector: string;
     id: number;
+    discount: number;
+    price: number;
 }
 
 export interface PriceConfig {
