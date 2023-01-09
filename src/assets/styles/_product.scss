@@ -1,144 +1,56 @@
-
-// h2 {
-//     font-size: 39px;
-//     position: relative;
-// }
-
-.about {
-    background-color: $BLACK_BG;
-    width: 1279px;
-    height: 1120px;
-    position: relative;
+.product-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    width: 100%;
+    font-family: 'Aire Exterior', sans-serif;
+    margin: 30px auto;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $BLACK_BG;
     border-radius: 10px;
-    margin-bottom: 30px;
+    width: 90%;
 }
 
 .about__main_info {
+    width: 90%;
     display: flex;
     justify-content: space-around;
-    width: 80%;
-    font-size: 32px;
-}
-
-.about__main_info__info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-    // p {
-    //     display: flex;
-    //     margin: 0 auto;
-    // }
-    // p:last-of-type {
-    //     display: flex;
-    //     justify-content: space-around;
-    // }
-    strong {
-        text-decoration: line-through;
-    }
-}
-
-.gallery__photo {
-  width: 100px;
-  height: 100px;
-  margin: 10px 0;
-}
-
-.about__main_info__photo__pic {
-    width: 100px;
-    height: 100px;
 }
 
 .about__main_info__photo {
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
-.about__main_info__info__amount {
-    display: flex;
-    justify-content: center;
-    .num_button {
-        border: 3px solid $MAIN_TEXT;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        background-color: transparent;
-        color: $MAIN_TEXT;
-        font-size: 28px;
-    }
-    .num_button:hover {
-        background-color: $WHITE_TR;
-    }
-    .num_button:active {
-        background-color: $BLUE_TR;
-    }
-    .amount {
-        border: 3px solid $MAIN_COLOR;
-        background-color: $BACKGROUND;
-        color: $MAIN_TEXT;
-        border-radius: 10px;
-        font-size: 28px;
-        width: 40px;
-        height: 40px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 25px;
-        font-family: 'Pulsar Original', sans-serif;
-    }
-}
+.about__main_info__info {
+    font-size: 32px;
 
-.about__main_info__info__buy {
-    position: relative;
-    width: 250px;
-    height: 50px;
-    clip-path: polygon(0 0, 90% 0%, 100% 40%, 100% 80%, 100% 100%, 20% 100%, 0 100%);
-    font-size: 24px;
-    color: black;
-    font-family: 'Aire Exterior', sans-serif;
-    left: 20%;
-}
-.about__main_info__info__buy:hover {
-    background-color: $BLACK_BG;
-    color: $MAIN_TEXT;
-}
-.about__main_info__info__buy:active {
-    color: $MAIN_COLOR;
+    button {
+        position: relative;
+        width: 250px;
+        height: 50px;
+        clip-path: polygon(0 0, 90% 0%, 100% 40%, 100% 80%, 100% 100%, 20% 100%, 0 100%);
+        font-size: 24px;
+        color: black;
+        font-family: 'Aire Exterior', sans-serif;
+        left: 20%;
+        margin-bottom: 10px;
+    }
 }
 
 .about__gallery {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 1150px;
-    .about__gallery__arrow {
-        border: 3px solid $MAIN_TEXT;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        background-color: $BLACK_BG;
-        color: $MAIN_TEXT;
-        font-size: 24px;
-    }
-    .about__gallery__arrow:hover {
-        background-color: $WHITE_TR;
-    }
-    .about__gallery__arrow:active {
-        background-color: $BLUE_TR;
-    }
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.about__gallery__photoes {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 945px;
+.gallery__photo {
+    margin: 10px;
 }
 
 .about__desctiption {
@@ -147,85 +59,4 @@
     text-align: center;
     width: 1200px;
     font-size: 44px;
-}
-
-@media (max-width: 1440px) {
-    // body {
-    //     width: 100%;
-    //     justify-content: center;
-    // }
-    // h2 {
-    //     display: flex;
-    //     position: relative;
-    //     justify-content: center;
-    //     width: 100vw;
-    //     font-size: 32px;
-    // }
-    .about {
-        width: 100vw;
-        margin-bottom: 30px;
-        .about__main_info {
-            margin: 30px 0;
-        }
-        .about__main_info__info {
-            font-size: 24px;
-        }
-        .about__main_info__info__buy {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            left: 5%;
-        }
-
-        .about__gallery {
-            width: 95%;
-            margin: 30px 0;
-        }
-        .about__gallery__photoes {
-            flex-direction: column;
-            width: 100px;
-        }
-        .gallery__photo {
-            width: 100px;
-            height: 100px;
-            margin: 10px 0;
-        }
-        .about__desctiption {
-            font-size: 38px;
-            width: 95%;
-            margin: 30px 0;
-        }
-    }
-}
-
-@media (max-width: 640px) {
-    // h2 {
-    //     display: flex;
-    //     position: relative;
-    //     justify-content: center;
-    //     text-align: center;
-    //     width: 100vw;
-    // }
-    .about {
-        top: 70px;
-        margin-bottom: 190px;
-        .about__main_info {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-        }
-        .about__main_info__info {
-            p {
-                margin: 5px 0;
-                font-size: 24px;
-            }
-            .about__main_info__info__buy {
-                margin-top: 10px;
-                left: 0;
-            }
-        }
-        .about__desctiption {
-            font-size: 26px;
-        }
-    }
 }
