@@ -4,97 +4,151 @@
     font-family: 'Aire Exterior', sans-serif;
     font-size: 5vw;
 
+    & .arrow-left,
+    & .arrow-right {
+        display: flex;
+        align-items: center;
+
+        fill: $MAIN_TEXT;
+        width: 25px;
+        height: 25px;
+
+        transition: all 0.3s;
+
+        &:hover {
+            fill: $MAIN_COLOR;
+
+            transition: all 0.3s;
+        }
+    }
 }
 
+.basket-header {
+    text-align: center;
+    font-size: calc(1.935vw + 13.81px);
 
-.basket__head_info {
+    user-select: none;
+}
+
+.basket-page-control {
     display: flex;
-    position: relative;
-    flex-direction: column;
+    justify-content: space-around;
+    font-size: calc(0.774vw + 17.52px);
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.basket-page-control__pages,
+.basket-page-control__prod_amount {
+    display: flex;
     align-items: center;
-    bottom: 50px;
-    width: 100%;
-}
+    margin: 0;
 
-.basket__head_info__header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    top: 180px;
-}
+    user-select: none;
 
-.basket__head_info__page_control {
-    display: flex;
-    position: relative;
-    width: 100%;
-    justify-content: space-between;
-    font-size: 32px;
-}
-
-.small_button {
-    background-color: transparent;
-    color: $MAIN_TEXT;
-    border: none;
-    padding: 3px;
-    font-size: 32px;
-}
-.small_button:hover {
-    background-color: $WHITE_TR;
-    border-radius: 10px;
-    box-shadow: 0px 0px 16px $MAIN_TEXT;
-}
-
-.small_button:active {
-    background-color: $BLUE_TR;
-    border-radius: 10px;
-    box-shadow: 0px 0px 16px $MAIN_COLOR;
+    & span {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
 }
 
 .basket__cards-wrapper {
-    overflow: hidden;
     width: 90vw;
+
+    overflow: hidden;
+
+    user-select: none;
 }
 
 .basket__cards {
-    display: grid;
     position: relative;
-    background-color: $BLACK_BG;
-    align-items: center;
-    grid-auto-flow: column;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    grid-template-rows: repeat(5, 1fr);
 
-    transition: all 0.3s ease;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    margin-top: 20px;
+
+    transition: all 1s ease;
 }
 
 .basket__card {
+    box-sizing: border-box;
+    align-self: flex-start;
+
     width: 90vw;
+    padding: 20px;
+
+    border-radius: 1vw;
+    background-color: rgba(0, 0, 0, 0.243);
+    border: 1px solid $MAIN_COLOR;
 }
 
 .card__main_info {
-    display: flex;
     position: relative;
+
+    display: grid;
+    grid-template-columns: 1fr 3fr 10fr 2fr;
+    grid-template-rows: 1fr;
     align-items: center;
     justify-content: space-between;
-    font-size: 32px;
-    width: 100%;
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 5fr 1fr 2fr;
+    }
 }
 
 .card__main_info_num {
     font-family: 'Pulsar Original', sans-serif;
-    font-size: 32px;
+    font-size: calc(1.161vw + 10.28px);
+
+    @media (max-width: 600px) {
+        order: -4;
+
+        margin: 0;
+
+        text-align: center;
+        font-size: 30px;
+    }
 }
 
 .card__main_info__photo {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: start;
+    align-self: flex-start;
+
+    @media (max-width: 600px) {
+        order: -3;
+    }
+    & img {
+        width: 90%;
+
+        @media (max-width: 600px) {
+            align-self: center;
+            width: 90%;
+        }
+    }
 }
 
 .stars {
-    width: 10vw;
+    position: relative;
+    bottom: calc(7.944vw - 48.55px);
+    width: 90%;
+    height: 4vw;
+
     fill: $MAIN_TEXT;
+
+    @media (max-width: 600px) {
+        position: absolute;
+        top: calc(-10.036vw - 13.89px);
+        left: calc(29.749vw - 8.2px);
+        width: 30%;
+        height: 0px;
+    }
 }
 
 .stars_1 path:nth-child(1) {
@@ -129,13 +183,22 @@
 
 .card__main_info__head_info {
     display: grid;
+    align-self: start;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 55px);
-    width: 750px;
-    p {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
+    grid-template-rows: 1fr 0.5fr 0.5fr;
+
+    gap: 0.5vw 0.5vw;
+
+    font-size: calc(1.677vw + 8.63px);
+
+    & p {
+        margin: 0;
+    }
+
+    @media (max-width: 600px) {
+        display: block;
+        text-align: end;
+        font-size: calc(5.735vw - 4.35px);
     }
 }
 
@@ -143,103 +206,158 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
+
+    @media (max-width: 600px) {
+        flex-direction: row;
+        justify-content: space-around;
+        order: -2;
+
+        .card__main_info__cross {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
 }
 
 .card__main_info__amount__special {
-    font-size: 40px;
-    margin: 10px 0;
+    font-size: calc(1.677vw + 8.63px);
 }
 
 .card__main_info__amount__of_products {
     display: flex;
-    margin: 28px 0 10px 0;
     align-items: center;
-    .num_button {
-        border-radius: 50%;
-        border: 4px solid $MAIN_TEXT;
-        background-color: $BLACK_BG;
-        color: $MAIN_TEXT;
-        width: 40px;
-        height: 40px;
-        font-size: 28px;
+
+    .card-decrease,
+    .card-increase {
         display: flex;
         align-items: center;
         justify-content: center;
+        width: calc(1.29vw + 15.87px);
+        height: calc(1.29vw + 15.87px);
+        fill: $MAIN_TEXT;
+        opacity: 1;
+
+        transition: all 0.3s;
+
+        @media (max-width: 600px) {
+            width: calc(7.168vw - 2.94px);
+            height: calc(7.168vw - 2.94px);
+        }
     }
-    .num_button:hover {
-        background-color: $WHITE_TR;
+
+    .card-decrease:hover,
+    .card-increase:hover {
+        fill: $MAIN_COLOR;
+        cursor: pointer;
+
+        transition: all 0.3s;
     }
-    .num_button:active {
-        background-color: $BLUE_TR;
+
+    .card-decrease:active,
+    .card-increase:active {
+        fill: $MAIN_COLOR;
+
+        opacity: 0.5;
     }
+
     .number_of_products {
-        display: flex;
-        background-color: $BACKGROUND;
-        color: $MAIN_TEXT;
-        font-size: 28px;
+        width: calc(1.29vw + 15.87px);
+        height: calc(1.29vw + 15.87px);
+        margin: 0 calc(1.29vw + 0.87px);
+        padding-top: 4px;
+
+        font-family: 'Pulsar Original', sans-serif;
+        font-size: calc(0.903vw + 11.11px);
+        text-align: center;
+
         border: 4px solid $MAIN_COLOR;
         border-radius: 10px;
-        width: 40px;
-        height: 40px;
-        margin: 0 25px;
-        text-align: center;
-        font-family: 'Pulsar Original', sans-serif;
+        background-color: $BACKGROUND;
+        color: $MAIN_TEXT;
+
+        @media (max-width: 600px) {
+            font-size: calc(5.735vw - 4.35px);
+        }
     }
 }
 
 .card__main_info__amount__price {
     display: flex;
     justify-content: space-around;
-    width: 120px;
     font-family: 'Pulsar Original', sans-serif;
-    font-size: 36px;
+    font-size: calc(1.419vw + 9.46px);
+
+    @media (max-width: 600px) {
+        font-size: calc(5.735vw - 4.35px);
+    }
 }
 
 .card__main_info__cross {
     display: flex;
-    position: absolute;
-    right: 0px;
-    top: 0px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 30px;
+
+    fill: $MAIN_TEXT;
+    align-self: flex-end;
+
+    transition: all 0.3s;
+    opacity: 1;
+
+    &:hover {
+        fill: $MAIN_COLOR;
+        cursor: pointer;
+
+        transition: all 0.3s;
+    }
+
+    &:active {
+        fill: $MAIN_COLOR;
+
+        opacity: 0.5;
+    }
 }
 
 .card__description {
-    display: flex;
-    position: relative;
-    bottom: 30px;
     justify-content: center;
-    text-align: center;
-    font-size: 24px;
-}
 
-.basket__cards__card:last-of-type {
-    border-bottom: none;
-    padding-bottom: 0;
+    text-align: center;
+    font-size: calc(1.677vw + 8.63px);
+
+    @media (max-width: 600px) {
+        text-align: left;
+        font-size: calc(5.735vw - 4.35px);
+    }
 }
 
 .basket__result {
     display: flex;
-    position: relative;
     flex-direction: column;
     align-items: center;
-    // bottom: 70px;
-    margin-bottom: 30px;
 }
 
 .basket__result__name {
-    display: flex;
-    position: relative;
-    top: 30px;
+    margin: 0 0 10px 0;
+    font-size: calc(1.935vw + 13.81px);
 }
 
 .basket__result__info {
     display: flex;
-    background-color: $BLACK_BG;
+    width: 90vw;
+    padding: 1vw;
     align-items: center;
-    border-radius: 10px;
-    width: 1279px;
-    // height: 172px;
     justify-content: space-around;
-    padding-top: 30px;
+
+    border: 1px solid $MAIN_COLOR;
+    background-color: rgba(0, 0, 0, 0.243);
+    border-radius: 1vw;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 .info__amount_and_price {
@@ -260,16 +378,26 @@
     align-items: center;
     font-size: 24px;
 
+    @media (max-width: 800px) {
+        order: -1;
+    }
+
     .info__promocode__enter {
-        width: 90%;
+        width: 70%;
         height: 40px;
+        align-self: flex-end;
+        margin-bottom: 10px;
+
         border: 4px solid $MAIN_COLOR;
-        border-radius: 10px;
+        border-radius: 8px;
         background-color: $BLACK_BG;
         color: $MAIN_TEXT;
         font-family: 'Aire Exterior', sans-serif;
         font-size: 24px;
-        padding-left: 10px;
+
+        @media (max-width: 800px) {
+            width: 90%;
+        }
     }
 
     .info__promocode__button {
@@ -279,7 +407,7 @@
         width: 20px;
         height: 20px;
         top: 10px;
-        right: 30px;
+        right: 10px;
     }
 
     .info__promocode__button_active {
@@ -292,19 +420,38 @@
     }
 }
 
+.promocodes {
+    content: 'Примененные промокоды';
+    padding: 1vw;
+
+    border: 1px solid $MAIN_COLOR;
+    background-color: rgba(0, 0, 0, 0.243);
+    border-radius: 1vw;
+}
+
+.promocode {
+    display: flex;
+    justify-content: space-between;
+}
+
 .proposal {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 
     & .proposal__button {
         display: none;
         width: 20px;
         height: 20px;
-        fill: #ffffff;
-        opacity: 0.8;
+        fill: $MAIN_TEXT;
 
         &:hover {
             cursor: pointer;
-            opacity: 1;
+            fill: $MAIN_COLOR;
+        }
+        &:active {
+            opacity: 0.8;
+            fill: $MAIN_COLOR;
         }
     }
 
@@ -334,141 +481,23 @@
     color: $MAIN_COLOR;
 }
 
-@media (max-width: 1440px) {
-    body {
-        width: 100%;
-    }
-    .basket__head_info {
-        width: 100%;
-        .basket__head_info__page_control {
-            width: 100vw;
-            flex-direction: column;
-            align-items: center;
-        }
-        .basket__head_info__header {
-            width: 100vw;
-            top: 280px;
-        }
-    }
-    .basket__cards {
-        width: 100vw;
-        height: 100%;
-        .basket__cards__card {
-            width: 100%;
-            height: 100%;
-            padding: 10px 0;
-        }
-        .card__main_info {
-            display: flex;
-            flex-direction: column;
-            font-size: 28px;
-            width: 100%;
-            .card__main_info__head_info {
-                width: 90%;
-                height: 100%;
-            }
-            .card__main_info__cross {
-                right: 10px;
-            }
-        }
-    }
-    .basket__result {
-        width: 100vw;
-        height: 100%;
-        .basket__result__info {
-            width: 100%;
-            height: 100%;
-            flex-direction: column;
-            .info__amount_and_price {
-                width: 90%;
-                flex-direction: row;
-                justify-content: space-between;
-                margin: 10px 0;
-            }
-            .info__promocode {
-                margin: 15px 0;
-            }
-            .info__promocode__freshman {
-                margin: 10px;
-            }
-            .info__buy_now {
-                margin: 10px;
-            }
-        }
-    }
+.small_button {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    fill: $MAIN_TEXT;
 }
 
-@media (max-width: 640px) {
-    body {
-        width: 100%;
-    }
-    h2 {
-        font-size: 26px;
-        margin-bottom: 20px;
-    }
-    .basket__head_info {
-        width: 100vw;
-        .basket__head_info__page_control {
-            width: 100%;
-            flex-direction: column;
-            align-items: center;
-            font-size: 18px;
-        }
-    }
-    .basket__cards {
-        width: 100vw;
-        height: 100%;
-        .basket__cards__card {
-            width: 100%;
-            height: 100%;
-            padding: 10px 0;
-        }
-        .card__main_info {
-            display: flex;
-            flex-direction: column;
-            font-size: 28px;
-            width: 100%;
-            .card__main_info__head_info {
-                width: 90%;
-                height: 100%;
-                font-size: 22px;
-            }
-            .card__main_info__cross {
-                right: 10px;
-            }
-            .card__main_info__amount__special {
-                font-size: 28px;
-            }
-        }
-        .card__description {
-            font-size: 18px;
-        }
-    }
-    .basket__result {
-        width: 100vw;
-        height: 100%;
-        .basket__result__info {
-            width: 100%;
-            height: 100%;
-            flex-direction: column;
-            .info__amount_and_price {
-                font-size: 22px;
-                width: 90%;
-                flex-direction: row;
-                justify-content: space-between;
-                margin: 10px 0;
-            }
-            .info__promocode {
-                font-size: 18px;
-                margin: 15px 0;
-            }
-            .info__promocode__freshman {
-                margin: 10px;
-            }
-            .info__buy_now {
-                margin: 10px;
-                width: 80%;
-            }
-        }
-    }
+.small_button:hover {
+    cursor: pointer;
+    fill: $MAIN_COLOR;
+}
+
+.small_button:active {
+    opacity: 0.8;
+    fill: $MAIN_COLOR;
+}
+
+.hide {
+  display: none;
 }
