@@ -58,14 +58,6 @@
     box-shadow: 0px 0px 16px $MAIN_COLOR;
 }
 
-h3 {
-    display: flex;
-    font-size: 32px;
-    font-weight: 400;
-    justify-content: center;
-    margin: 5px 0;
-}
-
 .modal__content__personal_data {
     display: flex;
     flex-direction: column;
@@ -84,6 +76,14 @@ h3 {
         margin: 5px 0;
         color: $WHITE_TR;
     }
+
+    h3 {
+    display: flex;
+    font-size: 32px;
+    font-weight: 400;
+    justify-content: center;
+    margin: 5px 0;
+}
 }
 
 .modal__content__card_info {
@@ -169,17 +169,13 @@ h3 {
         top: 50px;
     }
 }
+
 @media (max-width: 640px) {
     .modal__content {
         width: 320px;
         h2 {
             font-size: 28px;
         }
-    }
-
-    h3 {
-        font-size: 24px;
-        width: 100%;
     }
 
     .modal__content__personal_data {
@@ -189,6 +185,7 @@ h3 {
         .modal__content__personal_data__enter {
             width: 300px;
         }
+
     }
     .modal__content__card_info {
         width: 300px;

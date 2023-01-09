@@ -1,13 +1,8 @@
 import { PageComponent, PageConfig } from '../../core/components/page.component';
 import { PageModule } from '../../core/modules/page.model';
-import { cardList } from './store.components';
-import {
-    priceSlider,
-    playersSlider,
-    categoryBox,
-    producerBox,
-    copyButton,
-} from './store.components';
+import { cardList, productQuantity } from './store.components';
+import { copyButton, resetButton } from './button.components';
+import { priceSlider, playersSlider, categoryBox, producerBox } from './filter.components';
 
 class StorePage extends PageComponent {
     constructor(config: PageConfig) {
@@ -46,6 +41,8 @@ class StorePage extends PageComponent {
                 producerBox,
                 categoryBox,
                 copyButton,
+                resetButton,
+                productQuantity,
             ],
         });
         this.loadFilters();
@@ -54,8 +51,7 @@ class StorePage extends PageComponent {
 }
 
 export const storePage = new StorePage({
-    template: `<section class="start">
-    <section class="store store_horizontal">
+    template: `<section class="store store_horizontal">
     <select class="goods-sort" id="sort" name="sort">
       <option class="goods-sort__item" value="0">
         по популярности &#x2198;
@@ -81,7 +77,7 @@ export const storePage = new StorePage({
       <div class="goods-search__reset"></div>
       <p class="goods-search__count">23</p>
     </div>
-    <select class="goods-view" id="sort" name="sort">
+    <select class="goods-view" id="view" name="view">
       <option class="goods-view__item goods-view__item_active" value="0">
         горизонтальный
       </option>
