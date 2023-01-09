@@ -219,7 +219,7 @@ export class ModalWindow {
         const inputText = inputElement.value;
         ModalWindow.nameCheck = false;
 
-        const nameExp = /^[a-z]{3,}( [a-z]{3,}){1,}$/i;
+        const nameExp = /^[a-zа-я]{3,}( [a-zа-я]{3,}){1,}$/i;
         if (inputText.match(nameExp)) {
             ModalWindow.nameCheck = true;
         }
@@ -237,7 +237,7 @@ export class ModalWindow {
         const inputText = inputElement.value;
         ModalWindow.addressCheck = false;
 
-        const addressExp = /^\b(\w{5,})\b( \b\w{5,}\b){2,}$/;
+        const addressExp = /^([а-яА-Яa-zA-Z0-9]{5,})( [а-яА-Яa-zA-Z0-9]{5,}){2,}$/;
         if (inputText.match(addressExp)) {
             ModalWindow.addressCheck = true;
         }
