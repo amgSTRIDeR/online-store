@@ -1,8 +1,8 @@
 import { PageComponent } from '../components/page.component';
 import { ButtonComponent } from '../components/button.component';
 import { CardComponent } from '../../pages/store/store.components';
-import { DualSliderComponent } from '../../pages/store/store.components';
-import { CheckBoxComponent } from '../../pages/store/store.components';
+import { DualSliderComponent } from '../../pages/store/filter.components';
+import { CheckBoxComponent } from '../../pages/store/filter.components';
 
 export interface ModuleConfig {
     components: Array<
