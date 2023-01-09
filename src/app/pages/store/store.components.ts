@@ -1,5 +1,5 @@
 import { PageComponent } from '../../core/components/page.component';
-
+import { ProductPage } from '../product/product';
 import { GamesCollection } from '../../../public/gamesCollection.js';
 import {
     CardConfig,
@@ -13,9 +13,6 @@ import { Filter } from './store.filters';
 import { priceSlider, playersSlider, categoryBox, producerBox } from './filter.components';
 
 export class CardComponent extends PageComponent {
-    // card__sale-image
-    // card__price
-    // card__price-old
     containerSelector: string;
     id: number;
     discount: number;
@@ -99,6 +96,9 @@ export class CardComponent extends PageComponent {
         if (element) {
             element.innerHTML = this.template;
             this.checkSale(element);
+            element.addEventListener('click', () => {
+                ProductPage.pageRender(this.id);
+            });
         } else {
             throw new Error(`Component with selector ${this.selector} wasn't found`);
         }
