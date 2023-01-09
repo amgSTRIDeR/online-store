@@ -1,7 +1,7 @@
 import { PageComponent, PageConfig } from '../../core/components/page.component';
 import { PageModule } from '../../core/modules/page.model';
 import { cardList } from './store.components';
-import { copyButton, resetButton } from './store.components';
+import { copyButton, resetButton } from './button.components';
 import { priceSlider, playersSlider, categoryBox, producerBox } from './filter.components';
 
 class StorePage extends PageComponent {
