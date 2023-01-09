@@ -132,7 +132,9 @@ export class ProductPage {
       ModalWindow.modalRender();
       const bodyElement = document.querySelector('.body');
       if (bodyElement) {
-        bodyElement.classList.add('body_modal');
+        setTimeout(() => {
+          bodyElement.classList.add('body_modal');
+        }, 100)
       }
     });
 

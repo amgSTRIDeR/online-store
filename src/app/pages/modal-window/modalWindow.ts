@@ -125,6 +125,7 @@ export class ModalWindow {
         document.addEventListener('click', (e) => {
           const buyButton = document.querySelector('.info__buy_now');
           const modal = document.querySelector('.modal__content');
+          
           if (buyButton && bodyElement && modal) {
             const withinBoundaries = e.composedPath().includes(modal);
             const withinButtonBoundaries = e.composedPath().includes(buyButton);
