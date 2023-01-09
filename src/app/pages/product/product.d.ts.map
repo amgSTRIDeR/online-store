@@ -1,1 +1,1 @@
-{"version":3,"file":"product.d.ts","sourceRoot":"","sources":["../../../../../src/app/pages/product/product.ts"],"names":[],"mappings":"AAQA,qBAAa,WAAW;IACpB,MAAM,CAAC,UAAU,CAAC,SAAS,EAAE,MAAM;CA8ItC"}
+{"version":3,"file":"product.d.ts","sourceRoot":"","sources":["../../../../../src/app/pages/product/product.ts"],"names":[],"mappings":"AAQA,qBAAa,WAAW;IACtB,MAAM,CAAC,UAAU,CAAC,SAAS,EAAE,MAAM;CAmIpC"}
