@@ -70,7 +70,9 @@ export class CardComponent extends PageComponent {
     }
 
     render() {
-        const element = document.createElement(this.selector);
+        const element = document.createElement('div');
+        element.className = this.selector;
+        element.id = String(this.id);
         const container = document.querySelector(this.containerSelector);
 
         if (element) {
@@ -350,7 +352,7 @@ function makeCardList(gameList: GameObject[] | null) {
         for (let i = 0; i < gameList.length - 1; i += 1) {
             card = new CardComponent({
                 template: `
-              <div class="card" id = "${gameList[i].id}">
+             
             <h3 class="card__title">${gameList[i].title_ru}</h3>
             <p class="card__subtitle">${gameList[i].subtittle_ru}</p>
             <img class="card__image" src="${gameList[i].thumbnail}" alt="">
@@ -472,7 +474,7 @@ function makeCardList(gameList: GameObject[] | null) {
               <li class="card__info-age">${gameList[i].age[0]}+
               </li>
             </ul>
-          </div>
+          
               `,
                 selector: 'card',
                 containerSelector: '.cards',
