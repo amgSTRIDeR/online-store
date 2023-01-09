@@ -480,8 +480,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 251px;
-    height: 61px;
+    align-self: center;
+    width: calc(5.355vw + 149.86px);
+    height: calc(1.290vw + 35.87px);
     background-color: $MAIN_TEXT;
     font-size: 24px;
     color: black;
