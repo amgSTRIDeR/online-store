@@ -7,6 +7,7 @@ import {
     categoryBox,
     producerBox,
     copyButton,
+    resetButton,
 } from './store.components';
 
 class StorePage extends PageComponent {
@@ -46,6 +47,7 @@ class StorePage extends PageComponent {
                 producerBox,
                 categoryBox,
                 copyButton,
+                resetButton,
             ],
         });
         this.loadFilters();

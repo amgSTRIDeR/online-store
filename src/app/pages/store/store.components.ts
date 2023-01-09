@@ -494,6 +494,19 @@ export const copyButton = new ButtonComponent({
     className: '.copy__button',
     text: 'Скопировать ссылку',
     function: () => {
-        navigator.clipboard.writeText(window.location.href);
+        navigator.clipboard.writeText(window.location.href).catch((err: string | undefined) => {
+            throw new Error(err);
+        });
+    },
+});
+
+export const resetButton = new ButtonComponent({
+    className: '.filter__button',
+    text: 'Сбросить фильтр',
+    function: () => {
+        priceSlider.changeValues('0', '15000');
+        playersSlider.changeValues('1', '99');
+        categoryBox.changeValues([]);
+        producerBox.changeValues([]);
     },
 });
