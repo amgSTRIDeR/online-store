@@ -8,6 +8,7 @@ const cart = CartStorage.getInstance();
 
 export class ProductPage {
   static pageRender(productId: number) {
+    window.location.hash = `#product-details/${productId}`;
     const product: Product = GamesCollection[productId - 1];
 
     const mainSection = document.querySelector('.main-section');

@@ -3,6 +3,7 @@ import { CartStorage } from '../../shared/singletons/cart-singleton';
 import { GamesCollection } from '../../../public/gamesCollection';
 import { ModalWindow } from '../modal-window/modalWindow';
 import { Product } from '../../shared/interfaces/interfaces';
+import { ProductPage } from '../product/product';
 
 const cart = CartStorage.getInstance();
 
@@ -196,7 +197,7 @@ export class CartPage {
                     cardMainInfo.classList.add('card__main_info');
                     cardMainInfoNum.classList.add('card__main_info_num');
                     cardMainInfoPhoto.classList.add('card__main_info__photo');
-                    cardImage.classList.add('photo');
+                    cardImage.classList.add('card-photo');
                     cardStars.classList.add('stars');
                     cardStars.classList.add(`stars_${product.rating}`);
                     cardStars.innerHTML = `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
@@ -215,13 +216,15 @@ export class CartPage {
                     cardPrice.classList.add('price');
                     cardNewPrice.classList.add('new_price');
                     cardSmallButton.classList.add('card__main_info__cross');
-                    cardSmallButton.classList.add('small_button');
+                    // cardSmallButton.classList.add('small_button');
                     cardSmallButton.classList.add('small_button-item');
                     cardDescription.classList.add('card__description');
 
                     cardMainInfoNum.textContent = `- ${i + 1} -`;
                     cardImage.src = product.thumbnail;
                     cardImage.alt = product.title_ru;
+                    cardImage.id = `product-${product.id}`;
+                    cardImage.title = `Подробнее о ${product.title_ru}`;
                     headInfoName.textContent = `Название: ${product.title_ru}`;
                     headInfoCategory.textContent = `Категория: ${product.category_ru.join(', ')}`;
                     headInfoManufactor.textContent = `Производитель: ${product.brand}`;
@@ -307,6 +310,13 @@ export class CartPage {
             e.addEventListener('click', () => {
                 cart.removeItem(+e.id.split('=')[1]);
                 CartPage.cardsRender();
+            });
+        });
+
+        const cardsImages = Array.from(document.querySelectorAll('.card-photo'));
+        cardsImages.forEach((e) => {
+          e.addEventListener('click', () => {
+                ProductPage.pageRender(+e.id.split('-')[1]);
             });
         });
     }

@@ -168,7 +168,7 @@ export class CartStorage {
     }
 
     getItemStockNumber(itemId: number): number {
-      return this.cartArray.filter(obj => obj.id === itemId)[0].stock ?? GamesCollection[itemId - 1].stock;
+      return this.cartArray.filter(obj => obj.id === itemId)[0]?.stock ?? GamesCollection[itemId - 1].stock;
     }
 
     addPromo(promocode: string) {
