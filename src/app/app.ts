@@ -28,6 +28,7 @@ class App {
                 window.location.hash = '#basket';
             });
         }
+
     }
 }
 

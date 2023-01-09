@@ -5,6 +5,7 @@ import { ProductPage } from '../../pages/product/product';
 import { CartPage } from '../../pages/basket/cart';
 import { CartStorage } from '../../shared/singletons/cart-singleton';
 import { GamesCollection } from '../../../public/gamesCollection';
+import { addListener } from '../../shared/functions/errorPageListener';
 
 export class Render {
 
@@ -40,6 +41,7 @@ export class Render {
             const cart = CartStorage.getInstance();
             cart.renewCartWidget();
             cart.renewSumWidget();
+            addListener();
         }
 
         this.changeURL(pageID);
