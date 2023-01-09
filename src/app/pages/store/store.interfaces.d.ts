@@ -3,6 +3,8 @@ export interface CardConfig {
     selector: string;
     containerSelector: string;
     id: number;
+    discount: number;
+    price: number;
 }
 export interface PriceConfig {
     template: string;
@@ -55,5 +57,9 @@ export interface NewCollectionConfig {
     gamers: DualSliderConfig | CheckBoxConfig;
     brand: DualSliderConfig | CheckBoxConfig;
     category: DualSliderConfig | CheckBoxConfig;
+}
+export interface QuantityConfig {
+    template: string;
+    selector: string;
 }
 //# sourceMappingURL=store.interfaces.d.ts.map

@@ -1,10 +1,13 @@
 import { PageComponent } from '../../core/components/page.component';
-import { CardConfig, PriceConfig, DualSliderConfig, CheckBoxConfig } from './store.interfaces';
+import { CardConfig, PriceConfig, QuantityConfig } from './store.interfaces';
 export declare class CardComponent extends PageComponent {
     containerSelector: string;
     id: number;
+    discount: number;
+    price: number;
     flagAdd: boolean | undefined;
     constructor(config: CardConfig);
+    checkSale(element: HTMLDivElement): void;
     push(element: HTMLElement): void;
     render(): void;
 }
@@ -15,37 +18,13 @@ export declare class PriceComponent extends PageComponent {
     constructor(config: PriceConfig);
     render(): void;
 }
-export declare class DualSliderComponent {
-    selector: string;
-    leftSlider: string;
-    rightSlider: string;
-    leftRange: string;
-    rightRange: string;
-    option: string;
-    constructor(config: DualSliderConfig);
-    getValues(): string[];
-    changeValues(from: string, to: string): void;
-    fixLeftThumpPosition(sliderLeft: HTMLInputElement, sliderRight: HTMLInputElement, rangeLeft: HTMLInputElement): void;
-    fixRightThumpPosition(sliderLeft: HTMLInputElement, sliderRight: HTMLInputElement, rangeRight: HTMLInputElement): void;
-    setAccess(currentTarget: HTMLInputElement): void;
-    changeThumbs(sliderLeft: HTMLInputElement, sliderRight: HTMLInputElement, rangeLeft: HTMLInputElement, rangeRight: HTMLInputElement): void;
+export declare class QuantityComponent extends PageComponent {
+    constructor(config: QuantityConfig);
+    setAmount(amount: number): void;
     render(): void;
 }
-export declare class CheckBoxComponent {
-    selector: string;
-    itemSelector: string;
-    option: string;
-    checkedValues: string[];
-    constructor(config: CheckBoxConfig);
-    addRemove(checkbox: HTMLInputElement): void;
-    getValues(): string[];
-    changeValues(checkedList: string[]): void;
-    render(): void;
-}
-export declare const priceSlider: DualSliderComponent;
-export declare const playersSlider: DualSliderComponent;
-export declare const categoryBox: CheckBoxComponent;
-export declare const producerBox: CheckBoxComponent;
+export declare const productQuantity: QuantityComponent;
 declare let cardList: CardComponent[];
+export declare function makeNewCollection(): void;
 export { cardList };
 //# sourceMappingURL=store.components.d.ts.map
