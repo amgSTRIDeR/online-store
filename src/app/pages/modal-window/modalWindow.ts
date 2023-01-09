@@ -122,6 +122,19 @@ export class ModalWindow {
             }
         });
 
+        document.addEventListener('click', (e) => {
+          const buyButton = document.querySelector('.info__buy_now');
+          const modal = document.querySelector('.modal__content');
+          if (buyButton && bodyElement && modal) {
+            const withinBoundaries = e.composedPath().includes(modal);
+            const withinButtonBoundaries = e.composedPath().includes(buyButton);
+            
+            if (!withinBoundaries && !withinButtonBoundaries) {
+              bodyElement.classList.remove('body_modal');
+            }
+          }
+        });
+
         phoneInput.addEventListener('input', () => {
             ModalWindow.telInputCheck(phoneInput);
         });
@@ -161,13 +174,20 @@ export class ModalWindow {
                 ModalWindow.cardCodeCheck
             ) {
                 modalContent.innerHTML = 'Покупка завершена!';
+                ModalWindow.nameCheck = false;
+                ModalWindow.telCheck = false;
+                ModalWindow.addressCheck = false;
+                ModalWindow.emailCheck = false;
+                ModalWindow.cardNumberCheck = false;
+                ModalWindow.cardDateCheck = false;
+                ModalWindow.cardCodeCheck = false;
                 setTimeout(() => {
                     const cart = CartStorage.getInstance();
                     cart.cartArray = [];
                     window.location.hash = '#store';
 
                     if (bodyElement) {
-                      bodyElement.classList.remove('body_modal');
+                        bodyElement.classList.remove('body_modal');
                     }
                 }, 3000);
             } else {
