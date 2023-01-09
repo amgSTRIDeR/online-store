@@ -6,8 +6,8 @@
         right: 0;
         bottom: 0;
         left: 0;
-        width: 100vw;
-        height: 100vw;
+        width: 1000000vw;
+        height: 1000000vw;
         z-index: 5;
         background-color: $BACKGROUND;
         opacity: 0.9;
@@ -19,205 +19,203 @@
 }
 
 .modal__content {
+    position: fixed;
+    top: calc(1.29vw + 5.87px);
+    z-index: 6;
+
     display: none;
-    position: absolute;
     flex-direction: column;
     align-items: center;
-    width: 550;
-    z-index: 6;
-    background-color: $BACKGROUND;
+    padding: 1vw;
 
-    font-size: 100px;
+    font-family: 'Aire Exterior', sans-serif;
+    font-size: calc(0.645vw + 27.94px);
+
+    border: 1px solid $MAIN_COLOR;
+    border-radius: 0.5vw;
+
+    @media (max-width: 500px) {
+        width: 80vw;
+    }
 
     h2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 48px;
+        text-align: center;
+        font-size: calc(1.29vw + 15.87px);
         font-weight: 400;
-        margin: 0px;
+        margin: 0 0 0.5vw 0;
+        user-select: none;
+    }
+
+    h3 {
+        margin: 1vw 0;
+
+        font-size: calc(1.097vw + 11.49px);
+        font-weight: 400;
     }
 }
 
 .modal__content__close {
-    background-color: transparent;
-    color: $MAIN_TEXT;
-    border: none;
-    padding: 3px;
-    font-size: 32px;
-}
-.modal__content__close:hover {
-    background-color: $WHITE_TR;
-    border-radius: 10px;
-    box-shadow: 0px 0px 16px $MAIN_TEXT;
-}
+    position: absolute;
+    left: 0;
+    top: 5px;
 
-.modal__content__close:active {
-    background-color: $BLUE_TR;
-    border-radius: 10px;
-    box-shadow: 0px 0px 16px $MAIN_COLOR;
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+
+    fill: $MAIN_TEXT;
+
+    transition: all 0.3s;
+
+    &:hover {
+        fill: $MAIN_COLOR;
+        cursor: pointer;
+
+        transition: all 0.3s;
+    }
+
+    &:active {
+        fill: $MAIN_COLOR;
+        opacity: 0.8;
+    }
 }
 
 .modal__content__personal_data {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    gap: 1vw;
 
-    .modal__content__personal_data__enter {
-        width: 390px;
-        height: 75px;
-        background-color: $WHITE_INPUT;
-        border-radius: 5px;
-        border: none;
-        font-size: 24px;
-        text-align: center;
-        font-family: 'Aire Exterior', sans-serif;
-        font-weight: 400;
-        margin: 5px 0;
-        color: $WHITE_TR;
-    }
-
-    h3 {
-    display: flex;
-    font-size: 32px;
-    font-weight: 400;
-    justify-content: center;
-    margin: 5px 0;
+    text-align: center;
 }
+
+.modal__content__personal_data__enter {
+    height: 90%;
+    text-align: center;
+    padding: 0.5vw;
+
+    font-size: calc(0.645vw + 17.94px);
+    font-family: 'Aire Exterior', sans-serif;
+    font-weight: 400;
+
+    color: $MAIN_TEXT;
+    background-color: #000000;
+    border-radius: 0.5vw;
+    border: none;
+
+    &:focus {
+        outline: 1px solid $MAIN_COLOR;
+    }
 }
 
 .modal__content__card_info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 390px;
-    height: 196px;
-    background-color: $BLACK_BG;
-    border-radius: 10px;
-    width: 100%;
+    display: grid;
+    gap: 1vw;
+
     .card_label {
-        font-size: 24px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        font-size: calc(0.903vw + 13.11px);
         font-weight: 400;
         text-align: center;
     }
 
     .card_logo {
-        width: 50px;
-        height: 50px;
-
+        width: calc(0.774vw + 18.52px);
         fill: $MAIN_TEXT;
     }
 
-    .card_input {
-        border: 3px solid $MAIN_COLOR;
-        text-align: center;
-        border-radius: 10px;
-        background-color: transparent;
-        color: $MAIN_TEXT;
-        height: 40px;
-
-        font-size: 24px;
-        font-family: 'Aire Exterior', sans-serif;
-    }
     .modal__content__card_info__number {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
-        width: 100%;
-        .card_input {
-            width: 269px;
-        }
     }
+
     .modal__content__card_info__expire_data {
-        .card_input {
-            width: 114px;
-        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
+
     .modal__content__card_info__cvv {
-        .card_input {
-            width: 114px;
-        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.card_input {
+    width: 50%;
+
+    border: none;
+    text-align: center;
+    border-radius: 0.5vw;
+    background-color: #000000;
+    color: $MAIN_TEXT;
+
+    font-size: calc(1.032vw + 10.7px);
+    font-family: 'Aire Exterior', sans-serif;
+
+    &:focus {
+        outline: 1px solid $MAIN_COLOR;
     }
 }
 
 .modal__content__submit {
     font-family: 'Aire Exterior', sans-serif;
-    margin-top: 15px;
-    width: 100%;
+    margin-top: 2vw;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 251px;
-    height: 61px;
+    width: calc(5.355vw + 149.86px);
+    height: calc(1.29vw + 35.87px);
     background-color: $MAIN_TEXT;
     font-size: 24px;
     color: black;
     clip-path: polygon(0 0, 90% 0%, 100% 40%, 100% 80%, 100% 100%, 20% 100%, 0 100%);
-}
 
-.modal__content__submit:hover {
-    background-color: $BLACK_BG;
-    color: $MAIN_TEXT;
-}
-.modal__content__submit:active {
-    color: $MAIN_COLOR;
-}
+    &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
 
-@media (max-width: 1440px) {
-    .modal__content {
-        top: 50px;
-    }
-}
-
-@media (max-width: 640px) {
-    .modal__content {
-        width: 320px;
-        h2 {
-            font-size: 28px;
-        }
+        transition: all 0.3s;
     }
 
-    .modal__content__personal_data {
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        .modal__content__personal_data__enter {
-            width: 300px;
-        }
-
-    }
-    .modal__content__card_info {
-        width: 300px;
-        .card_label {
-            font-size: 20px;
-        }
-        .card_input {
-            font-size: 20px;
-        }
-        .modal__content__card_info__number {
-            .card_input {
-                width: 200px;
-            }
-        }
+    &:active {
+        background-color: $MAIN_COLOR;
+        color: $BACKGROUND;
     }
 }
 
 .input_true {
-    outline: 3px solid green;
+    outline: 0.1vw solid rgb(35, 207, 35);
+
+    &:focus {
+        outline: 0.1vw solid rgb(35, 207, 35);
+    }
 }
 
 .input_false {
-    outline: 3px solid red;
+    outline: 0.1vw solid rgb(255, 0, 0);
+
+    &:focus {
+        outline: 0.1vw solid rgb(255, 0, 0);
+    }
 }
 
 @keyframes falseInput {
-  0%   {background-color: #ff000000;}
-  100%  {background-color: #ff000048;}
+    0% {
+        background-color: #ff000000;
+    }
+    100% {
+        background-color: #ff000048;
+    }
 }
 
 .input_show-false {
-  animation-name: falseInput;
-  animation-duration: 0.3s;
-  animation-iteration-count: infinite;
+    animation-name: falseInput;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
 }

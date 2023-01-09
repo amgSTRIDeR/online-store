@@ -42,16 +42,12 @@ export class CartPage {
         basketPageControl.classList.add('basket-page-control');
         basketHeadInfoPageControlPages.classList.add('basket-page-control__pages');
         pageNumberDecrease.classList.add('arrow-left');
-        // pageNumberDecrease.classList.add('small_button');
         pagesCounter.classList.add('pages-counter');
         pageNumberIncrease.classList.add('arrow-right');
-        // pageNumberIncrease.classList.add('small_button');
         basketHeadInfoPageControlPagesProdAmount.classList.add('basket-page-control__prod_amount');
         productPerPageDecrease.classList.add('arrow-left');
-        // productPerPageDecrease.classList.add('small_button');
         productsPerPageShow.classList.add('products-on-page');
         productPerPageIncrease.classList.add('arrow-right');
-        // productPerPageIncrease.classList.add('small_button');
 
         basketHeader.textContent = 'Корзина';
         basketHeadInfoPageControlPages.textContent = 'Страница';
@@ -216,7 +212,6 @@ export class CartPage {
                     cardPrice.classList.add('price');
                     cardNewPrice.classList.add('new_price');
                     cardSmallButton.classList.add('card__main_info__cross');
-                    // cardSmallButton.classList.add('small_button');
                     cardSmallButton.classList.add('small_button-item');
                     cardDescription.classList.add('card__description');
 

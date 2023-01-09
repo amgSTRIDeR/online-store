@@ -17,7 +17,7 @@ export class ModalWindow {
 
         const modalContent = document.createElement('div');
         const modalContentHeader = document.createElement('h2');
-        const modalCloseButton = document.createElement('button');
+        const modalCloseButton = document.createElement('div');
         const modalContentPersonalData = document.createElement('form');
         const modalDataHeader = document.createElement('h3');
         const nameInput = document.createElement('input');
@@ -41,7 +41,7 @@ export class ModalWindow {
         modalContent.classList.add('modal__content');
         modalContentHeader.textContent = 'Оформление покупки';
         modalCloseButton.classList.add('modal__content__close');
-        modalCloseButton.innerHTML = '&lt';
+        modalCloseButton.innerHTML = `<svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M638.238123 372.44764c-55.902194 0-19.446911-94.093005-19.446911-94.093005l-0.12075 0.134053c16.712637-38.926568 9.251711-85.760223-22.531156-117.54309-41.661865-41.632189-109.202121-41.632189-150.888546 0L167.746492 438.451914c-19.993357 20.006659-31.228235 47.134507-31.228235 75.426877 0 28.30158 11.234879 55.43045 31.228235 75.461669l277.503245 277.499152c20.844747 20.812001 48.15372 31.224142 75.452459 31.224142 27.28646 0 54.614875-10.412141 75.436086-31.224142 31.762401-31.757285 39.231513-78.503958 22.594601-117.418246l0.057305 0.071631c0 0-36.45426-94.155427 19.447934-94.155427l126.925784 2.717901c67.400063 9.377578 125.729539-44.567032 125.729539-144.163377l0 0c0-96.717785-63.396889-152.390759-125.728516-144.029324L638.238123 372.44764zM765.162884 366.695636"  /></svg>`;
         modalContentPersonalData.classList.add('modal__content__personal_data');
         modalDataHeader.textContent = 'Ваши данные';
         nameInput.classList.add('modal__content__personal_data__enter');
@@ -83,7 +83,7 @@ export class ModalWindow {
         modalSubmit.textContent = 'Подтвердить';
 
         modalContent.appendChild(modalContentHeader);
-        modalContentHeader.prepend(modalCloseButton);
+        modalContent.prepend(modalCloseButton);
         modalContent.appendChild(modalContentPersonalData);
         modalContentPersonalData.appendChild(modalDataHeader);
         modalContentPersonalData.appendChild(nameInput);
@@ -94,8 +94,8 @@ export class ModalWindow {
         modalContent.appendChild(cardInfoForm);
         cardInfoForm.appendChild(cardInfoNumber);
         cardInfoNumber.appendChild(cardInfoNumberLabel);
+        cardInfoNumberLabel.appendChild(cardInfoNumberImg);
         cardInfoNumberLabel.appendChild(cardInfoNumberInput);
-        cardInfoNumber.appendChild(cardInfoNumberImg);
         cardInfoForm.appendChild(cardExpireData);
         cardExpireData.appendChild(cardExpireLabel);
         cardExpireData.appendChild(cardExpireInput);
@@ -120,6 +120,19 @@ export class ModalWindow {
             if (bodyElement) {
                 bodyElement.classList.remove('body_modal');
             }
+        });
+
+        document.addEventListener('click', (e) => {
+          const buyButton = document.querySelector('.info__buy_now');
+          const modal = document.querySelector('.modal__content');
+          if (buyButton && bodyElement && modal) {
+            const withinBoundaries = e.composedPath().includes(modal);
+            const withinButtonBoundaries = e.composedPath().includes(buyButton);
+            
+            if (!withinBoundaries && !withinButtonBoundaries) {
+              bodyElement.classList.remove('body_modal');
+            }
+          }
         });
 
         phoneInput.addEventListener('input', () => {
@@ -161,13 +174,20 @@ export class ModalWindow {
                 ModalWindow.cardCodeCheck
             ) {
                 modalContent.innerHTML = 'Покупка завершена!';
+                ModalWindow.nameCheck = false;
+                ModalWindow.telCheck = false;
+                ModalWindow.addressCheck = false;
+                ModalWindow.emailCheck = false;
+                ModalWindow.cardNumberCheck = false;
+                ModalWindow.cardDateCheck = false;
+                ModalWindow.cardCodeCheck = false;
                 setTimeout(() => {
                     const cart = CartStorage.getInstance();
                     cart.cartArray = [];
                     window.location.hash = '#store';
 
                     if (bodyElement) {
-                      bodyElement.classList.remove('body_modal');
+                        bodyElement.classList.remove('body_modal');
                     }
                 }, 3000);
             } else {
@@ -219,7 +239,7 @@ export class ModalWindow {
         const inputText = inputElement.value;
         ModalWindow.nameCheck = false;
 
-        const nameExp = /^[a-z]{3,}( [a-z]{3,}){1,}$/i;
+        const nameExp = /^[a-zа-я]{3,}( [a-zа-я]{3,}){1,}$/i;
         if (inputText.match(nameExp)) {
             ModalWindow.nameCheck = true;
         }
@@ -237,7 +257,7 @@ export class ModalWindow {
         const inputText = inputElement.value;
         ModalWindow.addressCheck = false;
 
-        const addressExp = /^\b(\w{5,})\b( \b\w{5,}\b){2,}$/;
+        const addressExp = /^([а-яА-Яa-zA-Z0-9]{5,})( [а-яА-Яa-zA-Z0-9]{5,}){2,}$/;
         if (inputText.match(addressExp)) {
             ModalWindow.addressCheck = true;
         }
