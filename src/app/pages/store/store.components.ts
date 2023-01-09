@@ -494,7 +494,6 @@ export const copyButton = new ButtonComponent({
     className: '.copy__button',
     text: 'Скопировать ссылку',
     function: () => {
-        console.log(window.location.href);
-        return window.location.href;
+        navigator.clipboard.writeText(window.location.href);
     },
 });
