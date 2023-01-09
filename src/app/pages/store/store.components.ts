@@ -1,7 +1,13 @@
 import { PageComponent } from '../../core/components/page.component';
 
 import { GamesCollection } from '../../../public/gamesCollection.js';
-import { CardConfig, PriceConfig, GameObject, NewCollectionConfig } from './store.interfaces';
+import {
+    CardConfig,
+    PriceConfig,
+    GameObject,
+    NewCollectionConfig,
+    QuantityConfig,
+} from './store.interfaces';
 import { CartStorage } from '../../shared/singletons/cart-singleton';
 import { Filter } from './store.filters';
 import { priceSlider, playersSlider, categoryBox, producerBox } from './filter.components';
@@ -106,6 +112,29 @@ export class PriceComponent extends PageComponent {
     }
 }
 
+export class QuantityComponent extends PageComponent {
+    constructor(config: QuantityConfig) {
+        super(config);
+    }
+
+    setAmount(amount: number) {
+        this.template = `${amount}`;
+        this.render();
+    }
+
+    render() {
+        const element = document.querySelector(this.selector);
+        if (element) {
+            element.innerHTML = this.template;
+        }
+    }
+}
+
+export const productQuantity = new QuantityComponent({
+    template: '0',
+    selector: '.goods-search__count',
+});
+
 let cardList: CardComponent[] = [];
 export function makeNewCollection() {
     const filterList: NewCollectionConfig = {
@@ -122,6 +151,10 @@ export function makeNewCollection() {
             option: item[0],
             params: item[1].getValues(),
         }).filter();
+    }
+    //вот здесь
+    if (listOfGames) {
+        productQuantity.setAmount(listOfGames.length);
     }
 }
 
