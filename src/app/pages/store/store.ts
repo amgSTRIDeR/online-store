@@ -1,6 +1,6 @@
 import { PageComponent, PageConfig } from '../../core/components/page.component';
 import { PageModule } from '../../core/modules/page.model';
-import { cardList } from './store.components';
+import { cardList, productQuantity } from './store.components';
 import { copyButton, resetButton } from './button.components';
 import { priceSlider, playersSlider, categoryBox, producerBox } from './filter.components';
 
@@ -42,6 +42,7 @@ class StorePage extends PageComponent {
                 categoryBox,
                 copyButton,
                 resetButton,
+                productQuantity,
             ],
         });
         this.loadFilters();

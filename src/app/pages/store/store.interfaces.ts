@@ -62,3 +62,8 @@ export interface NewCollectionConfig {
     brand: DualSliderConfig | CheckBoxConfig;
     category: DualSliderConfig | CheckBoxConfig;
 }
+
+export interface QuantityConfig {
+    template: string;
+    selector: string;
+}
