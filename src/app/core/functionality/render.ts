@@ -9,7 +9,6 @@ import { addErrorPageListener } from '../../shared/functions/errorPageListener';
 import { StoreSlider } from '../../pages/store/slider.control';
 
 export class Render {
-
     changeURL(url: string): void {
         const finalLink = window.location.protocol + '//' + window.location.host + '/#' + url;
         window.location.href = finalLink;
@@ -19,14 +18,14 @@ export class Render {
         let page;
         if (pageID === 'start' || pageID === '') {
             page = startPage;
-        } else if (pageID === 'store' || pageID.startsWith('store')) {
+        } else if (pageID === 'store' || pageID.startsWith('store?')) {
             page = storePage;
         } else if (pageID === 'basket' || pageID.startsWith('basket?')) {
             CartPage.pageRender(pageID.replace('basket', '').replace('?', ''));
         } else if (
             pageID.split('/')[0] === 'product-details' &&
             Number.isInteger(+pageID.split('/')[1]) &&
-            +pageID.split('/')[1] <= GamesCollection.length && 
+            +pageID.split('/')[1] <= GamesCollection.length &&
             +pageID.split('/')[1] > 0
         ) {
             ProductPage.pageRender(+pageID.split('/')[1]);
