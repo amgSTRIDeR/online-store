@@ -209,6 +209,7 @@
 
     // grid-template-columns: 32% 32% 32% 32% 32% 32%;
     // grid-template-columns: repeat(3, 32%);
+    grid-auto-flow: column;
     grid-template-rows: 1fr 1fr;
     gap: 1vw;
 
