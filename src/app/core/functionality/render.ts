@@ -5,7 +5,8 @@ import { ProductPage } from '../../pages/product/product';
 import { CartPage } from '../../pages/basket/cart';
 import { CartStorage } from '../../shared/singletons/cart-singleton';
 import { GamesCollection } from '../../../public/gamesCollection';
-import { addListener } from '../../shared/functions/errorPageListener';
+import { addErrorPageListener } from '../../shared/functions/errorPageListener';
+import { StoreSlider } from '../../pages/store/slider.control';
 
 export class Render {
 
@@ -41,7 +42,8 @@ export class Render {
             const cart = CartStorage.getInstance();
             cart.renewCartWidget();
             cart.renewSumWidget();
-            addListener();
+            addErrorPageListener();
+            StoreSlider.sliderRender();
         }
 
         this.changeURL(pageID);
