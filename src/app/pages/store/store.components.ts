@@ -100,8 +100,15 @@ export class CardComponent extends PageComponent {
             element.innerHTML = this.template;
             this.checkSale(element);
             element.addEventListener('click', () => {
-                if (!(event?.target instanceof HTMLButtonElement)) {
-                    ProductPage.pageRender(this.id);
+                const clickedElem: EventTarget | null | undefined = event?.target;
+                if (clickedElem instanceof HTMLElement) {
+                    if (
+                        !['card__button', 'card__price', 'card__cart-image'].includes(
+                            clickedElem.className
+                        )
+                    ) {
+                        ProductPage.pageRender(this.id);
+                    }
                 }
             });
         } else {
