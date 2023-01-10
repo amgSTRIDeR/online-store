@@ -1,4 +1,4 @@
-export function addListener() {
+export function addErrorPageListener() {
   const scrollButton = document.querySelector('.scroll-image');
 
   if (scrollButton) {
