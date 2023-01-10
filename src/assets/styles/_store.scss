@@ -19,24 +19,76 @@
     // margin: 550px auto;
     grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
     grid-template-rows: 50px 750px 50px 400px;
-    gap: 1vw;
 
     grid-template-areas:
         'sort sort search view view'
         'arrow-left cards cards cards arrow-right'
         'scroll scroll scroll scroll scroll'
         'sets sets sets sets sets';
+
+    @for $i from 1 through 101 {
+        .cards:has(.card:nth-child(#{$i})) {
+            grid-template-columns: repeat(#{round($i / 2)}, 32%);
+        }
+    }
 }
 
 .store_vertical {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 1vw;
+    grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
+    grid-template-rows: 50px 30vw;
 
     grid-template-areas:
-        'sort search view'
-        'sets cards scroll'
-        'sets cards scroll';
+        'sort sort search view view'
+        'sets sets cards cards scroll';
+
+    .scroll {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+    }
+
+    // @for $i from 1 through 101 {
+    //   .cards:has(.card:nth-child(#{$i})) {
+    //       grid-template-columns: repeat(#{round($i)}, 100%);
+    // }
+    // }
+.cards-wrapper {
+  height: 30vw;
+}
+    .cards {
+        justify-content: space-between;
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        // height: 30vw;
+        // gap: 20px;
+        width: 100%;
+
+        transition: all 1s;
+    }
+
+    .card {
+        position: relative;
+
+        box-sizing: border-box;
+        display: grid;
+        height: 12vw;
+        grid-template-rows: 1fr 0.5fr 2fr 0.5fr 1fr;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-areas:
+            'sale title rating'
+            '. subtitle .'
+            '. img .'
+            '. button .'
+            '. button .';
+        gap: 0.5vw;
+        padding: 1vw;
+    }
+
+    .arrow-left,
+    .arrow-right {
+        display: none;
+    }
 }
 
 .goods-sort {
@@ -200,32 +252,20 @@
 
 .cards {
     position: relative;
-    // transform: translateX(-288vw);
-    width: 72vw;
-    // height: 750px;
+
     display: grid;
     justify-content: space-between;
-    flex-wrap: wrap;
-
-    // grid-template-columns: 32% 32% 32% 32% 32% 32%;
-    // grid-template-columns: repeat(3, 32%);
     grid-auto-flow: column;
     grid-template-rows: 1fr 1fr;
     gap: 1vw;
+    width: 72vw;
 
     transition: all 1s;
-}
-
-@for $i from 1 through 101 {
-    .cards:has(.card:nth-child(#{$i})) {
-        grid-template-columns: repeat(#{round($i / 2)}, 32%);
-    }
 }
 
 .card {
     position: relative;
     display: grid;
-    // width: 90%;
     margin: 1vw;
     height: 290px;
     grid-template-rows: 1fr 0.5fr 2fr 0.5fr 1fr;

@@ -7,6 +7,7 @@ import { CartStorage } from '../../shared/singletons/cart-singleton';
 import { GamesCollection } from '../../../public/gamesCollection';
 import { addErrorPageListener } from '../../shared/functions/errorPageListener';
 import { StoreSlider } from '../../pages/store/slider.control';
+import { addStorePageListener } from '../../shared/functions/storePageListener';
 
 export class Render {
 
@@ -43,6 +44,7 @@ export class Render {
             cart.renewCartWidget();
             cart.renewSumWidget();
             addErrorPageListener();
+            addStorePageListener();
             StoreSlider.sliderRender();
         }
 
