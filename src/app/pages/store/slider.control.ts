@@ -3,18 +3,10 @@ export class StoreSlider {
     static currentPageNumber = 1;
 
     static sliderRender() {
-        const cardsWrapper = document.querySelector('.cards');
-        // const cardArray = Array.from(document.querySelectorAll('.card'));
-
         const arrowLeft = document.querySelector('.arrow-left');
         const arrowRight = document.querySelector('.arrow-right');
 
-        if (cardsWrapper instanceof HTMLDivElement) {
-            cardsWrapper.style.transform = `translateX(${
-                (StoreSlider.currentPageNumber - 1) * -72
-            }vw)`;
-        }
-
+        StoreSlider.moveSlider();
         StoreSlider.scrollsRender();
 
         arrowLeft?.addEventListener('click', () => {
@@ -72,10 +64,19 @@ export class StoreSlider {
     static moveSlider() {
         const cardsWrapper = document.querySelector('.cards');
         if (cardsWrapper instanceof HTMLDivElement) {
+          if (StoreSlider.direction === 'horizontal') {
+            cardsWrapper.style.transform = `translateY(0vw)`;
             cardsWrapper.style.transform = `translateX(${
                 (StoreSlider.currentPageNumber - 1) * -72
             }vw)`;
+          } else {
+            cardsWrapper.style.transform = `translateX(0vw)`;
+            cardsWrapper.style.transform = `translateY(${
+                (StoreSlider.currentPageNumber - 1) * -30
+            }vw)`;
+          }
             StoreSlider.scrollsRender();
         }
     }
+
 }
