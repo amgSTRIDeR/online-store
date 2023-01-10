@@ -65,7 +65,7 @@ export class CardComponent extends PageComponent {
                     <path d="M 62.278 19.546 L 52.237 19.546 L 45.237 19.546 L 35.197 19.546 C 33.264 19.546 31.697 21.113 31.697 23.046 C 31.697 24.979 33.264 26.546 35.197 26.546 L 45.237 26.546 L 52.237 26.546 L 62.278 26.546 C 64.211 26.546 65.778 24.979 65.778 23.046 C 65.778 21.113 64.211 19.546 62.278 19.546 Z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #ffffff; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #ffffff; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"></path>
                     `;
                 }
-                cartButton?.addEventListener('click', () => {
+                cartButton.addEventListener('click', () => {
                     if (!this.flagAdd) {
                         cardProductAdd.addItem(this.id);
                         this.flagAdd = true;
@@ -100,7 +100,9 @@ export class CardComponent extends PageComponent {
             element.innerHTML = this.template;
             this.checkSale(element);
             element.addEventListener('click', () => {
-                ProductPage.pageRender(this.id);
+                if (!(event?.target instanceof HTMLButtonElement)) {
+                    ProductPage.pageRender(this.id);
+                }
             });
         } else {
             throw new Error(`Component with selector ${this.selector} wasn't found`);
