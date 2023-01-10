@@ -35,11 +35,12 @@
 
 .store_vertical {
     grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
-    grid-template-rows: 50px 30vw;
+    grid-template-rows: 50px 30vw 400px;
 
     grid-template-areas:
         'sort sort search view view'
-        'sets sets cards cards scroll';
+        'cards cards cards cards scroll'
+        'sets sets sets sets sets';
 
     .scroll {
         flex-direction: column;
@@ -47,14 +48,10 @@
         height: 100%;
     }
 
-    // @for $i from 1 through 101 {
-    //   .cards:has(.card:nth-child(#{$i})) {
-    //       grid-template-columns: repeat(#{round($i)}, 100%);
-    // }
-    // }
-.cards-wrapper {
-  height: 30vw;
-}
+    .cards-wrapper {
+        height: 30vw;
+    }
+
     .cards {
         justify-content: space-between;
         grid-auto-flow: row;
@@ -64,6 +61,8 @@
         // gap: 20px;
         width: 100%;
 
+        justify-self: center;
+
         transition: all 1s;
     }
 
@@ -72,22 +71,172 @@
 
         box-sizing: border-box;
         display: grid;
-        height: 12vw;
-        grid-template-rows: 1fr 0.5fr 2fr 0.5fr 1fr;
-        grid-template-columns: 1fr 3fr 1fr;
+        height: 14vw;
+        width: 90%;
+        justify-self: center;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: auto;
         grid-template-areas:
-            'sale title rating'
-            '. subtitle .'
-            '. img .'
-            '. button .'
-            '. button .';
+            'title img sale rating'
+            'subtitle img . .'
+            'info info button button';
         gap: 0.5vw;
-        padding: 1vw;
+        margin: 0;
+
+        &:hover {
+          scale: calc(1);
+      }
+  
+      &:hover .card__info {
+          bottom: 0;
+      }
+  
+      &:hover .card__button {
+          margin-bottom: 0;
+      }
     }
 
     .arrow-left,
     .arrow-right {
         display: none;
+    }
+
+    .card__title {
+        grid-area: title;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-family: 'Aire exterior', sans-serif;
+        font-size: calc(0.903vw + 13.11px);
+
+        color: $MAIN_TEXT;
+    }
+
+    .card__subtitle {
+        grid-area: subtitle;
+        margin: 0;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: calc(0.387vw + 12.76px);
+        text-align: center;
+
+        color: $ADDITIONAL_TEXT;
+    }
+
+    .card__image {
+        grid-area: img;
+        align-self: center;
+        justify-self: center;
+        width: 200px;
+    }
+
+    .card__button {
+        grid-area: button;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        justify-self: flex-end;
+        align-self: flex-end;
+        width: 300px;
+        height: 50px;
+
+        background-color: #00000000;
+        border: 3px solid $MAIN_COLOR;
+        border-radius: 0.5vw;
+
+        transition: all 0.3s ease;
+
+        & .card__price {
+            margin: 0;
+
+            font-family: 'Pulsar Original', sans-serif;
+            font-size: calc(0.387vw + 12.76px);
+            color: $MAIN_TEXT;
+        }
+
+        & .card__cart-image {
+            height: 100%;
+        }
+    }
+
+    .card__rating {
+        position: relative;
+
+        grid-area: rating;
+        width: 50px;
+        justify-self: flex-end;
+        align-self: center;
+
+        & .card__rating-image {
+            fill: $MAIN_COLOR;
+        }
+
+        & .card__rating-number {
+            position: absolute;
+            top: 35%;
+            left: 38%;
+
+            margin: 0;
+
+            font-family: 'Pulsar Original', sans-serif;
+            font-size: calc(0.387vw + 12.76px);
+
+            color: $BACKGROUND;
+        }
+    }
+
+    .card__sale-image {
+        position: relative;
+
+        grid-area: sale;
+        width: 50px;
+        justify-self: flex-end;
+        align-self: center;
+
+        fill: $MAIN_COLOR;
+    }
+
+    .card__info {
+        grid-area: info;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        bottom: 0;
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 100%;
+
+        font-family: 'Robot', sans-serif;
+        font-size: calc(0.387vw + 12.76px);
+
+        color: $MAIN_TEXT;
+        list-style: none;
+
+        transition: all 0.3s ease;
+    }
+
+    .card__info-stock,
+    .card__info-players,
+    .card__info-time {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+
+        width: 120px;
+
+        & svg {
+            width: 50px;
+            margin-right: 5%;
+        }
+    }
+
+    .card__info-age {
+        font-family: 'Pulsar Original', sans-serif;
+        font-size: calc(0.645vw + 17.94px);
     }
 }
 
@@ -286,8 +435,8 @@
     transition: all 0.3s ease;
 
     &:hover {
+        cursor: pointer;
         scale: calc(1.05);
-
         transition: all 0.3s ease;
     }
 
@@ -345,7 +494,6 @@
     height: 50%;
     margin-left: auto;
     margin-right: auto;
-    // height: 38px;
 
     background-color: #00000000;
     border: 3px solid $MAIN_COLOR;
@@ -367,7 +515,6 @@
 
     & .card__cart-image {
         width: 20%;
-        // height: 30px;
     }
 }
 
@@ -476,14 +623,8 @@
 
 .sets-wrapper {
     grid-area: sets;
-    // display: grid;
     display: flex;
-    // grid-template-areas:
-    //     'category maker price price sale stock'
-    //     'category maker price price . .'
-    //     'category maker players players filter filter'
-    //     'category maker players players copy-button copy-button';
-    gap: 1vw;
+    justify-content: space-between;
 
     & .sets {
         padding: 1vw;
@@ -621,8 +762,8 @@
 
     grid-area: filter;
     display: block;
-    width: calc(11.527vw + 58.5px);
-    height: calc(2.824vw + 13.83px);
+    width: calc(6.903vw + 84.91px);
+    height: calc(2vw + 25.6px);
     // margin-top: calc(7.023vw - 17.28px);
     margin-left: auto;
     margin-right: auto;
@@ -656,8 +797,8 @@
 
     grid-area: copy-button;
     display: block;
-    width: calc(11.527vw + 58.5px);
-    height: calc(2.824vw + 13.83px);
+    width: calc(6.903vw + 84.91px);
+    height: calc(2vw + 25.6px);
     // margin-top: calc(7.023vw - 17.28px);
     margin-left: auto;
     margin-right: auto;
