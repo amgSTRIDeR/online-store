@@ -31,6 +31,7 @@ export class StoreSlider {
         if (goodsSort instanceof HTMLSelectElement) {
             goodsSort.addEventListener('change', () => {
                 StoreSlider.sortItems(+goodsSort.value);
+                StoreSlider.setQuery(+goodsSort.value);
             });
         }
     }
@@ -98,6 +99,44 @@ export class StoreSlider {
                 }
             }
         }
+    }
+    //вот
+    static setQuery(sortValue: number) {
+        let finalLink: string = window.location.href;
+        if (finalLink.includes('sort')) {
+            const fromSort = finalLink.slice(finalLink.indexOf('sort')).indexOf('&');
+            if (fromSort === -1) {
+                finalLink = finalLink.slice(0, finalLink.indexOf('sort') - 1);
+            } else {
+                finalLink =
+                    finalLink.slice(0, finalLink.indexOf('sort')) +
+                    finalLink.slice(finalLink.indexOf('sort') + fromSort + 1);
+                console.log(finalLink);
+            }
+        }
+        if (finalLink.includes('?')) {
+            finalLink += '&';
+        } else {
+            finalLink += '?';
+        }
+        if (sortValue !== 0) {
+            finalLink += 'sort=';
+        }
+
+        if (sortValue === 1) {
+            finalLink += 'rating-up';
+        } else if (sortValue === 2) {
+            finalLink += 'rating-down';
+        } else if (sortValue === 3) {
+            finalLink += 'price-up';
+        } else if (sortValue === 4) {
+            finalLink += 'price-down';
+        } else if (sortValue === 5) {
+            finalLink += 'name-up';
+        } else if (sortValue === 6) {
+            finalLink += 'name-down';
+        }
+        window.location.href = finalLink;
     }
 
     static sortItems(sortValue: number) {

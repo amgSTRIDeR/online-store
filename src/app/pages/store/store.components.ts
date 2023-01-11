@@ -10,7 +10,7 @@ import {
     GameObject,
     NewCollectionConfig,
     QuantityConfig,
-} from './store.interfaces';
+} from '../../shared/interfaces/interfaces';
 import { CartStorage } from '../../shared/singletons/cart-singleton';
 import { Filter } from './store.filters';
 import { priceSlider, playersSlider, categoryBox, producerBox } from './filter.components';
@@ -186,7 +186,6 @@ export function makeNewCollection() {
             params: item[1].getValues(),
         }).filter();
     }
-    //вот здесь
     if (listOfGames) {
         productQuantity.setAmount(listOfGames.length);
     }
