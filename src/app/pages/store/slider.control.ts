@@ -29,9 +29,9 @@ export class StoreSlider {
         });
 
         if (goodsSort instanceof HTMLSelectElement) {
-          goodsSort.addEventListener('change', () => {
-            StoreSlider.sortItems(+goodsSort.value);
-          })
+            goodsSort.addEventListener('change', () => {
+                StoreSlider.sortItems(+goodsSort.value);
+            });
         }
     }
 
@@ -73,25 +73,35 @@ export class StoreSlider {
     }
 
     static renewSlider() {
-        const cardsWrapper = document.querySelector('.cards');
-        if (cardsWrapper instanceof HTMLDivElement) {
+        const cardsElement = document.querySelector('.cards');
+        const cardsWrapper = document.querySelector('.cards-wrapper');
+
+        if (cardsElement instanceof HTMLDivElement) {
             if (StoreSlider.direction === 'horizontal') {
-                cardsWrapper.style.transform = `translateY(0vw)`;
-                cardsWrapper.style.transform = `translateX(${
+                cardsElement.style.transform = `translateY(0vw)`;
+                cardsElement.style.transform = `translateX(${
                     (StoreSlider.currentPageNumber - 1) * -72
                 }vw)`;
             } else {
-                cardsWrapper.style.transform = `translateX(0vw)`;
-                cardsWrapper.style.transform = `translateY(${
+                cardsElement.style.transform = `translateX(0vw)`;
+                cardsElement.style.transform = `translateY(${
                     (StoreSlider.currentPageNumber - 1) * -30
                 }vw)`;
             }
             StoreSlider.scrollsRender();
+            if (cardsWrapper) {
+                if (StoreSlider.pageCounter() === 0) {
+                    cardsWrapper.classList.remove('cards-wrapper_empty');
+                    cardsWrapper.classList.add('cards-wrapper_empty');
+                } else {
+                    cardsWrapper.classList.remove('cards-wrapper_empty');
+                }
+            }
         }
     }
 
     static sortItems(sortValue: number) {
-      const cardsArray = Array.from(document.querySelectorAll('.card'));
+        const cardsArray = Array.from(document.querySelectorAll('.card'));
 
         if (sortValue === sortParameters.Default) {
             StoreSlider.sortedItemsArray.sort((a, b) => a.id - b.id);
@@ -112,26 +122,27 @@ export class StoreSlider {
         if (sortValue === sortParameters.PriceIncrease) {
             StoreSlider.sortedItemsArray.sort((a, b) => a.price - b.price);
         }
-        
+
         if (sortValue === sortParameters.NameDecrease) {
-          StoreSlider.sortedItemsArray.sort(function(a, b) {
-            return b.title_ru.localeCompare(a.title_ru, 'cyrillic');
-          });
+            StoreSlider.sortedItemsArray.sort(function (a, b) {
+                return b.title_ru.localeCompare(a.title_ru, 'cyrillic');
+            });
         }
-        
+
         if (sortValue === sortParameters.NameIncrease) {
-            StoreSlider.sortedItemsArray.sort(function(a, b) {
-              return a.title_ru.localeCompare(b.title_ru, 'cyrillic');
+            StoreSlider.sortedItemsArray.sort(function (a, b) {
+                return a.title_ru.localeCompare(b.title_ru, 'cyrillic');
             });
         }
 
         if (cardsArray) {
-          cardsArray.forEach((e) => {
-            if (e instanceof HTMLDivElement) {
-              e.style.order = `${StoreSlider.sortedItemsArray.findIndex(obj => obj.id === +e.id)}`
-            }
-          })
+            cardsArray.forEach((e) => {
+                if (e instanceof HTMLDivElement) {
+                    e.style.order = `${StoreSlider.sortedItemsArray.findIndex(
+                        (obj) => obj.id === +e.id
+                    )}`;
+                }
+            });
         }
-
     }
 }

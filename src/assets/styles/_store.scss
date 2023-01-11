@@ -84,16 +84,16 @@
         margin: 0;
 
         &:hover {
-          scale: calc(1);
-      }
-  
-      &:hover .card__info {
-          bottom: 0;
-      }
-  
-      &:hover .card__button {
-          margin-bottom: 0;
-      }
+            scale: calc(1);
+        }
+
+        &:hover .card__info {
+            bottom: 0;
+        }
+
+        &:hover .card__button {
+            margin-bottom: 0;
+        }
     }
 
     .arrow-left,
@@ -397,6 +397,27 @@
 .cards-wrapper {
     grid-area: cards;
     overflow: hidden;
+
+    text-align: center;
+
+    & .empty-header {
+        display: none;
+        position: absolute;
+    }
+}
+
+.cards-wrapper_empty {
+    & .empty-header {
+        position: relative;
+
+        display: block;
+        height: 100%;
+        width: 100%;
+
+        font-family: 'Aire exterior', sans-serif;
+        font-size: 8vw;
+        text-align: center;
+    }
 }
 
 .cards {
