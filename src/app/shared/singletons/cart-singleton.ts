@@ -151,7 +151,13 @@ export class CartStorage {
         const price = `${Math.round(priceCount)} $`;
 
         if (sumWidget) {
-            sumWidget.textContent = price;
+            if (promoDiscount) {
+                sumWidget.textContent = `     ${Math.round(
+                    priceCount * ((100 - promoDiscount) / 100)
+                )} $`;
+            } else {
+                sumWidget.textContent = price;
+            }
         }
 
         if (purePrice && promoPrice) {
@@ -168,7 +174,10 @@ export class CartStorage {
     }
 
     getItemStockNumber(itemId: number): number {
-      return this.cartArray.filter(obj => obj.id === itemId)[0]?.stock ?? GamesCollection[itemId - 1].stock;
+        return (
+            this.cartArray.filter((obj) => obj.id === itemId)[0]?.stock ??
+            GamesCollection[itemId - 1].stock
+        );
     }
 
     addPromo(promocode: string) {
@@ -192,7 +201,7 @@ export class CartStorage {
     }
 
     showPromo(promocode: string) {
-      console.log(promocode)
+        console.log(promocode);
         const proposalPromo = document.querySelector('.proposal__promocode');
         const proposalButton = document.querySelector('.proposal__button');
 
@@ -221,6 +230,6 @@ export class CartStorage {
     }
 
     getNumberOfItemsInCart(itemId: number) {
-      return this.cartArray.filter(obj => obj.id === itemId)[0]?.quantity || 0;
+        return this.cartArray.filter((obj) => obj.id === itemId)[0]?.quantity || 0;
     }
 }
