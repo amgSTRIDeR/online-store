@@ -4,7 +4,6 @@ import { sortParameters } from '../../shared/enums/sortParameters';
 export class StoreSlider {
     static direction = 'horizontal';
     static currentPageNumber = 1;
-    // static sortParameter = sortParameters.RatingDecrease;
     static sortedItemsArray = [...GamesCollection];
 
     static sliderRender() {
