@@ -8,6 +8,10 @@ export const copyButton = new ButtonComponent({
         navigator.clipboard.writeText(window.location.href).catch((err: string | undefined) => {
             throw new Error(err);
         });
+        const copyButtonElement = document.querySelector('.copy__button');
+        if (copyButtonElement instanceof HTMLButtonElement) {
+            copyButtonElement.textContent = 'Ссылка скопирована';
+        }
     },
 });
 
