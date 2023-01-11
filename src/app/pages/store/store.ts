@@ -99,6 +99,7 @@ export const storePage = new StorePage({
   L213.13,222.409z" />
     </svg>
     <div class="cards-wrapper">
+    <h3 class="empty-header">Ничего не найдено</h3>
     <div class="cards">
         
        
