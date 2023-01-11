@@ -1,4 +1,4 @@
-import { FilterConfig, GameObject } from './store.interfaces';
+import { FilterConfig, GameObject } from '../../shared/interfaces/interfaces';
 import { QueryStorage } from '../../shared/singletons/query-singleton';
 import { StoreSlider } from './slider.control';
 
@@ -18,10 +18,15 @@ export class Filter {
 
     changeURL() {
         let finalLink = window.location.protocol + '//' + window.location.host + '/#store?';
+
         const queryList: QueryStorage = QueryStorage.getInstance();
         queryList.changeParams(this.option, this.params);
         if (this.option === 'category') {
             const finalList = queryList.getList();
+
+            if (window.location.href.includes('sort')) {
+                finalLink += window.location.href.slice(window.location.href.indexOf('sort')) + '&';
+            }
 
             if (finalList.price[0] !== '0' || finalList.price[1] !== '15000') {
                 finalLink += 'price=' + finalList.price.join('↕') + '&';

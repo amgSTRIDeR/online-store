@@ -1,4 +1,4 @@
-import { DualSliderConfig, CheckBoxConfig } from './store.interfaces';
+import { DualSliderConfig, CheckBoxConfig } from '../../shared/interfaces/interfaces';
 import { makeNewCollection } from './store.components';
 
 export class DualSliderComponent {
