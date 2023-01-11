@@ -1,5 +1,6 @@
 import { FilterConfig, GameObject } from './store.interfaces';
 import { QueryStorage } from '../../shared/singletons/query-singleton';
+import { StoreSlider } from './slider.control';
 
 export class Filter {
     beginList: GameObject[] | null;
@@ -60,6 +61,8 @@ export class Filter {
                 card.style.display = 'none';
             }
         }
+        // обновление слайдера при смене фильтров
+        StoreSlider.renewSlider();
     }
 
     filter(): GameObject[] | null {

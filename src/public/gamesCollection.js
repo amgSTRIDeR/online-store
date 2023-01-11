@@ -4346,8 +4346,8 @@ export const GamesCollection = [
     },
     {
         id: 95,
-        title_ru: "'Цивилизация' Сида Мейера: Новый рассвет.",
-        title_en: "'Civilization' Sid Meier: A New Dawn.",
+        title_ru: "Цивилизация Сида Мейера: Новый рассвет.",
+        title_en: "Civilization Sid Meier: A New Dawn.",
         subtittle_ru: 'Новые пути к победе!',
         subtittle_en: 'New ways to win!',
         description_ru:

@@ -54,21 +54,24 @@ export const storePage = new StorePage({
     template: `<section class="store store_horizontal">
     <select class="goods-sort" id="sort" name="sort">
       <option class="goods-sort__item" value="0">
-        по популярности &#x2198;
+        по умолчанию
       </option>
       <option class="goods-sort__item" value="1">
-        по популярности &#x2197;
+        по популярности &#x2198;
       </option>
       <option class="goods-sort__item" value="2">
-        по цене &#x2198;
+        по популярности &#x2197;
       </option>
       <option class="goods-sort__item" value="3">
-        по цене &#x2197;
+        по цене &#x2198;
       </option>
       <option class="goods-sort__item" value="4">
-        по названию &#x2198;
+        по цене &#x2197;
       </option>
       <option class="goods-sort__item" value="5">
+        по названию &#x2198;
+      </option>
+      <option class="goods-sort__item" value="6">
         по названию &#x2197;
       </option>
     </select>
