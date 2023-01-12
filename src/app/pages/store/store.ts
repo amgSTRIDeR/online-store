@@ -31,6 +31,8 @@ class StorePage extends PageComponent {
                         StoreSlider.sortOrder = +filter.split('=')[1];
                     } else if (filter.split('=')[0].includes('view')) {
                       StoreSlider.direction = +filter.split('=')[1];
+                  } else if (filter.split('=')[0].includes('search')) {
+                      StoreSlider.searchInputValue = filter.split('=')[1];
                   }
                 }
             }

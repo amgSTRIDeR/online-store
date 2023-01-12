@@ -1,4 +1,5 @@
 import { ButtonComponent } from '../../core/components/button.component';
+import { changeCardsDirection } from '../../shared/functions/cahge-cards-direction';
 import { priceSlider, playersSlider, categoryBox, producerBox } from './filter.components';
 import { StoreSlider } from './slider.control';
 
@@ -25,6 +26,8 @@ export const resetButton = new ButtonComponent({
         categoryBox.changeValues([]);
         producerBox.changeValues([]);
         StoreSlider.sortOrder = 0;
+        StoreSlider.direction = 0;
+        changeCardsDirection(0);
         StoreSlider.sortItems();
         window.location.href = window.location.protocol + '//' + window.location.host + '/#store';
     },

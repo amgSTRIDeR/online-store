@@ -1,6 +1,7 @@
 import { GamesCollection } from '../../../public/gamesCollection';
 import { sortParameters } from '../../shared/enums/sortParameters';
 import { changeCardsDirection } from '../../shared/functions/cahge-cards-direction';
+import { isContainsSubstring } from '../../shared/functions/isContainsSubstring';
 import { setSliderQuery } from '../../shared/functions/setSliderQuery';
 
 export class StoreSlider {
@@ -8,13 +9,16 @@ export class StoreSlider {
     static sortOrder = 0;
     static currentPageNumber = 1;
     static sortedItemsArray = [...GamesCollection];
+    static searchInputValue = '';
 
     static sliderRender() {
         const arrowLeft = document.querySelector('.arrow-left');
         const arrowRight = document.querySelector('.arrow-right');
         const goodsSort = document.querySelector('.goods-sort');
+        const searchInput = document.querySelector('.goods-search__input');
 
         StoreSlider.sortItems();
+        StoreSlider.searchItems();
         changeCardsDirection(StoreSlider.direction);
 
         arrowLeft?.addEventListener('click', () => {
@@ -36,6 +40,16 @@ export class StoreSlider {
                 StoreSlider.sortOrder = +goodsSort.value;
                 StoreSlider.sortItems();
                 StoreSlider.setQuery();
+            });
+        }
+
+        if (searchInput instanceof HTMLInputElement) {
+            searchInput.addEventListener('input', () => {
+                StoreSlider.searchInputValue = searchInput.value;
+                StoreSlider.setQuery();
+                if (searchInput.value) {
+                  StoreSlider.searchItems();
+                }
             });
         }
     }
@@ -115,6 +129,7 @@ export class StoreSlider {
 
         finalLink = setSliderQuery(finalLink, 'sort');
         finalLink = setSliderQuery(finalLink, 'view');
+        finalLink = setSliderQuery(finalLink, 'search');
 
         if (StoreSlider.sortOrder !== 0) {
             if (finalLink.includes('?')) {
@@ -136,6 +151,17 @@ export class StoreSlider {
             finalLink += 'view=';
 
             finalLink += StoreSlider.direction;
+        }
+
+        if (StoreSlider.searchInputValue) {
+            if (finalLink.includes('?')) {
+                finalLink += '&';
+            } else {
+                finalLink += '?';
+            }
+            finalLink += 'search=';
+
+            finalLink += StoreSlider.searchInputValue;
         }
 
         window.location.href = finalLink;
@@ -190,5 +216,28 @@ export class StoreSlider {
                 }
             });
         }
+    }
+
+    static searchItems() {
+        const searchInput = document.querySelector('.goods-search__input');
+
+        if (searchInput instanceof HTMLInputElement) {
+            searchInput.value = `${StoreSlider.searchInputValue}`;
+        }
+
+        const cardsArray = Array.from(document.querySelectorAll('.card'));
+
+        for (let i = 0; i < GamesCollection.length; i += 1) {
+            const el = cardsArray[i];
+            if (el instanceof HTMLDivElement) {
+              if (isContainsSubstring(i)) {
+                  el.style.display = 'grid';
+              } else {
+                  el.style.display = 'none';
+              }
+            }
+        }
+
+        StoreSlider.renewSlider();
     }
 }
