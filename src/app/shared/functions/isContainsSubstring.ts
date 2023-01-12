@@ -2,6 +2,10 @@ import { GamesCollection } from '../../../public/gamesCollection';
 import { StoreSlider } from '../../pages/store/slider.control';
 
 export function isContainsSubstring(index: number) {
+    if (StoreSlider.searchInputValue === '') {
+        return true;
+    }
+    
     const arrayOfValues: string[] = [];
     let check = false;
 
