@@ -11,14 +11,16 @@ export function addStorePageListener() {
           store.classList.remove('store_horizontal');
           store.classList.remove('store_vertical');
           store.classList.add('store_horizontal');
-          StoreSlider.direction = 'horizontal';
+          StoreSlider.direction = 0;
           StoreSlider.renewSlider();
+          StoreSlider.setQuery();
         } else {
           store.classList.remove('store_horizontal');
           store.classList.remove('store_vertical');
           store.classList.add('store_vertical');
-          StoreSlider.direction = 'vertical';
+          StoreSlider.direction = 1;
           StoreSlider.renewSlider();
+          StoreSlider.setQuery();
         }
       }
     })

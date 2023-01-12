@@ -14,6 +14,7 @@ import {
 import { CartStorage } from '../../shared/singletons/cart-singleton';
 import { Filter } from './store.filters';
 import { priceSlider, playersSlider, categoryBox, producerBox } from './filter.components';
+import { StoreSlider } from './slider.control';
 
 export class CardComponent extends PageComponent {
     containerSelector: string;
@@ -334,8 +335,8 @@ function makeCardList(gameList: GameObject[] | null) {
                 price: gameList[i].price,
             });
             cardList.push(card);
+          }
         }
-    }
     return cardList;
 }
 

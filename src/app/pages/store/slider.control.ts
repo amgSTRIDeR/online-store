@@ -1,10 +1,12 @@
 import { GamesCollection } from '../../../public/gamesCollection';
 import { sortParameters } from '../../shared/enums/sortParameters';
+import { setSliderQuery } from '../../shared/functions/setSliderQuery';
 
 export class StoreSlider {
-    static direction = 'horizontal';
+    static direction = 0;
     static currentPageNumber = 1;
     static sortedItemsArray = [...GamesCollection];
+    static sortOrder = 0;
 
     static sliderRender() {
         const arrowLeft = document.querySelector('.arrow-left');
@@ -12,7 +14,7 @@ export class StoreSlider {
         const goodsSort = document.querySelector('.goods-sort');
 
         StoreSlider.renewSlider();
-        StoreSlider.scrollsRender();
+        StoreSlider.sortItems();
 
         arrowLeft?.addEventListener('click', () => {
             if (StoreSlider.currentPageNumber > 1) {
@@ -30,8 +32,9 @@ export class StoreSlider {
 
         if (goodsSort instanceof HTMLSelectElement) {
             goodsSort.addEventListener('change', () => {
-                StoreSlider.sortItems(+goodsSort.value);
-                StoreSlider.setQuery(+goodsSort.value);
+                StoreSlider.sortOrder = +goodsSort.value;
+                StoreSlider.sortItems();
+                StoreSlider.setQuery();
             });
         }
     }
@@ -78,7 +81,7 @@ export class StoreSlider {
         const cardsWrapper = document.querySelector('.cards-wrapper');
 
         if (cardsElement instanceof HTMLDivElement) {
-            if (StoreSlider.direction === 'horizontal') {
+            if (StoreSlider.direction === 0) {
                 cardsElement.style.transform = `translateY(0vw)`;
                 cardsElement.style.transform = `translateX(${
                     (StoreSlider.currentPageNumber - 1) * -72
@@ -101,74 +104,72 @@ export class StoreSlider {
         }
     }
     //вот
-    static setQuery(sortValue: number) {
+    static setQuery() {
         let finalLink: string = window.location.href;
-        if (finalLink.includes('sort')) {
-            const fromSort = finalLink.slice(finalLink.indexOf('sort')).indexOf('&');
-            if (fromSort === -1) {
-                finalLink = finalLink.slice(0, finalLink.indexOf('sort') - 1);
+
+        finalLink = setSliderQuery(finalLink, 'sort');
+        finalLink = setSliderQuery(finalLink, 'view');
+
+        if (StoreSlider.sortOrder !== 0) {
+            if (finalLink.includes('?')) {
+                finalLink += '&';
             } else {
-                finalLink =
-                    finalLink.slice(0, finalLink.indexOf('sort')) +
-                    finalLink.slice(finalLink.indexOf('sort') + fromSort + 1);
-                console.log(finalLink);
+                finalLink += '?';
             }
-        }
-        if (finalLink.includes('?')) {
-            finalLink += '&';
-        } else {
-            finalLink += '?';
-        }
-        if (sortValue !== 0) {
             finalLink += 'sort=';
+
+            finalLink += StoreSlider.sortOrder;
         }
 
-        if (sortValue === 1) {
-            finalLink += 'rating-up';
-        } else if (sortValue === 2) {
-            finalLink += 'rating-down';
-        } else if (sortValue === 3) {
-            finalLink += 'price-up';
-        } else if (sortValue === 4) {
-            finalLink += 'price-down';
-        } else if (sortValue === 5) {
-            finalLink += 'name-up';
-        } else if (sortValue === 6) {
-            finalLink += 'name-down';
+        if (StoreSlider.direction !== 0) {
+            if (finalLink.includes('?')) {
+                finalLink += '&';
+            } else {
+                finalLink += '?';
+            }
+            finalLink += 'view=';
+
+            finalLink += StoreSlider.direction;
         }
+
         window.location.href = finalLink;
     }
 
-    static sortItems(sortValue: number) {
+    static sortItems() {
         const cardsArray = Array.from(document.querySelectorAll('.card'));
+        const goodsSort = document.querySelector('.goods-sort');
 
-        if (sortValue === sortParameters.Default) {
+        if (goodsSort instanceof HTMLSelectElement) {
+            goodsSort.value = `${StoreSlider.sortOrder}`;
+        }
+
+        if (StoreSlider.sortOrder === sortParameters.Default) {
             StoreSlider.sortedItemsArray.sort((a, b) => a.id - b.id);
         }
 
-        if (sortValue === sortParameters.RatingDecrease) {
+        if (StoreSlider.sortOrder === sortParameters.RatingDecrease) {
             StoreSlider.sortedItemsArray.sort((a, b) => b.rating - a.rating);
         }
 
-        if (sortValue === sortParameters.RatingIncrease) {
+        if (StoreSlider.sortOrder === sortParameters.RatingIncrease) {
             StoreSlider.sortedItemsArray.sort((a, b) => a.rating - b.rating);
         }
 
-        if (sortValue === sortParameters.PriceDecrease) {
+        if (StoreSlider.sortOrder === sortParameters.PriceDecrease) {
             StoreSlider.sortedItemsArray.sort((a, b) => b.price - a.price);
         }
 
-        if (sortValue === sortParameters.PriceIncrease) {
+        if (StoreSlider.sortOrder === sortParameters.PriceIncrease) {
             StoreSlider.sortedItemsArray.sort((a, b) => a.price - b.price);
         }
 
-        if (sortValue === sortParameters.NameDecrease) {
+        if (StoreSlider.sortOrder === sortParameters.NameDecrease) {
             StoreSlider.sortedItemsArray.sort(function (a, b) {
                 return b.title_ru.localeCompare(a.title_ru, 'cyrillic');
             });
         }
 
-        if (sortValue === sortParameters.NameIncrease) {
+        if (StoreSlider.sortOrder === sortParameters.NameIncrease) {
             StoreSlider.sortedItemsArray.sort(function (a, b) {
                 return a.title_ru.localeCompare(b.title_ru, 'cyrillic');
             });

@@ -3,6 +3,8 @@ import { PageModule } from '../../core/modules/page.model';
 import { cardList, productQuantity } from './store.components';
 import { copyButton, resetButton } from './button.components';
 import { priceSlider, playersSlider, categoryBox, producerBox } from './filter.components';
+import { StoreSlider } from './slider.control';
+import { sortParameters } from '../../shared/enums/sortParameters';
 
 class StorePage extends PageComponent {
     constructor(config: PageConfig) {
@@ -26,6 +28,8 @@ class StorePage extends PageComponent {
                     } else if (filter.split('=')[0].includes('brand')) {
                         const values: string[] = filter.split('=')[1].split('↕');
                         producerBox.changeValues(values);
+                    } else if (filter.split('=')[0].includes('sort')) {
+                        StoreSlider.sortOrder = +filter.split('=')[1];
                     }
                 }
             }
