@@ -763,6 +763,8 @@
 }
 
 .sale__wrapper {
+  display: none;
+
     grid-area: sale;
 
     background-color: #00000024;
@@ -771,6 +773,8 @@
 }
 
 .stock__wrapper {
+  display: none;
+  
     grid-area: stock;
 
     background-color: #00000024;
