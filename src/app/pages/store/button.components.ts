@@ -24,7 +24,8 @@ export const resetButton = new ButtonComponent({
         playersSlider.changeValues('1', '99');
         categoryBox.changeValues([]);
         producerBox.changeValues([]);
-        StoreSlider.sortItems(0);
+        StoreSlider.sortOrder = 0;
+        StoreSlider.sortItems();
         window.location.href = window.location.protocol + '//' + window.location.host + '/#store';
     },
 });
