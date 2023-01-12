@@ -8,11 +8,13 @@ export class StoreSlider {
     static sortOrder = 0;
     static currentPageNumber = 1;
     static sortedItemsArray = [...GamesCollection];
+    static searchInputValue = '';
 
     static sliderRender() {
         const arrowLeft = document.querySelector('.arrow-left');
         const arrowRight = document.querySelector('.arrow-right');
         const goodsSort = document.querySelector('.goods-sort');
+        const searchInput = document.querySelector('.goods-search__input');
 
         StoreSlider.sortItems();
         changeCardsDirection(StoreSlider.direction);
@@ -35,6 +37,14 @@ export class StoreSlider {
             goodsSort.addEventListener('change', () => {
                 StoreSlider.sortOrder = +goodsSort.value;
                 StoreSlider.sortItems();
+                StoreSlider.setQuery();
+            });
+        }
+
+        if (searchInput instanceof HTMLInputElement) {
+          searchInput.addEventListener('change', () => {
+                StoreSlider.searchInputValue = searchInput.value;
+                // StoreSlider.sortItems();
                 StoreSlider.setQuery();
             });
         }
@@ -115,6 +125,7 @@ export class StoreSlider {
 
         finalLink = setSliderQuery(finalLink, 'sort');
         finalLink = setSliderQuery(finalLink, 'view');
+        finalLink = setSliderQuery(finalLink, 'search');
 
         if (StoreSlider.sortOrder !== 0) {
             if (finalLink.includes('?')) {
@@ -136,6 +147,17 @@ export class StoreSlider {
             finalLink += 'view=';
 
             finalLink += StoreSlider.direction;
+        }
+
+        if (StoreSlider.searchInputValue) {
+            if (finalLink.includes('?')) {
+                finalLink += '&';
+            } else {
+                finalLink += '?';
+            }
+            finalLink += 'search=';
+
+            finalLink += StoreSlider.searchInputValue;
         }
 
         window.location.href = finalLink;
