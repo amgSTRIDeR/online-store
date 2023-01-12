@@ -17,7 +17,9 @@ export class StoreSlider {
         const searchInput = document.querySelector('.goods-search__input');
 
         StoreSlider.sortItems();
+        StoreSlider.searchItems();
         changeCardsDirection(StoreSlider.direction);
+        StoreSlider.setQuery();
 
         arrowLeft?.addEventListener('click', () => {
             if (StoreSlider.currentPageNumber > 1) {
@@ -42,7 +44,7 @@ export class StoreSlider {
         }
 
         if (searchInput instanceof HTMLInputElement) {
-          searchInput.addEventListener('change', () => {
+            searchInput.addEventListener('change', () => {
                 StoreSlider.searchInputValue = searchInput.value;
                 // StoreSlider.sortItems();
                 StoreSlider.setQuery();
@@ -211,6 +213,14 @@ export class StoreSlider {
                     )}`;
                 }
             });
+        }
+    }
+
+    static searchItems() {
+        const searchInput = document.querySelector('.goods-search__input');
+
+        if (searchInput instanceof HTMLInputElement) {
+            searchInput.value = `${StoreSlider.searchInputValue}`;
         }
     }
 }
