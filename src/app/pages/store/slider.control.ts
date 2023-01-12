@@ -19,7 +19,6 @@ export class StoreSlider {
         StoreSlider.sortItems();
         StoreSlider.searchItems();
         changeCardsDirection(StoreSlider.direction);
-        StoreSlider.setQuery();
 
         arrowLeft?.addEventListener('click', () => {
             if (StoreSlider.currentPageNumber > 1) {

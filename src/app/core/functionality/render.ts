@@ -13,9 +13,9 @@ export class Render {
     changeURL(url: string): void {
         const finalLink = window.location.protocol + '//' + window.location.host + '/#' + url;
         window.location.href = finalLink;
-        if (url === 'store') {
-          StoreSlider.setQuery()
-        }
+        // if (url === 'store') {
+        //   StoreSlider.setQuery()
+        // }
     }
 
     renderNewPage(pageID: string): void {
