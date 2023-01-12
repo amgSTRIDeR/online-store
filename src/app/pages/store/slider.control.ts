@@ -1,6 +1,7 @@
 import { GamesCollection } from '../../../public/gamesCollection';
 import { sortParameters } from '../../shared/enums/sortParameters';
 import { changeCardsDirection } from '../../shared/functions/cahge-cards-direction';
+import { isContainsSubstring } from '../../shared/functions/isContainsSubstring';
 import { setSliderQuery } from '../../shared/functions/setSliderQuery';
 
 export class StoreSlider {
@@ -43,10 +44,12 @@ export class StoreSlider {
         }
 
         if (searchInput instanceof HTMLInputElement) {
-            searchInput.addEventListener('change', () => {
+            searchInput.addEventListener('input', () => {
                 StoreSlider.searchInputValue = searchInput.value;
-                // StoreSlider.sortItems();
                 StoreSlider.setQuery();
+                if (searchInput.value) {
+                  StoreSlider.searchItems();
+                }
             });
         }
     }
@@ -221,5 +224,20 @@ export class StoreSlider {
         if (searchInput instanceof HTMLInputElement) {
             searchInput.value = `${StoreSlider.searchInputValue}`;
         }
+
+        const cardsArray = Array.from(document.querySelectorAll('.card'));
+
+        for (let i = 0; i < GamesCollection.length; i += 1) {
+            const el = cardsArray[i];
+            if (el instanceof HTMLDivElement) {
+              if (isContainsSubstring(i)) {
+                  el.style.display = 'grid';
+              } else {
+                  el.style.display = 'none';
+              }
+            }
+        }
+
+        StoreSlider.renewSlider();
     }
 }
