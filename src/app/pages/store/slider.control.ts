@@ -1,20 +1,21 @@
 import { GamesCollection } from '../../../public/gamesCollection';
 import { sortParameters } from '../../shared/enums/sortParameters';
+import { changeCardsDirection } from '../../shared/functions/cahge-cards-direction';
 import { setSliderQuery } from '../../shared/functions/setSliderQuery';
 
 export class StoreSlider {
     static direction = 0;
+    static sortOrder = 0;
     static currentPageNumber = 1;
     static sortedItemsArray = [...GamesCollection];
-    static sortOrder = 0;
 
     static sliderRender() {
         const arrowLeft = document.querySelector('.arrow-left');
         const arrowRight = document.querySelector('.arrow-right');
         const goodsSort = document.querySelector('.goods-sort');
 
-        StoreSlider.renewSlider();
         StoreSlider.sortItems();
+        changeCardsDirection(StoreSlider.direction);
 
         arrowLeft?.addEventListener('click', () => {
             if (StoreSlider.currentPageNumber > 1) {
@@ -77,8 +78,13 @@ export class StoreSlider {
     }
 
     static renewSlider() {
+        const goodsView = document.querySelector('.goods-view');
         const cardsElement = document.querySelector('.cards');
         const cardsWrapper = document.querySelector('.cards-wrapper');
+
+        if (goodsView instanceof HTMLSelectElement) {
+            goodsView.value = `${StoreSlider.direction}`;
+        }
 
         if (cardsElement instanceof HTMLDivElement) {
             if (StoreSlider.direction === 0) {

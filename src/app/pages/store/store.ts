@@ -4,7 +4,6 @@ import { cardList, productQuantity } from './store.components';
 import { copyButton, resetButton } from './button.components';
 import { priceSlider, playersSlider, categoryBox, producerBox } from './filter.components';
 import { StoreSlider } from './slider.control';
-import { sortParameters } from '../../shared/enums/sortParameters';
 
 class StorePage extends PageComponent {
     constructor(config: PageConfig) {
@@ -30,7 +29,9 @@ class StorePage extends PageComponent {
                         producerBox.changeValues(values);
                     } else if (filter.split('=')[0].includes('sort')) {
                         StoreSlider.sortOrder = +filter.split('=')[1];
-                    }
+                    } else if (filter.split('=')[0].includes('view')) {
+                      StoreSlider.direction = +filter.split('=')[1];
+                  }
                 }
             }
         }
