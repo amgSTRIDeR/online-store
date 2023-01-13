@@ -1,6 +1,6 @@
 {
-    "name": "news-api",
-    "description": "RS School task - migration to typescript",
+    "name": "online-store",
+    "description": "RS School team task - online store",
     "author": "Aleksei Ovchinnikov <amgstrider@gmail.com>",
     "main": "src/index.js",
     "type": "module",
