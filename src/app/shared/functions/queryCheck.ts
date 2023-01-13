@@ -9,5 +9,3 @@ export function queryCheck(query: string, param: string) {
     }
     return paramNumber;
 }
-
-module.exports = queryCheck;

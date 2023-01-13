@@ -201,7 +201,6 @@ export class CartStorage {
     }
 
     showPromo(promocode: string) {
-        console.log(promocode);
         const proposalPromo = document.querySelector('.proposal__promocode');
         const proposalButton = document.querySelector('.proposal__button');
 
