@@ -1,6 +1,6 @@
 import { ButtonComponent } from '../../core/components/button.component';
 import { priceSlider, playersSlider, categoryBox, producerBox } from './filter.components';
-import { StoreSlider } from './slider.control';
+import { StoreCards } from './store.cards-block';
 
 export const copyButton = new ButtonComponent({
     className: '.copy__button',
@@ -24,7 +24,7 @@ export const resetButton = new ButtonComponent({
         playersSlider.changeValues('1', '99');
         categoryBox.changeValues([]);
         producerBox.changeValues([]);
-        StoreSlider.sortItems(0);
+        StoreCards.sortItems(0);
         window.location.href = window.location.protocol + '//' + window.location.host + '/#store';
     },
 });

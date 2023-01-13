@@ -1,37 +1,37 @@
 import { GamesCollection } from '../../../public/gamesCollection';
 import { sortParameters } from '../../shared/enums/sortParameters';
 
-export class StoreSlider {
+export class StoreCards {
     static direction = 'horizontal';
     static currentPageNumber = 1;
     static sortedItemsArray = [...GamesCollection];
 
-    static sliderRender() {
+    static cardsRender() {
         const arrowLeft = document.querySelector('.arrow-left');
         const arrowRight = document.querySelector('.arrow-right');
         const goodsSort = document.querySelector('.goods-sort');
 
-        StoreSlider.renewSlider();
-        StoreSlider.scrollsRender();
+        StoreCards.renewSlider();
+        StoreCards.scrollsRender();
 
         arrowLeft?.addEventListener('click', () => {
-            if (StoreSlider.currentPageNumber > 1) {
-                StoreSlider.currentPageNumber -= 1;
-                StoreSlider.renewSlider();
+            if (StoreCards.currentPageNumber > 1) {
+                StoreCards.currentPageNumber -= 1;
+                StoreCards.renewSlider();
             }
         });
 
         arrowRight?.addEventListener('click', () => {
-            if (StoreSlider.currentPageNumber < StoreSlider.pageCounter()) {
-                StoreSlider.currentPageNumber += 1;
-                StoreSlider.renewSlider();
+            if (StoreCards.currentPageNumber < StoreCards.pageCounter()) {
+                StoreCards.currentPageNumber += 1;
+                StoreCards.renewSlider();
             }
         });
 
         if (goodsSort instanceof HTMLSelectElement) {
             goodsSort.addEventListener('change', () => {
-                StoreSlider.sortItems(+goodsSort.value);
-                StoreSlider.setQuery(+goodsSort.value);
+                StoreCards.sortItems(+goodsSort.value);
+                StoreCards.setQuery(+goodsSort.value);
             });
         }
     }
@@ -55,18 +55,18 @@ export class StoreSlider {
         if (scrollWrapper instanceof HTMLUListElement) {
             scrollWrapper.innerHTML = '';
 
-            for (let i = 0; i < StoreSlider.pageCounter(); i += 1) {
+            for (let i = 0; i < StoreCards.pageCounter(); i += 1) {
                 const scrollItem = document.createElement('li');
                 scrollItem.classList.add('scroll__item');
 
-                if (i === StoreSlider.currentPageNumber - 1) {
+                if (i === StoreCards.currentPageNumber - 1) {
                     scrollItem.classList.add('scroll__item_active');
                 }
 
                 const copyCard = scrollItem.cloneNode(true);
                 copyCard.addEventListener('click', () => {
-                    StoreSlider.currentPageNumber = i + 1;
-                    StoreSlider.renewSlider();
+                    StoreCards.currentPageNumber = i + 1;
+                    StoreCards.renewSlider();
                 });
                 scrollWrapper.appendChild(copyCard);
             }
@@ -78,20 +78,20 @@ export class StoreSlider {
         const cardsWrapper = document.querySelector('.cards-wrapper');
 
         if (cardsElement instanceof HTMLDivElement) {
-            if (StoreSlider.direction === 'horizontal') {
+            if (StoreCards.direction === 'horizontal') {
                 cardsElement.style.transform = `translateY(0vw)`;
                 cardsElement.style.transform = `translateX(${
-                    (StoreSlider.currentPageNumber - 1) * -72
+                    (StoreCards.currentPageNumber - 1) * -72
                 }vw)`;
             } else {
                 cardsElement.style.transform = `translateX(0vw)`;
                 cardsElement.style.transform = `translateY(${
-                    (StoreSlider.currentPageNumber - 1) * -30
+                    (StoreCards.currentPageNumber - 1) * -30
                 }vw)`;
             }
-            StoreSlider.scrollsRender();
+            StoreCards.scrollsRender();
             if (cardsWrapper) {
-                if (StoreSlider.pageCounter() === 0) {
+                if (StoreCards.pageCounter() === 0) {
                     cardsWrapper.classList.remove('cards-wrapper_empty');
                     cardsWrapper.classList.add('cards-wrapper_empty');
                 } else {
@@ -143,33 +143,33 @@ export class StoreSlider {
         const cardsArray = Array.from(document.querySelectorAll('.card'));
 
         if (sortValue === sortParameters.Default) {
-            StoreSlider.sortedItemsArray.sort((a, b) => a.id - b.id);
+            StoreCards.sortedItemsArray.sort((a, b) => a.id - b.id);
         }
 
         if (sortValue === sortParameters.RatingDecrease) {
-            StoreSlider.sortedItemsArray.sort((a, b) => b.rating - a.rating);
+            StoreCards.sortedItemsArray.sort((a, b) => b.rating - a.rating);
         }
 
         if (sortValue === sortParameters.RatingIncrease) {
-            StoreSlider.sortedItemsArray.sort((a, b) => a.rating - b.rating);
+            StoreCards.sortedItemsArray.sort((a, b) => a.rating - b.rating);
         }
 
         if (sortValue === sortParameters.PriceDecrease) {
-            StoreSlider.sortedItemsArray.sort((a, b) => b.price - a.price);
+            StoreCards.sortedItemsArray.sort((a, b) => b.price - a.price);
         }
 
         if (sortValue === sortParameters.PriceIncrease) {
-            StoreSlider.sortedItemsArray.sort((a, b) => a.price - b.price);
+            StoreCards.sortedItemsArray.sort((a, b) => a.price - b.price);
         }
 
         if (sortValue === sortParameters.NameDecrease) {
-            StoreSlider.sortedItemsArray.sort(function (a, b) {
+            StoreCards.sortedItemsArray.sort(function (a, b) {
                 return b.title_ru.localeCompare(a.title_ru, 'cyrillic');
             });
         }
 
         if (sortValue === sortParameters.NameIncrease) {
-            StoreSlider.sortedItemsArray.sort(function (a, b) {
+            StoreCards.sortedItemsArray.sort(function (a, b) {
                 return a.title_ru.localeCompare(b.title_ru, 'cyrillic');
             });
         }
@@ -177,7 +177,7 @@ export class StoreSlider {
         if (cardsArray) {
             cardsArray.forEach((e) => {
                 if (e instanceof HTMLDivElement) {
-                    e.style.order = `${StoreSlider.sortedItemsArray.findIndex(
+                    e.style.order = `${StoreCards.sortedItemsArray.findIndex(
                         (obj) => obj.id === +e.id
                     )}`;
                 }
