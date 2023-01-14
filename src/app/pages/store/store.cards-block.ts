@@ -1,18 +1,25 @@
 import { GamesCollection } from '../../../public/gamesCollection';
 import { sortParameters } from '../../shared/enums/sortParameters';
+import { changeCardsDirection } from '../../shared/functions/change-cards-direction';
+import { isContainsSubstring } from '../../shared/functions/isContainsSubstring';
+import { setSliderQuery } from '../../shared/functions/setSliderQuery';
 
 export class StoreCards {
-    static direction = 'horizontal';
+    static direction = 0;
+    static sortOrder = 0;
     static currentPageNumber = 1;
     static sortedItemsArray = [...GamesCollection];
+    static searchInputValue = '';
 
     static cardsRender() {
         const arrowLeft = document.querySelector('.arrow-left');
         const arrowRight = document.querySelector('.arrow-right');
         const goodsSort = document.querySelector('.goods-sort');
+        const searchInput = document.querySelector('.goods-search__input');
 
-        StoreCards.renewSlider();
-        StoreCards.scrollsRender();
+        StoreCards.sortItems();
+        StoreCards.searchItems();
+        changeCardsDirection(StoreCards.direction);
 
         arrowLeft?.addEventListener('click', () => {
             if (StoreCards.currentPageNumber > 1) {
@@ -30,8 +37,17 @@ export class StoreCards {
 
         if (goodsSort instanceof HTMLSelectElement) {
             goodsSort.addEventListener('change', () => {
-                StoreCards.sortItems(+goodsSort.value);
-                StoreCards.setQuery(+goodsSort.value);
+                StoreCards.sortOrder = +goodsSort.value;
+                StoreCards.sortItems();
+                StoreCards.setQuery();
+            });
+        }
+
+        if (searchInput instanceof HTMLInputElement) {
+            searchInput.addEventListener('input', () => {
+                StoreCards.searchInputValue = searchInput.value;
+                StoreCards.setQuery();
+                StoreCards.searchItems();
             });
         }
     }
@@ -74,11 +90,16 @@ export class StoreCards {
     }
 
     static renewSlider() {
+        const goodsView = document.querySelector('.goods-view');
         const cardsElement = document.querySelector('.cards');
         const cardsWrapper = document.querySelector('.cards-wrapper');
 
+        if (goodsView instanceof HTMLSelectElement) {
+            goodsView.value = `${StoreCards.direction}`;
+        }
+
         if (cardsElement instanceof HTMLDivElement) {
-            if (StoreCards.direction === 'horizontal') {
+            if (StoreCards.direction === 0) {
                 cardsElement.style.transform = `translateY(0vw)`;
                 cardsElement.style.transform = `translateX(${
                     (StoreCards.currentPageNumber - 1) * -72
@@ -101,74 +122,84 @@ export class StoreCards {
         }
     }
     //вот
-    static setQuery(sortValue: number) {
+    static setQuery() {
         let finalLink: string = window.location.href;
-        if (finalLink.includes('sort')) {
-            const fromSort = finalLink.slice(finalLink.indexOf('sort')).indexOf('&');
-            if (fromSort === -1) {
-                finalLink = finalLink.slice(0, finalLink.indexOf('sort') - 1);
+
+        finalLink = setSliderQuery(finalLink, 'sort');
+        finalLink = setSliderQuery(finalLink, 'view');
+        finalLink = setSliderQuery(finalLink, 'search');
+
+        if (StoreCards.sortOrder !== 0) {
+            if (finalLink.includes('?')) {
+                finalLink += '&';
             } else {
-                finalLink =
-                    finalLink.slice(0, finalLink.indexOf('sort')) +
-                    finalLink.slice(finalLink.indexOf('sort') + fromSort + 1);
-                console.log(finalLink);
+                finalLink += '?';
             }
-        }
-        if (finalLink.includes('?')) {
-            finalLink += '&';
-        } else {
-            finalLink += '?';
-        }
-        if (sortValue !== 0) {
             finalLink += 'sort=';
+
+            finalLink += StoreCards.sortOrder;
         }
 
-        if (sortValue === 1) {
-            finalLink += 'rating-up';
-        } else if (sortValue === 2) {
-            finalLink += 'rating-down';
-        } else if (sortValue === 3) {
-            finalLink += 'price-up';
-        } else if (sortValue === 4) {
-            finalLink += 'price-down';
-        } else if (sortValue === 5) {
-            finalLink += 'name-up';
-        } else if (sortValue === 6) {
-            finalLink += 'name-down';
+        if (StoreCards.direction !== 0) {
+            if (finalLink.includes('?')) {
+                finalLink += '&';
+            } else {
+                finalLink += '?';
+            }
+            finalLink += 'view=';
+
+            finalLink += StoreCards.direction;
         }
+
+        if (StoreCards.searchInputValue) {
+            if (finalLink.includes('?')) {
+                finalLink += '&';
+            } else {
+                finalLink += '?';
+            }
+            finalLink += 'search=';
+
+            finalLink += StoreCards.searchInputValue;
+        }
+
         window.location.href = finalLink;
     }
 
-    static sortItems(sortValue: number) {
+    static sortItems() {
         const cardsArray = Array.from(document.querySelectorAll('.card'));
+        const goodsSort = document.querySelector('.goods-sort');
 
-        if (sortValue === sortParameters.Default) {
+        if (goodsSort instanceof HTMLSelectElement) {
+            goodsSort.value = `${StoreCards.sortOrder}`;
+        }
+
+        if (StoreCards.sortOrder === sortParameters.Default) {
             StoreCards.sortedItemsArray.sort((a, b) => a.id - b.id);
         }
 
-        if (sortValue === sortParameters.RatingDecrease) {
+        if (StoreCards.sortOrder === sortParameters.RatingDecrease) {
             StoreCards.sortedItemsArray.sort((a, b) => b.rating - a.rating);
         }
 
-        if (sortValue === sortParameters.RatingIncrease) {
+        if (StoreCards.sortOrder === sortParameters.RatingIncrease) {
             StoreCards.sortedItemsArray.sort((a, b) => a.rating - b.rating);
         }
 
-        if (sortValue === sortParameters.PriceDecrease) {
+        if (StoreCards.sortOrder === sortParameters.PriceDecrease) {
             StoreCards.sortedItemsArray.sort((a, b) => b.price - a.price);
         }
 
-        if (sortValue === sortParameters.PriceIncrease) {
+        if (StoreCards.sortOrder === sortParameters.PriceIncrease) {
             StoreCards.sortedItemsArray.sort((a, b) => a.price - b.price);
         }
 
-        if (sortValue === sortParameters.NameDecrease) {
+        if (StoreCards.sortOrder === sortParameters.NameDecrease) {
             StoreCards.sortedItemsArray.sort(function (a, b) {
                 return b.title_ru.localeCompare(a.title_ru, 'cyrillic');
             });
         }
 
-        if (sortValue === sortParameters.NameIncrease) {
+        if (StoreCards.sortOrder === sortParameters.NameIncrease) {
             StoreCards.sortedItemsArray.sort(function (a, b) {
                 return a.title_ru.localeCompare(b.title_ru, 'cyrillic');
             });
@@ -182,6 +213,44 @@ export class StoreCards {
                     )}`;
                 }
             });
+        }
+    }
+
+    static searchItems() {
+        const searchInput = document.querySelector('.goods-search__input');
+        if (searchInput instanceof HTMLInputElement) {
+            searchInput.value = `${StoreCards.searchInputValue}`;
+        }
+
+        const cardsArray = Array.from(document.querySelectorAll('.card'));
+
+        for (let i = 0; i < GamesCollection.length; i += 1) {
+            const el = cardsArray[i];
+            if (el instanceof HTMLDivElement) {
+                if (isContainsSubstring(i)) {
+                    el.style.display = 'grid';
+                } else {
+                    el.style.display = 'none';
+                }
+            }
+        }
+        StoreCards.renewSlider();
+        StoreCards.renewCounter();
+    }
+
+    static renewCounter() {
+        const searchCount = document.querySelector('.goods-search__count');
+        const cardsArray = Array.from(document.querySelectorAll('.card'));
+        let count = 0;
+
+        if (searchCount instanceof HTMLElement) {
+            for (let i = 0; i < cardsArray.length; i++) {
+                const computedStyle = window.getComputedStyle(cardsArray[i]);
+                if (computedStyle.display === 'grid') {
+                    count += 1;
+                }
+            }
+            searchCount.textContent = `${count}`;
         }
     }
 }

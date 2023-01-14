@@ -334,8 +334,8 @@ function makeCardList(gameList: GameObject[] | null) {
                 price: gameList[i].price,
             });
             cardList.push(card);
+          }
         }
-    }
     return cardList;
 }
 
