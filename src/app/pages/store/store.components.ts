@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { PageComponent } from '../../core/components/page.component';
 import { ProductPage } from '../product/product';
 import { GamesCollection } from '../../../public/gamesCollection.js';
@@ -14,6 +11,7 @@ import {
 import { CartStorage } from '../../shared/singletons/cart-singleton';
 import { Filter } from './store.filters';
 import { priceSlider, playersSlider, categoryBox, producerBox } from './filter.components';
+import { isStringArray } from '../../shared/functions/is-string-array';
 
 export class CardComponent extends PageComponent {
     containerSelector: string;
@@ -183,7 +181,10 @@ export function makeNewCollection() {
         listOfGames = new Filter({
             beginList: listOfGames,
             option: item[0],
-            params: item[1].getValues(),
+            // Я не смог победить, даже с проверками eslint все равно ругается, у нас webpack не совсем правильно настроен, он такие ошибки просто подчеркивал (у меня по крайней мере), а обнаружил я то что здесь что-то не так только когда npm run build сделали первый раз. То есть если бы это было в процессе написания этого компонента, то проще было бы устранить.
+
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
+            params: isStringArray(item[1].getValues()) ? item[1].getValues() : [],
         }).filter();
     }
     if (listOfGames) {
