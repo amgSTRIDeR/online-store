@@ -182,8 +182,9 @@ export function makeNewCollection() {
             beginList: listOfGames,
             option: item[0],
             // Я не смог победить, даже с проверками eslint все равно ругается, у нас webpack не совсем правильно настроен, он такие ошибки просто подчеркивал (у меня по крайней мере), а обнаружил я то что здесь что-то не так только когда npm run build сделали первый раз. То есть если бы это было в процессе написания этого компонента, то проще было бы устранить.
+
             // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
-            params: (typeof item[1] === 'object' &&  Array.isArray(item[1].getValues()) && item[1].getValues().every((val: unknown) => typeof val === 'string')) ? item[1].getValues() : [],
+            params: isStringArray(item[1].getValues()) ? item[1].getValues() : [],
         }).filter();
     }
     if (listOfGames) {
