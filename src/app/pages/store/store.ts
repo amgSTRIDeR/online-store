@@ -3,7 +3,7 @@ import { PageModule } from '../../core/modules/page.model';
 import { cardList, productQuantity } from './store.components';
 import { copyButton, resetButton } from './button.components';
 import { priceSlider, playersSlider, categoryBox, producerBox } from './filter.components';
-import { StoreSlider } from './slider.control';
+import { StoreCards } from './store.cards-block';
 
 class StorePage extends PageComponent {
     constructor(config: PageConfig) {
@@ -28,11 +28,11 @@ class StorePage extends PageComponent {
                         const values: string[] = filter.split('=')[1].split('↕');
                         producerBox.changeValues(values);
                     } else if (filter.split('=')[0].includes('sort')) {
-                        StoreSlider.sortOrder = +filter.split('=')[1];
+                        StoreCards.sortOrder = +filter.split('=')[1];
                     } else if (filter.split('=')[0].includes('view')) {
-                      StoreSlider.direction = +filter.split('=')[1];
+                      StoreCards.direction = +filter.split('=')[1];
                   } else if (filter.split('=')[0].includes('search')) {
-                      StoreSlider.searchInputValue = filter.split('=')[1];
+                    StoreCards.searchInputValue = filter.split('=')[1];
                   }
                 }
             }

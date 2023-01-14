@@ -1,7 +1,7 @@
 import { ButtonComponent } from '../../core/components/button.component';
-import { changeCardsDirection } from '../../shared/functions/cahge-cards-direction';
+import { changeCardsDirection } from '../../shared/functions/change-cards-direction';
 import { priceSlider, playersSlider, categoryBox, producerBox } from './filter.components';
-import { StoreSlider } from './slider.control';
+import { StoreCards } from './store.cards-block';
 
 export const copyButton = new ButtonComponent({
     className: '.copy__button',
@@ -25,10 +25,10 @@ export const resetButton = new ButtonComponent({
         playersSlider.changeValues('1', '99');
         categoryBox.changeValues([]);
         producerBox.changeValues([]);
-        StoreSlider.sortOrder = 0;
-        StoreSlider.direction = 0;
+        StoreCards.sortOrder = 0;
+        StoreCards.direction = 0;
         changeCardsDirection(0);
-        StoreSlider.sortItems();
+        StoreCards.sortItems();
         window.location.href = window.location.protocol + '//' + window.location.host + '/#store';
     },
 });

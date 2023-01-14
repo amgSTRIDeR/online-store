@@ -1,11 +1,11 @@
-import { changeCardsDirection } from "./cahge-cards-direction";
+import { changeCardsDirection } from './change-cards-direction';
 
 export function addStorePageListener() {
-  const goodsView = document.querySelector('.goods-view');
+    const goodsView = document.querySelector('.goods-view');
 
-  if (goodsView instanceof HTMLSelectElement) {
-    goodsView.addEventListener('change', () => {
-      changeCardsDirection(+goodsView.value);
-    })
-  }
+    if (goodsView instanceof HTMLSelectElement) {
+        goodsView.addEventListener('change', () => {
+            changeCardsDirection(+goodsView.value);
+        });
+    }
 }

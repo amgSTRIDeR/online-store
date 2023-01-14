@@ -1,6 +1,6 @@
 import { FilterConfig, GameObject } from '../../shared/interfaces/interfaces';
 import { QueryStorage } from '../../shared/singletons/query-singleton';
-import { StoreSlider } from './slider.control';
+import { StoreCards } from './store.cards-block';
 
 export class Filter {
     beginList: GameObject[] | null;
@@ -67,7 +67,7 @@ export class Filter {
             }
         }
         // обновление слайдера при смене фильтров
-        StoreSlider.renewSlider();
+        StoreCards.renewSlider();
     }
 
     filter(): GameObject[] | null {

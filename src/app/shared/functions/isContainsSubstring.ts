@@ -1,8 +1,8 @@
 import { GamesCollection } from '../../../public/gamesCollection';
-import { StoreSlider } from '../../pages/store/slider.control';
+import { StoreCards } from '../../pages/store/store.cards-block';
 
 export function isContainsSubstring(index: number) {
-    if (StoreSlider.searchInputValue === '') {
+    if (StoreCards.searchInputValue === '') {
         return true;
     }
     
@@ -22,7 +22,7 @@ export function isContainsSubstring(index: number) {
     arrayOfValues.push(`${GamesCollection[index].category_ru.join(' ')}`);
 
     arrayOfValues.forEach((e) => {
-        if (e.toLowerCase().includes(StoreSlider.searchInputValue.toLowerCase())) {
+        if (e.toLowerCase().includes(StoreCards.searchInputValue.toLowerCase())) {
             check = true;
         }
     });

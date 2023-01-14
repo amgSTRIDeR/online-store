@@ -1,4 +1,5 @@
-import { StoreSlider } from '../../pages/store/slider.control';
+
+import { StoreCards } from '../../pages/store/store.cards-block';
 
 export function changeCardsDirection(directionOrder: number) {
     const store = document.querySelector('.store');
@@ -9,20 +10,20 @@ export function changeCardsDirection(directionOrder: number) {
             store.classList.remove('store_horizontal');
             store.classList.remove('store_vertical');
             store.classList.add('store_horizontal');
-            StoreSlider.direction = 0;
-            StoreSlider.renewSlider();
-            StoreSlider.setQuery();
+            StoreCards.direction = 0;
+            StoreCards.renewSlider();
+            StoreCards.setQuery();
         } else {
             store.classList.remove('store_horizontal');
             store.classList.remove('store_vertical');
             store.classList.add('store_vertical');
-            StoreSlider.direction = 1;
-            StoreSlider.renewSlider();
-            StoreSlider.setQuery();
+            StoreCards.direction = 1;
+            StoreCards.renewSlider();
+            StoreCards.setQuery();
         }
 
         if (goodsView instanceof HTMLSelectElement) {
-            goodsView.value = `${StoreSlider.direction}`;
+            goodsView.value = `${StoreCards.direction}`;
         }
     }
 }
