@@ -1,14 +1,27 @@
-export function setSliderQuery(finalLink: string, param: string) {
-  if (finalLink.includes(param)) {
-    const fromSort = finalLink.slice(finalLink.indexOf(param)).indexOf('&');
-    if (fromSort === -1) {
-        finalLink = finalLink.slice(0, finalLink.indexOf(param) - 1);
-    } else {
-        finalLink =
-            finalLink.slice(0, finalLink.indexOf(param)) +
-            finalLink.slice(finalLink.indexOf(param) + fromSort + 1);
+export function setSliderQuery(finalLink: string, text: string, param: number | string) {
+    if (finalLink.includes(text)) {
+        const fromSort = finalLink.slice(finalLink.indexOf(text)).indexOf('&');
+        if (fromSort === -1) {
+            finalLink = finalLink.slice(0, finalLink.indexOf(text) - 1);
+        } else {
+            finalLink =
+                finalLink.slice(0, finalLink.indexOf(text)) +
+                finalLink.slice(finalLink.indexOf(text) + fromSort + 1);
+        }
     }
-}
 
-return finalLink;
+    if (!param) {
+        return finalLink;
+    }
+
+    if (finalLink.includes('?')) {
+        finalLink += '&';
+    } else {
+        finalLink += '?';
+    }
+    finalLink += `${text}=`;
+
+    finalLink += param;
+
+    return finalLink;
 }
