@@ -1,4 +1,4 @@
-import { CreditCardsSvg } from '../../shared/enums/creditCardsSvg';
+import { CreditCardsSvg } from './creditCardsSvg';
 import { CartStorage } from '../../shared/singletons/cart-singleton';
 
 export class ModalWindow {
