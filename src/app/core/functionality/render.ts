@@ -10,46 +10,52 @@ import { addStorePageListener } from '../../shared/functions/storePageListener';
 import { StoreCards } from '../../pages/store/store.cards-block';
 
 export class Render {
-    changeURL(url: string): void {
-        const finalLink = window.location.protocol + '//' + window.location.host + '/#' + url;
-        window.location.href = finalLink;
-        if (url === 'store') {
-          StoreCards.setQuery()
-        }
+  static changeURL(url: string): void {
+    const finalLink = window.location.protocol + '//' + window.location.host + '/#' + url;
+    window.location.href = finalLink;
+    if (url === 'store') {
+      StoreCards.setQuery()
     }
+  }
 
-    renderNewPage(pageID: string): void {
-        let page;
-        if (pageID === 'start' || pageID === '') {
-            page = startPage;
-        } else if (pageID === 'store' || pageID.startsWith('store?')) {
-            page = storePage;
-        } else if (pageID === 'basket' || pageID.startsWith('basket?')) {
-            CartPage.pageRender(pageID.replace('basket', '').replace('?', ''));
-        } else if (
-            pageID.split('/')[0] === 'product-details' &&
-            Number.isInteger(+pageID.split('/')[1]) &&
-            +pageID.split('/')[1] <= GamesCollection.length &&
-            +pageID.split('/')[1] > 0
-        ) {
-            ProductPage.pageRender(+pageID.split('/')[1]);
+  static renderNewPage(pageID: string): void {
+    let page;
+
+    switch (pageID) {
+      case ('start'):
+      case (''):
+        page = startPage;
+        break;
+
+      case ('store'):
+        page = storePage;
+        break;
+
+      case ('basket'):
+        CartPage.pageRender(pageID.replace('basket', '').replace('?', ''));
+        break;
+
+      default:
+        if (pageID.match(/^product-details\/([1-9]|[1-9]\d|100|101)$/i)) {
+          ProductPage.pageRender(+pageID.split('/')[1]);
         } else {
-            page = errorPage;
-            pageID = `error`;
+          page = errorPage;
+          pageID = `error`;
         }
-
-        if (page) {
-            page.render();
-            page.loadComponents();
-
-            const cart = CartStorage.getInstance();
-            cart.renewCartWidget();
-            cart.renewSumWidget();
-            addErrorPageListener();
-            addStorePageListener();
-            StoreCards.cardsRender();
-        }
-
-        this.changeURL(pageID);
     }
+
+    if (page) {
+      page.render();
+      page.loadComponents();
+
+      const cart = CartStorage.getInstance();
+      cart.renewCartWidget();
+      cart.renewSumWidget();
+      addErrorPageListener();
+      addStorePageListener();
+      StoreCards.cardsRender();
+    }
+
+    Render.changeURL(pageID);
+  }
 }
