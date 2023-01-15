@@ -8,7 +8,6 @@
     "scripts": {
         "start": "webpack-dev-server --mode development --open",
         "build": "eslint . --max-warnings 0 --report-unused-disable-directives && webpack --mode production",
-        "tsc": "tsc",
         "format": "prettier --write .",
         "lint": "eslint . --max-warnings 0 --report-unused-disable-directives",
         "lint:fix": "npm run lint -- --fix",
@@ -41,8 +40,5 @@
         "webpack": "^5.75.0",
         "webpack-cli": "^5.0.1",
         "webpack-dev-server": "^4.11.1"
-    },
-    "compilerOptions": {
-        "module": "esnext"
     }
 }
