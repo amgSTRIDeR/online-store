@@ -49,9 +49,7 @@ const conf = {
 };
 
 module.exports = (env, options) => {
-    const production = options.mode === 'production';
-
-    conf.devtool = production ? 'source-map' : 'eval-source-map';
+    conf.devtool = (options.mode === 'production') ? 'hidden-source-map' : 'source-map';
 
     return conf;
 };
