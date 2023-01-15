@@ -1,7 +1,6 @@
 import { Render } from './render';
 
 export class Route {
-
     getHash() {
         const hash = window.location.hash.slice(1);
         return hash;
@@ -10,8 +9,7 @@ export class Route {
         window.addEventListener('hashchange', (e) => {
             if (e.oldURL.split('?')[0] !== e.newURL.split('?')[0]) {
                 const hash = this.getHash();
-                const renderPage = new Render();
-                renderPage.renderNewPage(hash);
+                Render.renderNewPage(hash);
             }
         });
         window.addEventListener('beforeunload', () => {
@@ -19,11 +17,11 @@ export class Route {
             localStorage.setItem('hash', hash);
         });
         window.addEventListener('load', () => {
-            if (localStorage.getItem('hash')) {
-                const hash: string | null = localStorage.getItem('hash');
-                const renderPage = new Render();
+            const storageHash = localStorage.getItem('hash');
+            if (storageHash) {
+                const hash: string | null = storageHash;
                 if (hash) {
-                    renderPage.renderNewPage(hash);
+                  Render.renderNewPage(hash);
                 }
             }
         });

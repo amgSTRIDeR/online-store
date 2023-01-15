@@ -3,8 +3,7 @@ import { Render } from './core/functionality/render';
 
 class App {
     constructor() {
-        const renderBeginPage = new Render();
-        renderBeginPage.renderNewPage('start');
+        Render.renderNewPage('start');
     }
 
     run() {

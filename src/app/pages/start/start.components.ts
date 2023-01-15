@@ -11,7 +11,6 @@ export const startButton = new StartButton({
     className: '.start__button',
     text: 'К покупкам',
     function: (): void => {
-        const renderStorePage = new Render();
-        renderStorePage.renderNewPage('store');
+        Render.renderNewPage('store');
     },
 });
