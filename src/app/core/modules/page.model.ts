@@ -11,7 +11,6 @@ export interface ModuleConfig {
         | CardComponent
         | DualSliderComponent
         | CheckBoxComponent
-        | null
     >;
 }
 
@@ -22,7 +21,6 @@ export class PageModule {
         | CardComponent
         | DualSliderComponent
         | CheckBoxComponent
-        | null
     >;
     constructor(config: ModuleConfig) {
         this.components = config.components;
@@ -40,7 +38,6 @@ export class PageModule {
                     | CardComponent
                     | DualSliderComponent
                     | CheckBoxComponent
-                    | null
             ) => c?.render()
         );
     }

@@ -1,7 +1,7 @@
 import { PageComponent, PageConfig } from '../../core/components/page.component';
 import { PageModule } from '../../core/modules/page.model';
 
-import { startButton } from './start.components';
+import { startButton } from './start.button';
 
 class StartPage extends PageComponent {
     constructor(config: PageConfig) {

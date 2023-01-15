@@ -25,7 +25,7 @@ export class PageComponent {
     }
 
     loadComponents(): void {
-        const pageModule: PageModule = new PageModule({ components: [null] });
+        const pageModule: PageModule = new PageModule({ components: [] });
         pageModule.render();
     }
 }
