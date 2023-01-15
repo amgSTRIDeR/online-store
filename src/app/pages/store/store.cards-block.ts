@@ -1,5 +1,5 @@
 import { GamesCollection } from '../../../public/gamesCollection';
-import { sortParameters } from '../../shared/enums/sortParameters';
+import { sortParameters } from './sortParameters';
 import { changeCardsDirection } from '../../shared/functions/change-cards-direction';
 import { isContainsSubstring } from '../../shared/functions/isContainsSubstring';
 import { setSliderQuery } from '../../shared/functions/setSliderQuery';

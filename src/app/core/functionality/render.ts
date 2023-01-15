@@ -4,7 +4,6 @@ import { errorPage } from '../../pages/error/error';
 import { ProductPage } from '../../pages/product/product';
 import { CartPage } from '../../pages/basket/cart';
 import { CartStorage } from '../../shared/singletons/cart-singleton';
-import { GamesCollection } from '../../../public/gamesCollection';
 import { addErrorPageListener } from '../../shared/functions/errorPageListener';
 import { addStorePageListener } from '../../shared/functions/storePageListener';
 import { StoreCards } from '../../pages/store/store.cards-block';
