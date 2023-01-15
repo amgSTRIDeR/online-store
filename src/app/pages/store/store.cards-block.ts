@@ -121,46 +121,13 @@ export class StoreCards {
             }
         }
     }
-    //вот
+
     static setQuery() {
         let finalLink: string = window.location.href;
 
-        finalLink = setSliderQuery(finalLink, 'sort');
-        finalLink = setSliderQuery(finalLink, 'view');
-        finalLink = setSliderQuery(finalLink, 'search');
-
-        if (StoreCards.sortOrder !== 0) {
-            if (finalLink.includes('?')) {
-                finalLink += '&';
-            } else {
-                finalLink += '?';
-            }
-            finalLink += 'sort=';
-
-            finalLink += StoreCards.sortOrder;
-        }
-
-        if (StoreCards.direction !== 0) {
-            if (finalLink.includes('?')) {
-                finalLink += '&';
-            } else {
-                finalLink += '?';
-            }
-            finalLink += 'view=';
-
-            finalLink += StoreCards.direction;
-        }
-
-        if (StoreCards.searchInputValue) {
-            if (finalLink.includes('?')) {
-                finalLink += '&';
-            } else {
-                finalLink += '?';
-            }
-            finalLink += 'search=';
-
-            finalLink += StoreCards.searchInputValue;
-        }
+        finalLink = setSliderQuery(finalLink, 'sort', StoreCards.sortOrder);
+        finalLink = setSliderQuery(finalLink, 'view', StoreCards.direction);
+        finalLink = setSliderQuery(finalLink, 'search', StoreCards.searchInputValue);
 
         window.location.href = finalLink;
     }
