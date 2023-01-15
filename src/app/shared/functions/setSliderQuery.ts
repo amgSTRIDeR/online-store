@@ -1,27 +1,25 @@
-export function setSliderQuery(finalLink: string, text: string, param: number | string) {
-    if (finalLink.includes(text)) {
-        const fromSort = finalLink.slice(finalLink.indexOf(text)).indexOf('&');
+export function setSliderQuery(str: string, text: string, param: number | string) {
+    if (str.includes(text)) {
+        const fromSort = str.slice(str.indexOf(text)).indexOf('&');
         if (fromSort === -1) {
-            finalLink = finalLink.slice(0, finalLink.indexOf(text) - 1);
+            str = str.slice(0, str.indexOf(text) - 1);
         } else {
-            finalLink =
-                finalLink.slice(0, finalLink.indexOf(text)) +
-                finalLink.slice(finalLink.indexOf(text) + fromSort + 1);
+            str = str.slice(0, str.indexOf(text)) + str.slice(str.indexOf(text) + fromSort + 1);
         }
     }
 
     if (!param) {
-        return finalLink;
+        return str;
     }
 
-    if (finalLink.includes('?')) {
-        finalLink += '&';
+    if (str.includes('?')) {
+        str += '&';
     } else {
-        finalLink += '?';
+        str += '?';
     }
-    finalLink += `${text}=`;
+    str += `${text}=`;
 
-    finalLink += param;
+    str += param;
 
-    return finalLink;
+    return str;
 }
