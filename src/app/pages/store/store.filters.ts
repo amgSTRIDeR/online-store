@@ -1,3 +1,4 @@
+import { setSliderQuery } from '../../shared/functions/setSliderQuery';
 import { FilterConfig, GameObject } from '../../shared/interfaces/interfaces';
 import { QueryStorage } from '../../shared/singletons/query-singleton';
 import { StoreCards } from './store.cards-block';
@@ -29,17 +30,21 @@ export class Filter {
             }
 
             if (finalList.price[0] !== '0' || finalList.price[1] !== '15000') {
-                finalLink += 'price=' + finalList.price.join('↕') + '&';
+              finalLink = setSliderQuery(finalLink, 'price', finalList.price.join('↕'));
             }
+
             if (finalList.gamers[0] !== '1' || finalList.gamers[1] !== '99') {
-                finalLink += 'gamers=' + finalList.gamers.join('↕') + '&';
+              finalLink = setSliderQuery(finalLink, 'gamers', finalList.gamers.join('↕'));
             }
+
             if (finalList.brand.length !== 0) {
-                finalLink += 'brand=' + finalList.brand.join('↕') + '&';
+              finalLink = setSliderQuery(finalLink, 'brand', finalList.brand.join('↕'));
             }
+
             if (finalList.category.length !== 0) {
-                finalLink += 'category=' + finalList.category.join('↕') + '&';
+              finalLink = setSliderQuery(finalLink, 'category', finalList.category.join('↕'));
             }
+
             this.saveParams();
             window.location.href = finalLink.slice(0, finalLink.length - 1);
         }
