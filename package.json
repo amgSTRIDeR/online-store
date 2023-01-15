@@ -29,6 +29,7 @@
         "html-loader": "^4.2.0",
         "html-webpack-plugin": "^5.5.0",
         "jest": "^29.3.1",
+        "jest-environment-jsdom": "^29.3.1",
         "node-sass": "^8.0.0",
         "prettier": "2.8.0",
         "sass-loader": "^13.2.0",
@@ -41,7 +42,7 @@
         "webpack-cli": "^5.0.1",
         "webpack-dev-server": "^4.11.1"
     },
-      "compilerOptions": {
+    "compilerOptions": {
         "module": "esnext"
-      }
+    }
 }
