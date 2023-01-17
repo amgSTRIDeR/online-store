@@ -1,4 +1,4 @@
-import { setSliderQuery } from './setSliderQuery';
+import { setSliderQuery } from './set-slider-query';
 
 describe('Find given param in query and add param if given', () => {
     test('update the query parameter if it already exists', () => {

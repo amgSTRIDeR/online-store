@@ -1,6 +1,6 @@
 import { PageComponent } from '../../core/components/page.component';
 import { ProductPage } from '../product/product';
-import { GamesCollection } from '../../../public/gamesCollection.js';
+import { GamesCollection } from '../../../public/games-collection.js';
 import {
     CardConfig,
     PriceConfig,
@@ -12,7 +12,7 @@ import { CartStorage } from '../../shared/singletons/cart-singleton';
 import { Filter } from './store.filters';
 import { priceSlider, playersSlider, categoryBox, producerBox } from './filter.components';
 import { isStringArray } from '../../shared/functions/is-string-array';
-import { StoreSvg } from './storeButtonSvg';
+import { StoreSvg } from './store-button-svg';
 
 export class CardComponent extends PageComponent {
     containerSelector: string;
@@ -321,8 +321,8 @@ function makeCardList(gameList: GameObject[] | null) {
                 price: gameList[i].price,
             });
             cardList.push(card);
-          }
         }
+    }
     return cardList;
 }
 

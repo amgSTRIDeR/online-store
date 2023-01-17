@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { addErrorPageListener } from './errorPageListener';
+import { addErrorPageListener } from './error-page-listener';
 
 describe('Change hash to #start when click a button', () => {
     let scrollButton: HTMLButtonElement;

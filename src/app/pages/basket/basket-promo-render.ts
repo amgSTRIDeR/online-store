@@ -1,5 +1,5 @@
 import { CartStorage } from '../../shared/singletons/cart-singleton';
-import { CartSvg } from './cartSvg';
+import { CartSvg } from './cart-svg';
 
 export function basketPromoRender() {
     const promocodes = document.querySelector('.promocodes');
