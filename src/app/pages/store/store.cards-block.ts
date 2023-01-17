@@ -194,7 +194,7 @@ export class StoreCards {
         for (let i = 0; i < GamesCollection.length; i += 1) {
             const el = cardsArray[i];
             if (el instanceof HTMLDivElement) {
-                if (isContainsSubstring(i)) {
+                if (isContainsSubstring(GamesCollection[i])) {
                     el.style.display = 'grid';
                 } else {
                     el.style.display = 'none';

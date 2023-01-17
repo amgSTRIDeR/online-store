@@ -1,7 +1,7 @@
-import { GamesCollection } from '../../../public/games-collection';
 import { StoreCards } from '../../pages/store/store.cards-block';
+import { GameObject } from '../interfaces/interfaces';
 
-export function isContainsSubstring(index: number) {
+export function isContainsSubstring(game: GameObject) {
     if (StoreCards.searchInputValue === '') {
         return true;
     }
@@ -9,17 +9,17 @@ export function isContainsSubstring(index: number) {
     const arrayOfValues: string[] = [];
     let check = false;
 
-    arrayOfValues.push(GamesCollection[index].title_ru);
-    arrayOfValues.push(GamesCollection[index].subtittle_ru);
-    arrayOfValues.push(GamesCollection[index].description_ru);
-    arrayOfValues.push(`${GamesCollection[index].price}`);
-    arrayOfValues.push(`${GamesCollection[index].rating}`);
-    arrayOfValues.push(`${GamesCollection[index].stock}`);
-    arrayOfValues.push(`${GamesCollection[index].GameTime.join(' ')}`);
-    arrayOfValues.push(`${GamesCollection[index].age.join(' ')}`);
-    arrayOfValues.push(`${GamesCollection[index].gamers.join(' ')}`);
-    arrayOfValues.push(GamesCollection[index].brand);
-    arrayOfValues.push(`${GamesCollection[index].category_ru.join(' ')}`);
+    arrayOfValues.push(game.title_ru);
+    arrayOfValues.push(game.subtittle_ru);
+    arrayOfValues.push(game.description_ru);
+    arrayOfValues.push(`${game.price}`);
+    arrayOfValues.push(`${game.rating}`);
+    arrayOfValues.push(`${game.stock}`);
+    arrayOfValues.push(`${game.GameTime.join(' ')}`);
+    arrayOfValues.push(`${game.age.join(' ')}`);
+    arrayOfValues.push(`${game.gamers.join(' ')}`);
+    arrayOfValues.push(game.brand);
+    arrayOfValues.push(`${game.category_ru.join(' ')}`);
 
     arrayOfValues.forEach((e) => {
         if (e.toLowerCase().includes(StoreCards.searchInputValue.toLowerCase())) {
