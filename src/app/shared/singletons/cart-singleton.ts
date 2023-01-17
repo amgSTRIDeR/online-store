@@ -1,5 +1,5 @@
 import { ItemInCart } from '../interfaces/interfaces';
-import { GamesCollection } from '../../../public/gamesCollection';
+import { GamesCollection } from '../../../public/games-collection';
 import { Promocodes } from '../interfaces/interfaces';
 import { PromocodesCollection } from '../../../public/promocodes';
 

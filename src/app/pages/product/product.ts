@@ -1,6 +1,6 @@
 import { CartStorage } from '../../shared/singletons/cart-singleton';
-import { GamesCollection } from '../../../public/gamesCollection';
-import { ModalWindow } from '../modal-window/modalWindow';
+import { GamesCollection } from '../../../public/games-collection';
+import { ModalWindow } from '../modal-window/modal-window';
 import { Product } from '../../shared/interfaces/interfaces';
 import { CartPage } from '../basket/cart';
 

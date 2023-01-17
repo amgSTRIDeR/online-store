@@ -1,8 +1,8 @@
-import { GamesCollection } from '../../../public/gamesCollection';
-import { sortParameters } from './sortParameters';
+import { GamesCollection } from '../../../public/games-collection';
+import { sortParameters } from './sort-parameters';
 import { changeCardsDirection } from '../../shared/functions/change-cards-direction';
-import { isContainsSubstring } from '../../shared/functions/isContainsSubstring';
-import { setSliderQuery } from '../../shared/functions/setSliderQuery';
+import { isContainsSubstring } from '../../shared/functions/is-contains-substring';
+import { setSliderQuery } from '../../shared/functions/set-slider-query';
 
 export class StoreCards {
     static direction = 0;

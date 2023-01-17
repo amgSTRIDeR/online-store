@@ -1,11 +1,11 @@
-import { GamesCollection } from '../../../public/gamesCollection';
+import { GamesCollection } from '../../../public/games-collection';
 import { StoreCards } from '../../pages/store/store.cards-block';
 
 export function isContainsSubstring(index: number) {
     if (StoreCards.searchInputValue === '') {
         return true;
     }
-    
+
     const arrayOfValues: string[] = [];
     let check = false;
 

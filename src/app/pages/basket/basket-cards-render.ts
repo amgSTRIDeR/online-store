@@ -1,10 +1,10 @@
-import { GamesCollection } from '../../../public/gamesCollection';
+import { GamesCollection } from '../../../public/games-collection';
 import { createDomElement } from '../../shared/functions/create-dom-element';
 import { Product } from '../../shared/interfaces/interfaces';
 import { CartStorage } from '../../shared/singletons/cart-singleton';
 import { ProductPage } from '../product/product';
 import { CartPage } from './cart';
-import { CartSvg } from './cartSvg';
+import { CartSvg } from './cart-svg';
 
 export function basketCardsRender() {
     const cartSection = document.querySelector('.basket__cards');
@@ -138,7 +138,7 @@ export function basketCardsRender() {
 
                 const cardSmallButtonCopy = copyCard.querySelector('.small_button-item');
                 if (cardSmallButtonCopy instanceof HTMLDivElement) {
-                  cardSmallButtonCopy.addEventListener('click', () => {
+                    cardSmallButtonCopy.addEventListener('click', () => {
                         cart.removeItem(+cardSmallButtonCopy.id.split('=')[1]);
                         CartPage.pageRenew();
                     });
@@ -146,7 +146,7 @@ export function basketCardsRender() {
 
                 const cardImageCopy = copyCard.querySelector('.card-photo');
                 if (cardImageCopy instanceof HTMLImageElement) {
-                  cardImageCopy.addEventListener('click', () => {
+                    cardImageCopy.addEventListener('click', () => {
                         ProductPage.pageRender(+cardImageCopy.id.split('-')[1]);
                     });
                 }

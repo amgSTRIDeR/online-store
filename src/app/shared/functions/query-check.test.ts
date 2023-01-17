@@ -1,4 +1,4 @@
-import { queryCheck } from './queryCheck';
+import { queryCheck } from './query-check';
 
 describe('queryCheck', () => {
     test('returns the correct number for a valid query', () => {
