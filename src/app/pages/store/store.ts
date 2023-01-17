@@ -11,11 +11,10 @@ class StorePage extends PageComponent {
     }
     loadFilters() {
         const url: string | null = localStorage.getItem('hash');
+
         if (url) {
-            if (url) {
-                const listOfFilters = decodeURI(url).slice(6).split('&');
-                applyFilters(listOfFilters);
-            }
+            const listOfFilters = decodeURI(url).slice(6).split('&');
+            applyFilters(listOfFilters);
         }
     }
 
