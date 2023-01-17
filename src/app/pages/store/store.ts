@@ -10,8 +10,8 @@ class StorePage extends PageComponent {
         super(config);
     }
     loadFilters() {
-        if (localStorage.getItem('hash')) {
-            const url: string | null = localStorage.getItem('hash');
+        const url: string | null = localStorage.getItem('hash');
+        if (url) {
             if (url) {
                 const listOfFilters = decodeURI(url).slice(6).split('&');
                 applyFilters(listOfFilters);
