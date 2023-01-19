@@ -1,6 +1,6 @@
 import { PageComponent } from '../../core/components/page.component';
 import { ProductPage } from '../product/product';
-import { GamesCollection } from '../../../public/games-collection.js';
+import { GamesCollection } from '../../../public/games-collection';
 import {
     CardConfig,
     PriceConfig,
