@@ -2,8 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { visitFunctionBody } from 'typescript';
-import { StoreCards } from './store.cards-block';
+import { pageCounter } from './page-counter';
 
 describe('pageCounter', () => {
     const card1 = document.createElement('div');
@@ -70,20 +69,20 @@ describe('pageCounter', () => {
     });
 
     test('return the correct number of pages when the number of products per page is 6', () => {
-        expect(StoreCards.pageCounter()).toEqual(2);
+        expect(pageCounter()).toEqual(2);
     });
 
     test('return the correct number of pages when the number of products per page is not 6', () => {
-        expect(StoreCards.pageCounter(3)).toEqual(3);
-        expect(StoreCards.pageCounter(7)).toEqual(2);
-        expect(StoreCards.pageCounter(12)).toEqual(1);
+        expect(pageCounter(3)).toEqual(3);
+        expect(pageCounter(7)).toEqual(2);
+        expect(pageCounter(12)).toEqual(1);
     });
 
     it('should not include elements that are not HTMLDivElements in the visible product count', () => {
         document.body.appendChild(card11);
         document.body.appendChild(card12);
 
-        expect(StoreCards.pageCounter(3)).toEqual(3);
+        expect(pageCounter(3)).toEqual(3);
 
         document.body.removeChild(card11);
         document.body.removeChild(card12);

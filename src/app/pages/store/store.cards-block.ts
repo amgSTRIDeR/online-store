@@ -3,6 +3,7 @@ import { sortParameters } from './sort-parameters';
 import { changeCardsDirection } from '../../shared/functions/change-cards-direction';
 import { isContainsSubstring } from '../../shared/functions/is-contains-substring';
 import { setSliderQuery } from '../../shared/functions/set-slider-query';
+import { pageCounter } from '../../shared/functions/page-counter';
 
 export class StoreCards {
     static direction = 0;
@@ -29,7 +30,7 @@ export class StoreCards {
         });
 
         arrowRight?.addEventListener('click', () => {
-            if (StoreCards.currentPageNumber < StoreCards.pageCounter()) {
+            if (StoreCards.currentPageNumber < pageCounter()) {
                 StoreCards.currentPageNumber += 1;
                 StoreCards.renewSlider();
             }
@@ -52,26 +53,12 @@ export class StoreCards {
         }
     }
 
-    static pageCounter(numberOfProductsPerPage = 6) {
-        const cardArray = Array.from(document.querySelectorAll('.card'));
-        let visibleProductsCounter = 0;
-
-        cardArray.forEach((e) => {
-            if (e instanceof HTMLDivElement) {
-                if (e.style.display === 'grid') {
-                    visibleProductsCounter += 1;
-                }
-            }
-        });
-        return Math.ceil(visibleProductsCounter / numberOfProductsPerPage);
-    }
-
     static scrollsRender() {
         const scrollWrapper = document.querySelector('.scroll');
         if (scrollWrapper instanceof HTMLUListElement) {
             scrollWrapper.innerHTML = '';
 
-            for (let i = 0; i < StoreCards.pageCounter(); i += 1) {
+            for (let i = 0; i < pageCounter(); i += 1) {
                 const scrollItem = document.createElement('li');
                 scrollItem.classList.add('scroll__item');
 
@@ -112,7 +99,7 @@ export class StoreCards {
             }
             StoreCards.scrollsRender();
             if (cardsWrapper) {
-                if (StoreCards.pageCounter() === 0) {
+                if (pageCounter() === 0) {
                     cardsWrapper.classList.remove('cards-wrapper_empty');
                     cardsWrapper.classList.add('cards-wrapper_empty');
                 } else {
