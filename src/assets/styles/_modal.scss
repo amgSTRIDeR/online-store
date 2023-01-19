@@ -1,0 +1,221 @@
+.body_modal {
+    &::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 1000000vw;
+        height: 1000000vw;
+        z-index: 5;
+        background-color: $BACKGROUND;
+        opacity: 0.9;
+    }
+
+    & .modal__content {
+        display: flex;
+    }
+}
+
+.modal__content {
+    position: fixed;
+    top: calc(1.29vw + 5.87px);
+    z-index: 6;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw;
+
+    font-family: 'Aire Exterior', sans-serif;
+    font-size: calc(0.645vw + 27.94px);
+
+    border: 1px solid $MAIN_COLOR;
+    border-radius: 0.5vw;
+
+    @media (max-width: 500px) {
+        width: 80vw;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: calc(1.29vw + 15.87px);
+        font-weight: 400;
+        margin: 0 0 0.5vw 0;
+        user-select: none;
+    }
+
+    h3 {
+        margin: 1vw 0;
+
+        font-size: calc(1.097vw + 11.49px);
+        font-weight: 400;
+    }
+}
+
+.modal__content__close {
+    position: absolute;
+    left: 0;
+    top: 5px;
+
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+
+    fill: $MAIN_TEXT;
+
+    transition: all 0.3s;
+
+    &:hover {
+        fill: $MAIN_COLOR;
+        cursor: pointer;
+
+        transition: all 0.3s;
+    }
+
+    &:active {
+        fill: $MAIN_COLOR;
+        opacity: 0.8;
+    }
+}
+
+.modal__content__personal_data {
+    display: grid;
+    gap: 1vw;
+
+    text-align: center;
+}
+
+.modal__content__personal_data__enter {
+    height: 90%;
+    text-align: center;
+    padding: 0.5vw;
+
+    font-size: calc(0.645vw + 17.94px);
+    font-family: 'Aire Exterior', sans-serif;
+    font-weight: 400;
+
+    color: $MAIN_TEXT;
+    background-color: #000000;
+    border-radius: 0.5vw;
+    border: none;
+
+    &:focus {
+        outline: 1px solid $MAIN_COLOR;
+    }
+}
+
+.modal__content__card_info {
+    display: grid;
+    gap: 1vw;
+
+    .card_label {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        font-size: calc(0.903vw + 13.11px);
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .card_logo {
+        width: calc(0.774vw + 18.52px);
+        fill: $MAIN_TEXT;
+    }
+
+    .modal__content__card_info__number {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .modal__content__card_info__expire_data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .modal__content__card_info__cvv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.card_input {
+    width: 50%;
+
+    border: none;
+    text-align: center;
+    border-radius: 0.5vw;
+    background-color: #000000;
+    color: $MAIN_TEXT;
+
+    font-size: calc(1.032vw + 10.7px);
+    font-family: 'Aire Exterior', sans-serif;
+
+    &:focus {
+        outline: 1px solid $MAIN_COLOR;
+    }
+}
+
+.modal__content__submit {
+    font-family: 'Aire Exterior', sans-serif;
+    margin-top: 2vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(5.355vw + 149.86px);
+    height: calc(1.29vw + 35.87px);
+    background-color: $MAIN_TEXT;
+    font-size: 24px;
+    color: black;
+    clip-path: polygon(0 0, 90% 0%, 100% 40%, 100% 80%, 100% 100%, 20% 100%, 0 100%);
+
+    &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+
+        transition: all 0.3s;
+    }
+
+    &:active {
+        background-color: $MAIN_COLOR;
+        color: $BACKGROUND;
+    }
+}
+
+.input_true {
+    outline: 0.1vw solid rgb(35, 207, 35);
+
+    &:focus {
+        outline: 0.1vw solid rgb(35, 207, 35);
+    }
+}
+
+.input_false {
+    outline: 0.1vw solid rgb(255, 0, 0);
+
+    &:focus {
+        outline: 0.1vw solid rgb(255, 0, 0);
+    }
+}
+
+@keyframes falseInput {
+    0% {
+        background-color: #ff000000;
+    }
+    100% {
+        background-color: #ff000048;
+    }
+}
+
+.input_show-false {
+    animation-name: falseInput;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+}

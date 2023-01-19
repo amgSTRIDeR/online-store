@@ -1,0 +1,94 @@
+.not_found {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../images/not-found.png');
+    background-repeat: no-repeat;
+    width: 1233px;
+    height: 718px;
+    font-family: 'Aire Exterior', sans-serif;
+    border: 3px solid $MAIN_COLOR;
+    border-radius: 10px;
+    box-shadow: 0px 17px 29px $MAIN_COLOR;
+    margin: 50px auto;
+}
+
+.not_found__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $MAIN_TEXT;
+    width: 980px;
+    height: 530px;
+}
+
+.not_found__content__info {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.not_found__content__small_text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+.scroll-image {
+    width: 80px;
+
+    fill: $MAIN_TEXT;
+    transition: all 0.3s;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.5);
+        transition: all 0.3s;
+    }
+
+    &:active {
+        fill: $MAIN_COLOR;
+    }
+}
+
+.elf-writing {
+  font-family: "Sindar", sans-serif;
+}
+
+@media (max-width: 1440px) {
+    .not_found {
+        width: 630px;
+        height: 720px;
+        border: 3px solid $MAIN_COLOR;
+        background-image: url('../images/not-found-tablet.png');
+        border-radius: 10px;
+        .not_found__content {
+            width: 600px;
+        }
+        .not_found__content__info {
+            font-size: 36px;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .not_found {
+        width: 305px;
+        height: 600px;
+        border: 3px solid $MAIN_COLOR;
+        background-image: url('../images/not-found-mobile.png');
+        border-radius: 10px;
+        .not_found__content {
+            width: 600px;
+        }
+        .not_found__content__info {
+            font-size: 24px;
+        }
+        .not_found__content__small_text {
+            width: 250px;
+            font-size: 14px;
+        }
+    }
+}
