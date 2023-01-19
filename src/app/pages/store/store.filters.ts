@@ -71,7 +71,7 @@ export class Filter {
                 card.style.display = 'none';
             }
         }
-        // обновление слайдера при смене фильтров
+        
         StoreCards.renewSlider();
     }
 
