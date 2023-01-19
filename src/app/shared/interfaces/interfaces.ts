@@ -70,7 +70,7 @@ export interface GameObject {
     category_ru: string[];
     category_en: string[];
     thumbnail: string;
-    images: ImageBitmap[];
+    images: string[];
 }
 
 export interface DualSliderConfig {
