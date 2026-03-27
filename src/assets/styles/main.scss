@@ -1,0 +1,30 @@
+@import './fonts';
+@import './variables';
+@import './header.scss';
+@import './footer.scss';
+@import './start.scss';
+@import './store.scss';
+@import './404.scss';
+@import './basket.scss';
+@import './modal.scss';
+@import './product.scss';
+
+.body {
+  margin: 0;
+  
+  background-color: $BACKGROUND;
+  color: $MAIN_TEXT;
+}
+
+.main-section {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+// @media (max-width: 1440px) {
+//     .main-section {
+//         margin: 300px auto 550px auto;
+//     }
+// }
